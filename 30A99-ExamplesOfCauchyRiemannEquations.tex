@@ -1,0 +1,258 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfCauchyRiemannEquations}
+\pmcreated{2013-03-22 17:38:05}
+\pmmodified{2013-03-22 17:38:05}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{examples of Cauchy-Riemann equations}
+\pmrecord{19}{40056}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+To illustrate the Cauchy-Riemann equations, we may consider a few
+examples.  Let $f$ be the squaring function, i.e. for any complex
+number $z$, we have $f(z) = z^2$.
+
+We now separate real from imaginary parts.  Letting $x$ and $y$ be
+real variables we have
+\[
+ f(x + iy) = (x + iy)^2 
+           = x^2 + 2ixy - y^2
+           = (x^2 - y^2) + i (2xy) .
+\]
+Defining real functions $u$ and $v$ by $f(x+iy) = u(x,y) + i v (x,y)$ 
+and taking derivatives, we have
+\begin{align*}
+u(x,y) & = x^2 - y^2  \\
+v(x,y) &= 2xy \\
+{\partial u \over \partial x} &= 2x \\
+{\partial u \over \partial y} &= -2y \\
+{\partial v \over \partial x} &= 2y \\
+{\partial v \over \partial y} &= 2x
+\end{align*}
+
+Since $\partial u / \partial x = \partial v / \partial y$ and
+$\partial u / \partial y = - \partial v / \partial x$. the
+Cauchy-Riemann relations are seen to be satisfied.
+
+Next, consider the complex conjugation function.  In this
+case, $\overline{x + i y} = x - iy$, so we have $u(x,y) = x$ 
+and $v(x,y) = y$.  Taking derivatives,
+\begin{align*}
+{\partial u \over \partial x} &= 1 \\
+{\partial u \over \partial y} &= 0 \\
+{\partial v \over \partial x} &= 0 \\
+{\partial v \over \partial y} &= -1
+\end{align*}
+Because $\partial u / \partial x \neq \partial v / \partial y$,
+the Cauchy-Riemann equations are \emph{not} satisfied do the
+conjugation function is not holomorphic.  Likewise, one can show
+that the functions $\Re, \Im, and | \cdot |$ which appear in
+complex analysis are not holomorphic.
+
+For our next example, we try a polynomial.  Let $f(Z) =
+z^3 + 2 z + 5$.  Writing $z = x+iy$ and $f = u + iv$, 
+we find that $u(x,y) = x^3 - 3 x y^2 + 2x + 5$ and
+$v(x,y) = 3 x^2 y - y^3 + 2y$.  Taking partial derivatives,
+one can confirm that the Cauchy-Riemann equations
+are satisfied, so we have a holomorphic function.
+
+More generally, we can show that \emph{all} complex
+polynomials are holomorphic.  Since the Cauchy-Riemann
+equations are linear, it suffices to check that integer 
+powers are holomorphic.  We can do this by an induction
+argument.  That $f(z) = z$ satisfies the equations is
+trivial and we have shown that $f(z) = z^2$ also
+satisfies them.  Let us assume that $f(z) = z^n$ 
+happens to satisfy the Cauchy-Riemann equations for a 
+particular value of $n$ and write
+\begin{align*}
+ (x + iy)^n &= u(x,y) + iv(x,y) \\
+ (x + iy)^{n+1} &= {\tilde u} (x,y) + i {\tilde v} (x,y)
+\end{align*}
+By elementary algebra, we have
+\begin{align*}
+ {\tilde u} (x,y) &= x u(x,y) - y v(x,y) \\
+ {\tilde v} (x,y) &= y u(x,y) + x v(x,y) .
+\end{align*}
+By elementary calculus, we have
+\begin{align*}
+ {\partial \tilde u \over \partial x} &=
+   u + x {\partial u \over \partial x} - 
+       y {\partial v \over \partial x} \\
+ {\partial \tilde u \over \partial y} &=
+ - v + x {\partial u \over \partial y} - 
+       y {\partial v \over \partial y} \\
+ {\partial \tilde v \over \partial x} &=
+   v + y {\partial u \over \partial x} + 
+       x {\partial v \over \partial x} \\
+ {\partial \tilde v \over \partial y} &=
+   u + y {\partial u \over \partial y} + 
+       x {\partial v \over \partial y} 
+\end{align*}
+so
+\begin{align*}
+ {\partial \tilde u \over \partial x} - 
+   {\partial \tilde v \over \partial y} &=
+ x \left( {\partial u \over \partial x} - 
+     {\partial v \over \partial y} \right) + 
+ y \left( {\partial u \over \partial y} + 
+     {\partial v \over \partial x} \right) \\
+ {\partial \tilde u \over \partial y} + 
+   {\partial \tilde v \over \partial x} &=
+ x \left( {\partial u \over \partial y} + 
+     {\partial v \over \partial x} \right) +
+ y \left( {\partial u \over \partial x} - 
+     {\partial v \over \partial y} \right)  
+\end{align*}
+Since the terms in parentheses are zero on account of
+$u$ and $v$ satisfying the Cauchy-Riemann equations,
+it follows that ${\tilde u}$ and ${\tilde v}$ also
+satisfy the Cauchy-Riemann equations.  By induction,
+$f(z) = z^n$ is holomorphic for all positive integers $n$.
+
+As our next example, we consider the complex
+square root.  As shown in the entry taking square 
+root algebraically, we have the following equality:
+\[
+ \sqrt{x+iy} = \sqrt{\frac{\sqrt{x^2 + y^2} + x}{2}} +
+  (\mbox{sign} \, {y}) i \sqrt{\frac{\sqrt{x^2 + y^2}- x}{2}}
+\]
+Differentiating and simplifying,
+\begin{align*}
+ u(x,y) &= \sqrt{\frac{\sqrt{x^2 + y^2} + x}{2}} \\
+ v(x,y) &= (\mbox{sign} \, {y}) \sqrt{\frac{\sqrt{x^2 + y^2}- x}{2}} \\
+ {\partial u \over \partial x} &=
+  \frac{\sqrt{2}}{4} 
+    \frac{\frac{x}
+               {\sqrt {x^2 + y^2}} + 1}
+         {\sqrt{ \sqrt {x^2 + y^2} + x}} = 
+   \frac{\sqrt{2}}{4} 
+   \frac{\sqrt{\sqrt {x^2 + y^2} + x}}
+       {\sqrt{x^2 + y^2}} \\
+ {\partial u \over \partial y} &=
+  (\mbox{sign} \, {y}) \frac{\sqrt{2}}{4} 
+    \frac{\frac{y}
+               {\sqrt {x^2 + y^2}}}
+         {\sqrt{ \sqrt {x^2 + y^2} + x}} =
+  (\mbox{sign} \, {y}) \frac{\sqrt{2}}{4} 
+  \frac{y}
+       {{\sqrt{x^2 + y^2}}
+        {\sqrt{ \sqrt {x^2 + y^2} + x}}} \\
+ {\partial v \over \partial x} &=
+  (\mbox{sign} \, {y}) \frac{\sqrt{2}}{4} 
+    \frac{\frac{x}
+               {\sqrt {x^2 + y^2}} - 1}
+               {\sqrt{ \sqrt {x^2 + y^2} - x}} = 
+  -(\mbox{sign} \, {y}) \frac{\sqrt{2}}{4} 
+    \frac{\sqrt{ \sqrt {x^2 + y^2} - x}}
+         {\sqrt{x^2 + y^2}} \\
+ {\partial v \over \partial y} &=
+  \frac{\sqrt{2}}{4} 
+    \frac{\frac{y}
+               {\sqrt {x^2 + y^2}}}
+         {\sqrt{ \sqrt {x^2 + y^2} - x}} =
+  \frac{\sqrt{2}}{4}
+  \frac{y}
+       {\sqrt{x^2 + y^2}
+        \sqrt{ \sqrt {x^2 + y^2} - x}} .
+\end{align*}
+Pulling out a  common factor and placing over a common denominator,
+\begin{align*}
+ {\partial u \over \partial x} -
+        {\partial v \over \partial y} &=
+ \frac{\sqrt{2}}{4 \sqrt{x^2 + y^2}} 
+  \left(
+    \sqrt{ \sqrt {x^2 + y^2} + x} -
+  \frac{y} {\sqrt{ \sqrt {x^2 + y^2} - x}}
+  \right) \\ &=
+ \frac{\sqrt{2}}{4 \sqrt{x^2 + y^2}} 
+ \frac{\sqrt{ \sqrt {x^2 + y^2} + x} \cdot
+       \sqrt{ \sqrt {x^2 + y^2} - x} - y}
+      {\sqrt{ \sqrt {x^2 + y^2} - x}} \\ &=
+ \frac{\sqrt{2}}{4 \sqrt{x^2 + y^2}} 
+ \frac{\sqrt{(x^2 + y^2) - y^2} - y}
+      {\sqrt{ \sqrt {x^2 + y^2} - x}} = 0 \\
+ {\partial u \over \partial y} +
+        {\partial v \over \partial x} &=
+ (\mbox{sign} \, {y})
+ \frac{\sqrt{2}}{4 \sqrt{x^2 + y^2}} 
+ \left(
+   \frac{y}{\sqrt{ \sqrt {x^2 + y^2} + x}} -
+   \sqrt{ \sqrt {x^2 + y^2} - x}
+ \right) \\ &=
+ (\mbox{sign} \, {y})
+ \frac{\sqrt{2}}{4 \sqrt{x^2 + y^2}} 
+ \frac{y - \sqrt{ \sqrt {x^2 + y^2} + x} \cdot
+           \sqrt{ \sqrt {x^2 + y^2} - x}}
+      {\sqrt{ \sqrt {x^2 + y^2} + x}} \\ &=
+ (\mbox{sign} \, {y})
+ \frac{\sqrt{2}}{4 \sqrt{x^2 + y^2}} 
+ \frac{\sqrt{(x^2 + y^2) - x^2} - y}
+      {\sqrt{ \sqrt {x^2 + y^2} + x}} = 0 ,
+\end{align*}
+so the Cauchy-Riemann equations are satisfied.  More
+generally, it can be shown that all complex algebraic
+functions and fractional powers satisfy the
+Cauchy-Riemann equations.  However, as suggested by
+the above derivation, a direct verification could
+be tedious, so it is better to use an indirect approach.
+
+Finally, we finish up with two examples of transcendental
+functions, the complex exponential and the complex logarithm,
+The complex exponential is defined as
+$\exp (x + iy) = \exp (x) (\cos y + i \sin y)$.  Hence
+we have
+\begin{align*}
+ u (x,y) &= \exp (x) \cos (y) \\
+ v (x,y) &= \exp (x) \sin (y) \\
+ {\partial u \over \partial x} &= \exp (x) \cos (y) \\
+ {\partial u \over \partial y} &= -\exp (x) \sin (y) \\
+ {\partial v \over \partial x} &= \exp (x) \sin (y) \\
+ {\partial v \over \partial y} &= \exp (x) \cos (y) 
+\end{align*}
+Thus we see that the complex exponential function is holomorphic.
+
+The complex logarithm may be defined as $\log (x + iy) =
+1/2 \log (x^2 + y^2) + i \arctan (y/x)$.  Hence we have
+\begin{align*}
+ u(x,y) &= 1/2 \log (x^2 + y^2) \\
+ v(x,y) &= \arctan (y/x) \\
+ {\partial u \over \partial x} &= {x \over x^2 + y^2} \\
+ {\partial u \over \partial y} &= {y \over x^2 + y^2} \\
+ {\partial v \over \partial x} &= {-y/x^2 \over 1 + (y/x)^2}
+                                = - {y \over x^2 + y^2} \\
+ {\partial v \over \partial y} &= {1/x \over 1 + (y/x)^2} 
+                                = {x \over x^2 + y^2} 
+\end{align*}
+Hence the complex logarithm is holomorphic.
+%%%%%
+%%%%%
+\end{document}

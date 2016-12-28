@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DilogarithmFunction}
+\pmcreated{2013-03-22 19:34:58}
+\pmmodified{2013-03-22 19:34:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{dilogarithm function}
+\pmrecord{14}{42570}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{33B15}
+\pmsynonym{Spence's function}{DilogarithmFunction}
+%\pmkeywords{dilogarithm}
+%\pmkeywords{polylogarithm}
+\pmrelated{ApplicationOfLogarithmSeries}
+\pmdefines{polylogarithm function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\it dilogarithm function} 
+\begin{align}
+\mbox{Li}_2(x) \;=:\; \sum_{n=1}^{\infty}\frac{x^n}{n^2},
+\end{align}
+studied already by Leibniz, is a special case of the {\it polylogarithm function}
+$$\mbox{Li}_s(x) \;=:\; \sum_{n=1}^{\infty}\frac{x^n}{n^s}.$$
+The radius of convergence of the series (1) is 1, whence the definition (1) is valid also in the unit disc of the complex plane.\, For\, $0 \le x \le 1$,\, the equation (1) is apparently equivalent to
+\begin{align}
+\mbox{Li}_2(x) \;=:\; -\int_0^x\frac{\ln(1\!-\!t)}{t}\,dt,
+\end{align}
+(cf. logarithm series of $\ln(1\!-\!x)$).\, The analytic continuation of $\mbox{Li}_2$ for\, $|z| \ge 1$\, can be made by
+\begin{align}
+\mbox{Li}_2(z) \;=:\; -\int_0^z\frac{\log(1\!-\!t)}{t}\,dt.
+\end{align}
+Thus $\mbox{Li}_2(z)$ is a multivalued analytic function of $z$.\, Its {\it principal branch} is single-valued and is got by taking the principal branch of the complex logarithm; then
+$$z \;\in\; \mathbb{C}\!\smallsetminus\![1,\,\infty[, \quad 0 < \arg(z\!-\!1) < 2\pi.$$\\
+
+For real values of $x$ we have
+\begin{align*}
+\mbox{Im}(\mbox{Li}_2(x)) \;=\;
+\begin{cases}
+\;0 \qquad\mbox{for}\;\; x \le 1,\\
+-\pi\ln{x} \;\;\mbox{for}\;\; x > 1.
+\end{cases}
+\end{align*}
+According to (2), the derivative of the dilogarithm is
+$$\mbox{Li}'_2(x) \;=\; \frac{-\ln(1\!-\!x)}{x}.$$
+In terms of the Bernoulli numbers, the dilogarithm function has a series expansion more rapidly converging than (1):
+\begin{align}
+\mbox{Li}_2(x) \;=\; \sum_{n=1}^{\infty}B_{n-1}\frac{(-\ln(1\!-\!x))^n}{n!} 
+\qquad (|\ln(1\!-\!x)| < 2\pi)
+\end{align}
+
+
+\textbf{Some functional equations and values}
+$$\mbox{Li}_2(z)+\mbox{Li}_2(-z) \;=\; \frac{1}{2}\mbox{Li}_2(z^2),$$
+$$\mbox{Li}_2(z)+\mbox{Li}_2\left(\frac{1}{z}\right) \;=\; -\frac{1}{2}(\log(-z))^2-\frac{\pi^2}{6},$$
+$$\mbox{Li}_2(iz)-i\mbox{Li}_2(z) \;=\; \frac{1}{4}\mbox{Li}_2(-z^2),$$
+$$\mbox{Li}_2(1) \;=\; \frac{\pi^2}{6}, \quad
+\mbox{Li}_2(2) \;=\; \frac{\pi^2}{4}-i\pi\ln{2}, \quad
+\mbox{Li}_2(i) \;=\; -\frac{\pi^2}{48}-i\,G$$
+Here, $G$ is Catalan's constant.\\
+
+\begin{thebibliography}{8}
+\bibitem{K}{\sc Anatol N. Kirillov}: {\it Dilogarithm identities} (1994). Available \PMlinkexternal{here}{http://arxiv.org/pdf/hep-th/9408113v2.pdf}.
+\bibitem{M}{\sc Leonard C. Maximon}:  The dilogarithm function for complex argument.\, -- {\it Proc. R. Soc. Lond. A} \textbf{459} (2003) 2807--2819.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

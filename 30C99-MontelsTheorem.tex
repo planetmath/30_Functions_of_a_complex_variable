@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MontelsTheorem}
+\pmcreated{2013-03-22 14:17:52}
+\pmmodified{2013-03-22 14:17:52}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Montel's theorem}
+\pmrecord{8}{35754}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C99}
+\pmrelated{AscoliArzelaTheorem}
+\pmrelated{SpaceOfAnalyticFunctions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Suppose that $G \subset {\mathbb{C}}$ is a region.
+
+\begin{thm}[Montel]
+A set ${\mathcal{F}}$ of holomorphic functions $f\colon G \to {\mathbb{C}}$ is \PMlinkname{normal}{NormalFamily} if and only if ${\mathcal{F}}$ is
+locally bounded.
+\end{thm}
+
+In other words a sequence of holomorphic functions $\{ f_n \}$ has a subsequence which converges uniformly 
+on compact subsets to a holomorphic function $f \colon G \to {\mathbb{C}}$
+if and only if the set $\{ f_n \}$ is locally bounded.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

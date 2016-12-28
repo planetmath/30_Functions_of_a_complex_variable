@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitForExpz}
+\pmcreated{2013-03-22 14:34:54}
+\pmmodified{2013-03-22 14:34:54}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{limit for exp(z)}
+\pmrecord{11}{36144}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For any complex number $z$, we have
+\begin{align*}
+\lim\limits_{n\to\infty} \left(1+\frac{z}{n}+o\left(\frac{1}{n}\right)\right)^n=\exp{z},\end{align*} where $ \exp $ denotes the exponential function.
+\newline
+{\bf Proof:} 
+For $\alpha\to 0$, we have 
+\begin{align*} 
+\ln(1+\alpha) &= \sum_{k=1}^\infty (-1)^{k-1}
+\cdot\frac{\alpha^k}{k} \\
+&= \alpha+O(\alpha^2). \end{align*}
+Therefore 
+\begin{eqnarray*}
+\left(1+\frac{z}{n}+o\left(\frac{1}{n}\right)\right)^n &=& \exp\left(n\ln\left(1+\frac{z}{n}+o\left(\frac{1}{n}\right)\right)\right) \\
+&=&\exp\left(n\left(\frac{z}{n}+o\left(\frac{1}{n}\right)+O(\frac{1}{n^2})\right)\right)\\
+&=&\exp\left(z+o(1)+O(\frac{1}{n})\right)\to\exp{z} \quad \text{for} \quad n\to\infty. \quad \Box \end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

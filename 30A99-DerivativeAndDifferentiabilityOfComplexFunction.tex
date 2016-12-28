@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativeAndDifferentiabilityOfComplexFunction}
+\pmcreated{2014-02-23 18:20:58}
+\pmmodified{2014-02-23 18:20:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivative and differentiability of complex function}
+\pmrecord{3}{88037}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmclassification{msc}{30A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $f(z)$ be given uniquely in a neighborhood of the point 
+$z$ in $\mathbb{C}$.\, If the difference quotient
+$$\frac{\Delta f}{\Delta z} \;=\; \frac{f(z+\Delta z)-f(z)}{\Delta z}$$
+tends to a finite limit $A$ as $\Delta z \to 0$,
+then $A$ is the {\it derivative} of $f$ at the point $z$ and is denoted by 
+\begin{align}
+f'(z) = A = \lim_{\Delta z \to 0}\frac{\Delta f}{\Delta z}.
+\end{align}
+Thus the difference\, $\lambda = \frac{\Delta f}{\Delta z}-A$\, tends to 
+zero simultaneously with $\Delta z$, and $\Delta f$ has the expansion
+$$\Delta f = A\Delta z+\lambda\Delta z.$$
+If we denote\, $|\Delta z| \;=:\; \varrho$,\, we have
+$$\lambda\Delta z = \frac{\lambda\Delta z}{\varrho}\cdot\varrho
+\;=\; \langle\varrho\rangle\varrho$$
+where $\langle\varrho\rangle$ means a complex number vanishing when 
+$|\Delta z| = \varrho \to 0$.\, Consequently, (1) implies
+\begin{align}
+\Delta f \;=\; A\Delta z+\langle\varrho\rangle\varrho
+\end{align}
+in which\, $A = f'(z)$\, and\, $\varrho = |\Delta z|$.\, It's easily seen that 
+the conditions (1) and (2) are equivalent.\, The latter expresses the 
+{\it differentiability} of $f$ at $z$.\, By it one can sayt that the increment of 
+$f$ is ``locally proportional'' to the increment of $z$.\, Cf. the 
+consideration of differential of real functions.\\
+
+\begin{thebibliography}{9}
+\bibitem{EL}{\sc E. Lindel\"of}: {\em Johdatus funktioteoriaan} (`Introduction to function theory').\, Mercatorin kirjapaino, Helsinki (1936).
+
+\bibitem{NP}{\sc R. Nevanlinna \& V. Paatero}: {\em Funktioteoria}.\, Kustannusosakeyhti\"o Otava, Helsinki (1963).
+\end{thebibliography}\\
+
+
+\end{document}

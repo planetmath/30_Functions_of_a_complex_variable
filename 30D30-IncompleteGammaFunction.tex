@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IncompleteGammaFunction}
+\pmcreated{2013-03-22 15:36:48}
+\pmmodified{2013-03-22 15:36:48}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{incomplete gamma function}
+\pmrecord{11}{37536}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{33B15}
+\pmrelated{SineIntegralInInfinity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{incomplete gamma function} is defined as the indefinite integral of the integrand of gamma integral.  There are several definitions which differ in details of normalization and constant of integration:
+
+\begin{eqnarray*}
+\gamma (a,x) &=& \int_0^x e^{-t} t^{a-1} \, dt \\
+\Gamma (a,x) &=&  \int_x^\infty e^{-t} t^{a-1} \, dt = \Gamma(a) - \gamma (a,x) \\
+P (a,x) &=& {1 \over \Gamma (a)} \int_0^x e^{-t} t^{a-1} \, dt = {\gamma (a,x) \over \Gamma(a)} \\
+\gamma^* (a,x) &=& {x^{-a} \over \Gamma(a)} \int_0^x e^{-t} t^{a-1} \, dt = {\gamma (a,x) \over x^a \Gamma(a)} \\
+I (a,x) &=&  {1 \over \Gamma (a+1)} \int_0^{x \sqrt{a+1}} e^{-t} t^a \, dt = {\gamma (a+1, x \sqrt{a+1}) \over  \Gamma(a+1)} \\
+C (a,x) &=& \int_x^\infty t^{a-1} \cos t \, dt \\
+S (a,x) &=& \int_x^\infty t^{a-1} \sin t \, dt \\
+E_n (x) &=& \int_1^\infty e^{-xt} t^{-n} \, dt = x^{n-1} \Gamma (1-n) - x^{n-1} \gamma (1-n,x) \\
+\alpha_n (x) &=& \int_1^\infty e^{-xt} t^n \, dt = x^{-n-1} \Gamma (1+n) - x^{-n-1} \gamma (1+n,x) \\
+\end{eqnarray*}
+For convenience of translating notations, these variants have been expressed in terms of $\gamma$.
+%%%%%
+%%%%%
+\end{document}

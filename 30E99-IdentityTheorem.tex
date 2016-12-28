@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdentityTheorem}
+\pmcreated{2013-03-22 17:10:38}
+\pmmodified{2013-03-22 17:10:38}
+\pmowner{fernsanz}{8869}
+\pmmodifier{fernsanz}{8869}
+\pmtitle{identity theorem}
+\pmrecord{8}{39491}
+\pmprivacy{1}
+\pmauthor{fernsanz}{8869}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+%\pmkeywords{zeros}
+%\pmkeywords{poles}
+%\pmkeywords{analytic functions}
+%\pmkeywords{indentity}
+%\pmkeywords{complex plane}
+%\pmkeywords{clopen}
+\pmrelated{Complex}
+\pmrelated{ZeroesOfAnalyticFunctionsAreIsolated}
+\pmrelated{TopologyOfTheComplexPlane}
+\pmrelated{ClopenSubset}
+\pmrelated{IdentityTheoremOfHolomorphicFunctions}
+\pmrelated{PlacesOfHolomorphicFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}{Lemma}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\numberwithin{equation}{section}
+\begin{document}
+\title{Identity theorem}%
+\author{Fernando Sanz Gamiz}%
+
+\begin{lem}
+Let $f$ be analytic on $\Omega \subseteq \mathbb C$ and let $L$ be the set of
+accumulation points (also called limit points or cluster points) of
+$\{z \in \Omega \colon f(z)=0\}$ in $\Omega$. Then $L$ is both open
+and closed in $\Omega$.
+\end{lem}
+
+\bigskip
+
+\begin{proof}
+By definition of accumulation point, $L$ is closed. To see that it
+is also open, let $z_0 \in L$, choose an open ball $B(z_0, r)
+\subseteq \Omega$ and write $f(z)=\sum_{n=0}^{\infty} a_n(z-z_0)^n,
+z \in B(z_0, r)$. Now $f(z_0) = 0$, and hence either $f$ has a zero
+of order $m$ at $z_0$ (for some $m$), or else $a_n = 0$ for all $n$.
+In the former case, there is a function g analytic on $\Omega$  such
+that $f(z)= (z-z_0)^m g(z), z \in \Omega$, with $g(z_0) \neq 0$. By
+continuity of $g$, $g(z) \neq 0$ for all $z$ sufficiently close to
+$z_0$, and consequently $z_0$ is an isolated point of$\{z \in \Omega
+\colon f(z)=0\}$ . But then $z_0 \notin L$, contradicting our
+assumption. Thus, it must be the case that $a_n = 0$ for all n, so
+that $f \equiv 0$ on $B(z_0, r)$. Consequently, $B(z_0, r) \in L$,
+proving that $L$ is open in $\Omega$.
+\end{proof}
+
+\bigskip
+
+\begin{thm}[Identity theorem]
+Let $\Omega$ be a open connected subset of $\mathbb C$ (i.e., a domain). If $f$ and
+$g$ are analytic on $\Omega$ and $\{z \in \Omega \colon f(z)=g(z)\}$
+has an accumulation point in $\Omega$, then $f \equiv g$ on
+$\Omega$.
+\end{thm}
+
+\bigskip
+
+\begin{proof}
+We have that $\{z \in \Omega \colon f(z)-g(z)=0\}$ has an
+accumulation point, hence, according to the previous lemma, it is
+open and closed (also called "clopen"). But, as $\Omega$ is
+connected, the only closed and open subset at once is $\Omega$
+itself, therefore $\{z \in \Omega \colon f(z)-g(z)=0\}=\Omega$,
+i.e., $f \equiv g$ on $\Omega$.
+\end{proof}
+
+\bigskip
+
+\begin{rem}
+This theorem provides a very powerful and useful tool to test
+whether two analytic functions, whose values coincide in some
+points, are indeed the same function. Namely, unless the points in
+which they are equal are isolated, they are the same function.
+\end{rem}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticContinuationOfGammaFunction}
+\pmcreated{2013-03-22 17:03:07}
+\pmmodified{2013-03-22 17:03:07}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{analytic continuation of gamma function}
+\pmrecord{10}{39342}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{30B40}
+\pmclassification{msc}{33B15}
+\pmsynonym{residues of gamma function}{AnalyticContinuationOfGammaFunction}
+\pmrelated{AnalyticContinuation}
+\pmrelated{EmptyProduct}
+\pmrelated{ResiduesOfTangentAndCotangent}
+\pmrelated{RolfNevanlinna}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Res}{Res}
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{side} \PMlinkescapeword{sides}
+
+The last \PMlinkescapetext{formula} of the \PMlinkname{parent entry}{GammaFunction} may be expressed as
+\begin{align}
+ \Gamma(z) \;=\; \frac{\Gamma(z\!+\!n)}{z(z\!+\!1)(z\!+\!2)\cdots(z\!+\!n\!-\!1)}.
+\end{align}
+According to the standard definition
+$$\Gamma(z) \;:=\; \int_0^\infty\!e^{-t}t^{z-1}\,dt,$$
+the left hand side of (1) is defined only in the right half-plane\, $\Re{z} > 0$,\, 
+whereas the expression $\Gamma(z+n)$ is defined and holomorphic for\, $\Re{z} > -n$\, 
+and thus the right hand side of (1) is holomorphic in the half-plane\, $\Re{z} > -n$\, 
+except the points
+$$0,\,-1,\,-2,\,\ldots,\,-(n\!-\!1)$$
+where it has the poles of order 1.\, Because the both sides of (1) are equal for\,  
+$\Re{z} > 0$,\, the left side of (1) is the analytic continuation of $\Gamma(z)$ to 
+the half-plane\, $\Re{z} > -n$.\, And since the positive integer $n$ can be chosen 
+arbitrarily, the Euler's $\Gamma$-function has been defined analytically to the whole 
+complex plane.
+
+Accordingly, the gamma function is unambiguous and holomorphic everywhere in $\mathbb{C}$ 
+except in the points
+\begin{align}
+0,\,-1,\,-2,\,-3,\,\ldots
+\end{align}
+which are poles of order 1 of the function.\, Hence, $\Gamma(z)$ 
+is a meromorphic function.
+
+For determining the residue of the function in the points (2), we rewrite the equation (1) as
+$$\Gamma(z) \;=\; 
+\frac{\Gamma(z\!+\!n\!+\!1)}{z(z\!+\!1)(z\!+\!2)\cdots(z\!+\!n)}.$$
+In the point\, $z = -n$\, we have
+$$\Gamma(z\!+\!n\!+\!1) \;=\; \Gamma(1) \;=\; 0! \;=\; 1,$$
+which implies (see the rule in the entry coefficients of Laurent series) that
+$$\Res(\Gamma;\,-n) \;=\; \frac{(-1)^n}{n!}.$$
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc R. Nevanlinna \& V. Paatero}: {\em Funktioteoria}.\, Kustannusosakeyhti\"o Otava. Helsinki (1963).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

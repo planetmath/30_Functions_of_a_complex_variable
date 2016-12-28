@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfConformalMappingTheorem}
+\pmcreated{2013-03-22 13:47:26}
+\pmmodified{2013-03-22 13:47:26}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of conformal mapping theorem}
+\pmrecord{7}{34502}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C35}
+%\pmkeywords{analytic function}
+%\pmkeywords{conformal mapping}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $D\subset\mathbb{C}$ be a domain, and let $f\colon D\to\mathbb{C}$ be an
+analytic function.  By identifying the complex plane $\mathbb{C}$ with
+$\mathbb{R}^2$, we can view $f$ as a function from $\mathbb{R}^2$ to
+itself:
+$$
+\tilde f(x,y):=(\Re f(x+iy), \Im f(x+iy))=(u(x,y),v(x,y))
+$$
+with $u$ and $v$ real functions.  The Jacobian matrix of $\tilde f$ is
+$$
+J(x,y)=\frac{\partial(u,v)}{\partial(x,y)}=\begin{pmatrix}
+u_x & u_y \\
+v_x & v_y
+\end{pmatrix}.
+$$
+As an analytic function, $f$ satisfies the Cauchy-Riemann equations,
+so that $u_x=v_y$ and $u_y=-v_x$.  At a fixed point $z=x+iy\in D$, we
+can therefore define $a=u_x(x,y)=v_y(x,y)$ and $b=u_y(x,y)=-v_x(x,y)$.
+We write $(a,b)$ in polar coordinates as $(r\cos\theta,r\sin\theta)$
+and get
+$$
+J(x,y)=\begin{pmatrix}
+a & b \\
+-b & a
+\end{pmatrix} = r\begin{pmatrix}
+\cos\theta & \sin\theta \\
+-\sin\theta & \cos\theta
+\end{pmatrix}.
+$$
+
+Now we consider two smooth curves through $(x,y)$, which we
+parametrize by $\gamma_1(t)=(u_1(t),v_1(t))$ and
+$\gamma_2(t)=(u_2(t),v_2(t))$.  We can choose the parametrization such
+that $\gamma_1(0)=\gamma_2(0)=z$.  The images of these curves under
+$\tilde f$ are $\tilde f\circ\gamma_1$ and $\tilde f\circ\gamma_2$,
+respectively, and their derivatives at $t=0$ are
+$$
+(\tilde f\circ\gamma_1)'(0)=
+\frac{\partial(u,v)}{\partial(x,y)}(\gamma_1(0))
+\cdot \frac{{\rm d}\gamma_1}{{\rm d}t}(0)=
+J(x,y)\begin{pmatrix}
+\frac{{\rm d}u_1}{{\rm d}t} \\
+\frac{{\rm d}v_1}{{\rm d}t}
+\end{pmatrix}
+$$
+and, similarly,
+$$
+(\tilde f\circ\gamma_2)'(0)=J(x,y)\begin{pmatrix}
+\frac{{\rm d}u_2}{{\rm d}t} \\
+\frac{{\rm d}v_2}{{\rm d}t}
+\end{pmatrix}
+$$
+by the chain rule.  We see that if $f'(z)\neq 0$, $f$ transforms the
+tangent vectors to $\gamma_1$ and $\gamma_2$ at $t=0$ (and therefore
+in $z$) by the orthogonal matrix
+$$
+J/r=\begin{pmatrix}
+\cos\theta & \sin\theta \\
+-\sin\theta & \cos\theta
+\end{pmatrix}
+$$
+and scales them by a factor of $r$.  In particular, the transformation
+by an orthogonal matrix implies that the angle between the tangent
+vectors is preserved.  Since the determinant of $J/r$ is 1, the
+transformation also preserves orientation (the direction of the angle
+between the tangent vectors).  We conclude that $f$ is a conformal
+mapping at each point where its derivative is nonzero.
+%%%%%
+%%%%%
+\end{document}

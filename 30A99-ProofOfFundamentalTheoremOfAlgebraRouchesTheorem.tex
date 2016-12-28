@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFundamentalTheoremOfAlgebraRouchesTheorem}
+\pmcreated{2013-03-22 14:36:21}
+\pmmodified{2013-03-22 14:36:21}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof of fundamental theorem of algebra (Rouch\'e's theorem)}
+\pmrecord{14}{36177}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{12D99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+The fundamental theorem of algebra can be proven using Rouch\'e's theorem.  Not only is this proof interesting because it demonstrates an important result, it also serves to provide an example of how to use Rouch\'e's theorem.  Since it is quite \PMlinkescapetext{simple}, it can be thought of as a ``toy model'' (see toy theorem) for theorems on the zeroes of analytic functions.  For a variant of this proof in \PMlinkescapetext{terms} of the argument principle (of which Rouch\'e's theorem is a consequence), please see the \PMlinkname{proof of the fundamental theorem of algebra (argument principle)}{ProofOfFundamentalTheoremOfAlgebra3}.
+
+\begin{proof}
+Let $n$ denote the degree of $f$.  Without loss of generality, the assumption can be made that the leading coefficient of $f$ is $1$.  Thus, $\displaystyle f(z)=z^n+\sum_{m=0}^{n-1} c_m z^m$.
+
+Let $\displaystyle R=1+\sum_{m=0}^{n-1}|c_m|$.  Note that, by choice of $R$, whenever $|z|>R$, $f(z) \neq 0$.  Suppose that $|z| \ge R$.  Since $R \ge 1$, $|z^a| \le |z^b|$ whenever $0<a<b$.  Hence, we have the following \PMlinkescapetext{string} of inequalities:
+
+$$\left| \sum_{m=0}^{n-1} c_m z^m \right| \le 1 + \sum_{m=0}^{n-1} |c_m| |z^m| \le |z^{n-1}| + \sum_{m=0}^{n-1} |c_m| |z^{n-1}| \le R |z^{n-1}| \le |z^n|$$
+
+Since polynomials in $z$ are entire, they are certainly analytic functions in the disk $|z| \le R$.  Thus, Rouch\'e's theorem can be applied to them.  Since $\displaystyle \left| \sum_{m=0}^{n-1} c_m z^m \right| \le |z^n|$ for $|z| \ge R$, Rouch\'e's theorem yields that $z^n$ and $f(z)$ have the same number of zeroes in the disk $|z| \le R$.  Since $z^n$ has a single zero of multiplicity $n$ at $z=0$, which counts as $n$ zeroes, $f(z)$ must also have $n$ zeroes counted according to multiplicity in the disk $|z| \le R$.  By choice of $R$, it follows that $f$ has exactly $n$ zeroes in the complex plane.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

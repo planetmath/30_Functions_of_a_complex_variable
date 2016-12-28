@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HurwitzsTheorem}
+\pmcreated{2013-03-22 14:17:55}
+\pmmodified{2013-03-22 14:17:55}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Hurwitz's theorem}
+\pmrecord{5}{35756}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C15}
+\pmrelated{CompositionAlgebraOverAlgebaicallyClosedFields}
+\pmrelated{CompositionAlgebrasOverMathbbR}
+\pmrelated{CompositionAlgebrasOverFiniteFields}
+\pmrelated{CompositionAlgebrasOverMathbbQ}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Define the ball at $z_0$ of radius $r$ as $B(z_0,r) = \{ z \in G : \lvert z-z_0 \rvert < r \}$ and $D(z_0,r) = \{ z \in G : \lvert z-z_0 \rvert \leq r \}$ is the closed ball at $z_0$ of radius $r$.
+
+\begin{thm}[Hurwitz]
+Let $G \subset {\mathbb{C}}$ be a region and suppose the sequence
+of holomorphic functions $\{ f_n \}$ converges uniformly on compact subsets
+of $G$ to a holomorphic function $f$.  If $f$ is not identically zero,
+$D(z_0,r) \subset G$ and $f(z) \not= 0$ for $z$ such that
+$\lvert z-z_0 \rvert = r$, then there exists an $N$ such that for all $n \geq N$
+$f$ and $f_n$ have the same number of zeros in $B(z_0,r)$.
+\end{thm}
+
+What this theorem says is that if you have a sequence of holomorphic functions which converge uniformly on compact subsets (such a sequence always converges to a holomorphic function but that's another theorem altogether), the \PMlinkescapetext{limit}
+function is not identically zero and furthermore the \PMlinkescapetext{limit} function is not
+zero on the boundary of some ball,
+then eventually 
+the functions of the sequence have the same number of zeros inside this ball as does the \PMlinkescapetext{limit} function.
+
+Do note the requirement for $f$ not being identically zero.  For example the sequence $f_n(z) := \frac{1}{n}$ converges uniformly on compact subsets to
+$f(z) := 0$, but $f_n$ have no zeros anywhere, while $f$ is identically zero.
+
+Also in general this result holds for bounded \PMlinkname{convex subsets}{ConvexSet} but it is most
+useful to \PMlinkescapetext{state} for balls.
+
+An immediate consequence of this theorem is this useful corollary.
+
+\begin{cor}
+If $G$ is a region and a sequence of holomorphic functions $\{ f_n \}$ converges
+uniformly on compact subsets of $G$ to a holomorphic function $f$, and furthermore if $f_n$ never vanishes (is not zero for any point in $G$), then
+$f$ is either identically zero or also never vanishes.
+\end{cor}
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

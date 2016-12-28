@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FactorizationTheoremForHinftyFunctions}
+\pmcreated{2013-03-22 15:36:23}
+\pmmodified{2013-03-22 15:36:23}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{factorization theorem for $H^\infty$ functions}
+\pmrecord{4}{37523}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30H05}
+\pmrelated{InnerFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+Let $H^\infty$ denote the bounded analytic functions on the unit disc.
+
+\begin{thm}
+Every $f \in H^\infty$ can be written as
+\begin{equation*}
+f(z) = \alpha I(z) F(z)
+\end{equation*}
+where $\lvert \alpha \rvert = 1$, $I$ is an inner function and $F$ is a bounded outer function.  Conversely any function which can be so written is bounded.
+\end{thm}
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexII}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable II}}.
+Springer-Verlag, New York, New York, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuasiperiodicFunction}
+\pmcreated{2013-03-22 14:40:38}
+\pmmodified{2013-03-22 14:40:38}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{quasiperiodic function}
+\pmrecord{13}{36280}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmrelated{ComplexTangentAndCotangent}
+\pmrelated{CounterperiodicFunction}
+\pmdefines{quasiperiod}
+\pmdefines{quasiperiodicity}
+\pmdefines{period}
+\pmdefines{periodic function}
+\pmdefines{periodic}
+\pmdefines{periodicity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{connection}
+\PMlinkescapeword{even}
+\PMlinkescapeword{meets}
+\PMlinkescapeword{order}
+\PMlinkescapeword{strictly}
+\PMlinkescapeword{term}
+
+A function $f$ is said to have a \emph{quasiperiod} $p$ if there exists a function $g$ such that
+ $$f(z + p) = g(z) f(z).$$
+
+In the special case where $g$ is identically equal to $1$, we call $f$ a \emph{periodic function}, and we say that $p$ is a \emph{period} of $f$ or that $f$ has \emph{periodicity} $p$.
+
+Except for the special case of periodicity noted above, the notion of quasiperiodicity is somewhat loose and fuzzy.  Strictly speaking, many functions could be regarded as quasiperiodic if one defines $g(z) = f(z+p) / f(z)$.  In order for the term ``quasiperiodic'' not to be trivial, it is customary to reserve its use for the case where the function $g$ is, in some vague, intuitive sense, simpler than the function $f$.  For instance, no one would call the function $f(z) = z^2 + 1$ quasiperiodic even though it meets the criterion of the definition if we set $g(z) = (z^2 + 2z + 2) / (z^2 + 1)$ because the rational function $g$ is ``more complicated'' than the polynomial $f$.  On the other hand, for the gamma function, one would say that $1$ is a quasiperiod because $\Gamma (z+1) = z \Gamma(z)$ and the function $g(z) = z$ is a ``much simpler'' function than the gamma function.
+
+Note that the every complex number can be said to be a quasiperiod of the exponential function.  The term ``quasiperiod'' is most frequently used in connection with theta functions.
+
+Also note that almost periodic functions are quite a different affair than quasiperiodic functions --- there, one is dealing with a precise notion.
+%%%%%
+%%%%%
+\end{document}

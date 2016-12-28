@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InfinitelydifferentiableFunctionThatIsNotAnalytic}
+\pmcreated{2013-03-22 12:46:15}
+\pmmodified{2013-03-22 12:46:15}
+\pmowner{ariels}{338}
+\pmmodifier{ariels}{338}
+\pmtitle{infinitely-differentiable function that is not analytic}
+\pmrecord{5}{33081}
+\pmprivacy{1}
+\pmauthor{ariels}{338}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmclassification{msc}{26A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\usepackage{amsthm}
+\begin{document}
+If $f\in\mathcal{C}^{\infty}$, then we can certainly \emph{write} a Taylor series for $f$.  However, analyticity requires that this Taylor series actually converge (at least across some radius of convergence) to $f$.  It is not necessary that the power series for $f$ converge to $f$, as the following example shows.
+
+\newcommand{\e}{e^{-\frac{1}{x^2}}}
+Let
+$$
+f(x)=\begin{cases}
+\e & x \ne 0 \\
+0 & x = 0
+\end{cases}.
+$$
+Then $f\in \mathcal{C}^{\infty}$, and for any $n\ge 0$, $f^{(n)}(0)=0$ (see below).  So the Taylor series for $f$ around 0 is 0; since $f(x)>0$ for all $x\ne 0$, clearly it does not converge to $f$.
+
+\subsection*{Proof that $f^{(n)}(0)=0$}
+
+Let $p(x), q(x)\in \Reals[x]$ be polynomials, and define
+$$
+g(x)=\frac{p(x)}{q(x)} \cdot f(x).
+$$
+Then, for $x\ne 0$,
+$$
+g'(x) = \frac{(p'(x) + p(x)\frac{2}{x^3})q(x) - q'(x)p(x)}{q^2(x)} \cdot\e.
+$$
+Computing (e.g. by applying \PMlinkname{L'H\^opital's rule}{LHpitalsRule}), we see that $g'(0)=\lim_{x\to 0}g'(x)=0$.
+
+Define $p_0(x)=q_0(x)=1$.  Applying the above inductively, we see that we may write $f^{(n)}(x)=\frac{p_n(x)}{q_n(x)}f(x)$.  So $f^{(n)}(0)=0$, as required.
+%%%%%
+%%%%%
+\end{document}

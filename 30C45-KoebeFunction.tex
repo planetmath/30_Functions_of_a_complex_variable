@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KoebeFunction}
+\pmcreated{2013-03-22 14:23:30}
+\pmmodified{2013-03-22 14:23:30}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Koebe function}
+\pmrecord{6}{35888}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C45}
+\pmsynonym{K\"obe function}{KoebeFunction}
+\pmdefines{rotation of the Koebe function}
+\pmdefines{rotation of the K\"obe function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+The analytic function
+\begin{equation*}
+f(z) := \frac{z}{(1-z)^2}
+\end{equation*}
+on the unit disc in the complex plane is called the {\em Koebe function}.  For some $\lvert \alpha \rvert = 1$, the functions
+\begin{equation*}
+f_\alpha(z) := \frac{z}{(1- \alpha z)^2}
+\end{equation*}
+are called {\em rotations of the Koebe function}.
+\end{defn}
+
+Firstly note that $f_1 = f$, and
+next
+note that $f$ is a map from the open unit disc onto ${\mathbb{C}} \backslash (-\infty,-1/4]$.  The maps $f_\alpha (z)$ can be also given as
+$f_\alpha(z) = \bar{\alpha} f_1 (\alpha z )$.
+Further note that the power series representation of these
+functions is given by
+\begin{equation*}
+f_\alpha(z) = \frac{z}{(1-\alpha z)^2}
+= \sum_{n=1}^\infty n \alpha^{n-1} z^n .
+\end{equation*}
+
+Also note that these functions belong to the class of Schlicht functions.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexII}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable II}}.
+Springer-Verlag, New York, New York, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

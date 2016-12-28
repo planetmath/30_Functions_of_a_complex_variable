@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Antiholomorphic}
+\pmcreated{2014-11-06 12:07:50}
+\pmmodified{2014-11-06 12:07:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{antiholomorphic}
+\pmrecord{9}{41476}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmsynonym{antiholomorphic function}{Antiholomorphic}
+\pmrelated{ComplexConjugate}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{iff}
+
+A complex function \,$f\!: D \to \mathbb{C}$,\, where $D$ is a domain of the complex plane, having the derivative 
+$$\frac{df}{d \overline{z}}$$
+in each point $z$ of $D$, is said to be {\em antiholomorphic} in $D$. \\
+
+The following conditions are \PMlinkname{equivalent}{Equivalent3}:
+\begin{itemize}
+
+\item $f(z)$ is antiholomorphic in $D$.
+
+\item \, $\overline{f(z)}$\, is holomorphic in $D$. 
+
+\item $f(\overline{z})$ is holomorphic in\, $\overline{D} \,:=\, \{\overline{z}\;\vdots\;\, z \in D\}$.
+
+\item $f(z)$ may be \PMlinkescapetext{expanded} to a power series $\sum_{n=0}^\infty a_n(\overline{z}-u)^n$ at each\, $u \in D$.
+
+\item The real part \,$u(x,\,y)$\, and the imaginary part 
+\,$v(x,\,y)$\, of the function $f$ satisfy the equations
+$$\frac{\partial u}{\partial x} 
+\;=\; -\frac{\partial v}{\partial y}, \qquad 
+  \frac{\partial u}{\partial y} \;=\; \frac{\partial v}{\partial x}.$$
+N.B. the \PMlinkescapetext{place} of minus; cf. the \PMlinkname{Cauchy--Riemann equations}{CauchyRiemannEquations}.\\
+
+\end{itemize}
+
+\textbf{Example.}\, The function\, $\displaystyle z \mapsto \frac{1}{\overline{z}}$ is antiholomorphic in\, 
+$\mathbb{C}\!\smallsetminus\!\{0\}$.\, One has 
+$$f(z) \;=\; \frac{z}{|z|^2} 
+       \;=\; \underbrace{\frac{x}{x^2\!+\!y^2}}_{u}+i\underbrace{\frac{y}{x^2\!+\!y^2}}_{v}$$
+and thus         
+$$\frac{\partial u}{\partial x} 
+\;=\; \frac{y^2\!-\!x^2}{(x^2\!+\!y^2)^2},  \qquad
+\frac{\partial v}{\partial y}
+\;=\; \frac{x^2\!-\!y^2}{(x^2\!+\!y^2)^2},  \qquad 
+\frac{\partial u}{\partial y} 
+\;=\; -\frac{2xy}{(x^2\!+\!y^2)^2},  \qquad
+\frac{\partial v}{\partial x} \;=\; -\frac{2xy}{(x^2\!+\!y^2)^2}.$$
+
+
+%%%%%
+%%%%%
+\end{document}

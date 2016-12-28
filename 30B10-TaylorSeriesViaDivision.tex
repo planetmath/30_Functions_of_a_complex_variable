@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TaylorSeriesViaDivision}
+\pmcreated{2014-12-02 17:46:48}
+\pmmodified{2014-12-02 17:46:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Taylor series via division}
+\pmrecord{20}{40154}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{41A58}
+\pmsynonym{quotient of Taylor series}{TaylorSeriesViaDivision}
+\pmsynonym{calculating Bernoulli numbers}{TaylorSeriesViaDivision}
+%\pmkeywords{Bernoulli numbers}
+\pmrelated{BinomialCoefficient}
+\pmrelated{BernoulliNumber}
+\pmrelated{BernoulliPolynomialsAndNumbers}
+\pmrelated{ErnstLindelof}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{formula} \PMlinkescapeword{simple}
+Let the \PMlinkname{real}{RealFunction} (or \PMlinkname{complex}{ComplexFunction}) functions $f$ and $g$ have the Taylor series
+$$f(x) \;=\; a_0+a_1(x-a)+a_2(x-a)^2+\ldots$$
+$$g(x) \;=\; b_0+b_1(x-a)+b_2(x-a)^2+\ldots$$
+on an interval $I$ (or a circle in $\mathbb{C}$) centered at\, $x = a$.\, If\, $b_0 \neq 0$, then also the quotient $\displaystyle\frac{f(x)}{g(x)}$ apparently has the derivatives of all \PMlinkname{orders}{HigherOrderDerivatives} on $I$.\, It is not hard to justify that if one \PMlinkname{divides}{Division} the series of $f$ by the series of $g$, the obtained series
+\begin{align}
+\frac{f(x)}{g(x)} \;=\; c_0+c_1(x-a)+c_2(x-a)^2+\ldots
+\end{align}
+is identically same as the Taylor series of $f(x)/g(x)$ on $I$.
+
+We consider the coefficients $c_n$ of (1) as undetermined \PMlinkescapetext{constants}.\, They can be determined by first multiplying, using Cauchy multiplication rule, the series (1) 
+and the series of $g$ and then by comparing the gotten coefficients of \PMlinkname{powers}{GeneralAssociativity} of $x\!-\!a$ with the corresponding coefficients of the series of $f$.\, Accordingly, we have the conditions
+\begin{align}
+a_0 \;=\; b_0c_0,\quad a_1 \;=\; b_0c_1+b_1c_0,\quad a_2 \;=\; b_0c_2+b_1c_1+b_2c_0,\quad \ldots
+\end{align}
+Since for every \PMlinkescapetext{index} $n$, the equation
+$$a_n \;=\; b_0c_n+b_1c_{n-1}+b_2c_{n-2}+\ldots+b_nc_0$$
+holds and\, $b_0 \neq 0$,\, we get the recurrence relation
+\begin{align}
+c_n \;=\; -\frac{b_1}{b_0}c_{n-1}-\frac{b_2}{b_0}c_{n-2}-\ldots-\frac{b_n}{b_0}c_0+\frac{a_n}{b_0}\quad\quad
+(n = 0,\,1,\,2,\,\ldots).
+\end{align}
+
+\textbf{Example.} We will calculate the Bernoulli numbers, which are the numbers $B_n$ appearing in the Taylor series of $\displaystyle\frac{x}{e^x-1}$ expanded with the powers of $x$:
+\begin{align}
+\frac{x}{e^x-1} \;=\; \sum_{n=1}^\infty\frac{B_n}{n!}x^n
+\end{align}
+This function has really all derivatives in the point\, $x = 0$,\, since in this point the \PMlinkname{inverse}{InverseNumber}\, $\frac{e^x-1}{x} = 1+\frac{x}{2!}+\frac{x^2}{3!}+\ldots$\, naturally has the derivatives and the value 1 distinct from zero.\, Let us think the division of $x$ by the Taylor series of $e^x\!-\!1$.
+ 
+Corresponding to (1), we denote the \PMlinkescapetext{right side} of (4) as $c_0+c_1x+c_2x^2+\ldots$.\, When we now think this series and the series $x+\frac{x^2}{2!}+\ldots+\frac{x^n}{n!}+\ldots$ of the denominator of
+$\displaystyle\frac{x}{e^x-1}$ to be multiplied, the result must be $x$, i.e. the coefficients of all powers of $x$ except the first power are 0.\, So the two first conditions corresponding to (2) are\, 
+$c_0 = 1$,\, $c_1+\frac{1}{2}c_0 = 0$;\, thus 
+$$c_0 \;=\; B_0 \;=\; 1,\qquad c_1 \;=\; B_1 \;=\; -\frac{1}{2}.$$
+Setting the coefficient of $x^n$ equal to zero gives the formula
+\begin{align}
+\frac{c_0}{n!}+\frac{c_1}{(n-1)!}+\ldots+\frac{c_{n-2}}{2!}+c_{n-1} \;=\; 0
+\end{align}
+for\, $n \geq 2$.\, Putting here\, $c_i = \frac{B_i}{i!}$\, to (5) we obtain
+$$\frac{B_0}{0!n!}+\frac{B_1}{1!(n-1)!}+\frac{B_2}{2!(n-2)!}+\ldots+\frac{B_{n-2}}{(n-2)!2!}+\frac{c_{n-1}}{(n-1)!} 
+\;=\; 0,$$
+and multiplying this by $n!$, 
+$${n\choose n}B_0+{n\choose n\!-\!1}{B_1}+{n\choose n\!-\!2}{B_2}+\ldots+{n\choose 2}B_{n-2}+{n\choose 1}c_{n-1} 
+\;=\; 0.$$
+This yields, by substituting the values of $B_0$ and $B_1$ and recalling that the odd Bernoulli numbers are zero ($n > 2$), the recursion formula
+$$\frac{1\!-\!2k}{2}+{2k\!+\!1\choose 2}{B_2}+{2k\!+\!1\choose 4}{B_4}+\ldots+
+{2k\!+\!1\choose 2k\!-\!2}B_{2k\!-\!2}+{2k\!+\!1\choose 2k}B_{2k} \;=\; 0$$
+for the even Bernoulli numbers $B_{2k}$ ($k = 1,\,2,\,\ldots$).\, It gives successively
+$$-\frac{1}{2}+3B_2 \;=\; 0,\quad -\frac{3}{2}+10B_2+5B_4 = 0,\quad -\frac{5}{2}+21B_2+35B_4+7B_6 \;=\; 0,\quad\ldots$$
+From here we obtain\, $B_2 = \frac{1}{6}$,\, $B_4 = -\frac{1}{30}$,\, $B_6 = \frac{1}{42}$,\, and so on.\\
+
+\textbf{Remark.}\, The method of using undetermined coefficients in division of power series is especially simple in the case that the denominator in (1) is a polynomial, because the number of the terms in the recursion formula (3) is, independently on $n$, below a finite bound.  Thus the method is applicable for expanding the rational functions to power series.  For example, if we want to expand $\frac{1}{1+x^2}$ with the powers of $x\!-\!1$, we write\, $1+x^2 = 2\!+\!2(x\!-\!1)\!+\!(x\!-\!1)^2$.\, The two first conditions corresponding to (2) are\, $2c_0 = 1$\, and\, 
+$2c_1+2c_0 = 0$,\, whence\, $c_0 = \frac{1}{2}$\, and\, $c_1 = -\frac{1}{2}$.\, The coefficient of $(x\!-\!1)^n$ gives the condition $2c_n+2c_{n-1}+c_{n-2} = 0$,\, whence the simple recursion formula\, $c_n = -c_{n-1}-\frac{1}{2}c_{n-2}$; the use of this is much more comfortable than the long division \,$1:(2\!+\!2(x\!-\!1)\!+\!(x\!-\!1)^2)$.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset I}.  Second edition.\, WSOY, Helsinki (1950).
+\end{thebibliography} 
+
+%%%%%
+%%%%%
+\end{document}

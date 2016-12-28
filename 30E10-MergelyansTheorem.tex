@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MergelyansTheorem}
+\pmcreated{2013-03-22 14:23:59}
+\pmmodified{2013-03-22 14:23:59}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Mergelyan's theorem}
+\pmrecord{7}{35897}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E10}
+\pmrelated{RungesTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{thm}[Mergelyan]
+Let $K \subset {\mathbb{C}}$ be a compact subset of the complex plane such that
+${\mathbb{C}} \backslash K$ (the complement of $K$) is connected, and let
+$f\colon K \to {\mathbb{C}}$ be a continuous function which is also holomorphic
+on the interior of $K.$  Then $f$ is the uniform limit on $K$ of holomorphic
+polynomials (polynomials in one complex variable).
+\end{thm}
+
+So for any $\epsilon > 0$ one can find a polynomial $p(z) = \sum_{j=1}^n a_j z^j$
+such that $\lvert f(z) - p(z) \rvert < \epsilon$ for all $z \in K.$
+
+Do note that this theorem is not a weaker version of Runge's theorem.  Here, we do not
+need $f$ to be holomorphic on a neighbourhood of $K,$ but just on the interior of $K.$  For example, if the interior of $K$ is empty, then $f$ just needs to be continuous on $K.$  Further, it could be that the closure of the interior of $K$
+might not be all of $K.$  Consider $K = D \cup [-10,10],$ where $D$
+is the closed unit disc.  Then $K$ has two lines coming out of either end of the disc and $f$ needs to only be continuous there.
+
+Also note that this theorem is distinct from the Stone-Weierstrass theorem.  The point here is that the polynomials are
+holomorphic in Mergelyan's theorem.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\bibitem{Rudin:realcomplex}
+Walter Rudin.
+{\em \PMlinkescapetext{Real and Complex Analysis}}.
+McGraw-Hill, Boston, Massachusetts, 1987.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

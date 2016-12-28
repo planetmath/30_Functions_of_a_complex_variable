@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IncompleteGammaFunctionRecurrenceFormula}
+\pmcreated{2013-03-22 15:36:50}
+\pmmodified{2013-03-22 15:36:50}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{incomplete gamma function recurrence formula}
+\pmrecord{6}{37537}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{33B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The incomplete gamma function satisfies the following recurrence formula:
+
+\[ \gamma (a+1,x) = a \gamma (a,x) - x^a e^{-x} \]
+
+This can be derived by integration by parts:
+
+\begin{eqnarray*}
+\int_0^x e^{-t} t^a \, dt &=&
+- \int_0^x t^a \, d e^{-t} \\
+&=& a \int_0^x t^{a-1} \, d e^{-t} - x^a e^{-x}
+\end{eqnarray*}
+
+In terms of other variants of the incomplete gamma function, the recursion relation appears as follows:
+
+\begin{eqnarray*}
+P (a+1,x) &=& P (a,x) - {x^a e^{-x} \over \Gamma (a+1)} \\
+\gamma^* (a-1,x) &=& x \gamma^* (a,x) + {e^{-x} \over \Gamma(a)} \\
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

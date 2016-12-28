@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolynomiallyConvexHull}
+\pmcreated{2013-03-22 14:21:15}
+\pmmodified{2013-03-22 14:21:15}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{polynomially convex hull}
+\pmrecord{6}{35833}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C10}
+\pmclassification{msc}{52A01}
+\pmrelated{HolomorphicallyConvex}
+\pmdefines{polynomially convex}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $K \subset {\mathbb{C}}$ be a compact subset of the complex plane,
+then the {\em polynomially convex hull} of $K$, denoted $\hat{K}$, is defined as
+\begin{equation*}
+\hat{K} :=
+\{ z \in {\mathbb{C}} : \lvert p(z) \rvert \leq \max_{\zeta \in K} \lvert p(\zeta) \rvert \text{ for all polynomials $p$ } \}.
+\end{equation*}
+A compact set $K$ is said to be {\em polynomially convex} if
+$K = \hat{K}$
+\end{defn}
+
+Obviously $K \subset \hat{K}$.  The intuitive idea behind this definition is that the polynomially convex hull of $K$ fills in any ``holes'' that may exist in $K$.
+The following proposition makes that precise.
+
+\begin{prop}
+If $K \subset {\mathbb{C}}$ is a polynomially convex set, then
+all the components of the interior of $K$ are simply connected.
+\end{prop}
+
+One of the reasons for this definition is the following result.
+
+\begin{prop}
+Let $f$ be a function analytic in an open neighbourhood $N$ of a compact set
+$K \subset
+{\mathbb{C}}$, and suppose that $f$ can be approximated by polynomials uniformly
+on compact subsets of $N$.  Then $f$ can be extended analytically to a neighbourhood of $\hat{K}$.
+\end{prop}
+
+For example if we take $K = \{ z \in {\mathbb{C}} : \lvert z \rvert = 1 \}$
+(the unit circle)
+then $\hat{K} = \{ z \in {\mathbb{C}} : \lvert z \rvert \leq 1 \}$ (the
+closed unit disc).  The fact that the inside of the disc belongs to
+$\hat{K}$ follows from the maximum modulus principle as polynomials are analytic functions.  The fact that $\hat{K}$ does not contain anything outside the
+closed unit disc follows by looking at the polynomial $p(z) = z$ which has
+always greater modulus outside of the unit disc then anywhere on the unit circle.  So if we have a function defined on a neighbourhood of the unit circle
+and which we can approximate uniformly on compact subsets of this
+neighbourhood
+by polynomials, then we can extend this function analytically
+to the whole unit disc.  So this for example implies that $f(z) := \frac{1}{z}$
+cannot be approximated uniformly on compact subsets by polynomials on a
+neighbourhood of the unit circle.
+
+The reason why we call $\hat{K}$ a ``hull'' of some \PMlinkescapetext{sort} is that the conventional convex hull of $K \subset {\mathbb{R}}^n$ can be defined as the set of points $x$ such that for all \emph{linear functions} $f \colon {\mathbb{R}}^n\to \mathbb{R}$ we have $\lvert f(x) \rvert \leq \sup_{y\in K} \lvert f(y) \rvert$.  This coincides with conventional definition because if $x$ is not in the conventional convex hull, then there is a linear functional that separates $x$ from the hull (by Hahn-Banach theorem in general, or more elementarily in ${\mathbb{R}}^n$ by Farkas's lemma), and conversely if $x$ is in the convex hull of $K$ then such linear function does not exist for the same reason.  So, intuitively the conventional convex hull is set of point that are inseparable from from $K$ by linear functions.  Polynomially convex hull is the same thing, but with polynomials.
+Of course similar definitions can be made with respect to other classes of functions.  For example, hulls with respect to plurisubharmonic functions are very useful in multivariate complex analysis.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

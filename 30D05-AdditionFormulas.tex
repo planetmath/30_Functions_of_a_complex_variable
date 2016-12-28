@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdditionFormulas}
+\pmcreated{2013-03-22 19:35:28}
+\pmmodified{2013-03-22 19:35:28}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{addition formulas}
+\pmrecord{6}{42580}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D05}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{26A99}
+\pmrelated{ExampleOnSolvingAFunctionalEquation}
+\pmrelated{ProofOfAdditionFormulaOfExp}
+\pmrelated{AdditionFormulasForSineAndCosine}
+\pmrelated{AdditionFormulaForTangent}
+\pmrelated{AdditionAndSubtractionFormulasForHyperbolicFunctions}
+\pmdefines{addition formula}
+\pmdefines{subtraction formula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{connection}
+
+The {\em addition formula} of a \PMlinkname{real}{RealFunction} or complex function shows how the value of the function at a sum-formed variable can be expressed with the values of this function and perhaps of another function at the addends.\\
+
+\textbf{Examples}
+\begin{enumerate}
+
+\item Addition formula of an additive function $f$,\\
+$f(x\!+\!y) = f(x)+f(y)$
+
+\item Addition formula of the natural power function, i.e. the binomial theorem,\\
+$(x\!+\!y)^n = \sum_{\nu = 0}^n {n\choose \nu} x^{\nu}y^{n-\nu}\qquad(n = 0,\,1,\,2,\,\ldots)$
+
+\item Addition formula of the \PMlinkname{exponential function}{ComplexExponentialFunction},\\
+$e^{x+y} = e^xe^y$
+
+\item Addition formulae of the \PMlinkname{trigonometric functions}{DefinitionsInTrigonometry}, e.g.\\
+$\cos(x\!+\!y) = \cos{x}\cos{y}-\sin{x}\sin{y},\footnote{The addition formula of cosine is sometimes called ``the mother of all formulae''.}\,\,\,\,
+\tan(x\!+\!y) = \frac{\tan{x}+\tan{y}}{1-\tan{x}\tan{y}}$
+
+\item Addition formulae of the hyperbolic functions, e.g.\\
+$\sinh(x\!+\!y) = \sinh{x}\cosh{y}+\cosh{x}\sinh{y}$
+
+\item Addition formula of the Bessel function,\\
+$J_n(x\!+\!y) = \sum_{\nu=-\infty}^{\infty}J_\nu(x)J_{n-\nu}(y)
+\qquad(n = 0,\,\pm1,\,\pm2,\,\ldots)$
+
+\end{enumerate}
+
+The five first of those are instances of \PMlinkescapetext{{\em algebraic addition formulae}}; e.g. $\cosh{x}$\, and \,$\sinh{x}$\, are tied together by the algebraic \PMlinkname{connection}{UnitHyperbola} \,$\cosh^2{x}-\sinh^2{x} = 1$.
+
+One may also speak of the {\em subtraction formulae} of functions --- one example would be\, $e^{x-y} = \frac{e^x}{e^y}$.
+
+%%%%%
+%%%%%
+\end{document}

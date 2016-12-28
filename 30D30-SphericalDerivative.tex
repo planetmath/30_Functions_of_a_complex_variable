@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SphericalDerivative}
+\pmcreated{2013-03-22 14:18:36}
+\pmmodified{2013-03-22 14:18:36}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{spherical derivative}
+\pmrecord{7}{35773}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+Let $G \subset {\mathbb{C}}$ be a domain.
+
+\begin{defn}
+Let $f \colon G \to {\mathbb{C}}$ be a meromorphic function, then the {\em spherical
+derivative} of $f$, denoted $f^\sharp$ is defined as
+\begin{equation*}
+f^\sharp(z) := \frac{2\lvert f'(z) \rvert}{1+\lvert f(z) \rvert^2}
+\end{equation*}
+for $z$ where $f(z) \not= \infty$ and when $f(z) = \infty$ define
+\begin{equation*}
+f^\sharp(z) = \lim_{\zeta \to z} f^\sharp(\zeta) .
+\end{equation*}
+\end{defn}
+
+The second definition makes sense since a meromorphic functions has
+only isolated poles, and thus $f^\sharp(\zeta)$ is defined by the first equation when we are close to $z$.  Some basic properties of the spherical derivative
+are as follows.
+
+\begin{prop}
+If $f \colon G \to {\mathbb{C}}$ is a meromorphic function
+then
+\begin{itemize}
+\item $f^\sharp$ is a continuous function,
+\item $f^\sharp(z) < \infty$ for all $z \in G$. 
+\end{itemize}
+\end{prop}
+
+Note that sometimes the spherical derivative is also denoted
+as $\mu(f)(z)$ rather then $f^\sharp(z)$.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\bibitem{Gamelin:complex}
+Theodore~B.\@ Gamelin.
+{\em \PMlinkescapetext{Complex Analysis}}.
+Springer-Verlag, New York, New York, 2001.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TrigonometricFormulasFromDeMoivreIdentity}
+\pmcreated{2013-03-22 18:51:16}
+\pmmodified{2013-03-22 18:51:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{trigonometric formulas from de Moivre identity}
+\pmrecord{16}{41664}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D05}
+\pmclassification{msc}{30A99}
+\pmrelated{TrigonometricFormulasFromSeries}
+\pmrelated{ReductionFormulas}
+\pmrelated{GoniometricFormulae}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{terms}
+De Moivre identity
+\begin{align}
+(\cos\varphi+i\sin\varphi)^n \,=\, \cos{n\varphi}+i\sin{n\varphi} \qquad (n \in \mathbb{Z})
+\end{align}
+implies simply some important trigonometric formulas, the derivation of which without imaginary numbers would require much longer calculations.\\
+
+
+When one expands the left hand side of (1) using the binomial theorem ($n > 0$), the sum of the real terms (the real part) must be $\cos{n\varphi}$ and the sum of the imaginary terms (cf. the imaginary part) must equal $i\sin{n\varphi}$.\, Thus both $\cos{n\varphi}$ and 
+$\sin{n\varphi}$ has been expressed as polynomials of $\sin\varphi$ and $\cos\varphi$ with integer coefficients.\\
+
+For example, if\, $n = 5$,\, we have
+$$(\cos\varphi+i\sin\varphi)^5 \;=\;
+\cos^5\varphi+5i\cos^4\varphi\sin\varphi-10\cos^3\varphi\sin^2\varphi
+-10i\cos^2\varphi\sin^3\varphi+5\cos\varphi\sin^4\varphi+i\sin^5\varphi,$$
+whence
+$$\cos{5\varphi} \;=\; \cos^5\varphi-10\cos^3\varphi\sin^2\varphi+5\cos\varphi\sin^4\varphi,$$
+$$\sin{5\varphi} \;=\; 5\cos^4\varphi\sin\varphi-10\cos^2\varphi\sin^3\varphi+\sin^5\varphi.$$
+By the ``fundamental formula''\, $\sin^2\varphi+\cos^2\varphi = 1$\, of trigonometry, the even powers on the right hand sides may be expressed with the other function; therefore we obtain
+\begin{align}
+\cos{5\varphi} \;=\; 16\cos^5\varphi-20\cos^3\varphi+5\cos\varphi,
+\end{align}
+\begin{align}
+\sin{5\varphi} \;=\; 16\sin^5\varphi-20\sin^3\varphi+5\sin\varphi.
+\end{align}
+
+\subsection{Linearisation formulas}
+There are also inverse formulas where one expresses the integer powers $\cos^m\varphi$ and $\sin^n\varphi$ and their products as the polynomials with rational coefficients of either $\cos\varphi$, $\cos2\varphi$, \ldots\, or 
+$\sin\varphi$, $\sin2\varphi$, \ldots,\, depending on whether it is a question of an \PMlinkname{even}{EvenFunction} or an odd function of $\varphi$.\, We will derive the transformation formulas.
+
+If we denote
+$$\cos\varphi+i\sin\varphi \;:=\; t,$$
+then the complex conjugate of $t$ is the same as its inverse number:
+$$\cos\varphi-i\sin\varphi \;=\; \frac{1}{t}.$$
+By adding and subtracting, these equations yield
+\begin{align}
+\cos\varphi \;=\; \frac{1}{2}\left(t+\frac{1}{t}\right), \quad \sin\varphi \;=\; \frac{1}{2i}\left(t-\frac{1}{t}\right).
+\end{align}
+Similarly, the equations
+$$(\cos\varphi+i\sin\varphi)^{\pm n} \,=\, \cos(\pm n\varphi)+i\sin(\pm n\varphi)$$
+yield
+\begin{align}
+\cos{n\varphi} \;=\; \frac{1}{2}\left(t^n+\frac{1}{t^n}\right), \quad 
+\sin{n\varphi} \;=\; \frac{1}{2i}\left(t^n-\frac{1}{t^n}\right).
+\end{align}
+for any integer $n$.\, The linearisation formulas are obtained by expanding first the expression to be linearised with the equations (4) and then simplifying the result with the equations (5).\\
+
+\textbf{Example 1.}
+\begin{align*}
+\cos^4\varphi & \;=\; \left(\frac{1}{2}\left(t+\frac{1}{t}\right)\right)^4\\
+& \;=\; \frac{1}{16}\left(t^4+4t^2+6+\frac{4}{t^2}+\frac{1}{t^4}\right)\\
+& \;=\; \frac{1}{16}\left(t^4+\frac{1}{t^4}\right)+\frac{1}{4}\left(t^2+\frac{1}{t^2}\right)+\frac{3}{8}\\
+& \;=\; \frac{1}{8}\cos4\varphi+\frac{1}{2}\cos2\varphi+\frac{3}{8}
+\end{align*}
+
+\textbf{Example 2.}
+\begin{align*}
+\cos^4\varphi\sin^3\varphi &\;=\; \frac{1}{16}\left(t+\frac{1}{t}\right)^4\frac{-1}{8i}\left(t-\frac{1}{t}\right)^3\\
+&\;=\; -\frac{1}{128i}\left(t^2-\frac{1}{t^2}\right)^3\left(t+\frac{1}{t}\right)\\
+&\;=\; -\frac{1}{128i}\left(t^6-3t^2+\frac{3}{t^2}-\frac{1}{t^6}\right)\left(t+\frac{1}{t}\right)\\
+&\;=\; -\frac{1}{128i}\left(t^7-3t^3+\frac{3}{t}-\frac{1}{t^5}-3t+\frac{3}{t^3}-\frac{1}{t^7}\right)\\
+&\;=\; -\frac{1}{128i}\left(\left(t^7-\frac{1}{t^7}\right)+\left(t^5-\frac{1}{t^5}\right)
+-3\left(t^3-\frac{1}{t^3}\right)-3\left(t-\frac{1}{t}\right)\right)\\
+&\;=\; -\frac{1}{64}\sin7\varphi-\frac{1}{64}\sin5\varphi+\frac{3}{64}\sin3\varphi+\frac{3}{64}\sin\varphi
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

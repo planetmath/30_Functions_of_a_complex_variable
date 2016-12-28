@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuasisymmetricMapping}
+\pmcreated{2013-03-22 14:06:45}
+\pmmodified{2013-03-22 14:06:45}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{quasisymmetric mapping}
+\pmrecord{8}{35516}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C65}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{26A12}
+\pmrelated{QuasiconformalMapping}
+\pmrelated{BeurlingAhlforsQuasiconformalExtension}
+\pmdefines{$M$-condition}
+\pmdefines{quasisymmetric}
+\pmdefines{$M$-quasisymmetric}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A function $\mu$ of the real line to itself is \emph{quasisymmetric} (or \emph{$M$-quasisymmetric}) if it satisfies the following $M$-condition. 
+
+There exists an $M$, such that for all $x, t$ (where $t \not= x$)
+\begin{equation*}
+\frac{1}{M}
+\leq
+\frac{\mu(x+t) - \mu(x)}{\mu(x)-\mu(x-t)}
+\leq
+M
+.
+\end{equation*}
+Geometrically this means that the ratio of the length of the intervals $\mu[(x-t,x)]$ and $\mu[(x,x+t)]$ is bounded.  This implies among other things that the function is one-to-one and continuous.
+
+For example powers (as long as you make them one-to-one by for example using an odd power, or defining them as $-|x|^p$ for negative $x$ and $|x|^p$ for positive $x$ where $p > 0$) are quasisymmetric.  On the other hand functions like $e^x - e^{-x}$, while one-to-one, onto and continuous, are not quasisymmetric.  It would seem like a very strict condition, however it has been shown that there in fact exist functions that are quasisymmetric, but are not even absolutely continuous.
+
+Quasisymmetric functions are an analogue of quasiconformal mappings.
+%%%%%
+%%%%%
+\end{document}

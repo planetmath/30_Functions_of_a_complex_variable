@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocallyBounded}
+\pmcreated{2013-03-22 14:17:47}
+\pmmodified{2013-03-22 14:17:47}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{locally bounded}
+\pmrecord{9}{35752}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{54-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+Suppose that $X$ is a topological space and $Y$ a metric space.  
+
+\begin{defn}
+A set ${\mathcal{F}}$
+of functions $f\colon X \to Y$ is said to be {\em locally bounded} if for
+every $x \in X$, there exists a neighbourhood $N$ of $x$ such that ${\mathcal{F}}$ is uniformly bounded on $N$.
+\end{defn}
+
+In the special case of functions on the complex plane where it
+is often used, the definition can be given as follows.
+
+\begin{defn}
+A set ${\mathcal{F}}$ of functions $f\colon G \subset {\mathbb{C}} \to {\mathbb{C}}$ is said to be {\em locally bounded} if for every $a \in G$
+there exist constants $\delta > 0$ and $M > 0$ such that for all
+$z \in G$ such that $\lvert z-a \rvert < \delta$, $\lvert f(z) \rvert < M$ for all $f \in {\mathcal{F}}$.
+\end{defn}
+
+As an example we can look at the set ${\mathcal{F}}$ of entire functions where
+$f(z) = z^2 + t$ for any $t \in [0,1]$.  Obviously each such $f$ is unbounded
+itself, however if we take a small neighbourhood around any point we can
+bound all $f \in {\mathcal{F}}$.  Say on an open ball $B(z_0,1)$ we can show
+by triangle inequality that $\lvert f(z) \rvert \leq (\lvert z_0 \rvert +1)^2 + 1$
+for all $z \in B(z_0,1)$.  So this set of functions is locally bounded.
+
+Another example would be say the set of all analytic functions from
+some region $G$ to the unit disc.  All those functions are bounded by 1,
+and so we have a uniform bound even over all of $G$.
+
+As a counterexample suppose the we take the constant functions $f_n(z) = n$ for
+all natural numbers $n$.  While each of these functions is itself bounded,
+we can never find a uniform bound for all such functions.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfInfiniteProducts}
+\pmcreated{2013-03-22 14:02:32}
+\pmmodified{2013-03-22 14:02:32}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{examples of infinite products}
+\pmrecord{5}{35391}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmrelated{ComplexTangentAndCotangent}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{connection}
+\PMlinkescapeword{decomposition}
+A classic example is the Riemann zeta function.
+For $\Re(z)>1$ we have
+$$\zeta(z)=\sum_{n=1}^\infty\frac{1}{n^z}=
+\prod_{p\text{ prime}}\frac{1}{1-p^{-z}}\;.$$
+With the help of a Fourier series, or in other ways, one can prove
+this infinite product expansion of the sine function:
+\begin{equation} \label{eq:sin}
+\sin z=z\prod_{n=1}^\infty\left(1-\frac{z^2}{n^2\pi^2}\right)
+\end{equation}
+where $z$ is an arbitrary complex number.
+Taking the logarithmic derivative (a frequent move in connection with
+infinite products) we get a decomposition
+of the cotangent into partial fractions:
+\begin{equation} \label{eq:1}
+\pi\cot\pi z=\frac{1}{z}+\sum_{n=1}^\infty
+\left(\frac{1}{z+n}+\frac{1}{z-n}\right)\;.
+\end{equation}
+The equation \eqref{eq:1}, in turn, has some interesting uses, e.g. to get
+the Taylor expansion of an Eisenstein series, or to evaluate
+$\zeta(2n)$ for positive integers $n$.
+%%%%%
+%%%%%
+\end{document}

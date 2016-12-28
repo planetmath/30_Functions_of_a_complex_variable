@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PaleyWienerTheorem}
+\pmcreated{2013-03-22 15:25:42}
+\pmmodified{2013-03-22 15:25:42}
+\pmowner{Gorkem}{3644}
+\pmmodifier{Gorkem}{3644}
+\pmtitle{Paley-Wiener theorem}
+\pmrecord{14}{37275}
+\pmprivacy{1}
+\pmauthor{Gorkem}{3644}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f(z)$ be an entire function such that $\vert f(z)\vert \leq K
+e^{\gamma \vert z\vert}$ for some $K \geq 0$ and
+$\gamma > 0$. If the restriction of $f$ to the real line
+is in $L^2(\mathbb{R})$, then there exists a function  
+$g(t)\in L^2(-\gamma, \gamma)$ such that
+$$ f(z) = \frac{1}{\sqrt{2\pi}}\int_{-\gamma}^{\gamma}g(t)e^{izt}dt$$
+for all $z$. 
+%%%%%
+%%%%%
+\end{document}

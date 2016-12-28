@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticContinuation}
+\pmcreated{2014-03-13 16:38:30}
+\pmmodified{2014-03-13 16:38:30}
+\pmowner{rspuzio}{6075}
+\pmmodifier{pahio}{2872}
+\pmtitle{analytic continuation}
+\pmrecord{16}{36287}
+\pmprivacy{1}
+\pmauthor{rspuzio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B40}
+\pmclassification{msc}{30A99}
+\pmrelated{AnalyticContinuationOfRiemannZeta}
+\pmrelated{AnalyticContinuationOfGammaFunction}
+\pmdefines{analytic continuation along an arc}
+\pmdefines{analytic continuation along a path}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{simple}
+
+Suppose that $D_1$ and $D_2$ are connected open subsets of the complex plane 
+and that $D_1 \subset D_2$.  Suppose that $f \colon D_1 \to \mathbb{C}$ and $g \colon D_2 \to \mathbb{C}$ are analytic.  If the restriction of $g$ to $D_1$ equals $f$, we say that $g$ is a \emph{direct analytic continuation} of $f$.
+
+The reason that the notion of analytic continuation is interesting is the rigidity theorem for complex functions, which implies that analytic continuation is unique.  This is in marked contrast to what would happen if, instead of analyticity, we only required a weaker condition such as continuity.  In that case, there would exist a great number of continuations of a given function to a larger domain.  In fact there are so many possibilities that the choice of continuation is largely arbitrary --- one can find a continuation which agrees with any continuous function on a subset of $D_2$ which is separated from $D_1$.
+
+One can generalize this notion to continuation along a chain of open sets.
+Suppose that one has a sequence of open sets\, 
+$D_1,\ldots,D_n$\,  such that
+$D_k \cap D_{k+1}$ is not empty for $k$ between $1$ and $n-1$ and $n$ functions
+$f_k \colon D_k \to \mathbb{C}$ such that $f_k (z) = f_{k+1} (z)$ when 
+$z \in D_k \cap D_{k+1}$ for all $k$ between $1$ and $n-1$.  Then we say
+that $f_n$ is the \emph{indirect analytic continuation} of 
+$f_1$ along the chain\, $D_1,\ldots,D_n$.
+
+A related notion is that of analytic continuation along an arc.  Given an arc $C$ with endpoints $x$ and $y$, a function $f$ defined in open neighborhood of $x$, and a function $g$ defined in open neighborhood of $y$ we say that $g$ is the analytic continuation of $f$ along the arc $C$ if there exists an open set containing $C$ and and an analytic function $h$ defined on this open set such that $f$ agrees with $h$ at those points of the complex plane where both $f$ and $h$ are defined and $g$ agrees with $h$ at those points of the complex plane where both $g$ and $h$ are defined.  By the rigidity theorem, the analytic continuation of a function along an arc is unique.\, This concerns especially extending a real function to an analytic function of a complex variable.
+
+It is worth noting that it is possible to obtain different analytic continuations of the same function along two arcs with the same endpoints.  For instance, if we let $f$ be the square root function, let $x=1$ and $y=-1$, and let $C_1$ and $C_2$ be the two halves of the unit circle joining $x$ to $y$, then the result of analytically continuing $f$ from $x$ to $y$ along $C_1$ differs from the result of analytically continuing $f$ from $x$ to $y$ along $C_2$.
+
+This seems to contradict the uniqueness of analytic continuation.  This contradiction, however, is only apparent because there does not exist a single open set which contains both $C_1$ and $C_2$ to which $f$ can be analytically continued.  In fact, in order to accommodate both the analytic continuation along $C_1$ and the analytic continuation along $C_2$, one needs to define $f$ on a Riemann surface.  Then there exists an open subset of the Riemann surface which contains the lifts of both $C_1$ and $C_2$.  Since the lift of the endpoint of the lift of $C_1$ lies on a different sheet of the Riemann surface than the endpoint of the lift of $C_2$, there is nothing contradictory about the fact that the analytic continuation of $f$ assumes different values at these two distinct points on the Riemann surface.
+
+The notion of analytic continuation along an arc can be extended to analytic continuation along a path.  Any path can be written as the union of overlapping arcs.  To continue a function along a path, one successively continues it along the various arcs into which the path has been decomposed.  It is a simple consequence of the rigidity theorem that the result of analytically continuing a function along a path is independent of the decomposition of the path into arcs.
+%%%%%
+%%%%%
+\end{document}

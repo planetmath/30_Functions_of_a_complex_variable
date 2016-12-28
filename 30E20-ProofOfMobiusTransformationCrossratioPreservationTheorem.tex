@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMobiusTransformationCrossratioPreservationTheorem}
+\pmcreated{2013-03-22 14:08:20}
+\pmmodified{2013-03-22 14:08:20}
+\pmowner{Johan}{1032}
+\pmmodifier{Johan}{1032}
+\pmtitle{Proof of M\"obius transformation cross-ratio preservation theorem}
+\pmrecord{5}{35553}
+\pmprivacy{1}
+\pmauthor{Johan}{1032}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+From the definition of M\"obius transform we get
+that the image $w_k$ of a point $z_k$ is
+$$
+w_k = \frac{az_k+b}{cz_k+d}
+$$
+From this we get
+$$
+w_i - w_j = \frac{az_i+b}{cz_i+d} - \frac{az_j+b}{cz_j+d}
+= \frac{(ad-bc)(z_i-z_j)}{(cz_i+d)(cz_j+d)}
+$$
+and by inserting this into the cross-ratios
+$$
+\frac{(w_1-w_2)(w_3-w_4)}{(w_1-w_4)(w_3-w_2)} =
+\frac{\frac{(ad-bc)(z_1-z_2)}{(cz_1+d)(cz_2+d)}\frac{(ad-bc)(z_3-z_4)}{(cz_3+d)(cz_4+d)}}{\frac{(ad-bc)(z_1-z_4)}{(cz_1+d)(cz_4+d)}\frac{(ad-bc)(z_3-z_2)}{(cz_3+d)(cz_2+d)}} =  \frac{(z_1-z_2)(z_3-z_4)}{(z_1-z_4)(z_3-z_2)}
+$$
+%%%%%
+%%%%%
+\end{document}

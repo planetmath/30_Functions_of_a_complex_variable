@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SensepreservingMapping}
+\pmcreated{2013-03-22 14:08:01}
+\pmmodified{2013-03-22 14:08:01}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{sense-preserving mapping}
+\pmrecord{5}{35546}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{26B05}
+\pmsynonym{orientation-preserving}{SensepreservingMapping}
+\pmrelated{Orientation}
+\pmrelated{Jacobian}
+\pmrelated{Curve}
+\pmdefines{sense-preserving}
+\pmdefines{sense-reversing}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A continuous mapping which preserves the orientation of a Jordan curve is called sense-preserving or orientation-preserving.  If on the other hand a mapping reverses the orientation, it is called sense-reversing.
+
+If the mapping is furthermore differentiable then the above statement is equivalent to saying that the Jacobian is strictly positive at every point of the domain.
+
+An example of sense-preserving mapping is any conformal mapping $f : {\mathbb{C}} \rightarrow {\mathbb{C}}$.  If you however look at the mapping $g(z) := f(\bar{z})$, then that is a sense-reversing mapping.  In general if $f : {\mathbb{C}} \rightarrow {\mathbb{C}}$ is a smooth mapping then the Jacobian in fact is defined as $J = |f_z| - |f_{\bar{z}}|$, and so a mapping is sense preserving if the modulus of the partial derivative with respect to $z$ is strictly greater then the modulus of the partial derivative with respect to $\bar{z}$.
+
+This does not \PMlinkescapetext{mean} that this notion is \PMlinkescapetext{restricted} to the complex plane.  For example $f : {\mathbb{R}} \rightarrow {\mathbb{R}}$ defined by $f(x) = 2x$ is a sense preserving mapping, while $f(x) = x^2$ is sense preserving only on the
+interval $(0,\infty)$.
+%%%%%
+%%%%%
+\end{document}

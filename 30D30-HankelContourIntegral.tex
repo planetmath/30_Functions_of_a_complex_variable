@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HankelContourIntegral}
+\pmcreated{2013-03-22 17:27:50}
+\pmmodified{2013-03-22 17:27:50}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{Hankel contour integral}
+\pmrecord{5}{39847}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{33B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+Hankel's contour integral is a unit (and nilpotent) for gamma function over $\mathbb{C}$. That is,
+$$\left(\frac{i}{2\pi}\int_\mathcal{C}(-t)^{-z}e^{-t}dt\right)\Gamma(z)=1, \qquad |z|<\infty.$$
+Hankel's integral is holomorphic with simple zeros in $\mathbb{Z}_{\leq 0}$. Its path of integration starts on the positive real axis \emph{ad infinitum}, rounds the origin counterclockwise and returns to $+\infty$. As an example of application of Hankel's integral, we have
+$$\frac{i}{2\pi}\int_\mathcal{C}(-t)^{-\frac{1}{2}}e^{-t}dt=\frac{1}{\sqrt{\pi}}\,,$$
+where the path of integration is the one above mentioned.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructionOfRiemannSurfaceUsingPaths}
+\pmcreated{2013-03-22 14:44:23}
+\pmmodified{2013-03-22 14:44:23}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{construction of Riemann surface using paths}
+\pmrecord{21}{36376}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30F99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Note: All arcs and curves are assumed to be smooth in this entry.
+
+Let $f$ be a complex function defined in a disk $D$ about a point $z_0 \in \mathbb{C}$.  In this entry, we shall show how to construct a Riemann surface such that $f$ may be analytically continued to a function on this surface by considering paths in the complex plane.
+
+Let ${\cal P}$ denote the class of paths on the complex plane having $z_0$ as an endpoint along which $f$ may be analytically continued.  We may define an equivalence relation $\sim$ on this set --- $C_1 \sim C_2$ if $C_1$ and $C_2$ have the same endpoint and there exists a one-parameter family of paths along which $f$ can be analytically continued which includes $C_1$ and $C_2$.
+
+Define ${\cal S}$ as the quotient of ${\cal P}$ modulo $\sim$.  It is possible to extend $f$ to a function on ${\cal S}$.  If $C \in {\cal P}$, let $f(C)$ be the value of the analytic continuation of $f$ at the endpoint of $C$ (not $z_0$, of course, but the other endpoint).  By the monodromy theorem, if $C_1 \sim C_2$, then $f(C_1) = f(C_2)$.  Hence, $f$ is well defined on the quotient ${\cal S}$.
+
+Also, note that there is a natural projection map $\pi \colon {\cal S} \to \mathbb{C}$.  If $C$ is an equivalence class of paths in ${\cal S}$, define $\pi (C)$ to be the common endpoint of those paths (not $z_0$, of course, but the other endpoint).
+
+Next, we shall define a class of subsets of ${\cal S}$.  If $f$ can be analytically continued from along a path $C$ from $z_0$ to $z_1$ then there must exist an open disk $D'$ centered about $z_1$ in which the continuation of $f$ is analytic.  Given any $z \in D'$, let $C(z)$ be the concatenation of the path $C$ from $z_0$ to $z_1$ and the straight line segment from $z_1$ to $z$ (which lies inside $D'$).  Let $N(C, D') \subset {\cal S}$ be the set of all such paths.
+
+We will define a topology of ${\cal S}$ by taking all these sets $N(C,D')$ as a basis.  For this to be legitimate, it must be the case that, if $C_3$ lies in the intersection of two such sets, $N(C_1,D_1)$ and $N(C_2,D_2)$ there exists a basis element $N(C_3,D_3)$ contained in the intersection of $N(C_1,D_1)$ and $N(C_2,D_2)$.  Since the endpoint of $C_3$ lies in the intersection of $D_1$ and $D_2$, there must exist a disk $D_3$ centered about this point which lies in the intersection of $D_1$ and $D_2$.  It is easy to see that $N(C_3,D_3) \subset N(C_1,D_1) \cap N(C_2,D_2)$.
+
+Note that this topology has the Hausdorff property.  Suppose that $C_1$ and $C_2$ are distinct elements of ${\cal S}$.  On the one hand, if $\pi (C_1) \ne \pi (C_2)$, then one can find disjoint open disks $D_1$ and $D_2$ centered about $C_1$ and $C_2$.  Then $N(C_1,D_1) \cap N(C_2,D_2) = \emptyset$ because $\pi (N(C_1,D_1)) \cap \pi(N(C_2,D_2)) = D_1 \cap D_2 = \emptyset$.  On the other hand, if $\pi (C_1) = \pi (C_2)$, then let $D_3$ be the smaller of the disks $D_1$ and $D_2$.  Then $N(C_1,D_3) \cap N(C_2,D_3) = \emptyset$.
+
+To complete the proof that ${\cal S}$ is a Riemann surface, we must exhibit coordinate neighborhoods and homomorphisms.  As coordinate neighborhoods, we shall take the neighborhoods $N(C,D)$ introduced above and as homomorphisms we shall take the restrictions of $\pi$ to these neighborhoods.  By the way that these neighborhoods have been defined, every element of ${\cal S}$ lies in at least one such neighborhood.  When the domains of two of these homomorphisms overlap, the composition of one homomorphism with the inverse of the restriction of the other homomorphism to the overlap region is simply the identity map in the overlap region, which is analytic.  Hence, ${\cal S}$ is a Riemann surface.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexSineAndCosine}
+\pmcreated{2013-03-22 14:45:25}
+\pmmodified{2013-03-22 14:45:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{complex sine and cosine}
+\pmrecord{31}{36398}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D10}
+\pmclassification{msc}{30B10}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{33B10}
+%\pmkeywords{power series}
+\pmrelated{EulerRelation}
+\pmrelated{CyclometricFunctions}
+\pmrelated{ExampleOfTaylorPolynomialsForSinX}
+\pmrelated{ComplexExponentialFunction}
+\pmrelated{DefinitionsInTrigonometry}
+\pmrelated{PersistenceOfAnalyticRelations}
+\pmrelated{CosineAtMultiplesOfStraightAngle}
+\pmrelated{HeavisideFormula}
+\pmrelated{SomeValuesCharacterisingI}
+\pmrelated{UniquenessOfFouri}
+\pmdefines{complex sine}
+\pmdefines{complex cosine}
+\pmdefines{sine}
+\pmdefines{cosine}
+\pmdefines{goniometric formula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We define for all complex values of $z$:
+\begin{itemize}
+\item $\displaystyle\sin{z} \;:=\; z\!-\!\frac{z^3}{3!}\!+\!\frac{z^5}{5!}\!-\!\frac{z^7}{7!}\!+-\ldots$
+\item $\displaystyle\cos{z} \;:=\; 1\!-\!\frac{z^2}{2!}\!+\!\frac{z^4}{4!}\!-\!\frac{z^6}{6!}\!+-\ldots$
+\end{itemize}
+Because these series converge for all real values of $z$, their radii of convergence are $\infty$, and therefore they converge for all complex values of $z$ (by a known \PMlinkescapetext{theorem} of Abel; cf. the entry power series), too.\, Thus they define holomorphic functions in the whole complex plane, i.e. entire functions (to be more precise, entire transcendental functions).\, The series also show that sine is an odd function and cosine an even function.
+
+Expanding the complex exponential functions $e^{iz}$ and $e^{-iz}$ to power series and separating the \PMlinkescapetext{terms} of even and odd degrees gives the generalized Euler's formulas
+     $$e^{iz} \;=\; \cos{z}+i\sin{z},\quad e^{-iz} \;=\; \cos{z}-i\sin{z}.$$
+Adding, subtracting and multiplying these two formulae give respectively the two Euler's formulae
+\begin{align}
+\cos{z} \;=\; \frac{e^{iz}\!+\!e^{-iz}}{2}, \quad\sin{z} \;=\; \frac{e^{iz}\!-\!e^{-iz}}{2i}
+\end{align}
+(which sometimes are used to define cosine and sine) and the ``fundamental formula of trigonometry''
+                $$\cos^2{z}+\sin^2{z} \;=\; 1.$$
+As consequences of the generalized Euler's formulae one gets easily the addition formulae of sine and cosine:
+$$\sin{(z_1\!+\!z_2)} \;=\; \sin{z_1}\cos{z_2}+\cos{z_1}\sin{z_2},$$
+$$\cos{(z_1\!+\!z_2)} \;=\; \cos{z_1}\cos{z_2}-\sin{z_1}\sin{z_2};$$
+so they are in $\mathbb{C}$ fully \PMlinkescapetext{similar} as in $\mathbb{R}$.\, It means that all {\em goniometric} formulae derived from these, such as
+$$\sin{2z} \;=\; 2\sin{z}\cos{z}, \quad \sin{(\pi\!-\!z)} \;=\; \sin{z}, \quad
+ \sin^2{z} \;=\; \frac{1-\cos{2z}}{2},$$
+have the old shape.\, See also the persistence of analytic relations.
+
+The addition formulae may be written also as
+$$\sin{(x\!+\!iy)} \;=\; \sin{x}\cosh{y}+i\cos{x}\sinh{y},$$
+$$\cos{(x\!+\!iy)} \;=\; \cos{x}\cosh{y}-i\sin{x}\sinh{y}$$
+which imply, when assumed that\, $x,\,y\in\mathbb{R}$,\, the results
+$$\mbox{Re}(\sin(x\!+\!iy)) \;=\; \sin{x}\cosh{y}, \quad 
+  \mbox{Im}(\sin(x\!+\!iy)) \;=\; \cos{x}\sinh{y},$$
+$$\mbox{Re}(\cos(x\!+\!iy)) \;=\; \cos{x}\cosh{y}, \quad 
+  \mbox{Im}(\cos(x\!+\!iy)) \;=\; -\sin{x}\sinh{y}.$$
+Thus we get the modulus estimation
+$$\begin{array}{l}
+|\sin(x\!+\!iy)| \;=\; \sqrt{\sin^2{x}\cosh^2{y}+\cos^2{x}\sinh^2{y}} \;=\; 
+\sqrt{\sin^2{x}\cosh^2{y}+(1-\sin^2{x})\sinh^2{y}}\\ \;=\; 
+\sqrt{\sin^2{x}(\cosh^2{y}-\sinh^2{y})+\sinh^2{y}} \;=\;
+\sqrt{\sin^2{x}\,\cdot 1 +\sinh^2{y}} \;\ge\; |\sinh{y}|,
+\end{array}$$
+which tends to infinity when\, $z = x\!+\!iy$\, moves to infinity along any line non-parallel to the real axis.\, The modulus of $\cos(x\!+\!iy)$ behaves similarly.
+
+Another important consequence of the addition formulae is that the functions $\sin$ and $\cos$ are periodic and have $2\pi$ as their 
+\PMlinkname{prime period}{ComplexExponentialFunction}:
+$$\sin{(z\!+\!2\pi)} \;=\; \sin{z},\quad \cos{(z\!+\!2\pi)} \;=\; \cos{z} \quad \forall z$$
+
+The periodicity of the functions causes that their inverse functions, the {\em complex cyclometric functions}, are infinitely multivalued; they can be expressed via the complex logarithm and square root (see general power) as
+$$\arcsin{z} \;=\; \frac{1}{i}\log(iz\!+\!\sqrt{1\!-\!z^2}), \quad
+  \arccos{z} \;=\; \frac{1}{i}\log(z\!+\!i\sqrt{1\!-\!z^2}).$$
+
+The derivatives of sine function and cosine function are obtained either from the series forms or from (1):
+$$\frac{d}{dz}\sin{z} \;=\; \cos{z}, \quad \frac{d}{dz}\cos{z} \;=\; -\sin{z}$$
+Cf. the \PMlinkname{higher derivatives}{HigherOrderDerivativesOfSineAndCosine}.
+%%%%%
+%%%%%
+\end{document}

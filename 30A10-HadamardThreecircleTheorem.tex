@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HadamardThreecircleTheorem}
+\pmcreated{2013-03-22 14:10:45}
+\pmmodified{2013-03-22 14:10:45}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Hadamard three-circle theorem}
+\pmrecord{7}{35605}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A10}
+\pmclassification{msc}{30C80}
+\pmrelated{MaximumPrinciple}
+\pmrelated{LogarithmicallyConvexFunction}
+\pmrelated{HardysTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+Let $f(z)$ be a complex analytic function on the annulus
+$r_1\leq\abs{z}\leq r_3$. Let $M(r)$ be the maximum of
+$\abs{f(z)}$ on the circle $\abs{z}=r$. Then $\log M(r)$ is a
+convex function of $\log r$. Moreover, if $f(z)$ is not of the form $cz^\lambda$ for some $\lambda$, then $\log M(r)$ is a \PMlinkname{strictly convex}{ConvexFunction} as a function of $\log r$.
+
+The conclusion of the theorem can be restated as
+\begin{equation*}
+\log\frac{r_3}{r_1} \log M(r_2) \leq \log\frac {r_3}{r_2} \log M(r_1) + 
+\log\frac {r_2}{r_1} \log M(r_3)
+\end{equation*}
+for any three concentric circles of radii $r_1<r_2<r_3$.
+%%%%%
+%%%%%
+\end{document}

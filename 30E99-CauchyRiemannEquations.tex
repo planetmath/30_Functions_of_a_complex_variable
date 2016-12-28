@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyRiemannEquations}
+\pmcreated{2013-03-22 12:55:36}
+\pmmodified{2013-03-22 12:55:36}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Cauchy-Riemann equations}
+\pmrecord{5}{33281}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+\pmrelated{Holomorphic}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\begin{document}
+The following system of partial differential
+equations 
+$$
+\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y},\quad
+\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x},
+$$
+where $u(x,y), v(x,y)$ are real-valued functions defined on some
+open subset of $\reals^2$, was introduced by Riemann[1] as a
+definition of a holomorphic function.  Indeed, if $f(z)$ satisfies the
+standard definition of a holomorphic function, i.e. if the
+complex derivative
+$$f'(z) = \lim_{\zeta\rightarrow 0} \frac{f(z+\zeta)-f(z)}{\zeta}$$
+exists in the domain of definition, then the real and imaginary parts
+of $f(z)$
+satisfy the Cauchy-Riemann equations.
+Conversely, if $u$ and $v$ satisfy the Cauchy-Riemann equations, and if their
+partial derivatives are continuous, then the complex valued function
+$$f(z) = u(x,y) + i v(x,y),\quad z=x+i y,$$
+possesses a continuous complex derivative.
+
+\paragraph{References}
+
+\begin{enumerate}
+\item D. Laugwitz, \emph{Bernhard Riemann, 1826-1866:
+ Turning points in the Conception of
+ Mathematics}, translated by Abe Shenitzer. Birkhauser, 1999.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

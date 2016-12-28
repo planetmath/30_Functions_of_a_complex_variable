@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SeriesInversion}
+\pmcreated{2013-03-22 15:39:09}
+\pmmodified{2013-03-22 15:39:09}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{series inversion}
+\pmrecord{8}{37585}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+The method of \emph{series inversion} allows us to derive the power series
+of an inverse function $f^{-1}$ given the power series of $f$.
+
+Clearly, since we are representing function $f$ and $f^{-1}$ by power series,
+the function $f$ must necessarily be holomorphic; that is, it is differentiable
+as a complex-valued function on an open subset of the complex plane.
+(It follows that $f^{-1}$ must also be holomorphic.)
+Holomorphic functions include the elementary functions studied in calculus
+such as $\sin$, $\cos$, $\tan$ and $\exp$.
+
+For the method to work smoothly, it is best to assume that we want
+to invert $f$ at around the origin, and its value there is zero.
+There is no loss of generality, since
+if $f(b) = a$, we can apply series inversion to the function $g$ defined
+by $f(z) = a + g(z-b)$.
+Then $f^{-1}(w) = g^{-1}(w-a) + b$;
+we obtain the power series for $f^{-1}$ centred at $a$.
+
+Also, it must be true that $f'(0) \neq 0$, otherwise $f$ will not even
+be invertible around the origin.
+
+\section*{An example}
+
+We explain the method by an example, for $f(z) = \arctan z$.
+In the following, we will consistently use the notation $O(z^n)$
+to denote a holomorphic function $h(z)$ whose power series expansion begins
+with $z^n$.  And similarly when $z$ is replaced with the variable $w$.
+
+First, we start with the well-known power series expansion for $w = \arctan z$:
+\begin{equation}
+\label{eq:arctan}
+w = z - \frac{z^3}{3} + \frac{z^5}{5} + O(z^7)\,.
+\end{equation}
+The number of explicit terms in the power series expansion determines
+the number of terms that we will be able to obtain
+in the power series expansion of $f^{-1}$.
+So in this case, we are going to seek an expansion
+of $f^{-1}(w) = \tan w$ up to (but excluding) the $w^7$ term.
+
+A simple rearrangement of \eqref{eq:arctan} gives
+\begin{equation}
+\label{eq:z}
+z = w + \frac{z^3}{3} - \frac{z^5}{5} + O(z^7)
+\end{equation}
+
+Now we \emph{substitute equation \eqref{eq:z} into itself}.
+Of course, usually when we substitute an equation into itself
+we do not get anything, but here it works because we can 
+\emph{perform simplications using the $O$ notation}.
+So for instance, in the following,
+in second term $z^3/3$ on the right of equation \eqref{eq:z}, we put in
+equation \eqref{eq:z} simplified to $z = w + O(z^3)$.
+Why we should choose this simplication will be clear in a moment:
+\begin{align}
+\label{eq:z3}
+z &= w + \frac{1}{3} \Bigl( w + O(z^3) \Bigr)^3 - \frac{z^5}{5} + O(z^7) \\
+&= w + \frac{1}{3} \Bigl( w^3 + O(z^3) (w^2 + \dotsb) \Bigr) - \frac{z^5}{5} + O(z^7) \\
+\label{eq:Ow3}
+&= w + \frac{1}{3} \Bigl( w^3 + O(w^3) \cdot O(w^2) \Bigr) + O(w^5)\,.
+\end{align}
+In equation \eqref{eq:Ow3} we used the fact that the expansion
+for $z = f^{-1}(w)$ \emph{must begin} with a $w$ term, i.e.
+$f^{-1}(0) = 0$.  Also note that we are guaranteed that the $w$ and $z$ terms
+have non-zero coefficients, because $f'(0) \neq 0$.  (Otherwise
+we would not be able to isolate $z$ in equation \eqref{eq:z}.)
+
+Now equation \eqref{eq:Ow3} simplifies to
+\begin{equation}
+\label{eq:Ow5}
+z = w + \frac{w^3}{3} + O(w^5)\,,
+\end{equation}
+which is already an achievement, because we have identified
+exactly what the $w^3$ term must be.
+
+We substitute \eqref{eq:Ow5} into the $z^3$ and $z^5$ terms of \eqref{eq:z},
+and obtain:
+\begin{align}
+z &= w + \frac{1}{3} \left( w + \frac{w^3}{3} + O(w^5) \right)^3 - \frac{1}{5} \left( w + \frac{w^3}{3} + O(w^5) \right)^5 + O(z^7) \\
+&= w + \frac{1}{3} \left( w^3 + \binom{3}{1} \frac{w^3}{3} w^2 + O(w^7) \right) - \frac{1}{5} \left( w^5 + O(w^7) \right) + O(w^7)  \\
+&= w + \frac{1}{3} w^3 + \frac{2}{15} w^5 + O(w^7)\,.
+\end{align}
+And this gives our desired expansion of $z = \tan w$ 
+of degree $<7$.
+
+\section*{Summary}
+
+To summarize the procedure in general,
+we start with the expansion
+\begin{equation}
+\label{eq:f}
+w = f(z) = a_1 z + a_2 z^2 + a_3 z^3 + \dotsb \,, \quad a_1 \neq 0\,,
+\end{equation}
+and rearrange it to,
+\begin{equation}
+\label{eq:z-general}
+z = b_1 \Bigl( w - a_2 z^2 - a_3 z^3 - \dotsb - a_n z^n \Bigr) + O(w^{n+1})\,, \quad b_1 = \frac{1}{a_1}\,.
+\end{equation}
+So we know that $z = b_1 w + O(w^2)$,
+and we can substitute
+this into the term $z^2$ of equation \eqref{eq:z-general}.
+At the end we will get an equation of the form
+$z = b_1 w + b_2 w^2 + O(w^3)$, and we can substitute this
+into the terms $z^2$ and $z^3$ of \eqref{eq:z-general}.
+And what ever results we will substitute back into the 
+terms $z^2$, $z^3$, $z^4$ of equation \eqref{eq:z-general}.
+We can repeat this process until 
+we have all the terms of $z = f^{-1}(w)$ that we need.
+
+We probably should normalize
+the functions so that $a_1 = b_1 = 1$
+to make the computations easier.
+
+\begin{thebibliography}{XXXXX}
+
+\bibitem{Ahlfors}
+Lars V. Ahlfors. {\it Complex Analysis}. McGraw-Hill, 1979.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

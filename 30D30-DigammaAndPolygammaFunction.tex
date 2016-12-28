@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DigammaAndPolygammaFunction}
+\pmcreated{2013-03-22 15:53:21}
+\pmmodified{2013-03-22 15:53:21}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{digamma and polygamma function}
+\pmrecord{13}{37890}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{33B15}
+\pmdefines{digamma function}
+\pmdefines{polygamma function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{digamma function} is defined as the logarithmic derivative of the gamma function:
+ \[ \psi (z) = {d \over dz} \log \Gamma (z) = {\Gamma' (z) \over \Gamma (z)}. \]
+Likewise the \emph{polygamma functions} are defined as higher order logarithmic derivatives of the gamma function:
+ \[ \psi^{(n)} (z) = {d^n \over dz^n} \log \Gamma (z). \]
+
+These equations enjoy functional equations which are closely related to those of the gamma function:
+\begin{align*}
+\psi (z+1) &= \psi (z) + {1 \over z} \\
+\psi (1-z) &= \psi (z) + \pi \cot \pi z \\
+\psi (2z)  &= {1 \over 2} \psi (z) + {1 \over 2} \psi \left( z + {1 \over 2} 
+\right) + \log 2 \\
+\psi^{(n)} (z+1) &= \psi^{(n)} (z) + (-1)^n {n! \over z^{n+1}} \\
+\end{align*}
+
+These functions have poles at the negative integers and can be expressed as partial fraction series:
+\begin{align}
+\psi(z) = -\gamma-{1\over z}+\sum_{k=1}^\infty \left({1\over k}-{1\over z\!+\!k}\right), 
+\end{align}
+\begin{align}
+\psi^{(n)}(z) = (-1)^nn!\!\sum_{k=0}^\infty{1\over(z\!+\!k)^n}
+\end{align}
+Here, $\gamma$ is \PMlinkname{Euler--Mascheroni constant}{EulerMascheroniConstant}.\, Substituting\, $z = 1$\, to (1), one gets the value
+$$\Gamma\,'(1) \;=\; -\gamma.$$
+%%%%%
+%%%%%
+\end{document}

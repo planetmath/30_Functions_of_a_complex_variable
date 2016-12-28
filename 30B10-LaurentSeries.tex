@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaurentSeries}
+\pmcreated{2013-03-22 12:04:52}
+\pmmodified{2013-03-22 12:04:52}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{Laurent series}
+\pmrecord{12}{31152}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmsynonym{Laurent expansion}{LaurentSeries}
+\pmrelated{EssentialSingularity}
+\pmrelated{CoefficientsOfLaurentSeries}
+\pmdefines{principal part}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+A \emph{Laurent series} centered about $a$ is a series of the form
+$$
+\sum_{k=-\infty}^\infty c_k (z-a)^k
+$$
+where $c_k, a, z \in \mathbb{C}$. The \emph{principal part} of a Laurent series is the subseries $\sum_{k=-\infty}^{-1} c_k (z-a)^k$.
+
+One can prove that the above series converges everywhere inside the (possibly empty) set
+$$
+D := \{z \in \mathbb{C} \mid R_1 < |z-a| < R_2 \}
+$$
+where
+$$
+R_1 := \limsup_{k \rightarrow\infty} |c_{-k}|^{1/k}
+$$
+and
+$$
+R_2 := 1/\left(\limsup_{k \rightarrow\infty} |c_{k}|^{1/k}\right).
+$$
+
+Every Laurent series has an associated function, given by
+$$
+f(z) := \sum_{k=-\infty}^\infty c_k (z-a)^k,
+$$
+whose domain is the set of points in $\mathbb{C}$ on which the series converges. This function is analytic inside the annulus $D$, and conversely, every analytic function on an annulus is equal to some unique Laurent series. The coefficients of Laurent series for an analytic function can be determined using the Cauchy integral formula.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

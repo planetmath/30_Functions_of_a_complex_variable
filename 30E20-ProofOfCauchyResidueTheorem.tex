@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCauchyResidueTheorem}
+\pmcreated{2013-03-22 13:42:04}
+\pmmodified{2013-03-22 13:42:04}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of Cauchy residue theorem}
+\pmrecord{7}{34377}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Being $f$ holomorphic by Cauchy-Riemann equations the differential form $f(z)\,dz$ is closed. So by the lemma about closed differential forms on a simple connected domain we know that the integral $\int_C f(z)\, dz$ is equal to $\int_{C'} f(z)\, dz$ if $C'$ is any curve which is homotopic to $C$. 
+In particular we can consider a curve $C'$ which turns around the points $a_j$ along small circles and join these small circles with segments. Since the curve $C'$ follows each segment two times with opposite orientation it is enough to sum
+the integrals of $f$ around the small circles.
+
+So letting $z=a_j+\rho e^{i\theta}$ be a parameterization of the curve around the point $a_j$, we have $dz=\rho i e^{i\theta}\, d \theta$ and hence
+\[
+  \int_C f(z)\, dz = \int_{C'} f(z)\, dz = \sum_j \eta(C,a_j)\int_{\partial B_\rho(a_j)} f(z)\, dz
+\]\[
+ = \sum_j \eta(C,a_j) \int_0^{2\pi} f(a_j+\rho e^{i\theta}) \rho i e^{i\theta}\, d\theta
+\]
+where $\rho>0$ is chosen so small that the balls $B_\rho(a_j)$ are all disjoint and all contained in the domain $U$. So by linearity, it is enough to prove that
+for all $j$
+\[
+   i\int_0^{2\pi} f(a_j+e^{i\theta})\rho e^{i\theta}\, d\theta = 2\pi i \mathrm{Res}(f,a_j).
+\]
+
+Let now $j$ be fixed and
+consider now the Laurent series for $f$ in $a_j$:
+\[
+f(z)= \sum_{k\in \mathbb Z} c_k (z-a_j)^k
+\]
+so that $\mathrm{Res}(f,a_j)=c_{-1}$. We have
+\[
+  \int_0^{2\pi} f(a_j+e^{i\theta})\rho e^{i\theta}\, d\theta =
+  \sum_k \int_0^{2\pi} c_k (\rho e^{i\theta})^k \rho e^{i\theta}\, d\theta
+ =\rho^{k+1} \sum_k c_k \int_0^{2\pi}  e^{i(k+1)\theta}\, d\theta.
+\]
+Notice now that if $k=-1$ we have
+\[
+\rho^{k+1} c_k \int_0^{2\pi} e^{i(k+1)\theta}\, d\theta = 
+c_{-1}\int_0^{2\pi} d\theta = 2\pi c_{-1} = 2\pi \,\mathrm{Res}(f,a_j)
+\]
+while for $k\neq -1$ we have
+\[
+  \int_0^{2\pi} e^{i(k+1)\theta}\, d\theta =  \left[\frac{e^{i(k+1)\theta}}{i(k+1)}\right]_0^{2\pi} = 0.
+\]
+Hence the result follows.
+%%%%%
+%%%%%
+\end{document}

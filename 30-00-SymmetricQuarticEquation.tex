@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymmetricQuarticEquation}
+\pmcreated{2013-03-22 18:05:28}
+\pmmodified{2013-03-22 18:05:28}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{symmetric quartic equation}
+\pmrecord{16}{40629}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{12D99}
+\pmsynonym{symmetric quartic}{SymmetricQuarticEquation}
+\pmrelated{AlgebraicEquation}
+\pmrelated{EulersDerivationOfTheQuarticFormula}
+\pmrelated{ErnstLindelof}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{roots} \PMlinkescapeword{root} \PMlinkescapeword{identity}
+
+\subsection{Symmetric quartic}
+
+Besides the biquadratic equation, there are other \PMlinkescapetext{types} of quartic equations 
+\begin{align}
+a_0z^4+a_1z^3+a_2z^2+a_3z+a_4 \;=\; 0 \qquad (a_0 \;\neq\; 0),
+\end{align}
+which can be reduced to quadratic equations.\, If the left hand side of (1) is $P(z)$, one may write the identity
+\begin{align}
+\frac{P(z)}{z^2} \;=\; \left(a_0z^2+\frac{a_4}{z^2}\right)+\left(a_1z+\frac{a_3}{z}\right)+a_2.
+\end{align}
+If we assume first that\, $a_4 = a_0$\, and\, $a_3 = a_1$,\, the identity is
+$$\frac{P(z)}{z^2} \;=\; a_0\left(z^2+\frac{1}{z^2}\right)+a_1\left(z+\frac{1}{z}\right)+a_2.$$
+We set \,$\displaystyle z+\frac{1}{z} := x$,\, whence\, $\displaystyle z^2+\frac{1}{z^2} = x^2-2$;\, hence the identity is simplified to
+$$\frac{P(z)}{z^2} \;=\; a_0x^2+a_1x+a_2-2a_0.$$
+Accordingly, we obtain the \PMlinkname{roots}{Equation} of the so-called {\em symmetric quartic equation}
+\begin{align}
+a_0z^4+a_1z^3+a_2z^2+a_1z+a_0 \;=\; 0 \qquad (a_0 \;\neq\; 0),
+\end{align}
+if we first determine the roots $x_1$ and $x_2$ of the quadratic
+$$a_0x^2+a_1x+a_2-2a_0 \;=\; 0$$
+and then solve the equations\, $z+\frac{1}{z} = x_1$ and $z+\frac{1}{z} = x_2$
+which can be written
+\begin{align}
+z^2-x_1z+1 \;=\; 0, \quad z^2-x_2z+1 \;=\; 0.
+\end{align}
+
+Note, that the roots of either equations (4) are inverse numbers of each other (see properties of quadratic equations).\, Therefore, as well the inverse number of any root of the symmetric quartic (3) is a root of (3); this fact is, by the way, clear also because of the identity
+$$z^4P\!\left(\frac{1}{z}\right) \;=\; P(z).$$\\
+
+
+
+\textbf{Example.}\, The equation
+$$2z^4-5z^3+4z^2-5z+2 \;=\; 0$$
+is symmetric.\, Thus we solve first
+$$2x^2-5x+4-2\cdot2 \;=\; 0,$$
+which yields\, $x_1 = 0$,\, $x_2 = \frac{5}{2}$.\, Secondly we solve
+$$z^2+1 \;=\; 0, \quad z^2-\frac{5}{2}z+1 \;=\; 0$$
+which yield all the four roots\, $z = \pm i$,\; $z = \frac{1}{2}$,\; $z = 2$\, of the quartic.\\
+
+
+\subsection{Almost symmetric quartic}
+
+There is still the quartic equation 
+\begin{align}
+a_0z^4+a_1z^3+a_2z^2-a_1z+a_0 \;=\; 0 \qquad (a_0 \neq 0),
+\end{align}
+which reduces to quadratics --- the identity (2) for it reads
+$$\frac{P(z)}{z^2} \;=\; a_0\left(z^2+\frac{1}{z^2}\right)+a_1\left(z-\frac{1}{z}\right)+a_2.$$
+The substitution \,$\displaystyle z-\frac{1}{z} := x$\, converts it to
+$$\frac{P(z)}{z^2} \;=\; a_0x^2+a_1x+a_2+2a_0.$$
+Thus, (5) can be solved by determining first the roots $x_1$ and $x_2$ of
+$$a_0x^2+a_1x+a_2+2a_0 \;=\; 0,$$
+then the roots $z$ of\, $z-\frac{1}{z} = x_1$ and $z-\frac{1}{z} = x_2$\, which may written
+$$z^2-x_1z-1 \;=\; 0, \quad z^2-x_2z-1 \;=\; 0.$$
+Hence one infers, that if $z$ is a root of (5), so is also its opposite inverse 
+$-\frac{1}{z}$; this is apparent also due to the identity
+$$z^4P\!\left(-\frac{1}{z}\right) \;=\; P(z).$$
+
+\begin{thebibliography}{9}
+\bibitem{J} {\sc Ernst Lindel\"of}: \emph{Johdatus korkeampaan analyysiin}. Fourth edition. Werner S\"oderstr\"om Osakeyhti\"o, Porvoo ja Helsinki (1956).
+\bibitem{d} {\sc E. Lindel\"of}: \emph{Einf\"uhrung in die h\"ohere Analysis}. Nach der ersten schwedischen
+und zweiten finnischen Auflage auf deutsch herausgegeben von E. Ullrich. Teubner, Leipzig (1934).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

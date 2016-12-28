@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRouchesTheorem}
+\pmcreated{2013-03-22 14:34:26}
+\pmmodified{2013-03-22 14:34:26}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of Rouch\'e's theorem}
+\pmrecord{6}{36132}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the integral
+ $$N(\lambda) = {1 \over 2 \pi i} \oint_C {f'(z) + \lambda g'(z) \over f(z) + \lambda g(z)} dz$$
+where $0 \le \lambda \le 1$.  By the hypotheses, the function $f + \lambda g$ is non-singular on $C$ or on the interior of $C$ and has no zeros on $C$.  Hence, by the argument principle, $N(\lambda)$ equals the number of zeros (counted with multiplicity) of $f + \lambda g$ contained inside $C$.  Note that this means that $N(\lambda)$ must be an integer.
+
+Since $C$ is compact, both $|f|$ and $|g|$ attain minima and maxima on $C$.  Hence there exist positive real constants $a$ and $b$ such that
+ $$|f(z)| > a > b > |g(z)|$$
+for all $z$ on $C$.  By the triangle inequality, this implies that $|f(z) + \lambda g(z)| > a - b$ on $C$.  Hence $1/(f + \lambda g)$ is a continuous function of $\lambda$ when $0 \le \lambda \le 1$ and $z \in C$.  Therefore, the integrand is a continuous function of $C$ and $\lambda$.  Since $C$ is compact, it follows that $N(\lambda)$ is a continuous function of $\lambda$.
+
+Now there is only one way for a continuous function of a real variable to assume only integer values -- that function must be constant.  In particular, this means that the number of zeros of $f + \lambda g$ inside $C$ is the same for all $\lambda$.  Taking the extreme cases $\lambda = 0$ and $\lambda = 1$, this means that $f$ and $f+g$ have the same number of zeros inside $C$.
+%%%%%
+%%%%%
+\end{document}

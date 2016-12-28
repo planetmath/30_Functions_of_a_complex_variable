@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FreeAnalyticBoundaryArc}
+\pmcreated{2013-03-22 14:18:00}
+\pmmodified{2013-03-22 14:18:00}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{free analytic boundary arc}
+\pmrecord{7}{35758}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{54-00}
+\pmrelated{AnalyticCurve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $G \subset \mathbb{C}$ be a region and let $\gamma$ be a connected subset of $\partial G$ (boundary of $G$), then $\gamma$ is a {\em free analytic boundary arc} of
+$G$ if for every point $\zeta \in \gamma$ there is a neighbourhood $U$ of
+$\zeta$ and
+a conformal equivalence $h \colon {\mathbb{D}} \to U$ (where ${\mathbb{D}}$ is the unit disc) such that $h(0) = \zeta$, $h(-1,1) = \gamma \cap U$ and
+$h({\mathbb{D}}_+) = G \cap U$ (where ${\mathbb{D}}_+$ is all the points
+in the unit disc with non-negative imaginary part).
+\end{defn}
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexII}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable II}}.
+Springer-Verlag, New York, New York, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

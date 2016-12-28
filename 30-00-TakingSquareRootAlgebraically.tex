@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TakingSquareRootAlgebraically}
+\pmcreated{2015-06-14 16:31:35}
+\pmmodified{2015-06-14 16:31:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{taking square root algebraically}
+\pmrecord{17}{37175}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{12D99}
+\pmsynonym{square root of complex number}{TakingSquareRootAlgebraically}
+\pmrelated{SquareRootOfSquareRootBinomial}
+\pmrelated{CasusIrreducibilis}
+\pmrelated{TopicEntryOnComplexAnalysis}
+\pmrelated{ValuesOfComplexCosine}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+For getting the square root of the complex number\; $a\!+\!ib$\, 
+($a, b\in \mathbb{R}$) purely algebraically, one should solve the real part $x$ and the imaginary part $y$ of\, $\sqrt{a\!+\!ib}$\, from the binomial equation
+\begin{align}
+  (x\!+\!iy)^2 = a\!+\!ib.
+\end{align}
+This gives 
+$$a\!+\!ib \;=\; x^2\!+\!2ixy\!-\!y^2 \;=\; 
+(x^2\!-\!y^2)\!+\!i\!\cdot\!2xy.$$
+Comparing (see \PMlinkname{equality}{EqualityOfComplexNumbers}) the real parts and the imaginary parts yields the pair of real equations
+$$x^2\!-\!y^2 = a,\qquad 2xy = b,$$
+which may be written
+$$x^2\!+\!(-y^2) = a, \qquad x^2\!\cdot\!(-y^2) = -\frac{b^2}{4}.$$
+Note that the \PMlinkescapetext{signs of} $x$ and $y$ must be chosen such that their product ($= \frac{b}{2}$) has the same sign as $b$.\, Using the properties of quadratic equation, one infers that $x^2$ and $-y^2$ are the roots of the equation 
+$$t^2\!-\!at\!-\!\frac{b^2}{4} = 0.$$
+The quadratic formula gives
+$$t = \frac{a\pm\sqrt{a^2\!+\!b^2}}{2},$$
+and since $-y^2$ is the smaller root,\, $x^2 = \frac{a\!+\!\sqrt{a^2\!+\!b^2}}{2},\quad
+ -y^2 = \frac{a\!-\!\sqrt{a^2\!+\!b^2}}{2}$.\, So we obtain the result
+$$x = \sqrt{\frac{\sqrt{a^2\!+\!b^2}+\!a}{2}}, \qquad
+y = (\mathrm{sign}\,b)\sqrt{\frac{\sqrt{a^2\!+\!b^2}-\!a}{2}}$$
+(see the signum function).\, Because both may have also the \PMlinkescapetext{opposite signs, we have the formula}
+\begin{align}
+\sqrt{a\!+\!ib} \;=\; 
+\pm\left(\sqrt{\frac{\sqrt{a^2\!+\!b^2}+\!a}{2}}+(\mathrm{sign}\,{b})i\sqrt{\frac{\sqrt{a^2\!+\!b^2}-\!a}{2}}\right).
+\end{align}
+
+The result shows that the real and imaginary parts of the square root of any complex number\; $a\!+\!ib$\, can be obtained from the real part $a$ and imaginary part $b$ of the number by using only algebraic operations, i.e. the rational operations and the \PMlinkescapetext{radicals}.\, Apparently, the same is true for all roots of a complex number with \PMlinkname{index}{NthRoot} an integer power of 2.
+
+In practise, when determining the square root of a non-real complex number, one need not to remember the \PMlinkescapetext{formula} (2), but it's better to solve concretely the equation (1).
+
+\textbf{Exercise.}\, Compute $\sqrt{i}$ and check it!
+%%%%%
+%%%%%
+\end{document}

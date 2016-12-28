@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCriterionForConformalMappingOfRiemannianSpaces}
+\pmcreated{2013-03-22 16:22:03}
+\pmmodified{2013-03-22 16:22:03}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of criterion for conformal mapping of Riemannian spaces}
+\pmrecord{7}{38505}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this attachment, we prove that the a mapping $f$ of Riemannian (or
+pseudo-Riemannian) spaces $(M,g)$ and $(N,h)$ is conformal if and only if 
+$f^* h = s g$ for some scalar field $s$ (on $M$).
+
+The key observation is that the angle $A$ between curves $S$ and $T$ which 
+intersect at a point $P$ is determined by the tangent vectors to these two curves 
+(which we shall term $s$ and $t$) and the metric at that point, like so:
+ \[ \cos A = {g(s,t) \over \sqrt{g(s,s)} \sqrt{g(t,t)}}\]
+Moreover, given any tangent vector at a point, there will exist at least one
+curve to which it is the tangent.  Also, the tangent vector to the image of
+a curve under a map is the pushforward of the tangent to the original curve
+under the map; for instance, the tangent to $f(S)$ at $f(P)$ is $f^* s$.  Hence, 
+the mapping $f$ is conformal if and only if
+ \[{g(u,v) \over \sqrt{g(u,u)} \sqrt{g(v,v)}} = {h(f^* u, f^* v) \over 
+\sqrt{h(f^* u, f^* u)} \sqrt{h(f^* v, f^* v)}}\]
+for all tangent vectors $u$ and $v$ to the manifold $M$.  By the way pushforwards 
+and pullbacks work, this is equivalent to the condition that
+ \[{g(u,v) \over \sqrt{g(u,u)} \sqrt{g(v,v)}} = {(f^*  h)(u, v) \over 
+\sqrt{(f^*  h)(u, u)} \sqrt{(f^* h)(v, v)}}\]
+for all tangent vectors $u$ and $v$ to the manifold $N$.  Now, by elementary
+algebra, the above equation is equivalent to the requirement that there
+exist a scalar $s$ such that, for all $u$ and $v$, it is the case that 
+$g(u,v) = s h^* (u,v)$ or, in other words, $f^* h = s g$ for some scalar 
+field $s$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaurentExpansionOfRationalFunction}
+\pmcreated{2013-03-11 19:16:06}
+\pmmodified{2013-03-11 19:16:06}
+\pmowner{pahio}{2872}
+\pmmodifier{}{0}
+\pmtitle{Laurent expansion of rational function}
+\pmrecord{5}{42619}
+\pmprivacy{1}
+\pmauthor{pahio}{0}
+\pmtype{Example}
+\pmclassification{msc}{30B10}
+\pmsynonym{}{LaurentExpansionOfRationalFunction}
+%\pmkeywords{}
+\pmrelated{}
+\pmdefines{}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The Laurent series expansion of a rational function may often be determined using the uniqueness of Laurent series coefficients in an annulus and applying geometric series.\, We will determine the expansion of 
+$$f(z) \;:=\; \frac{2z}{1\!+\!z^2}$$
+by the powers of $z\!-\!i$.
+
+We first have the partial fraction decomposition 
+\begin{align}
+f(z) \;=\; \frac{1}{z\!-\!i}+\frac{1}{z\!+\!i}
+\end{align}
+whence the principal part of the Laurent expansion contains $\displaystyle\frac{1}{z\!-\!i}$.\, Taking into account the poles\, $z = \pm i$\, of $f$ we see that there are two possible annuli for the Laurent expansion:\\
+
+a)\; The annulus\; $\displaystyle 0 \,<\, |z\!-\!i| \,<\, 2$.\, We can write
+$$
+\frac{1}{z\!+\!i} \;=\; \frac{1}{2i\!+\!(z\!-\!i)} \;=\; \frac{1}{2i}\cdot\frac{1}{1\!-\!\left(-\frac{z-i}{2i}\right)}
+                  \;=\; \frac{1}{2i}-\frac{z\!-\!i}{(2i)^2}+\frac{(z\!-\!i)^2}{(2i)^3}-+\ldots
+$$
+Thus
+$$\frac{2z}{1\!+\!z^2} \;=\; \frac{1}{z\!-\!i}-\sum_{n=0}^\infty\left(\frac{i}{2}\right)^{n+1}(z\!-\!i)^n
+\quad \qquad (0 \,<\, |z\!-\!i| \,<\, 2).
+$$\\
+
+
+b)\; The annulus\; $\displaystyle 2 \,<\, |z\!-\!i| \,<\, \infty$.\, Now we write
+$$\frac{1}{z\!+\!i} \;=\; 
+\frac{1}{(z\!-\!i)\!+\!2i} \;=\; \frac{1}{z\!-\!i}\cdot\frac{1}{1\!-\!\left(-\frac{2i}{z-i}\right)}
+\;=\; \frac{1}{z\!-\!i}-\frac{2i}{(z\!-\!i)^2}+\frac{(2i)^2}{(z\!-\!i)^3}-+\ldots
+$$
+Accordingly
+$$\frac{2z}{1\!+\!z^2} \;=\; \frac{2}{z\!-\!i}+\sum_{n=2}^\infty\frac{(-2i)^{n-1}}{(z\!-\!i)^n}
+\quad \qquad (2 \,<\, |z\!-\!i| \,<\, \infty).
+$$
+This latter Laurent expansion consists of negative powers only, but\, $z = i$\, isn't an essential singularity of $f$, though.
+
+%%%%%
+\end{document}

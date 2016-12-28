@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SecondFormOfCauchyIntegralTheorem}
+\pmcreated{2013-03-22 15:19:39}
+\pmmodified{2013-03-22 15:19:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{second form of Cauchy integral theorem}
+\pmrecord{9}{37139}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmsynonym{equivalent form of Cauchy integral theorem}{SecondFormOfCauchyIntegralTheorem}
+%\pmkeywords{analytic}
+%\pmkeywords{holomorphic}
+\pmrelated{CauchyIntegralTheorem}
+\pmdefines{example of non-analytic function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+Let the complex function $f$ be analytic in a simply connected open domain $U$ of the complex plane, and let $a$ and $b$ be any two points of $U$.\, Then the contour integral
+\begin{align}
+\int_\gamma f(z)\,dz
+\end{align}
+is independent on the path $\gamma$ which in $U$ goes from $a$ to $b$.
+\end{thmplain}
+
+
+\textbf{Example.}\, Let's consider the integral (1) of the real part function defined by
+$$f(z) := \mbox{Re}(z)$$
+with the path $\gamma$ going from the point\, $O = (0,\,0)$\, to the point\, $Q = (1,\,1)$.\, If $\gamma$ is the line segment $OQ$, we may use the substitution
+    $$z := (1\!+\!i)t,\quad dz = (1\!+\!i)\,dt,\quad 0 \leqq t \leqq 1,$$
+and (1) equals 
+        $$\int_0^1t\!\cdot\!(1\!+\!i)\,dt = \frac{1}{2}\!+\!\frac{1}{2}i.$$
+Secondly, we choose for $\gamma$ the broken line $OPQ$ where\, $P = (1,\,0)$.\, Now (1) is the sum
+      $$\int_{OP}\mbox{Re}(z)\,dz+\int_{PQ}\mbox{Re}(z)\,dz 
+   = \int_0^1x\,dx+\int_0^1i\,dy = \frac{1}{2}\!+\!i.$$
+Thus, the integral (1) of the function depends on the path between the two points.\, This is explained by the fact that the \PMlinkescapetext{real part} function $f$ is not analytic --- its real part $x$ and imaginary part 0 do not satisfy the Cauchy-Riemann equations.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CorollaryOfCauchyIntegralTheorem}
+\pmcreated{2013-03-22 18:54:12}
+\pmmodified{2013-03-22 18:54:12}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{corollary of Cauchy integral theorem}
+\pmrecord{18}{41751}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmsynonym{generalisation of Cauchy integral theorem}{CorollaryOfCauchyIntegralTheorem}
+\pmrelated{VariantOfCauchyIntegralFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\textbf{Theorem.}\, Let $\gamma$ be a closed contour of $\mathbb{C}$ not intersecting itself and 
+$\gamma_1,\,\ldots,\,\gamma_n$ likewise.\, Let all the contours $\gamma_1,\,\ldots,\,\gamma_n$ be outside each other but insinde $\gamma$.\, If the closed, ``holey'' domain between $\gamma$ and the $\gamma_j$s is contained in a domain 
+$U$ where $f$ is holomorphic, then 
+\begin{align}
+\oint_\gamma\!f(z)\,dz \;=\; \oint_{\gamma_1}\!f(z)\,dz+\ldots+\oint_{\gamma_n}\!f(z)\,dz
+\end{align}
+where all integrals are taken with the same direction of circulation.\, Especially, in the case \,$n = 1$\, one has
+\begin{align}
+\oint_\gamma\!f(z)\,dz \;=\; \oint_{\gamma_1}\!f(z)\,dz.
+\end{align}
+
+\textbf{Note 1.}\, The integrals in (1) and (2) need not necessarily vanish, since inside a $\gamma_j$ there may be points not belonging to $U$.\\
+
+\textbf{Note 2.}\, When\, $n = 0$,\, i.e. the sum on the right hand side of (1) is \PMlinkname{empty}{EmptySum}, it has the value 0; thus also the Cauchy integral theorem is a special case of (1).\\
+
+\textbf{Note 3.}\, The theorem implies easily the residue theorem.\\
+
+\emph{Proof.}\, We prove the theorem only in the case\, $n = 1$.\, Other cases may be handled analogously.\\
+Draw two auxiliary ways connecting $\gamma$ and $\gamma_1$.\, The integral of $f$ taken anticlockwise around the route consisting of the upper parts of the curves and the auxiliary ways is, by the fundamental theorem of complex analysis, equal zero.\, Similarly the integral of $f$ taken anticlockwise around the route consisting of the lower parts of the curves and the auxiliary ways is equal zero.\, Thus also the sum of both equals zero.\, But in the sum, the portions taken along the auxiliary ways are run in opposite directions and so they cancel each other.\, Therefore in the sum only the portions, which are run along $\gamma$ and $\gamma_1$, remain; then
+$$\oint_\gamma\!f(z)\,dz+\oint_{\gamma_1}\!f(z)\,dz \;=\; 0,$$
+i.e.
+$$\oint_\gamma\!f(z)\,dz \;=\; -\oint_{\gamma_1}\!f(z)\,dz.$$
+However, here $\gamma$ is run anticlockwise and $\gamma_1$ clockwise.\, Reversing the direction in the right hand side of this last equation, one obtains (2). Q.E.D.
+
+\begin{center}
+\begin{pspicture}(-4.7,-4)(4.7,4)
+\psellipse[linecolor=blue](0,0)(3.5,2)
+\pscircle[linecolor=blue](0.5,0){1}
+\psline(-3.5,0)(-0.5,0)
+\psline(1.5,0)(3.5,0)
+\rput(-0.15,2.18){$\gamma$}
+\rput (0.5,1.2){$\gamma_1$}
+\end{pspicture}
+\end{center}
+
+
+\textbf{Example.}\, Calculate 
+$$\oint_C\frac{dz}{z\!-\!z_0}$$
+where the circle $C$ of complex plane with centre $z_0$ and radius $R$ is run once anticlockwise.\\
+Since\, $|z\!-\!z_0| = R$\, we can take the parametric presentation
+$$z\!-\!z_0 \;=\; R e^{i\varphi} \quad \mbox{with} \quad 0 \leqq \varphi < 2\pi.$$
+Then\, $dz \;=\; iR e^{i\varphi}\,d\varphi$\, and
+\begin{align}
+\oint_C\frac{dz}{z\!-\!z_0} \;=\; \int_0^{2\pi}\!i\,d\varphi \;=\; 2i\pi.
+\end{align}
+By the equation (2) of the theorem, one can infer that the result (3) is true for any continuous contour going once around the point $z_0$ anticlockwise (cf. the lemma of \PMlinkid{this entry}{3105}).
+
+
+%%%%%
+%%%%%
+\end{document}

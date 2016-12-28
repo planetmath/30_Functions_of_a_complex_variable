@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMartysTheorem}
+\pmcreated{2013-03-22 18:23:11}
+\pmmodified{2013-03-22 18:23:11}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{proof of Marty's theorem}
+\pmrecord{4}{41030}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+
+% commands
+%\newcommand{\comment}[1]{\small{(\,\textit{#1}\;)}}
+
+
+\begin{document}
+\emph{(i)} Fix $K \subseteq \Omega$ compact. We have:
+\begin{align}
+\frac{2 |f'(z)|}{1 + |f(z)|^2} &\leq M_K \ \forall \ f \in \mathcal{F}, z \in K & \tag{$*$} \label{1}
+\end{align}
+
+Let $V$ be a region with $K = \overline{V}$ and let $\gamma \colon [a,b] \to V$ be the $C^1$ curves connecting the points $P, Q \in \Omega$. Then we have:
+\begin{align*}
+d_{\sigma}(f(P), f(Q)) &= \inf_{\gamma} l_{\sigma}(f \circ \gamma) = \inf_{\gamma} \int_{a}^{b} \|(f \circ \gamma)'(t)\|_{\sigma, f \circ \gamma(t)} \,dt \\
+&= \inf_{\gamma} \int_{a}^{b} \frac{2 |f'(\gamma(t))|}{1 + |f(\gamma(t))|^2} |\gamma'(t)| \,dt \\
+&\stackrel{\leq}{\substack{\eqref{1}}} M_K \inf_{\gamma} \int_{a}^{b} |\gamma'(t)| \,dt \\
+&= M_K \inf_{\gamma} l(\gamma) = M_K |P - Q|
+\end{align*}
+
+Thus $f$ is Lipschitz continuous and thus $\mathcal{F}$ is equicontinuous. By the Ascoli-ArzelÃ  Theorem we conclude that $\mathcal{F}$ is normal.
+
+\emph{(ii)} Now assume $\mathcal{F}$ to be normal. Define:
+\begin{align*}
+f^{\sharp}(z) &:= \frac{2 |f'(z)|}{1 + |f(z)|^2} 
+\end{align*}
+
+Let $K \subseteq \Omega$ be compact. To obtain contradiction assume $\{f^{\sharp} : f \in \mathcal{F}\}$ is not uniformly bounded on $K$.
+But then there exists a sequence $\{f_n\} \subset \mathcal{F}$ such that:
+\begin{align*}
+\max_{z \in K} f_n^{\sharp}(z) &\to \infty \ (n \to \infty)
+\end{align*}
+
+Since $\mathcal{F}$ is normal for each $P \in \Omega$ let there be a neighbourhood $U_P$ such that $\{f_n\}$ converges normally to a meromorphic function $f$. But from $(1 / f_n)^{\sharp} = f_n^{\sharp}$ we see that $\{f_n^{\sharp}\}$ converges normally on $U_P$. Since $K$ is compact it can be covered by finitely many sets $U_P$. We conclude that $\{f_n^{\sharp}\}$ must be bounded on $K$ and obtain a contradiction. \qed
+%%%%%
+%%%%%
+\end{document}

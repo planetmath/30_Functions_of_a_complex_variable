@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSchwarzLemma}
+\pmcreated{2013-03-22 12:45:07}
+\pmmodified{2013-03-22 12:45:07}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{proof of Schwarz lemma}
+\pmrecord{6}{33057}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+\newcommand{\size}[1]{\left|#1\right|}
+\begin{document}
+Define $g(z)=f(z)/z$.  Then $g:\Delta\to\Complex$ is a holomorphic function.  The Schwarz lemma is just an application of the maximal modulus principle to $g$.
+
+For any $1>\epsilon>0$, by the maximal modulus principle $\size{g}$ must attain its maximum on the closed disk $\left\{z:\size{z}\le 1-\epsilon\right\}$ at its boundary $\left\{z:\size{z}=1-\epsilon\right\}$, say at some point $z_{\epsilon}$. But then $\size{g(z)}\le \size{g(z_{\epsilon})} \le \frac{1}{1-\epsilon}$ for any $\size{z}\le 1-\epsilon$.  Taking an infinimum as $\epsilon\to0$, we see that values of $g$ are bounded: $\size{g(z)}\le 1$.
+
+Thus $\size{f(z)}\le\size{z}$.  Additionally, $f'(0)=g(0)$, so we see that $\size{f'(0)}=\size{g(0)}\le 1$.  This is the first part of the lemma.
+
+Now suppose, as per the premise of the second part of the lemma, that $|g(w)|=1$ for some $w\in\Delta$.  For any $r>\size{w}$, it must be that $\size{g}$ attains its maximal modulus (1) \emph{inside} the disk $\left\{z:\size{z}\le r\right\}$, and it follows that $g$ must be constant inside the entire open disk $\Delta$.  So $g(z)\equiv a$ for $a=g(w)$ of modulus 1, and $f(z)=az$, as required.
+%%%%%
+%%%%%
+\end{document}

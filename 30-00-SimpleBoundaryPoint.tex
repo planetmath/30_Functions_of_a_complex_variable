@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimpleBoundaryPoint}
+\pmcreated{2013-03-22 14:23:23}
+\pmmodified{2013-03-22 14:23:23}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{simple boundary point}
+\pmrecord{5}{35885}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{54-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $G \subset {\mathbb{C}}$ be a region and $\omega \in \partial G$ (the boundary of $G$).  Then
+we call $\omega$ a {\em simple boundary point} if whenever
+$\{ \omega_n \} \subset G$ is a sequence converging to $\omega$ there is a path
+$\gamma \colon [0,1] \to {\mathbb{C}}$ such that
+$\gamma(t) \in G$ for $0 \leq t < 1$, $\gamma(1) = \omega$ and there is a sequence
+$\{ t_n \} \in [0,1)$ such that $t_n \to 1$ and $\gamma(t_n) = \omega_n$ for all
+$n$.
+\end{defn}
+
+For example if we let $G$ be the open unit disc, then every boundary point is a simple boundary point.  This definition is useful for studying boundary behaviour of Riemann maps (maps arising from the Riemann mapping theorem), and one can prove for example the following theorem.
+
+\begin{thm}
+Suppose that $G \subset {\mathbb{C}}$ is a bounded simply connected region such
+that every point in the boundary of $G$ is a simple boundary point, then $\partial G$ is a Jordan curve.
+\end{thm}
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexII}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable II}}.
+Springer-Verlag, New York, New York, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

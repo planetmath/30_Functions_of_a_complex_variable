@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRiemannMappingTheorem}
+\pmcreated{2013-03-22 14:35:17}
+\pmmodified{2013-03-22 14:35:17}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of Riemann mapping theorem}
+\pmrecord{22}{36151}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This proof relies on the existence of a solution to the Dirichlet problem, and hence is applicable to any domain for which it can be proven that the Dirichlet problem has a solution.  For simplicity, I will assume that the region $U$ is bounded; 
+%at the end of the proof, I shall indicate how the proof can be modified to 
+%work for unbounded regions.
+
+Since this proof uses real techniques to prove a complex result, a few simple conventions will make it easier to read.  The letter $x$ and $y$ will always denote real quantities and $z$ will always equal $x + i y$.  Functions of a complex variable will be written as functions of two real variables without further warning; thus, $f(z)$ and $f(x,y)$ will denote the same entity.
+
+Consider the following boundary value problem:
+ $${\partial^2 u \over \partial x^2} + {\partial^2 u \over \partial y^2} = 0$$
+ $$u(x,y) = \log |x + i y - a|$$
+when $x + iy$ lies on the boundary of $U$.  Note that, since $a$ lies in the interior of $U$, $\log |x + i y - a|$ bounded on the boundary of $U$.
+Hence, by the existence theorem, there exists a unique function $u$ satisfying this boundary value problem.  Since the boundary values of $u$ are bounded, $u$ will be bounded on the interior of $U$ as well.  By the regularity theorem for the Laplace equation, $h$ will be differentiable (in fact, analytic) on the interior of $U$.
+
+Because $u$ satisfies the two-dimensional Laplace equation, the curl of the vector field
+ $$\left( -{\partial u \over \partial y}, {\partial u \over \partial x} \right)$$
+vanishes.  Since $U$ is simply connected, Poincare's lemma implies that there must exist a function $v$ such that this vector field is the gradient of $v$.  Since $v$ is only determind up to an additive constant, we may impose the condition $v(a) = 0$.  Written out explicitly, the condition that the gradient of $v$ equals the vector field looks like
+ $${\partial v \over \partial x} = -{\partial u \over \partial y}$$
+ $${\partial v \over \partial x} = {\partial u \over \partial x}$$
+Note that these equations are exactly the Cauchy-Riemann equations for $u$ and $v$ and, hence, $u + i v$ is an analytic function.
+
+Define $p$ $q$, and $f$ as 
+ $$p(z) = u(z) - \log |z - a|$$
+ $$q(z) = v(z) - \arg |z - a|$$
+ $$f(z) = \exp (-p(z) - iq(z)) = (z-a) \exp (- u(z) - iv(z) )$$
+Because $u$ and $v$ satisfies Laplace's equation, $p$ and $q$ will also satisfy Laplace's equation in $U \setminus \{a\}$.  Note that, whilst $p$ is single-valued, $q$ is multiply-valued with branch point at $a$.  Upon circling $a$ once, the value of $q$ increases by $2 \pi i$.  On the other hand, $f$ is single valued since the exponentiation operation cancels out the multiple-valuedness of $q$.  Because $p$ and $q$ satisfy the Cauchy-Riemann equations and the exponential function is analytic, $f$ is analytic.
+
+By construction, $p(z) = 0$ when $z$ lies on the boundary of $U$.  It will now be shown that $p(z) \ge 0$ whenever $z \in U \setminus \{a\}$.  Since $\log |z - a| \to - \infty$ as $z \to a$ and $h(a)$ is finite, it follows that there exists $\epsilon > 0$, such that $p(z) > 0$ when $0 < |z - a| \le \epsilon$  Consider the region $V = \{z \in U \colon |z| > \epsilon\}$.  For a point $z$ to lie on the boundary of $V$, either $|z - a| = \epsilon$ or $z$ must lie on the boundary of $U$.  Either way, $p(z) \ge 0$, so the maximum principle implies that $p(z) \ge 0$ whenever $z \in V$.  We already saw that $p(z) \ge 0$ when $0 < |z| < \epsilon$, so $p(z) > 0$ whenever $z \in U \setminus \{a\}$.
+
+As a consequence, $|f(z)| \le 1$ when $z \in U$ because
+ $$|f(z)| = \exp \left( -p(z) \right) \le 1$$
+Also, note that $f(a) = 0$ and that $f'(a)$ is real and positive because
+ $$f'(a) = \exp \left( -u(a) + i v(a) \right) = \exp \left( -u(a) \right) \in \mathbb{R}$$
+since $v$ was chosen so that $v(a) = 0$.
+
+To show that $f$ is bijective, we shall study the level sets of $p$.  To simplify this study, we shall exclude those points at which the derivative of $f$ vanishes.  For every real number $r > 0$, define
+ $$A(r) = \{ z \in U \colon |f(z)| \ge e^{-r} \quad \& \quad f'(z) = 0 \}$$
+We will now show that $A(r)$ is finite.  The set
+ $$\{ z \in U \colon |f(z)| \ge e^{-r} \}$$
+is compact.  Hence, were $A(r)$ infinite, it would have an accumulation point.  Since $f(z) = 0$ whenever $s \in A(r)$ and $f$ is analytic, this would imply that $f(z) = 0$ identically, which is not the case.  Hence, $A(r)$ must be finite.
+
+Choose $r$ such that $f'(z) \ne 0$ whenever $|z| = r$.  Let $C(r)$ denote the level set
+ $$C(r) = \{ z \colon p(z) = r \}$$
+We shall now show that $C$ is smooth and is homeomorphic to a circle.  As the level set of a  continuous function on a compact set, $C$ is compact.  Let $w$ be an point of $C(r)$.  By assumption, $f'(w) \ne 0$.  Hence, by the inverse function theorem, there exists a neighborhood $N$ of $w$ on which $f$ is invertible.  Furthermore, $f^{-1}$ is an anlytic function.  Since $z \in C(r)$ if and only if $|f(z)| = e^{-r}$, it follows that $C(r) \cap N$ is the image of an arc the circle $\{ z \colon |z| = e^{-r} \}$ under $f^{-1}$.  Hence, $C(r) \cap N$ is diffeomorphic to a line segment.
+
+Since this is true of every point $w \in C(r)$, $C(r)$ is a compact one-dimensional manifold.  A compact, one-dimensional manifold must be either a circle or a finite union of circles.  Suppose that $C$ is a union of more than one circle.  By the Jordan curve theorem, each of these circles divides the compex plane into an interior and an exterior reigion.  Hence, given two of the circles which would comprise $C(r)$, one of these circles would have to lie inside the other and there would have to be an open set which has these two circles as boundary.  However, it is assumed that $p$ is constant on both circles and assumes the same value on both.  By the maximum principle, this would imply that $p$ is constant in the region between the circles which would, in turn, imply that $f$ is constant on $U$, which is impossible.  Hence, $C$ consists of a single circle.
+
+Next, note that $a$ must lie inside $C$.  If $a$ did not lie in $C$, it would follow that $|f(z)|<r$ when $z$ lies outside of $C$.  But this is not possible because the boundary of $u$ lies on the outsde of $C$ as well and $|f|$ was chosen to satisfy the boundary value $|f(z)| = 1$ when $z$ lies on the boundary of $U$.
+
+Since $a$ lies on the interior of the circle $C$, the winding number of $C$ about $a$ is 1.  Hence, upon traversing $C$ once, the phase of $q$ will increase by $2 \pi$.
+
+Since $f^{-1}$ is analytic, $C$ is not only homeomorphic to a circle, it is also a smooth curve.  Hence it makes sense to speak of the tangent to $C$ and the normal to $C$.  In terms of the normal and tangential derivatives, the Cauchy-Riemann equations my be written as
+ $$\frac{\partial p}{\partial t} = \frac{\partial q}{\partial n},\quad
+ \frac{\partial p}{\partial n} = -\frac{\partial q}{\partial t}$$
+Since $p(x) = r$ when $x$ lies on $C(r)$ and $p(x) \ge r$ when $x$ lies in the interior of $C(r)$, it follows that $\partial p / \partial t = 0$ and $\partial p / \partial n > 0$.  By the Cauchy-Riemann eqations, this means that $\partial q / \partial t \le 0$.  It is not possible that $\partial q / \partial t \le 0$ because, if that were so, then all the derivatives of $p$ and $q$ would vanish, which would imply that $f' = 0$, contrary to hypothesis.  Hence $q$ is a monotonically decreasing function on $C(r)$.  We already saw that $q$ decreases by $2 \pi$ upon traversing $C(r)$.  These two facts together imply that $\exp(-iq)$ is a bijection from $C(r)$ to the unit circle.  Hence $f$ is a bijection from $C(r)$ to the circle of radius $e^{-r}$.
+
+To finish the proof, we need to deal with the points $z$ such that $f'(z) = 0$.  We shall use the argument principle to show that these points do not exist!  As before, choose $r$ such that $f'(z) \ne 0$ whenever $|z| = r$.  Then $C(r)$ is a smooth close curve and we may apply the argument principle to $f'$ along $C(r)$.  Differentiating the definition,
+ $$f'(z) = -f(z) (u'(z) + i v'(z))$$
+Since the argument of a product is the sum of the arguments of the factors, we may consider $f$ and $u' + iv'$ separately.  The argument principle states that, because $f$ has only one simple zero (located at $a$) inside $C(r)$, the argument of $f$ will increase by $2 \pi$ upon traversing $C(r)$.  To compute the argument of $u' + iv'$, we may make use of the fact that the derivative of an analytic function is the same no matter what direction one chooses to compute the derivative.  To compute the derivative of $u + i v$ at a point on $C(r)$, choose the normal direction.  From what we had seen earlier, it follows that $u' + iv'$ will point along the inward normal to $C(r)$.  Since the inward normal rotates by by $-2 \pi$ upon traversing the curve, the argument of $u' + iv'$ changes by $-2 \pi$ upon traversing $C(r)$.  Hence, the argument of $f'$ stays the same after traversing $C(r)$.  Since $f'$ is analytic inside $C(r)$, the argument principle states that $f'$ can have no zeros inside of $C(r)$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NthRoot}
+\pmcreated{2013-03-22 11:57:27}
+\pmmodified{2013-03-22 11:57:27}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{nth root}
+\pmrecord{25}{30754}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{12D99}
+\pmsynonym{complex root}{NthRoot}
+\pmsynonym{principal root}{NthRoot}
+%\pmkeywords{nth root}
+%\pmkeywords{square root}
+%\pmkeywords{cube root}
+%\pmkeywords{root}
+%\pmkeywords{complex geometry}
+%\pmkeywords{complex plane}
+%\pmkeywords{complex}
+%\pmkeywords{imaginary}
+\pmrelated{SquareRoot}
+\pmrelated{CubeRoot}
+\pmrelated{RealNumber}
+\pmrelated{RationalNumber}
+\pmrelated{Complex}
+\pmrelated{IrrationalNumber}
+\pmrelated{EvenEvenOddRule}
+\pmrelated{ExtensionOfValuationFromCompleteBaseField}
+\pmrelated{Radical5}
+\pmrelated{Radical6}
+\pmrelated{ExampleOfConvergingIncreasingSequence}
+\pmrelated{NthRootByNewtonsMethod}
+\pmdefines{index}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapeword{index}
+
+The phrase ``\emph{the $n$-th root of a number}'' is a somewhat misleading concept that requires a fair amount of thought to make rigorous.
+
+For $n$ a positive integer, we define \emph{an} $n$-th root of a number $x$ to be a number $y$ such that $y^n=x$.  The number $n$ is said to be the \emph{index} of the root.  Note that the term ``number'' here is ambiguous, as the discussion can apply in a variety of contexts (groups, rings, monoids, etc.)  The purpose of this entry is specifically to deal with $n$-th roots of real and complex numbers.
+
+In an effort to give meaning to the term \emph{the} $n$-th root of a real number $x$, we define it to be the unique real number that $y$ is \emph{an} $n$th root of $x$ and such that $\operatorname{sign}(x)=\operatorname{sign}(y)$, if such a number exists.  We denote this number by $\sqrt[n]{x}$, or by $x^{\frac{1}{n}}$ if $x$ is positive.  This specific $n$th root is also called the \emph{principal $n$th root}.
+
+Example:  $\sqrt[4]{81} = 3$ because $3^4 = 3 \times 3 \times 3 \times 3= 81$, and $3$ is the unique positive real number with this property.
+
+Example:  If $x+1$ is a positive real number, then we can write $\sqrt[5]{x^5 + 5x^4 + 10x^3 + 10x^2 + 5x + 1} = x + 1$ because
+$(x + 1)^5 = (x^2 + 2x + 1)^2(x + 1) = x^5 + 5x^4 + 10x^3 + 10x^2 + 5x + 1$.  (See the Binomial Theorem
+and \PMlinkescapetext{Pascal's Triangle}.)
+
+The nth root operation is distributive for multiplication and division, but not for addition and
+subtraction.  That is, $\sqrt[n]{x \times y} = \sqrt[n]{x} \times \sqrt[n]{y}$, and
+$\sqrt[n]{\frac{x}{y}} = \frac{\sqrt[n]{x}}{\sqrt[n]{y}}$.  However, except in special cases,
+$\sqrt[n]{x + y} \not= \sqrt[n]{x} + \sqrt[n]{y}$ and $\sqrt[n]{x - y} \not= \sqrt[n]{x} - \sqrt[n]{y}$.
+
+Example:  $\sqrt[4]{\frac{81}{625}} = \frac{3}{5}$ because
+$\left(\frac{3}{5}\right)^4 = \frac{3^4}{5^4} = \frac{81}{625}$.
+
+Note that when we restrict our attention to real numbers, expressions like $\sqrt{-3}$ are undefined.  Thus, for a more full definition of $n$th roots, we will have to incorporate the notion of complex numbers:  \emph{The nth roots of a complex number} $t = x + yi$ are all the complex numbers $z_1, z_2, \ldots, z_n \in \mathbb{C}$ that satisfy the condition $z_k^n = t$.  Applying the fundamental theorem of algebra (complex version) to the function $x^n-t$ tells us that $n$ such complex numbers always exist (counting multiplicity).
+
+One of the more popular methods of finding these roots is through trigonometry and the geometry of complex numbers.  For a complex number $z=x+iy$, recall that we can put $z$ in polar form:  $z=(r, \theta)$, where $r = \sqrt[2]{x^2 + y^2}$, and $\theta = \frac{\pi}{2}$ if $x = 0$, and $\theta = \arctan{\frac{y}{x}}$ if $x \not= 0$.  (See the Pythagorean Theorem.)  For the specific procedures involved, see calculating the nth roots of a complex number.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

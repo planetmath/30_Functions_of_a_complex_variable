@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaussLucasTheorem}
+\pmcreated{2013-03-22 18:19:42}
+\pmmodified{2013-03-22 18:19:42}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Gauss--Lucas theorem}
+\pmrecord{10}{40959}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D20}
+\pmsynonym{Gauss-Lucas theorem}{GaussLucasTheorem}
+\pmsynonym{Lucas' theorem}{GaussLucasTheorem}
+\pmsynonym{Lucas's root theorem}{GaussLucasTheorem}
+\pmsynonym{zeros of polynomial derivative}{GaussLucasTheorem}
+\pmrelated{RollesTheorem}
+\pmrelated{ProductRule}
+\pmrelated{LogarithmicDerivative}
+\pmrelated{SlopeAngle}
+\pmrelated{FundamentalTheoremOfAlgebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{derivative} \PMlinkescapeword{side}
+
+\textbf{Theorem.}\, If a convex polygon of the complex plane contains all \PMlinkname{zeros}{ZeroOfAFunction} of a polynomial $f(z)$, then it contains also all zeros of the \PMlinkname{derivative}{ComplexDerivative} $f'(z)$.\\
+
+{\em Proof.}\, Due to the fundamental theorem of algebra, the polynomial $f(z)$ can be written in the form
+\begin{align}
+f(z) \,=\, a_0(z-z_1)(z-z_2)\cdots(z-z_n)
+\end{align}
+where $a_0$ is the leading coefficient and\, $z_1$, $z_2$,\,\ldots,\,$z_n$\, are the zeros of $f(z)$ (some of these may coincide).\, When the derivative
+$$f'(z) \,=\, \sum_{\mu=1}^n\prod_{\nu\neq\mu}(z-z_\nu)$$
+is divided by (1), we have the identic equation
+$$\frac{f'(z)}{f(z)} \,=\, \frac{1}{z\!-\!z_1}+\frac{1}{z\!-\!z_2}+\ldots+\frac{1}{z\!-\!z_n},$$
+and therefore
+\begin{align}
+f'(z) \,=\, f(z)\!\left(\frac{1}{z\!-\!z_1}+\frac{1}{z\!-\!z_2}+\ldots+\frac{1}{z\!-\!z_n}\right).
+\end{align}
+Since $f(z)$ has no zeros outside the polygon, we have, according to (2), to show only that the same concerns the second factor of the right hand side of (2).
+
+Let $z$ be an arbitrary point outside the polygon.\, Because of its convexity, there is a line $l$ through $z$ such that the polygon is completely on the other side of $l$.\, Thus all directed line segments from $z$ to the points $z_1,\, z_2, \ldots,\, z_n$ lie on the same side of the line $l$.\, The direction angles of those segments, being the arguments of the complex numbers $z_1\!-\!z,\, z_2\!-\!z,\, \ldots,\, z_n\!-\!z$,\, are between the values $\alpha$ and 
+$\alpha\!+\!\pi$, where $\alpha$ is one of the two angles which $l$ forms with the positive real axis.\, 
+
+The arguments of any non-zero complex number and its inverse number are always opposite numbers of each other.\, Hence the arguments of
+\begin{align}
+\frac{1}{z\!-\!z_1},\,\frac{1}{z\!-\!z_2},\,\ldots,\,\frac{1}{z\!-\!z_n}
+\end{align}
+are between $-\alpha$ and $-\alpha\!-\!\pi$.\, Think the line $m$ through the origin with the direction angle $-\alpha$ and the position vectors of the numbers (3).\, These vectors are all directed on the same side of $m$, and similarly their sum vector, which thus is distinct from zero.\, The opposite vector of this sum vector is equal to the second factor in (2), and accordingly distinct from zero.\\
+
+\textbf{Note.}\, The theorem can be strengthened to the following form:\; The zeros of the derivative of any non-zero polynomial $f(z)$ are contained in the convex hull of the set of the zeros of $f(z)$.
+
+
+%%%%%
+%%%%%
+\end{document}

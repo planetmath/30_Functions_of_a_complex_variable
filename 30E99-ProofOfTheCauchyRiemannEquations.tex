@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheCauchyRiemannEquations}
+\pmcreated{2013-03-22 12:55:39}
+\pmmodified{2013-03-22 12:55:39}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{proof of the Cauchy-Riemann equations}
+\pmrecord{6}{33282}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+\pmdefines{complex derivative}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\begin{document}
+\paragraph{Existence of complex derivative implies the Cauchy-Riemann
+  equations.}
+
+Suppose that the complex
+derivative
+\begin{equation}
+  \label{eq:cder}
+f'(z) = \lim_{\zeta\rightarrow 0} \frac{f(z+\zeta)-f(z)}{\zeta}  
+\end{equation}
+exists for some $z\in \cnums$. 
+This means that for all $\epsilon>0$, there exists a $\rho>0$, such that
+for all complex $\zeta$ with
+$\vert \zeta\vert<\rho$, we have
+$$\left\vert f'(z)  - \frac{f(z+\zeta)-f(z)}{\zeta} \right \vert<\epsilon.$$
+
+Henceforth, set
+$$f=u+iv,\quad z=x+iy.$$
+If $\zeta$ is
+real, then the above limit reduces to a partial derivative in $x$, i.e.
+$$f'(z) = \frac{\partial f}{\partial x} = \frac{\partial u}{\partial
+  x} + i \frac{\partial v}{\partial x},$$
+Taking the limit with an
+imaginary $\zeta$ we deduce that
+$$f'(z) = -i\frac{\partial f}{\partial y} = -i \frac{\partial u}{\partial
+  y} + \frac{\partial v}{\partial y}.$$
+Therefore
+$$\frac{\partial f}{\partial x} = -i\frac{\partial f}{\partial y},$$
+and breaking this relation up into its real and imaginary parts gives
+the Cauchy-Riemann equations.
+
+\paragraph{The Cauchy-Riemann
+  equations imply the existence of a complex derivative.}
+Suppose that the Cauchy-Riemann
+equations 
+$$
+\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y},\quad
+\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x},
+$$
+hold for a fixed $(x,y)\in\reals^2$, 
+and  that all the
+partial derivatives are continuous at $(x,y)$ as well.  The continuity
+implies that all directional derivatives exist as well.  In
+other words, for $\xi,\eta\in\reals$ and $\rho=\sqrt{\xi^2+\eta^2}$
+we have
+$$
+\frac{
+u(x+\xi,y+\eta) - u(x,y) - (\xi \frac{\partial u}{\partial x } + \eta
+\frac{\partial u}{\partial y})}{\rho} \rightarrow
+0,\;\mbox{as } \rho\rightarrow 0,$$
+with a similar relation holding for $v(x,y)$.  Combining the two scalar
+relations into a vector relation we obtain
+$$
+\rho^{-1} \left\Vert
+  \begin{pmatrix}
+    u(x+\xi,y+\eta) \\ v(x+\xi,y+\eta)
+  \end{pmatrix}
+  -
+  \begin{pmatrix}
+    u(x,y) \\ v(x,y)
+  \end{pmatrix}
+  -
+  \begin{pmatrix}
+    \frac{\partial u}{\partial x} & \frac{\partial u}{\partial y}\\
+    \frac{\partial v}{\partial x} & \frac{\partial v}{\partial y}\\
+  \end{pmatrix}
+  \begin{pmatrix}
+    \xi \\ \eta
+  \end{pmatrix}
+\right\Vert \rightarrow 0,\;\mbox{as } \rho\rightarrow 0.$$
+Note that
+the Cauchy-Riemann equations imply that the matrix-vector product
+above is equivalent to the product of two complex numbers, namely
+$$\left(\frac{\partial u}{\partial x} +i\frac{\partial v}{\partial
+  x}\right)(\xi+i\eta).$$
+Setting
+\begin{eqnarray*}
+f(z) &=& u(x,y)+i v(x,y),\\
+f'(z) &=& \frac{\partial u}{\partial x} + i\frac{\partial v}{\partial
+  x}\\
+\zeta &=& \xi+i\eta  
+\end{eqnarray*}
+we can therefore rewrite the above limit relation  as
+$$
+\left\vert \frac{ f(z+\zeta)-f(z) - f'(z)\zeta}{ \zeta}\right\vert  \rightarrow
+0,\;\mbox{as } \rho\rightarrow 0,$$
+which is the complex limit definition of $f'(z)$ shown
+in \eqref{eq:cder}.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,216 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ModularGroup}
+\pmcreated{2013-03-22 17:35:02}
+\pmmodified{2013-03-22 17:35:02}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{modular group}
+\pmrecord{17}{39996}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+
+% there are many more packages, add them here as you need them
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Half}{\mathbb{H}}
+\newcommand{\Ints}{\mathbb{Z}}
+% define commands here
+\newtheorem{thm}{Theorem}
+\newrgbcolor{LightGreen}{0.7 1 0.7}
+\newrgbcolor{LightYellow}{1 1 0.7}
+\newrgbcolor{LightBlue}{0.7 1 1}
+\newrgbcolor{LightRed}{1 0.7 0.7}
+
+\begin{document}
+\PMlinkescapeword{forces}
+\PMlinkescapeword{similar}
+The \emph{modular group} $\Gamma$ is the group of M\"obius transformations
+\[z\mapsto \frac{az+b}{cz+d}\]
+in which $a,b,c,$ and $d$ are integers and $ad-bc=1$. $\Gamma$ is a subgroup of the full group of M\"obius transformations of the extended complex plane. It can be shown that in fact $\Gamma$ is the group of analytic automorphisms of $\Half$.
+
+The full group of M\"obius transformations is isomorphic to $PSL_2(\Complex)$, and the modular group is in turn isomorphic to $PSL_2(\Ints)$ via the mapping
+\[\left[z\mapsto \frac{az+b}{cz+d}\right]\mapsto \begin{pmatrix} a b & c d\end{pmatrix}\]
+(Note that it is clear that two matrices that differ by $-I_2$, the negative of the identity matrix, induce the same linear fractional transformation). We denote by $I$ the identity of either $\Gamma$ or $PSL_2(\Ints)$.
+
+Let $\Half$ denote the upper half-plane in $\Complex$, i.e. $H=\{z\in\Complex\ \mid\ \Im(z)>0\}$. Then if \[\gamma=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in\Gamma, z\in\Half\]
+a short calculation leads to the fact that $\displaystyle\Im(\gamma z)=\frac{\Im(z)}{\lvert cz+d\rvert^2}$. Thus $\Im(gz)=\Im(z)$ and $\Gamma$ acts on the upper half-plane.
+
+First consider two particular transformations in $\Gamma$, namely
+\begin{align*}
+S=\begin{pmatrix}0 &-1\\ 1 &0\end{pmatrix} &:z\mapsto \frac{-1}{z}\\
+T=\begin{pmatrix}1 &1 \\ 0& 1\end{pmatrix} &:z\mapsto z+1
+\end{align*}
+Then $S^2=(ST)^3=1$.
+
+Let's get a feel for the action of the elements $S,ST$ on $\Half$. First, note that $S$ takes points outside the unit circle bijectively to points inside the unit circle, and vice versa. Also, since
+\[\left\lvert\frac{-1}{z}+1\right\rvert=\left\lvert\frac{z-1}{z}\right\rvert\]
+we see that $S(z)$ is inside the half-circle of radius $1$ centered at $-1$ precisely when $\lvert z-1\rvert < \lvert z\rvert$, which happens if and only if $\Re (z)>1/2$. Thus the region $\Re(z)>1/2$ is mapped bijectively by $S$ to the region $\lvert z+1\rvert<1$. Similarly, the region $\Re(z)<-1/2$ is mapped bijectively by $S$ to the half-circle centered at $1$.
+
+To understand the action of $ST$, divide $\Half$ into three (open) regions $U_1$, $U_2$, $U_3$ (see figure below).
+\begin{center}
+\begin{pspicture}(-6,0)(6,6)
+\psset{unit=3cm}
+\psframe[linestyle=none,fillstyle=solid,fillcolor=LightYellow](-0.5,0)(2,2)
+\psframe[linestyle=none,fillstyle=solid,fillcolor=LightRed](-2,0)(-0.5,2)
+\pswedge[linestyle=none,fillstyle=solid,fillcolor=LightGreen](-1,0){1}{0}{60}
+\pswedge[linestyle=none,fillstyle=solid,fillcolor=LightGreen](0,0){1}{120}{180}
+\psset{linecolor=blue}
+\psarc(-1,0){1}{0}{180}
+\psarc(0,0){1}{0}{180}
+\psarc(1,0){1}{0}{180}
+\psarc(-2,0){1}{0}{90}
+\psarc(2,0){1}{90}{180}
+\qline(-1.5,0)(-1.5,2)
+\qline(-0.5,0)(-0.5,2)
+\qline(0.5,0)(0.5,2)
+\qline(1.5,0)(1.5,2)
+\psarc(-1.6667,0){0.333}{0}{180}
+\psarc(-1.3333,0){0.333}{0}{180}
+\psarc(-0.6667,0){0.333}{0}{180}
+\psarc(-0.3333,0){0.333}{0}{180}
+\psarc( 0.3333,0){0.333}{0}{180}
+\psarc( 0.6667,0){0.333}{0}{180}
+\psarc( 1.3333,0){0.333}{0}{180}
+\psarc( 1.6667,0){0.333}{0}{180}
+\rput(1.,1.5){\LARGE $U_1$}
+\rput(-0.5,0.5){\LARGE $U_2$}
+\rput(-1.5,1.5){\LARGE $U_3$}
+\rput(2,2.1){.}
+\psdots(0,1)(-0.5,0.866)(0.5,0.866)
+\rput(-.05,.95){$i$}
+\rput(-.55,.95){$\rho$}
+\rput(.55,.95){$-\overline{\rho}$}
+\pscustom[fillstyle=hlines,linestyle=none]{\psarc(0,0){1}{60}{120} \psline(-0.5,2)(.5,2)}
+\psset{linecolor=black}
+\psaxes[labels=none]{-}(0,0)(-2,0.1)(2,0.1)
+\multido{\n=-2+1}{5}{\rput(\n,-.1){\small \n}}
+\end{pspicture}
+\end{center}
+Since $ST$ is simply $T$ followed by $S$, any point $z\in U_1$ will, after application of $T$, have absolute value $>1$, and thus $\lvert ST(U_1)\rvert<1$. But by the above, we also see that $ST(U_1)$ is contained in the half-circle centered at $-1$, so $ST(U_1)=U_2$.
+
+Similarly, $S(U_3)=T(U_2)$, so that $ST(U_2)=U_3$. It follows from bijectivity of $ST$ that $ST(U_3)=U_1$, and so $ST$ ``rotates'' the plane around the point $\rho$. Similarly, $TS$ rotates the plane around $-\overline{\rho}$.
+
+It follows that $\rho$ has a nontrivial stabilizer under the action of $\Gamma$, since $ST$ and $(ST)^2$ both stabilize $\rho$. Similarly, $S$ stabilizes $i$. It turns out (see theorem below) that these are the only points of $\Half$ with nontrivial stabilizers.
+
+It turns out that $\Gamma$ tiles $\Half$; there is a set of simple, connected subsets of $\Half$ that are permuted by the action of $\Gamma$. If we further annotate the diagram above (removing the shaded regions for clarity), we can see what the tiling looks like:
+\begin{center}
+\begin{pspicture}(-6,0)(6,6)
+\psset{unit=3cm}
+\psset{linecolor=blue}
+\psarc(-1,0){1}{0}{180}
+\psarc(0,0){1}{0}{180}
+\psarc(1,0){1}{0}{180}
+\psarc(-2,0){1}{0}{90}
+\psarc(2,0){1}{90}{180}
+\qline(-1.5,0)(-1.5,2)
+\qline(-0.5,0)(-0.5,2)
+\qline(0.5,0)(0.5,2)
+\qline(1.5,0)(1.5,2)
+\psarc(-1.6667,0){0.333}{0}{180}
+\psarc(-1.3333,0){0.333}{0}{180}
+\psarc(-0.6667,0){0.333}{0}{180}
+\psarc(-0.3333,0){0.333}{0}{180}
+\psarc( 0.3333,0){0.333}{0}{180}
+\psarc( 0.6667,0){0.333}{0}{180}
+\psarc( 1.3333,0){0.333}{0}{180}
+\psarc( 1.6667,0){0.333}{0}{180}
+\rput(0,1.5){\large $1$}
+\rput(1,1.5){\large $T$}
+\rput(1.8,1.5){\large $T^2$}
+\rput(1,0.7){\large $TS$}
+\rput(0,0.7){\large $S$}
+\rput(-1,1.5){\large $T^{-1}$}
+\rput(-1.8,1.5){\large $T^{-2}$}
+\rput(-1,0.7){\large $T^{-1}S$}
+\rput(-.7,.4){$STS$}
+\rput(-.3,.4){$ST$}
+\rput(.3,.4){$ST^{-1}$}
+\rput(.7,.4){$ST^{-1}S$}
+\rput(2,2.1){.}
+\psdots(0,1)(-0.5,0.866)(0.5,0.866)
+\rput(-.05,.95){$i$}
+\rput(-.55,.95){$\rho$}
+\rput(.55,.95){$-\overline{\rho}$}
+\pscustom[fillstyle=hlines,linestyle=none]{\psarc(0,0){1}{60}{120} \psline(-0.5,2)(.5,2)}
+\psset{linecolor=black}
+\psaxes[labels=none]{-}(0,0)(-2,0.1)(2,0.1)
+\multido{\n=-2+1}{5}{\rput(\n,-.1){\small \n}}
+\end{pspicture}
+\end{center}
+Note that we have thus far treated only the interior of these regions and have been somewhat cavalier about what happens at the boundary. It is possible, with care, to define a fundamental domain that includes some boundary points so that the action of $\Gamma$ in fact tiles the entire half-plane.
+
+The usual choice for a fundamental domain for the action is the shaded region in the diagram, which is
+\[D=\{z\in\Half\ \mid\ \lvert z\rvert\geq 1\text{ and } \lvert \Re z\rvert\leq 1/2\}\]
+
+The following theorem collects these results together, and also proves that $\Gamma$ is in fact generated by $S$ and $T$ (or, equivalently, by $S$ and $ST$).
+
+\begin{thm}\ 
+\newline
+\begin{enumerate}
+\item For each $z\in\Half$, $\gamma z\in D$ for some $\gamma\in\Gamma$ (in fact, for some $\gamma\in G=\langle S,T\rangle$);
+\item If $z,z'$ are distinct points in $D$ and $I\neq\gamma\in\Gamma$ is such that $\gamma z=z'$, then $z$ and $z'$ are both on the boundary of $D$. In particular, either 
+\begin{itemize}
+\item $\lvert \Re z\rvert=\lvert \Re z'\rvert=1/2$ and $z'=z\pm 1$, or else
+\item $\lvert z\rvert=\lvert z'\rvert=1$ and $z'=-1/z$.
+\end{itemize}
+\item Finally, the stabilizer $\Gamma_z$ of a point $z\in D$ consists solely of $I$ except that
+\begin{itemize}
+\item $\Gamma_i=\langle S\rangle$, the two-element group generated by $S$;
+\item $\Gamma_{\rho}=\langle ST\rangle$, the three-element group generated by $ST$ (here $\displaystyle\rho=\frac{-1+i\sqrt{3}}{2}$);
+\item $\Gamma_{-\overline{\rho}}=\langle TS\rangle$, also a three-element group
+\end{itemize}
+\item $\Gamma = \langle S,T\rangle$; that is, $S$ and $T$ together generate $\Gamma$.
+\end{enumerate}
+\end{thm}
+
+Note that (1) and (2) in the above theorem imply that the interior of $D$ has precisely one representative from each orbit of $G=\langle S,T\rangle$.
+
+\textbf{Proof:}
+To prove (1), choose $z\in\Half$, and recall that if 
+\[\gamma=\begin{pmatrix}a&b\\c&d\end{pmatrix}\in G, z\in\Half\]
+then $\displaystyle\Im(\gamma z)=\frac{\Im(z)}{\lvert cz+d\rvert^2}$. Since $c$ and $d$ are integers, choose $\gamma\in G$ such that $\lvert cz+d\rvert$ is as small as possible; then $\Im(\gamma z)$ is as large as possible. Now translate $\gamma z$ by powers of $T$ so that its real part is between $-1/2$ and $1/2$, say $\lvert \Re(T^n\gamma(z))\rvert\leq 1/2$. Then in fact $T^n\gamma(z)\in D$, for if not, then $\lvert T^n\gamma(z)\rvert<1$, so that $\lvert ST^n\gamma(z)\rvert>1>\lvert T^n\gamma(z)\rvert$ contradicting the maximality of $\Im\gamma(z)$ over all possible choices of $\gamma\in G$. Thus $T^n\gamma$ is the required element of $G\leq \Gamma$.
+
+We now prove (2). Suppose $z\in D$, and that $\gamma\in \Gamma$ is such that $\gamma(z)\in D$. Note that $\gamma(z)$ has the same property, since $\gamma^{-1}(\gamma(z))\in D$, so we may assume, by replacing $z$ by $\gamma(z)$ if required, that $\Im(z)\leq \Im(\gamma(z))$, which means that $\lvert cz+d\rvert\leq 1$. Then $\lvert c\rvert=0, \pm 1$ (since if $c\geq 2$ then $\lvert\Im(cz+d)\rvert\geq \sqrt{3}>1$ and $\lvert cz+d\rvert> 1$). The case $c=-1$ reduces to the case $c=1$ by replacing $\gamma=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ by $\gamma'=\begin{pmatrix}-a&-b\\-c&-d\end{pmatrix}$, which represents the same element of $\Gamma$ as does $\gamma$. We consider the two remaining cases ($c=0$ and $c=1$) separately.
+
+If $c=0$, then $d=\pm 1$ (it cannot be zero since $ad-bc=1$), so $\gamma=\begin{pmatrix} \pm 1 & b\\0 & \pm 1\end{pmatrix}$, and $\gamma$ is simply translation by $\pm b$. But $\lvert\Re(z)\rvert,\lvert\Re(\gamma(z))\rvert\leq 1/2$, so we must have either $b=0$, in which case $\gamma=I$, or $b=\pm 1$, in which case $\gamma(z)=z\pm 1$ and either $\Re(z)=-1/2, \Re(\gamma(z))=1/2$ or the reverse.
+
+If $c=1$, then we have $\lvert z+d\rvert\leq 1$. That together with the fact that $\lvert z\rvert\geq 1$ forces $\lvert z\rvert=1$, and either $d=0$ or $d=\pm 1$.
+\begin{itemize} 
+\item If $d=0$, then $b=-1$, so $\gamma=\begin{pmatrix}a & -1\\1 & 0\end{pmatrix}$ and thus $\gamma(z)=a-1/z$ and $a=0, \pm 1$. If $a=0$, then $\gamma(z)=-1/z$. In particular, $-1/z=\gamma(z)=z$ implies that $z=i$, proving the first assertion of (3). If $a=\pm 1$, then the argument above shows that $\Re(z)=-1/2, \Re(\gamma(z))=1/2$ or the reverse, since $-1/z$ also lies on the unit circle in $D$.
+\item If $d=1$,  $z$ is on the unit circle in $D$ and $\lvert z+1\rvert\leq 1$, so we must have $z=\rho$. Similarly, if $d=-1$, $z=-\overline{\rho}$.
+\end{itemize}
+
+The proof of (3) follows directly from the above arguments. Clearly the stabilizer of any point in the interior of $D$ consists only of $I$, from part (2). If $\Re(z)=\pm 1/2$, then the only element of $\Gamma$ leaving $z$ in $D$ is $T$ or $T^{-1}$, but these clearly do not stabilize $z$. Finally, consider the case where $\lvert z\rvert=1$. If $z\neq i, \rho,-\overline{\rho}$, then by part (2), only $\gamma=S$ leaves $z$ in $D$, and it clearly moves $z$. But $Si=i$, so $\Gamma_i=\langle S\rangle$. If $z=\rho$, both $T$ and $S$ leave $\rho$ in $D$; $TS$ stabilizes it and thus $\Gamma_{\rho}=\langle TS\rangle$. The case of $z=-\rho$ is similar.
+
+Finally, we prove that $G=\Gamma$. Suppose $\gamma\in\Gamma$. Choose a point $z$ in the interior of $D$, and let $z'=\gamma z$. We know from part (1) that for some $\gamma'\in G$, $\gamma'z'\in D$. Thus $z$ and $\gamma'\gamma z$ are in the same orbit of an element of $\Gamma$, but $z$ is not on the boundary of $D$. Then by part (2), $\gamma'\gamma z=z$, but part (3) then implies that in fact $\gamma'\gamma=I$ since $z$ is interior to $D$. Then $\gamma=\gamma'^{-1}\in G$ and the result follows.
+
+\begin{thebibliography}{10}
+\bibitem{bib:andrews}
+J.P.~Serre, \emph{A Course in Arithmetic}, Springer GTM, 1973.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

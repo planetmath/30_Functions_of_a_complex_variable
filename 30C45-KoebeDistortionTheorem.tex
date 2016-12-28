@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KoebeDistortionTheorem}
+\pmcreated{2013-03-22 14:23:25}
+\pmmodified{2013-03-22 14:23:25}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Koebe distortion theorem}
+\pmrecord{7}{35886}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C45}
+\pmsynonym{distortion theorem}{KoebeDistortionTheorem}
+\pmsynonym{generalized distortion theorem}{KoebeDistortionTheorem}
+\pmsynonym{K\"obe distortion theorem}{KoebeDistortionTheorem}
+\pmrelated{SchlichtFunctions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{thm}[Koebe]
+Suppose $f$ is a schlicht function (univalent function on the unit disc
+such that $f(0) = 0$ and $f'(0) = 1$) then
+\begin{equation*}
+\frac{1-\lvert z \rvert}{(1+\lvert z \rvert)^3}
+\leq
+\lvert f'(z) \rvert
+\leq
+\frac{1+\lvert z \rvert}{(1-\lvert z \rvert)^3},
+\end{equation*}
+and
+\begin{equation*}
+\frac{\lvert z \rvert}{(1+\lvert z \rvert)^2}
+\leq
+\lvert f(z) \rvert
+\leq
+\frac{\lvert z \rvert}{(1-\lvert z \rvert)^2}.
+\end{equation*}
+Equality holds for one of the four inequalities at some point $z \not= 0$ if and only if $f$ is a rotation of the Koebe function.
+\end{thm}
+
+Following is a generalized distortion theorem.
+
+\begin{thm}
+If $K$ is a compact subset of a region $G \subset {\mathbb{C}}$, then there is a constant $M$ (depending on $K$) such that for every univalent function $f$
+on $G$ and ever pair of points $z,w \in K$ we have
+\begin{equation*}
+\frac{1}{M}
+\leq
+\frac{\lvert f'(z) \rvert}{\lvert f'(w) \rvert}
+\leq
+M .
+\end{equation*} 
+\end{thm}
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexII}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable II}}.
+Springer-Verlag, New York, New York, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

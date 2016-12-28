@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLiouvillesTheorem}
+\pmcreated{2013-03-22 12:54:15}
+\pmmodified{2013-03-22 12:54:15}
+\pmowner{Evandar}{27}
+\pmmodifier{Evandar}{27}
+\pmtitle{proof of Liouville's theorem}
+\pmrecord{5}{33254}
+\pmprivacy{1}
+\pmauthor{Evandar}{27}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f:\mathbb{C}\to\mathbb{C}$ be a bounded, entire function.  Then by Taylor's theorem, $$f(z)=\sum_{n=0}^\infty c_n x^n \mbox{ where } c_n = \frac{1}{2\pi i}\int_{\Gamma_r} \frac{f(w)}{w^{n+1}}\,dw$$
+
+where $\Gamma_r$ is the circle of radius $r$ about $0$, for $r>0$.  Then $c_n$ can be estimated as $$|c_n|\leq\frac{1}{2\pi}\operatorname{length}(\Gamma_r)\operatorname{sup}\left\{\left|\frac{f(w)}{w^{n+1}}\right|\,\colon\, w\in \Gamma_r\right\} = \frac{1}{2\pi}\, 2\pi r \frac{M_r}{r^{n+1}} = \frac{M_r}{r^{n}}$$
+
+where $M_r = \operatorname{sup}\{|f(w)|\colon w\in\Gamma_r\}$.
+
+But $f$ is bounded, so there is $M$ such that $M_r\leq M$ for all $r$.  Then $|c_n|\leq\frac{M}{r^n}$ for all $n$ and all $r>0$.  But since $r$ is arbitrary, this gives $c_n = 0$ whenever $n>0$.  So $f(z) = c_0$ for all $z$, so $f$ is constant.$\square$
+%%%%%
+%%%%%
+\end{document}

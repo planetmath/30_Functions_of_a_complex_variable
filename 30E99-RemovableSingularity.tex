@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RemovableSingularity}
+\pmcreated{2013-03-22 12:56:01}
+\pmmodified{2013-03-22 12:56:01}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{removable singularity}
+\pmrecord{5}{33289}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+\pmrelated{EssentialSingularity}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\begin{document}
+Let $U\subset\cnums$ be an open neighbourhood of a
+point $a\in \cnums$.  We say that a function
+$f:U\backslash\{a\}\rightarrow \cnums$ has a \emph{removable singularity} at
+$a$, if the complex derivative $f'(z)$ exists for all $z\neq a$, and
+if $f(z)$ is  bounded near $a$.
+
+Removable singularities can, as the name suggests, be removed.
+\begin{theorem}
+  Suppose that $f:U\backslash\{a\}\rightarrow \cnums$ has a removable
+  singularity at $a$.  Then, $f(z)$ can be holomorphically extended to
+  all of $U$, i.e.
+  there exists a holomorphic $g:U\rightarrow\cnums$ such that
+  $g(z)=f(z)$ for all $z\neq a$.
+\end{theorem}
+
+\emph{Proof.}
+Let $C$ be a circle centered at $a$, oriented counterclockwise, and
+sufficiently small so that $C$ and its interior are contained in
+$U$. For  $z$ in the interior of $C$, set
+$$g(z) = \frac{1}{2\pi i} \oint_C \frac{f(\zeta)}{\zeta-z}d\zeta.$$
+Since $C$ is a compact set, the defining limit for the derivative
+$$\frac{d}{dz} \frac{f(\zeta)}{\zeta-z}= 
+\frac{f(\zeta)}{(\zeta-z)^2}$$
+converges uniformly for $\zeta\in C$.  Thanks to the uniform
+convergence, the order of the derivative and the integral operations
+can be interchanged.  Hence, we may deduce that $g'(z)$ exists 
+for all $z$ in the interior of $C$.  Furthermore, by the Cauchy
+integral formula we have that $f(z)=g(z)$ for all $z\neq a$, and therefore
+$g(z)$ furnishes us with the desired extension.
+%%%%%
+%%%%%
+\end{document}

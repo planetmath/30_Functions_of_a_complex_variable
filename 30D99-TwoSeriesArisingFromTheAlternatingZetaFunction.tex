@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TwoSeriesArisingFromTheAlternatingZetaFunction}
+\pmcreated{2013-06-06 19:13:30}
+\pmmodified{2013-06-06 19:13:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{two series arising from the alternating zeta function}
+\pmrecord{10}{42581}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Conjecture}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D99}
+\pmclassification{msc}{30B50}
+\pmclassification{msc}{11M41}
+\pmsynonym{trigonometric series conjecture equivalent to the Riemann hypothesis}{TwoSeriesArisingFromTheAlternatingZetaFunction}
+%\pmkeywords{Riemann hypothesis}
+\pmrelated{EulerRelation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The terms of the series defining the alternating zeta function
+$$\eta(s) \;:=\; \sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^s} \qquad (\mbox{Re}\,s > 0),$$
+a.k.a. the Dirichlet eta function, may be split into their real and imaginary parts:
+$$\frac{1}{n^s} \;=\; \frac{e^{-ib\ln{n}}}{n^a} \;=\; 
+\frac{\cos(b\ln{n})}{n^a}-\frac{i\sin(b\ln{n})}{n^a}$$
+Here,\, $s = a\!+\!ib$\, with real $a$ and $b$.\, It follows the equation
+\begin{align}
+\eta(s) \;=\; 
+-\sum_{n=1}^\infty\frac{(-1)^n}{n^a}\cos(b\ln{n})+i\sum_{n=1}^\infty\frac{(-1)^n}{n^a}\sin(b\ln{n})
+\end{align}
+containing two Dirichlet series.
+
+The alternating zeta function and the Riemann zeta function are connected by the relation
+$$\zeta(s) \;=\; \frac{\eta(s)}{1-2^{1-s}}$$
+(see the \PMlinkname{parent entry}{AnalyticContinuationOfRiemannZetaToCriticalStrip}).\, The following conjecture concerning the above real part series and imaginary part series of (1) has been proved by Sondow [1] to be equivalent with the Riemann hypothesis.\\
+
+\textbf{Conjecture.}\, If the equations
+$$\sum_{n=1}^\infty\frac{(-1)^n}{n^a}\cos(b\ln{n}) \;=\; 0 \quad \mbox{and} \quad 
+\sum_{n=1}^\infty\frac{(-1)^n}{n^a}\sin(b\ln{n}) \;=\; 0$$
+are true for some pair of real numbers $a$ and $b$, then
+$$a \;=\; 1/2 \qquad \mbox{or} \qquad a \;=\; 1.$$
+
+\begin{thebibliography}{8}
+\bibitem{S}{\sc Jonathan Sondow}: A simple counterexample to Havil's ``reformulation'' of the Riemann hypothesis.\, -- {\it Elemente der Mathematik} \textbf{67} (2012) 61--67.\, Also available \PMlinkexternal{here}{http://arxiv.org/pdf/0706.2840v3.pdf}.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TeichmullerSpace}
+\pmcreated{2013-03-22 14:19:48}
+\pmmodified{2013-03-22 14:19:48}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Teichm\"uller space}
+\pmrecord{8}{35799}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30F60}
+\pmdefines{Teichm\"uller metric}
+\pmdefines{Teichm\"uller equivalence}
+\pmdefines{Teichm\"uller equivalent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+\begin{defn}
+Let $S_0$ be a Riemann surface.  Consider all pairs $(S,f)$ where
+$S$ is a Riemann surface and $f$ is a sense-preserving quasiconformal
+mapping of $S_0$ onto $S$.  We say $(S_1,f_1) \sim (S_2,f_2)$ if $f_2 \circ
+f_1^{-1}$ is homotopic to a conformal mapping of $S_1$ onto $S_2$.  In this case we say that $(S_1,f_1)$ and $(S_2,f_2)$ are {\em Teichm\"uller equivalent}.  The space of equivalence classes under this relation is called the {\em Teichm\"uller space} $T(S_0)$ and $(S_0,I)$ is called the initial
+point of $T(S_0)$.  The equivalence relation is called {\em Teichm\"uller equivalence}.
+\end{defn}
+
+\begin{defn}
+There exists a natural {\em Teichm\"uller metric} on $T(S_0)$, where the distance
+between $(S_1,f_1)$ and $(S_2,f_2)$ is $\log K$ where $K$ is the smallest maximal dilatation of a mapping homotopic to $f_2 \circ f_1^{-1}$.
+\end{defn}
+
+There is also a natural isometry between $T(S_0)$ and $T(S_1)$ defined by
+a quasiconformal mapping of $S_0$ onto $S_1$.  The mapping
+$(S,f) \mapsto (S,f \circ g)$ induces an isometric mapping of $T(S_1)$ onto $T(S_0)$.  So we could think of $T(\cdot)$ as a contravariant functor from
+the category of Riemann surfaces with quasiconformal maps to the category of
+Teichm\"uller spaces (as a subcategory of metric spaces).
+
+\begin{thebibliography}{9}
+\bibitem{ahlfors}
+L.\@ V.\@ Ahlfors.  \emph{\PMlinkescapetext{Lectures on Quasiconformal
+Mappings}}.  Van Nostrand-Reinhold, Princeton, New Jersey, 1966
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

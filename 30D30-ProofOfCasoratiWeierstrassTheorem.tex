@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCasoratiWeierstrassTheorem}
+\pmcreated{2013-03-22 13:32:40}
+\pmmodified{2013-03-22 13:32:40}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of Casorati-Weierstrass theorem}
+\pmrecord{4}{34144}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmrelated{PicardsTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Assume that $a$ is an essential singularity of $f$.  Let $V\subset U$
+be a punctured neighborhood of $a$, and let $\lambda\in\mathbb{C}$.
+We have to show that $\lambda$ is a limit point of $f(V)$.  Suppose it
+is not, then there is an $\epsilon>0$ such that
+$|f(z)-\lambda|>\epsilon$ for all $z\in V$, and the function
+$$
+g:V\to\mathbb{C}, z\mapsto\frac{1}{f(z)-\lambda}
+$$
+is bounded, since $|g(z)|=\frac{1}{|f(z)-\lambda|}<\epsilon^{-1}$
+for all $z\in V$.  According to Riemann's removable singularity
+theorem, this implies that $a$ is a removable singularity of $g$, so
+that $g$ can be extended to a holomorphic function $\bar
+g:V\cup\{a\}\to\mathbb C$.  Now
+$$
+f(z)=\frac{1}{\bar g(z)}-\lambda
+$$
+for $z\neq a$, and $a$ is either a removable singularity of $f$ (if
+$\bar g(z)\neq 0$) or a pole of order $n$ (if $\bar g$ has a zero of
+order $n$ at $a$).  This contradicts our assumption that $a$ is an
+essential singularity, which means that $\lambda$ must be a limit
+point of $f(V)$.  The argument holds for all $\lambda\in\mathbb{C}$,
+so $f(V)$ is dense in $\mathbb{C}$ for any punctured neighborhood $V$
+of $a$.
+
+To prove the converse, assume that $f(V)$ is dense in $\mathbb{C}$ for
+any punctured neighborhood $V$ of $a$.  If $a$ is a removable
+singularity, then $f$ is bounded near $a$, and if $a$ is a pole,
+$f(z)\to\infty$ as $z\to a$.  Either of these possibilities
+contradicts the assumption that the image of any punctured
+neighborhood of $a$ under $f$ is dense in $\mathbb C$, so $a$ must be
+an essential singularity of $f$.
+%%%%%
+%%%%%
+\end{document}

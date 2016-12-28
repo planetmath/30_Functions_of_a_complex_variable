@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CalculationOfContourIntegral}
+\pmcreated{2013-03-22 19:14:16}
+\pmmodified{2013-03-22 19:14:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{calculation of contour integral}
+\pmrecord{8}{42162}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmclassification{msc}{30A99}
+\pmrelated{AntiderivativeOfComplexFunction}
+\pmrelated{SubstitutionNotation}
+\pmrelated{ProofOfCauchyIntegralFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+
+\begin{document}
+We will determine the important complex integral
+$$I \;:=\; \oint_C\!(z\!-\!z_0)^n\,dz$$
+where $C$ is the circumference of the circle \,$|z\!-\!z_0| = \varrho$\, taken anticlockwise and $n$ an arbitrary integer.\\
+
+Let's take the ``direction angle'' of the radius of $C$ as the parametre $t$, i.e. 
+$$t \;:=\; \arg|z\!-\!z_0|.$$
+Then on $C$, we have
+$$z\!-\!z_0 \;=\; \varrho e^{it}, \quad 0 \;\leqq\; t \leqq 2\pi$$
+and 
+$$dz \;=\; i\varrho e^{it}\,dt, \quad (z\!-\!z_0)^n \;=\; \varrho^ne^{int},$$
+whence
+$$I \;=\; \int_0^{2\pi}\!\varrho^ne^{int}i\varrho e^{it}\,dt\;=\; i\varrho^{n+1}\!\int_0^{2\pi}\!e^{i(n+1)t}\,dt.$$
+In the case \,$n = -1$\, one gets trivially\, $I = 2i\pi$.\, If\, $n \neq -1$,\, we obtain
+$$I \;=\; i\varrho^{n+1}\!\!\sijoitus{t=0}{\quad 2\pi}\!\frac{e^{i(n+1)t}}{i(n\!+\!1)} 
+\;=\; \frac{\varrho^{n+1}}{n\!+\!1}(1\!-\!1) \;=\; 0,$$
+using the fact that $2i\pi$ is a \PMlinkname{period of the exponential function}{PeriodicityOfExponentialFunction}.
+
+Hence we can write the result
+\begin{align*}
+ \oint_C(z\!-\!z_0)^n\,dz \;=\;
+   \begin{cases}
+     2i\pi \quad \mbox{if} \;\; n \;=\; -1, \\
+     0    \qquad \mbox{if} \;\; n \;\in\; \mathbb{Z}\!\smallsetminus\!\{-1\}. \\
+   \end{cases}
+\end{align*}
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

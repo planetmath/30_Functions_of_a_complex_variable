@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticContinuationOfRiemannZetaToCriticalStrip}
+\pmcreated{2015-08-22 13:33:33}
+\pmmodified{2015-08-22 13:33:33}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{analytic continuation of Riemann zeta to critical strip}
+\pmrecord{23}{39150}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{30B40}
+\pmclassification{msc}{11M41}
+\pmrelated{RiemannZetaFunction}
+\pmrelated{AnalyticContinuation}
+\pmrelated{MeromorphicExtension}
+\pmrelated{CriticalStrip}
+\pmrelated{AnalyticContinuationOfRiemannZetaUsingIntegral}
+\pmrelated{FormulaeForZetaInTheCriticalStrip}
+\pmrelated{GammaFunction}
+\pmdefines{alternating zeta function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The \PMlinkescapetext{terms}\, $\frac{1}{n^s} = e^{-s\log{n}}$\, (see the general power) of the series
+\begin{align}
+\sum_{n=1}^\infty\frac{1}{n^s} \;=\;
+ 1+\frac{1}{2^s}+\frac{1}{3^s}+\frac{1}{4^s}+\ldots,
+\end{align}
+defining the Riemann zeta function $\zeta(s)$ for\, 
+$\Re{s} > 1$,\, are holomorphic in the whole $s$-plane and the 
+series converges uniformly in any closed disc of the 
+half-plane\, $\Re{s} > 1$ ((let\, $s = \sigma+it$\, with 
+$\sigma,\, t\in\mathbb{R}$\, and $\sigma > 1$;\, 
+then $|\frac{1}{n^s}| = \frac{1}{n^\sigma} \le \frac{1}{n^{1+d}}$\,
+for a positive $d$ for all\, $n = 1,\,2,\,\ldots$;\, 
+the series\, $\sum_{n=1}^\infty\frac{1}{n^{1+d}}$ converges 
+since\, $1\!+\!d > 1$;\, thus the series (1) converges uniformly 
+in the closed half-plane\, $\Re{s} \ge 1\!+\!d$,\, by the 
+\PMlinkname{Weierstrass criterion}{WeierstrassCriterionOfUniformConvergence})).\, 
+Therefore we can infer (see 
+\PMlinkname{theorems on complex function series}{TheoremsOnComplexFunctionSeries}) 
+that the sum $\zeta(s)$ of (1) is holomorphic in the domain\, 
+$\Re{s} > 1$.
+
+We use also the fact that the series
+\begin{align}
+\sum_{n=1}^\infty\frac{(-1)^{n-1}}{n^s} \;=\;
+ 1-\frac{1}{2^s}+\frac{1}{3^s}-\frac{1}{4^s}+-\ldots
+\end{align}
+
+defining the Dirichlet eta function $\eta(s)$, a.k.a. the {\it alternating zeta function}, is convergent for\, 
+$\Re{s} > 0$\, and its sum is holomorphic in this half-plane.
+
+
+If we multiply the series (1) by the difference 
+$\displaystyle 1\!-\!\frac{2}{2^s}$, every other \PMlinkescapetext{term} of the series changes its sign and we get the series (2).\, So we can write
+\begin{align}
+\zeta(s) \;=\; \frac{\eta(s)}{1-\frac{2}{2^s}},
+\end{align}
+which is valid when the denominator does not vanish and\, $\Re{s} > 1$.\, The zeros of the denominator are obtained from\, $2^s = 2$,\, i.e. from
+$$e^{s\log{2}} \;=\; e^{\log{2}}.$$
+This gives\, $s\log{2}-\log{2} = n\cdot2i\pi$ (see the periodicity of exponential function), i.e.
+\begin{align}
+s \;=\; 1\!+\!n\!\cdot\!\frac{2\pi i}{\ln{2}}\quad(n\in\mathbb{Z}).
+\end{align}
+Thus the zeros of the denominator of (3) are on the line \,$\Re{s} = 1$.
+
+Now the function on the right hand side of (3) is holomorphic in the set
+$$D \;:=\; \{s\in\mathbb{C}\,\vdots\,\,\, \Re{s} > 0\}\smallsetminus 
+      \{1\!+\!n\!\cdot\!\frac{2\pi i}{\ln{2}}\,\vdots\,\,\, n\in\mathbb{Z}\}$$
+and the values of this function coincide with the values of zeta function in the half-plane\, $\Re{s} > 1$.
+
+This result means that, via the equation (3), the zeta function has been \PMlinkname{analytically continued}{AnalyticContinuation} to the domain $D$, as far as to the imaginary axis.\\
+
+\textbf{Remark.}\, In reality, all points (4) except\, $s = 1$\, are removable singularities of $\zeta(s)$ given by (3), due to the fact that they are also zeros of $\eta(s)$.\, The fact is considered in the entry zeros of Dirichlet eta function.\\
+
+Charles Hermite has shown that the zeta function may be analytically continued to the whole $s$-plane except for a simple pole at\, $s = 1$,\, by using the equation
+\begin{align}
+\zeta(s) \;=\; \frac{1}{\Gamma(s)}\int_0^\infty\!\frac{x^{s-1}}{e^x-1}\,dx.
+\end{align}
+See \PMlinkname{this article}{AnalyticContinuationOfRiemannZetaUsingIntegral}.
+%%%%%
+%%%%%
+\end{document}

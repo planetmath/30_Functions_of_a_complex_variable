@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticCurve}
+\pmcreated{2013-03-22 14:18:03}
+\pmmodified{2013-03-22 14:18:03}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{analytic curve}
+\pmrecord{7}{35759}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{54-00}
+\pmsynonym{analytic arc}{AnalyticCurve}
+\pmsynonym{smooth analytic curve}{AnalyticCurve}
+\pmsynonym{real analytic curve}{AnalyticCurve}
+\pmrelated{FreeAnalyticBoundaryArc}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+There are several somewhat different definitions of the word \emph{analytic curve} depending on context.  
+In the context of a real analytic manifold (for example ${\mathbb{R}}^n$), the most generic
+definition is perhaps the following.
+
+\begin{defn}
+Suppose $X$ is a real analytic manifold.
+A curve $\gamma \subset X$ is an \emph{analytic curve} if it is a real analytic submanifold
+of dimension 1.  Equivalently if near each point $p \in \gamma,$
+there exists a real analytic mapping
+$f \colon (-1,1) \to X,$ such that $f$ has nonvanishing differential and maps onto a neighbourhood of $p$ in $\gamma .$ 
+\end{defn}
+
+It is sometimes common to equate the mapping $f$ and the curve $\gamma$.
+If the curve is as above but instead in the complex plane, we can instead make the following equivalent definition.
+
+\begin{defn}
+A curve $\gamma \subset \mathbb{C}$ is said to be an {\em analytic curve} (or {\em analytic arc}) if every point of $\gamma$ has an open neighbourhood $\Delta$ for which there is an
+onto conformal map $f \colon {\mathbb{D}} \to \Delta$ (where ${\mathbb{D}} \subset \mathbb{C}$ is
+the unit disc) such that ${\mathbb{D}} \cap {\mathbb{R}}$ is mapped
+onto $\Delta \cap \gamma$ by $f.$
+\end{defn}
+
+Other words for this concept are \emph{smooth analytic curve}, in which case the word \emph{analytic curve}
+would be reserved for curves with singularities.  That is, for real analytic subvarieties of $X$.  Some authors will emphasize the fact that this is a real curve and say \emph{real analytic curve}.
+
+In the context of subvarieties the following definition may be used.
+
+\begin{defn}
+An \emph{analytic curve} is a complex analytic subvariety of dimension 1 of a complex manifold.
+\end{defn}
+
+Note that locally all complex analytic subvarieties of dimension 1 in ${\mathbb{C}}^2$ can be parametrized by a the Puiseux parametrization theorem.  Perhaps that is why there is the confusion in using the term.
+
+\begin{thebibliography}{9}
+\bibitem{Gamelin:complex}
+Theodore~B.\@ Gamelin.
+{\em \PMlinkescapetext{Complex Analysis}}.
+Springer-Verlag, New York, New York, 2001.
+\bibitem{Whitney:varieties}
+Hassler Whitney.
+{\em \PMlinkescapetext{Complex Analytic Varieties}}.
+Addison-Wesley, Philippines, 1972.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfConformalMobiusCircleMapTheorem}
+\pmcreated{2013-03-22 13:36:45}
+\pmmodified{2013-03-22 13:36:45}
+\pmowner{brianbirgen}{2180}
+\pmmodifier{brianbirgen}{2180}
+\pmtitle{proof of conformal M\"obius circle map theorem}
+\pmrecord{5}{34244}
+\pmprivacy{1}
+\pmauthor{brianbirgen}{2180}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmrelated{SchwarzLemma}
+\pmrelated{MobiusTransformation}
+\pmrelated{AutomorphismsOfUnitDisk}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f$ be a conformal map from the unit disk $\Delta$ onto itself. 
+Let $a=f(0)$. Let $g_a(z) = \frac{z-a}{1-\overline{a}z}$. 
+Then $g_a \circ f$ is a conformal map from $\Delta$ onto itself, 
+with $g_a \circ f(0)=0$. 
+Therefore, by Schwarz's Lemma for all $z \in \Delta$ $|g_a \circ f(z)| \le |z|$. 
+
+Because $f$ is a conformal map onto $\Delta$, 
+$f^{-1}$ is also a conformal map of $\Delta$ onto itself. 
+$(g_a \circ f)^{-1}(0)=0$ so that by Schwarz's Lemma
+$|(g_a \circ f)^{-1}(w)| \le |w|$ for all $w \in \Delta$. 
+Writing $w=g_a \circ f(z)$ this becomes $|z| \le |g_a \circ f(z)|$. 
+
+Therefore, for all $z \in \Delta$ $|g_a \circ f(z)| = |z|$. 
+By Schwarz's Lemma, $g_a \circ f$ is a rotation. 
+Write $g_a \circ f(z) = e^{i \theta} z$, or $f(z) = e^{i \theta} g_a^{-1}$. 
+
+Therefore, $f$ is a M\"obius Transformation.
+%%%%%
+%%%%%
+\end{document}

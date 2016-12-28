@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LogarithmicIntegral}
+\pmcreated{2013-03-22 17:03:05}
+\pmmodified{2013-03-22 17:03:05}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{logarithmic integral}
+\pmrecord{14}{39341}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmclassification{msc}{33E20}
+\pmclassification{msc}{26A36}
+\pmsynonym{Li}{LogarithmicIntegral}
+\pmrelated{SineIntegral}
+\pmrelated{PrimeNumberTheorem}
+\pmrelated{PrimeCountingFunction}
+\pmrelated{LaTeXSymbolForCauchyPrincipalValue}
+\pmrelated{ConvergenceOfIntegrals}
+\pmdefines{logarithmic integral}
+\pmdefines{logarithmus integralis}
+\pmdefines{Eulerian logarithmic integral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Li}{\operatorname{Li}}
+\newcommand{\li}{\operatorname{li}}
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{expansion}
+
+The European or Eulerian version of {\em logarithmic integral} (in Latin {\em logarithmus integralis}) is defined as
+\begin{align}
+  \Li{x} := \int_2^x\frac{dt}{\ln{t}},
+\end{align}
+and the American version is
+\begin{align}
+  \li{x} := \int_0^x\frac{dt}{\ln{t}},
+\end{align}
+The integrand $\displaystyle\frac{1}{\ln{t}}$ has a singularity\, $t = 1$,\, 
+and for\, $x > 1$\, the latter definition is interpreted as 
+the Cauchy principal value
+$$\li{x} = 
+\lim_{\varepsilon\to 0+}\left(\int_0^{1-\varepsilon}\!\frac{dt}{\ln{t}}
++\int_{1+\varepsilon}^x\frac{dt}{\ln{t}}\right).$$
+The connection between (1) and (2) is
+$$\Li{x} = \li{x}-\li{2}.$$
+The logarithmic integral appears in some physical problems 
+and in a formulation of the prime number theorem ($\Li{x}$\, gives 
+a slightly better approximation for the prime counting function than\, $\li{x}$).
+
+One has the asymptotic series expansion
+$$\Li{x} = \frac{x}{\ln{x}}\sum_{n=0}^\infty\frac{n!}{(\ln{x})^n}.$$
+
+The definition of the logarithmic integral may be extended to the whole 
+complex plane, and one gets the analytic function \, $\Li{z}$\, having 
+the branch point\, $z = 1$\, and the derivative \,$\displaystyle\frac{1}{\log{z}}$.
+%%%%%
+%%%%%
+\end{document}

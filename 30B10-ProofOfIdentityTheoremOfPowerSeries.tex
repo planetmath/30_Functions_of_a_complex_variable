@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfIdentityTheoremOfPowerSeries}
+\pmcreated{2013-03-22 16:47:38}
+\pmmodified{2013-03-22 16:47:38}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of identity theorem of power series}
+\pmrecord{7}{39027}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmclassification{msc}{40A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We start by proving a more modest result.  Namely, we show that,
+under the hypotheses of the theorem we are trying to prove, we
+can conclude that $a_0 = b_0$. 
+
+Let $R$ be chosen such that both series converge when $|z - z_0| < R$.
+From the set of points at which the two power series are equal, we may
+choose a sequence $\{ w_k \}_{k=0}^\infty$ such that
+\begin{itemize}
+\item $|w_k - z_0| < R/2$ for all $k$.
+\item $\lim_{k \to \infty} w_k$ exists and equals $z_0$.
+\item $w_k \neq z_0$ for all $k$.
+\end{itemize}.
+
+Since power series converge uniformly, we may interchange the
+limit with the summation.
+\begin{eqnarray*}
+\lim_{k \to \infty} \sum_{n=0}^\infty
+a_n (w_k - z_0)^n &=& 
+\sum_{n=0}^\infty \lim_{k \to \infty}
+a_n (w_k - z_0)^n = a_0 \\
+\lim_{k \to \infty} \sum_{n=0}^\infty
+b_n (w_k - z_0)^n &=& 
+\sum_{n=0}^\infty \lim_{k \to \infty}
+b_n (w_k - z_0)^n = b_0
+\end{eqnarray*}
+Because $\sum_{n=0}^\infty a_n (w_k - z_0)^n =
+sum_{n=0}^\infty a_n (w_k - z_0)^n$ for all $k$,
+this means that $a_0 = b_0$.
+
+We will now prove that $a_n = b_n$ for all $n$ by
+an induction argument.  The intial step with $n = 0$
+is, of course, the result demonstrated above. 
+Assume that $a_m = b_m$ for all $m$ less than 
+some integer $N$.  Then we have
+\[
+\sum_{n=N}^\infty a_n (w - z_0)^n =
+\sum_{n=N}^\infty b_n (w - z_0)^n
+\]
+for all $w \in S$.  Pulling out a common
+factor and relabelling the index, we have
+\[
+(w - z_0)^N \sum_{n=0}^\infty a_{n+N} (w - z_0)^n =
+(w - z_0)^N \sum_{n=0}^\infty b_{n+N} (w - z_0)^n.
+\]
+Because $z_0 \notin S$, the factor $w - z_0$ will
+not equal zero, so we may cancel it:
+\[
+\sum_{n=0}^\infty a_{n+N} (w - z_0)^n =
+\sum_{n=0}^\infty b_{n+N} (w - z_0)^n
+\]
+By our weaker result, we have $a_N = b_N$.
+Hence, by induction, we have $a_n = b_n$ for all $n$.
+%%%%%
+%%%%%
+\end{document}

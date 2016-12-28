@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEstimatingTheoremOfContourIntegral}
+\pmcreated{2013-03-22 15:46:02}
+\pmmodified{2013-03-22 15:46:02}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{proof of estimating theorem of contour integral}
+\pmrecord{22}{37723}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmclassification{msc}{30A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+WLOG consider $g(t):\mathbb{R} \to \mathbb{C}$ a parameterization of the $\gamma$ curve along which the integral is evaluated with $|g'(t)|=1$. This amounts to a canonical parameterization and is always possible.
+Since the integral is independent of re-parameterization\footnote{apart from a possible sign change due to exchange of orientation of the path} the result will be completely general.
+
+With this in mind, the contour integral can be explicitly written as
+
+\begin{equation}
+\label{integral}
+\int_\gamma f(z) dz = \int_0^L f(g(t)) g'(t) dt
+\end{equation}
+
+where $L$ is the arc length of the curve $\gamma$.
+
+Consider the set of all continuous functions $[0,L]\to \mathbb{C}$ as a vector space\footnote{axioms are trivial to verify}, we can define an inner product in it via
+
+\begin{equation}
+\langle f,g\rangle = \int_0^L f(t)\bar{g}(t) dt
+\end{equation}
+
+The axioms are easy to verify:
+
+\begin{itemize}
+\item $\langle k_1 a_1+k_2 a_2,a_3\rangle = \int_0^L (k_1 a_1(t) + k_2 a_2(t))\bar{a_3}(t) dt = k_1\langle a_1,a_3 \rangle +k_2\langle a_2,a_3 \rangle$
+
+\item $\langle a,b \rangle = \int_0^L a(t)\bar{b}(t) dt = \int_0^L \overline{b(t)\bar{a}(t)}dt = \overline{\int_0^L b(t)\bar{a}(t) dt} = \overline{\langle b,a \rangle}$
+
+\item $\langle a,a \rangle = \int_0^L a(t)\bar{a}(t) dt = \int_0^L |a(t)|^2 dt \ge 0$ since the integrand is a non-negative (real) function, and $0$ iff $|a|^2=0$ everywhere in the interval, that is: $\langle a,a \rangle=0 \iff a=0$
+
+\end{itemize}
+
+With all this in mind, equation \ref{integral} can be written as
+
+\begin{equation}
+\int_\gamma f(z) dz = \langle f\circ g, \bar{g}' \rangle
+\end{equation}
+
+Where by definition $\| f \| = \sqrt{<f,f>}$ is the norm associated with the inner product defined previously.
+
+Using Cauchy-Schwarz inequality we can write that
+
+\begin{equation}
+|\langle f\circ g, \bar{g}' \rangle| \le \|f\circ g\| \|\bar{g}'\|
+\end{equation}
+
+But since by assumption the parameterization $g$ is canonic, $\|\bar{g}'\|=\|g'\|=\sqrt{\int_0^L 1 dt} = \sqrt{L}$.
+
+On the other hand $\|f\circ g\|=\sqrt{\int_0^L f(g(t)) \bar{f}(g(t))dt} \le \sqrt{\int_0^L M^2 dt} = M\sqrt{L}$, where $|f(g(t))|\le M$ for every point on $\gamma$.
+
+The previous paragraphs imply that
+
+\begin{equation}
+\left|\int_\gamma f(z) dz\right|\le ML
+\end{equation}
+
+which is the result we aimed to prove.
+
+Cauchy-Schwarz inequality says more, it also says that $|\langle a,b \rangle |=\|a\|\|b\| \iff a=\lambda b$ where $\lambda$ is a constant.
+
+So if $|\langle f\circ g, \bar{g}' \rangle =\|f\circ g\|\|\bar{g}'\|$ then $f\circ g = \lambda \bar{g}'$, where $\lambda \in \mathbb{C}$ is a constant.
+If $g$ is a canonical parameterization $|g'| = 1$ and we get the absolute modulus  $|\lambda| = |f\circ g|$ (which must be constant) and all that remains is to find the phase of $\lambda$ which must also be constant.
+
+%%%%%
+%%%%%
+\end{document}

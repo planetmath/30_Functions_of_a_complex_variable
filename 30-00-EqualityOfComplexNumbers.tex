@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EqualityOfComplexNumbers}
+\pmcreated{2015-05-09 17:11:34}
+\pmmodified{2015-05-09 17:11:34}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{equality of complex numbers}
+\pmrecord{7}{40210}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmrelated{ModulusOfAComplexNumber}
+\pmrelated{ArgumentOfProductAndQuotient}
+\pmrelated{ComplexLogarithm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The equality relation ``='' among the \PMlinkescapetext{complex numbers} is determined as consequence of the definition of the complex numbers as elements of the quotient ring $\mathbb{R}/(X^2\!+\!1)$, which enables the \PMlinkescapetext{interpretation} of the complex numbers as the ordered pairs \,$(a,\,b)$\, of real numbers and also as the sums $a\!+\!ib$ where\, $i^2 = -1$.
+\begin{align}
+a_1+ib_1 = a_2+ib_2 \quad \Longleftrightarrow \quad a_1 = a_2\; \wedge\; b_1 = b_2
+\end{align}
+This condition may as well be derived by using the field properties of $\mathbb{C}$ and the properties of the real numbers:
+\begin{align*}
+a_1+ib_1 = a_2+ib_2\; & \implies\; \;a_2-a_1 = -i(b_2-b_1)\\
+& \implies\; (a_2-a_1)^2 = -(b_2-b_1)^2\\ 
+& \implies\;  (a_2-a_1)^2+(b_2-b_1)^2 = 0\\
+& \implies\; \;a_2-a_1 = 0, \;\; b_2-b_1= 0\\
+& \implies\; \;a_1 = a_2, \;\;\; b_1 = b_2
+\end{align*}
+The implication \PMlinkescapetext{chain} in the reverse direction is apparent.\\
+
+
+If\, $a+ib \neq 0$,\, then at least one of the real numbers $a$ and $b$ differs from 0.\, We can set
+\begin{align}
+a = r\cos\varphi, \qquad b = r\sin\varphi,
+\end{align}
+where $r$ is a uniquely determined positive number and $\varphi$ is an angle which is uniquely determined up to an integer multiple of $2\pi$.\, In fact, the equations (2) yield
+$$a^2+b^2 = r^2(\cos^2\varphi+\sin^2\varphi) = r^2,$$
+whence
+\begin{align}
+r = \sqrt{a^2+b^2}.
+\end{align}
+Thus (2) implies
+\begin{align}
+\cos\varphi = \frac{a}{\sqrt{a^2+b^2}}, \qquad \sin\varphi = \frac{b}{\sqrt{a^2+b^2}}.
+\end{align}
+The equations (4) are \PMlinkescapetext{compatible}, since the sum of the squares of their \PMlinkescapetext{right sides} is 1.\, So these equations determine the angle $\varphi$ up to a multiple of $2\pi$.\, We can write the\\
+
+\textbf{Theorem.}\, Every complex number may be represented in the {\em polar form}
+$$r(\cos\varphi+i\sin\varphi),$$
+where $r$ is the modulus and $\varphi$ the argument of the number.\, Two complex numbers are equal if and only if they have equal moduli and, if the numbers do not vanish, their arguments differ by a multiple of $2\pi$.
+
+
+%%%%%
+%%%%%
+\end{document}

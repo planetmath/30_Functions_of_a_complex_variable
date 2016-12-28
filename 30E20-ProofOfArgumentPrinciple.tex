@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfArgumentPrinciple}
+\pmcreated{2013-03-22 14:34:32}
+\pmmodified{2013-03-22 14:34:32}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of argument principle}
+\pmrecord{11}{36134}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmsynonym{Cauchy's argument principle}{ProofOfArgumentPrinciple}
+%\pmkeywords{complex variables}
+%\pmkeywords{complex analysis}
+%\pmkeywords{complex integrals}
+%\pmkeywords{contour integration}
+%\pmkeywords{residues}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Since $f$ is meromorphic, $f'$ is meromorphic, and hence $f'/f$ is meromorphic.  The singularities of $f'/f$ can only occur at the zeros and the poles of $f$.
+
+I claim that all singularities of $f'/f$ are simple poles.  Furthermore, if $f$ has a zero at some point $p$, then the residue of the pole at $p$ is positive and equals the multiplicity of the zero of $f$ at $p$.  If $f$ has a pole at some point $p$, then the residue of the pole at $p$ is negative and equals minus the multiplicity of the pole of $f$ at $p$.
+
+To prove these assertions, write\! $f(x) = (x\!-\!p)^n g(x)$\, with\, $g(p) \neq 0$.  Then
+ $${f'(x) \over f(x)} = {n \over x\!-\!p} + {g'(x) \over g(x)}$$
+Since $g(p) \neq 0$, the only singularity of $f'\!/\!f$ at $p$ comes from the first summand.  Since $n$ is either the order of the zero of $f$ at $p$ if $f$ has a zero at $p$ or minus the order of the pole of $f$ at $p$ if $f$ has a pole at $p$, the assertion is proven.
+
+By the Cauchy residue theorem, the integral
+ $${1 \over 2 \pi i} \int_C {f'(z) \over f(z)} dz$$
+equals the sum of the residues of $f'/f$.  Combining this fact with the characterization of the poles of $f'/f$ and their residues given above, one deduces that this integral equals the number of zeros of $f$ minus the number of poles of $f$, counted with multiplicity.
+
+%%%%%
+%%%%%
+\end{document}

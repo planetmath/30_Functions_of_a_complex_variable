@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchwarzReflectionPrinciple}
+\pmcreated{2013-03-22 14:17:58}
+\pmmodified{2013-03-22 14:17:58}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Schwarz reflection principle}
+\pmrecord{7}{35757}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C35}
+\pmsynonym{Schwarz reflection theorem}{SchwarzReflectionPrinciple}
+\pmsynonym{reflection principle}{SchwarzReflectionPrinciple}
+\pmdefines{symmetric region}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+For a region $G \subset {\mathbb{C}}$ define $G^* := \{ z : \bar{z} \in G \}$ (where $\bar{z}$ is the complex conjugate of $z$).  If $G$ is a {\em symmetric region}, that is $G = G^*$, then we define
+$G_+ := \{ z \in G : \operatorname{Im} z > 0 \}$,
+$G_- := \{ z \in G : \operatorname{Im} z < 0 \}$ and
+$G_0 := \{ z \in G : \operatorname{Im} z = 0 \}$.
+
+\begin{thm}
+Let $G \subset {\mathbb{C}}$ be a region such that $G = G^*$ and suppose that
+$f \colon G_+ \cup G_0 \to {\mathbb{C}}$ is a continuous functions that is
+analytic on $G_+$ and further that $f(x)$ is real for $x \in G_0$ (that is
+for real $x$), then there is an analytic function $g : G \to {\mathbb{C}}$
+such that $g(z) = f(z)$ for $z \in G_+ \cup G_0$.
+\end{thm}
+
+That is you can ``reflect'' an analytic function across the real axis.  Note that by composing with various conformal mappings you could generalize the above to reflection across an analytic curve.
+So loosely stated, the theorem says that if an analytic function is defined in a region with some ``nice'' boundary and the function behaves ``nice'' on this boundary, then we can extend the function to a larger domain.  Let us make this statement precise with the following generalization.
+
+\begin{thm}
+Let $G, \Omega \subset {\mathbb{C}}$ be regions and let $\gamma$ and $\omega$
+be free analytic boundary arcs in $\partial G$ and $\partial \Omega$.  Suppose
+that $f \colon G \cup \gamma \to {\mathbb{C}}$ is a continuous function that
+is analytic on $G$, $f(G) \subset \Omega$ and $f(\gamma) \subset \omega$, then for any compact set $\kappa \subset \gamma$, $f$ has an analytic continuation to an open set containing $G \cup \kappa$.
+\end{thm}
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\bibitem{Conway:complexII}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable II}}.
+Springer-Verlag, New York, New York, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZeroesOfAnalyticFunctionsAreIsolated}
+\pmcreated{2013-03-22 13:38:10}
+\pmmodified{2013-03-22 13:38:10}
+\pmowner{brianbirgen}{2180}
+\pmmodifier{brianbirgen}{2180}
+\pmtitle{zeroes of analytic functions are isolated}
+\pmrecord{8}{34285}
+\pmprivacy{1}
+\pmauthor{brianbirgen}{2180}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C15}
+\pmsynonym{zeros of analytic functions are isolated}{ZeroesOfAnalyticFunctionsAreIsolated}
+\pmrelated{Complex}
+\pmrelated{LeastAndGreatestZero}
+\pmrelated{IdentityTheorem}
+\pmrelated{WhenAllSingularitiesArePoles}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The zeroes of a non-constant analytic function on ${\mathbb C}$ are isolated. 
+Let $f$ be an analytic function 
+defined in some domain $D \subset {\mathbb C}$ and 
+let $f(z_0)=0$ for some $z_0 \in D$. Because $f$ is analytic, 
+there is a Taylor series expansion for $f$ around $z_0$ which 
+converges on an open disk $|z-z_0|<R$. Write it as 
+$f(z) = \Sigma_{n=k}^{\infty} a_n (z-z_0)^n$, with $a_k \ne 0$ and $k > 0$ 
+($a_k$ is the first non-zero term). 
+One can factor the series so that 
+$f(z) = (z-z_0)^k \Sigma_{n=0}^{\infty} a_{n+k} (z-z_0)^n$ and define 
+$g(z) = \Sigma_{n=0}^{\infty} a_{n+k} (z-z_0)^n$ so that $f(z) = (z-z_0)^k g(z)$. 
+Observe that $g(z)$ is analytic on $|z-z_0|<R$. 
+
+To show that $z_0$ is an isolated zero of $f$, 
+we must find $\epsilon > 0$ so that $f$ is non-zero on $0<|z-z_0|<\epsilon$. 
+It is enough to find $\epsilon>0$ so that $g$ is non-zero 
+on $|z-z_0|<\epsilon$ by the relation $f(z) = (z-z_0)^k g(z)$. 
+Because $g(z)$ is analytic, it is continuous at $z_0$. 
+Notice that $g(z_0)=a_k \ne 0$, 
+so there exists an $\epsilon > 0$ so that for all $z$ with
+$|z-z_0| < \epsilon$ it follows that $|g(z) - a_k| < \frac{|a_k|}{2}$. 
+This implies that $g(z)$ is non-zero in this set.
+%%%%%
+%%%%%
+\end{document}

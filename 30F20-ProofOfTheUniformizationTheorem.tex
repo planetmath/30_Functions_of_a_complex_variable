@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheUniformizationTheorem}
+\pmcreated{2013-03-22 15:37:50}
+\pmmodified{2013-03-22 15:37:50}
+\pmowner{Simone}{5904}
+\pmmodifier{Simone}{5904}
+\pmtitle{proof of the uniformization theorem}
+\pmrecord{14}{37558}
+\pmprivacy{1}
+\pmauthor{Simone}{5904}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30F20}
+\pmclassification{msc}{30F10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Our proof relies on the well-known Newlander-Niremberg theorem which implies, in particular, that any Riemmanian metric on an oriented $2$-dimensional real manifold defines a unique analytic structure.
+
+We will merely use the fact that $H^1(X,\mathbb R)=0$. If $X$ is compact, then $X$ is a complex curve of genus $0$, so $X\simeq\mathbb P^1$. On the other hand, the elementary Riemann mapping theorem says that an open set $\Omega\subset\mathbb C$ with $H^1(\Omega,\mathbb R)=0$ is either equal to $\mathbb C$ or biholomorphic to the unit disk. Thus, all we have to show is that a non compact Riemann surface $X$ with $H^1(X,\mathbb R)=0$ can be embedded in the complex plane $\mathbb C$.
+
+Let $\Omega_\nu$ be an exhausting sequence of relatively compact connected open sets with smooth boundary in $X$. We may assume that $X\setminus\Omega_\nu$ has no relatively compact connected components, otherwise we \lq\lq fill the holes\rq\rq{} of $\Omega_\nu$ by taking the union with all such components. We let $Y_\nu$ be the double of the manifold with boundary $(\overline\Omega_\nu,\partial\Omega_\nu)$, i.e. the union of two copies of $\overline\Omega_\nu$ with opposite orientations and the boundaries identified. Then $Y_\nu$ is a compact oriented surface without boundary.
+
+Fact: we have $H^1(Y_\nu,\mathbb R)=0$. We postpone the proof of this fact to the end of the present paragraph and we continue with the proof of the uniformization theorem.
+
+Extend the almost complex structure of $\overline\Omega_\nu$ in an arbitrary way to $Y_\nu$, e.g. by an extension of a Riemmanian metric. Then $Y_\nu$ becomes a compact Riemann surface of genus $0$, thus $Y_\nu\simeq\mathbb P^1$ and we obtain in particular a holomorphic embedding $\Phi_\nu\colon\Omega_\nu\to\mathbb C$. Fix a point $a\in\Omega_0$ and a non zero linear form $\xi^*\in T_aX$. We can take the composition of $\Phi_\nu$ with an affine linear map $\mathbb C\to\mathbb C$ so that $\Phi_\nu(a)=0$ and $d\Phi_\nu(a)=\xi^*$. By the well-known properties of injective holomorphic maps, $(\Phi_\nu)$ is then uniformly bounded on every small disk centered at $a$, thus also on every compact subset of $X$ by a connectedness argument. Hence $(\Phi_\nu)$ has a subsequence converging towards an injective holomorphic map $\Phi\colon X\to\mathbb C$.
+
+Proof of the "fact": Let us first compute the cohomology with compact support $H^1_c(\Omega_\nu,\mathbb R)$. Let $u$ be a closed $1$-form with compact support in $\Omega_\nu$. By Poincar\'e duality $H^1_c(X,\mathbb R)=0$, so $u=df$ for some "test" function $f\in\mathcal D(X)$. As $df=0$ on a neighborhood of $X\setminus\Omega_\nu$ and as all connected components of this set are non compact, $f$ must be equal to the constant zero near $X\setminus\Omega_\nu$. Hence $u=df$ is the zero class in $H^1_c(\Omega_\nu,\mathbb R)$ and we get $H^1_c(\Omega_\nu,\mathbb R)=H^1(\Omega_\nu,\mathbb R)=0$. The exact sequence of the pair $(\overline\Omega_\nu,\partial\Omega_nu)$ yelds
+$$
+\mathbb R=H^0(\overline\Omega_\nu,\mathbb R)\to H^0(\partial\Omega_\nu,\mathbb R)\to H^1(\overline\Omega_\nu,\partial\Omega_\nu;\mathbb R)\simeq H^1_c(\Omega_\nu,\mathbb R)=0,
+$$
+thus $H^0(\partial\Omega_\nu,\mathbb R)=\mathbb R$. Finally, the Mayer-Vietoris sequence applied to small neighborhoods of the two copies of $\overline\Omega_\nu$ in $Y_\nu$ gives an exact sequence
+$$
+H^0(\overline\Omega_\nu,\mathbb R)^{\oplus 2}\to H^0(\partial\Omega_\nu,\mathbb R)\to H^1(Y_\nu,\mathbb R)\to H^1(\overline\Omega_\nu,\mathbb R)^{\oplus 2}=0
+$$
+where the first map is onto. Hence $H^1(Y_\nu,\mathbb R)=0$.
+
+\begin{thebibliography}
+{}J.-P. Demailly, \emph{Complex Analytic and Algebraic Geometry}.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

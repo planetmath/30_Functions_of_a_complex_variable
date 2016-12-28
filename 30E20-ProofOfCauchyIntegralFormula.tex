@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCauchyIntegralFormula}
+\pmcreated{2013-03-22 12:47:23}
+\pmmodified{2013-03-22 12:47:23}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{proof of Cauchy integral formula}
+\pmrecord{15}{33105}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\begin{document}
+Let $D=\{z\in\cnums:\Vert z-z_0\Vert< R\}$
+be a disk in the
+complex plane, $S\subset D$ a finite subset, and $U\subset\cnums$ an
+ open domain that contains the closed disk  $\overline{D}$. Suppose that
+\begin{itemize}
+\item $f:U\backslash S\rightarrow \cnums$ is holomorphic, and that
+\item $f(z)$ is bounded near all $z\in D\backslash S$.  
+\end{itemize}
+Hence, by a straightforward compactness argument we also have that 
+$f(z)$ is bounded on $\overline{D}\backslash S$, and hence bounded on
+$D\backslash S$.  
+
+Let $z\in D\backslash
+S$ be given, and set
+$$g(\zeta) = \frac{f(\zeta)-f(z)}{\zeta-z},\quad \zeta\in D\backslash
+S',$$
+where $S'=S\cup \{ z\}$.  Note that $g(\zeta)$ is holomorphic and
+bounded on $ D\backslash S'$.
+The second assertion is true, because
+$$g(\zeta)\rightarrow f'(z),\;\mbox{as}\; \zeta\rightarrow z.$$
+Therefore, by the Cauchy integral theorem
+$$
+\oint_C g(\zeta)\, d\zeta=0,
+$$
+where $C$ is the counterclockwise circular contour parameterized by
+$$\zeta = z_0 + R e^{it},\; 0\leq t\leq 2\pi.$$
+Hence,
+\begin{equation}
+  \label{eq:1}
+\oint_C \frac{f(\zeta)}{\zeta-z}\, d\zeta = \oint_C
+\frac{f(z)}{\zeta-z}\, d\zeta.
+\end{equation}
+
+\noindent
+$\mathbf{Lemma}$
+ If  $z\in\cnums$ is such that $\Vert z\Vert\neq 1$, then
+$$
+\oint_{\Vert\zeta\Vert=1} \frac{d\zeta}{\zeta-z} =
+\begin{cases}
+  0 &\text{if } \Vert z\Vert>1\\
+  2\pi i &\text{if } \Vert z\Vert<1\\
+\end{cases}
+$$
+
+The proof is a fun exercise in elementary integral calculus, an
+application of the half-angle trigonometric substitutions.
+
+Thanks to the Lemma, the  right hand side of \eqref{eq:1} evaluates to 
+$2\pi i f(z).$
+Dividing through by $2\pi i$, we obtain 
+$$
+f(z) = \frac{1}{2\pi i} \oint_C \frac{f(\zeta)}{\zeta-z}\, d\zeta,
+\quad z\in D,
+$$
+as desired.
+
+Since a circle is a compact set, the defining limit for the derivative
+$$\frac{d}{dz} \frac{f(\zeta)}{\zeta-z}= 
+\frac{f(\zeta)}{(\zeta-z)^2},\quad z\in D$$
+converges uniformly for $\zeta\in \partial D$.  Thanks to the uniform
+convergence, the order of the derivative and the integral operations 
+can be interchanged.  In this way we obtain the second formula:
+$$
+f'(z) = \frac{1}{2\pi i} \frac{d}{dz} \oint_C
+\frac{f(\zeta)}{\zeta-z}\, d\zeta  =  \frac{1}{2\pi i} \oint_C
+\frac{f(\zeta)}{(\zeta-z)^2}\, d\zeta,\quad z\in D.$$
+%%%%%
+%%%%%
+\end{document}

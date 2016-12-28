@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfHarmonicFunctionsOnGraphs}
+\pmcreated{2013-03-22 12:45:53}
+\pmmodified{2013-03-22 12:45:53}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{example of harmonic functions on graphs}
+\pmrecord{5}{33073}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30F15}
+\pmclassification{msc}{31C05}
+\pmclassification{msc}{31B05}
+\pmclassification{msc}{31A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\begin{document}
+\begin{enumerate}
+
+\item
+Let $G=(V,E)$ be a connected finite graph, and let $a,z\in V$ be two of its vertices.  The function
+$$
+f(v) = \Prob{}{\text{simple random walk from $v$ hits $a$ before $z$}}
+$$
+is a harmonic function except on $\{a,z\}$.
+
+Finiteness of $G$ is required only to ensure $f$ is well-defined.  So we may replace ``$G$ finite'' with ``simple random walk on $G$ is recurrent''.
+
+\item
+Let $G=(V,E)$ be a graph, and let $V'\subseteq V$.  Let $\alpha: V'\to \Reals$ be some boundary condition.  For $u\in V$, define a random variable $X_u$ to be the first vertex of $V'$ that simple random walk from $u$ hits.  The function
+$$
+f(v) = \operatorname{\Expect} \alpha(X_v)
+$$
+is a harmonic function except on $V'$.
+
+The first example is a special case of this one, taking $V'=\{a,z\}$ and $\alpha(a)=1, \alpha(z)=0$.
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

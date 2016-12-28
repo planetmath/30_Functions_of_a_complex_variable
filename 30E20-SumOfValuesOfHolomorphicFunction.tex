@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SumOfValuesOfHolomorphicFunction}
+\pmcreated{2013-03-22 19:15:30}
+\pmmodified{2013-03-22 19:15:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{sum of values of holomorphic function}
+\pmrecord{6}{42186}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $w(z)$ be a holomorphic function on a simple closed curve $C$ and inside it.\, If $a_1,\,a_2,\,\ldots,\,a_m$ are inside $C$ the simple zeros of a function $f(z)$ holomorphic on $C$ and inside, then
+\begin{align}
+w(a_1)\!+\!w(a_2)\!+\ldots+\!w(a_m) \;=\; \frac{1}{2i\pi}\!\oint_C\!w(z)\frac{f'(z)}{f(z)}\,dz
+\end{align}
+where the contour integral is taken anticlockwise.
+
+The \PMlinkescapetext{formula remains in force} if some of the zeros are multiple and are counted with \PMlinkname{multiplicities}{Pole}.
+
+If the zeros $a_j$ of $f(z)$ have the multiplicities $\alpha_j$ and the function has inside $C$ also the poles 
+$b_1,\,b_2,\,\ldots,\,b_n$ with the multiplicities $\beta_1,\,\beta_2,\,\ldots,\,\beta_n$,\, then (1) must be written
+\begin{align}
+\sum_j\alpha_jw(a_j)-\sum_k\beta_kw(b_k) \;=\; \frac{1}{2i\pi}\!\oint_C\!w(z)\frac{f'(z)}{f(z)}\,dz.
+\end{align}
+
+
+The special case \,$w(z) \equiv 1$\, gives from (2) the argument principle.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Le calcul des r\'esidus et ses applications \`a la th\'eorie des fonctions}.\, Gauthier-Villars, Paris (1905).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

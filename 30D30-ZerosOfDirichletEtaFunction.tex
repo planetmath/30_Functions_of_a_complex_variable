@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZerosOfDirichletEtaFunction}
+\pmcreated{2014-11-21 21:17:02}
+\pmmodified{2014-11-21 21:17:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{zeros of Dirichlet eta function}
+\pmrecord{19}{42158}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{30B40}
+\pmclassification{msc}{11M41}
+\pmrelated{DirichletEtaFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+As stated in the \PMlinkname{parent entry}{AnalyticContinuationOfRiemannZetaToCriticalStrip}, the definition of the Riemann zeta function may be \PMlinkname{analytically continued}{AnalyticContinuation} from the half-plane \,$\Re{s} > 1$\, to the half-plane \,$\Re{s} > 0$\, by using the Dirichlet eta function $\eta(s)$ via the equation 
+\begin{align}
+\zeta(s) \;=\; \frac{\eta(s)}{1-\frac{2}{2^s}}.
+\end{align}
+Then only the status of the points
+\begin{align}
+s_n \;:=\; 1\!+\!n\!\cdot\!\frac{2\pi i}{\ln{2}}\qquad(n\in\mathbb{Z})
+\end{align}
+which are the zeros of $1\!-\!\frac{2}{2^s}$, remains \PMlinkescapetext{open}:\, are they poles of $\zeta(s)$ or not?\, E. Landau has 1909 signaled this problem, which has been elementarily solved not earlier than after 40 years, by D. V. Widder.\, He proved that those numbers, except\, $s = 1$,\, are also zeros of $\eta(s)$.\, This means that they only are removable singularities of $\zeta(s)$ and that (1) in fact extends $\zeta(s)$ to every points of the half-plane\, 
+$\Re{s} > 0$\, except\, $s = 1$.
+
+A new direct proof by J. Sondow of the vanishing of the Dirichlet eta function at the points\, $s_n \neq 1$\, was published in 2003.\, It is based on a \PMlinkescapetext{simple} relation between the partial sums $\eta_n(s)$ and 
+$\zeta_n(s)$ of the series defining respectively the functions $\eta(s)$ and $\zeta(s)$ for $\Re{s} > 1$, which involves the approximation of an integral by a Riemann sum.
+
+With some clever but not so complicated \PMlinkescapetext{algebra} performed on finite sums, Sondow writes for any $s$ the following:
+\begin{align*}
+\eta_{2n}(s) &\;=\; 1-\frac{1}{2^s}+\frac{1}{3^s}-\frac{1}{4^s}+-\ldots+\frac{(-1)^{2n-1}}{(2n)^s}\\
+         &\;=\; 1+\frac{1}{2^s}+\frac{1}{3^s}+\frac{1}{4^s}+\ldots+\frac{(-1)^{2n-1}}{(2n)^s}
+-2\left(\frac{1}{2^s}+\frac{1}{4^s}+\ldots+\frac{1}{(2n)^s} \right)\\
+         &\;=\; \left(1-\frac{2}{2^s}\right)\zeta_{2n}(s)
++\frac{2}{2^s}\left(\frac{1}{(n\!+\!1)^s}+\ldots+\frac{1}{(2n)^s}\right)\\
+         &\;=\; \left(1-\frac{2}{2^s}\right)\zeta_{2n}(s)
++\frac{2n}{(2n)^s}\frac{1}{n}\left(\frac{1}{(1\!+\!1/n)^s}+\ldots+\frac{1}{(1\!+\!n/n)^s}\right)
+\end{align*}
+Now if $t$ is real,\, $s = 1\!+\!it$,\, and\, $2^{1-s} = 2^{-it} = 1$,\, then the factor multiplying $\zeta_{2n}(s)$ is zero and consequently
+$$\eta_{2n}(s) \;=\; \frac{1}{n^{it}}R_n(1/(1\!+\!x)^s,0,1)$$
+where\, $R_n(f(x),a,b)$\, denotes a special Riemann sum approximating the integral of $f(x)$ over\, $[a,\,b]$.\, For\, $s = 1$,\, i.e.\, $t = 0$, one gets
+$$\eta(1) \;=\; \lim_{n\to\infty}\eta_{2n}(1) \;=\; \lim_{n\to\infty}R_n(1/(1\!+\!x),0,1) 
+\;=\; \int_0^1\frac{dx}{1\!+\!x} \;=\; \ln{2}$$
+and otherwise, when\, $t \neq 0$,\, one has\, $|n^{1-s}| = |n^{-it}| = 1$,\, giving
+\begin{align*}
+|\eta(s)| &\;=\; \lim_{n\to\infty}|\eta_{2n}(s)| \;=\; \lim_{n\to\infty}|R_n(1/(1\!+\!x)^s,0,1)|\\
+          &\;=\; \left|\int_0^1\frac{dx}{(1\!+\!x)^s}\right| \;=\; \left|\frac{2^{1-s}\!-\!1}{1\!-\!s}\right|
+ \;=\; \left|\frac{1\!-\!1}{-it}\right| \;=\; 0.
+\end{align*}\\
+
+\textbf{Note.}\, By (1) the Dirichlet eta function has as zeros 
+also the zeros of the Riemann zeta function (see 
+\PMlinkname{Riemann hypothesis}{RiemannZetaFunction}).
+
+\begin{thebibliography}{8}
+\bibitem{L}{\sc E. Landau}: \emph{Handbuch der Lehre von der Verteilung der Primzahlen}. Erster Band. Berlin (1909); p. 161, 933.
+\bibitem{W}{\sc D. V. Widder}: \emph{The Laplace transform}.\, Princeton University Press (1946); p. 230.
+\bibitem{S}{\sc J. Sondow}: ``Zeros of the alternating zeta function on the line\, $\Re{s} = 1$''.\, --- \emph{Amer. Math. Monthly} \textbf{110} (2003).\, Also available \PMlinkexternal{here}{http://arxiv.org/abs/math.NT/0209393}.
+\bibitem{S}{\sc J. Sondow}: ``The Riemann hypothesis, simple zeros, and the asymptotic convergence degree of improper Riemann sums''.\, --- \emph{Proc. Amer. Math. Soc.} \textbf{126} (1998).\, Also available \PMlinkexternal{here}{http://www.ams.org/journals/proc/1998-126-05/S0002-9939-98-04607-3/}.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfIdentityTheoremOfHolomorphicFunctions}
+\pmcreated{2013-03-22 14:40:41}
+\pmmodified{2013-03-22 14:40:41}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of identity theorem of holomorphic functions}
+\pmrecord{12}{36282}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Since $z_0 \in D$, there exists an $\epsilon_0 > 0$ the closed disk of radius $\epsilon$ about $z_0$ is contained in $D$.  Furthermore, both $f_1$ and $f_2$
+are analytic inside this disk.  Since $z_0$ is a limit point, there must exist a sequence ${x_k}_{k=1}^\infty$ of distinct points of $s$ which converges to $z_0$. We may further assume that $|x_k - z_0| < \epsilon_0$ for every $k$.
+
+By the theorem on the radius of convergence of a complex function, the Taylor series of $f_1$ and $f_2$ about $z_0$ have radii of convergence greater than or equal to $\epsilon_0$.  Hence, if we can show that the Taylor series of the two functions at $z_0$ ar equal, we will have shown that $f_1(z) = g_1(z)$ whenever $z < \epsilon$.
+
+The $n$-th coefficient of the Taylor series of a function is constructed from the $n$-th derivative of the function.  The $n$-th derivative may be expressed
+as a limit of $n$-th divided differences
+ $$f^{(n)}(z_0) = \lim_{y_1, \ldots y_n \to z_0} {\Delta^n f (y_1, \ldots, y_n) \over \Delta^n (y_1, \ldots, y_n)}$$
+Suppose we choose the points at which to compute the divided differences as points of the sequence $x_i$.  Then we have
+ $$f^{(n)}(z_0) = \lim_{m \to \infty} {\Delta^n f (x_{m+1}, \ldots, x_{m+n}) \over \Delta^n (x_{m+1}, \ldots, x_{m+n})}$$
+Since $f_1(x_i) = f_2(x_i)$, it follows that $f_1^{(n)} (z_0) = f_2^{(n)} 
+(z_0)$ for all $n$ and hence $f_1(z) = f_2 (z)$ when $|z - z-0| < \epsilon_0$.
+
+If $D$ happens to be a circle centred about $z_0$, we are done.  If not, let $z_1$ be any point of $D$ such that $|z_1 - z_0| \ge \epsilon$.  Since every connected open subset of the plane is arcwise connected, there exists an arc 
+$C$ with endpoints $z_1$ and $z_0$. 
+
+Define the function $M \colon D \to \mathbb{R}$ as follows
+ $$M(z) = \sup \{r \mid |z - w| < r \Rightarrow w \in D \} \cap [0,1]$$
+Because $D$ is open, it follows that $0 < M(z) \le 1$ for all $z \in D$.
+
+We will now show that $M$ is continuous.  Let $w_1$ and $w_2$ be any two distinct points of $D$.  If $M(w_1) > |w_1 - w_2|$, then a disk of radius $M(w_1) - |w_1 - w_2|$ about $w_2$ will be contained in the disk of radius $M(w_1)$ about $w_1$.  Hence, by the definition of $M$, it will follow that $M(w_2) \ge M(w_1) - |w_1 - w_2|$.  Therefore, for any two points $w_1$ and $w_2$, it is the case that $|M(w_1) - M(w_2)| \le |w_1 - w_2|$, which implies that $M$ is continuous.
+
+Since $M$ is continuous and the arc $C$ is compact, $M$ attains a minimum value $m$ on $C$.  Let $\mu > 0$ be chosen smaller strictly less than both $m/2$ and $\epsilon_0$. Consider the set of all open disks of radius $\mu$ centred about ponts of $C$.  By the way $\mu$ was selected, each of these disks lies inside $D$.  Since $C$ is compact a finite subset of these disks will serve to cover $D$.  In other words, there exsits a finite set of points $y_1, y_2, \ldots y_n$ such that, if $z \in C$, then $|z - y_j| < \mu$ for some $j \in \{1,2,\ldots,n\}$.  We may assume that the $y_j$'s are ordered so that, as one traverses $C$ from $z_0$ to $z_1$, one encounters $y_j$ before one encounters $y_{j+1}$.  This imples that $|y_j - y_{j+1}| < \mu$.  Without loss of generality, we may assume that $y_1 = z_0$ and $y_n = z_1$.
+
+We shall now show that $f_1 (z) = f_2(z)$ when $|z - y_j| < \mu$ for all $j$ by induction.  From our definitions it follows that $f_1 (z) = f_2 (z)$ when $|z - y_1| < \mu$.  Next, we shall now show that if $f_1 (z) = f_2 (z)$ when $|z - y_j| \le m/2$, then $f_1 (z) = f_2 (z)$ when $|z - y_{j+i}| \le m/2$.  Since $|y_j - y_{j+1}| < \mu$, there exists a point $w \in C$ and a constant $\epsilon > 0$ such that $|w - z| < \epsilon$ implies $|z - y_j| \le \mu$ and $|z - y_{j+i}| \le \mu$.  By the induction hypothesis, $f_1 (z) = f_2 (z)$ when $|z - y_j| < \mu$.  Consider a disk of radius $m$ about $w$.  By the definition of $m$, this disk lies inside $D$ and, by what we have already shown, $f_1(z) = f_2 (z)$ when $|z - w| \le m$.  Since $|w - y_{j+1}| < \mu < m/2$, it follows from the triangle inequality that $f_1 (z) = f_2 (z)$ when $|z - y_{j+1}| < \mu$.
+
+In particular, the proposition just proven implies that $f_1 (z_1) = f_1 (z_1)$ since $z_1 = y_n$.  This means that we have shown that $f_1 (z) = f_2 (z)$ for all $z \in D$.
+%%%%%
+%%%%%
+\end{document}

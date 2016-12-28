@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BeurlingAhlforsQuasiconformalExtension}
+\pmcreated{2013-03-22 14:06:49}
+\pmmodified{2013-03-22 14:06:49}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Beurling-Ahlfors quasiconformal extension}
+\pmrecord{12}{35517}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C62}
+\pmsynonym{Beurling-Ahlfors theorem}{BeurlingAhlforsQuasiconformalExtension}
+\pmrelated{QuasiconformalMapping}
+\pmrelated{QuasisymmetricMapping}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{thm}[Beurling-Ahlfors]
+There exists a quasiconformal mapping of the upper half plane to itself if and only if the boundary correspondence mapping $\mu$ is \PMlinkname{$M$-quasisymmetric}{QuasisymmetricMapping}.  Furthermore there exists an extension of $\mu$ to a quasiconformal mapping of the upper half planes such that the maximal dilatation of the extension depends only on $M$ and not on $\mu$.
+\end{thm}
+
+That is, the extension is \PMlinkname{$K$-quasiconformal}{QuasiconformalMapping} if and only if the boundary correspondence is \PMlinkname{$M$-quasisymmetric}{QuasisymmetricMapping} where $K$ depends purely on $M$.
+
+Supposing that we have the mapping $\phi: H \rightarrow H$ (where $H$ is the upper half plane), then the mapping $\mu : {\mathbb{R}} \rightarrow {\mathbb{R}}$,
+such that $\mu(x) = \phi(x)$ where $x \in {\mathbb{R}}$, is the boundary correspondence of $\phi$.
+
+To prove the sufficiency of the above theorem Beurling and Ahlfors \cite{ba1956} define $\phi$ as follows.  Given a $\mu$ that is a quasisymmetric mapping of the real line onto itself and fixes $\infty$, we define a map $\phi(x,y) = u(x,y) + iu(x,y)$ where
+\begin{align*}
+u(x,y) & = \frac{1}{2y} \int_{-y}^y \mu(x+t) dt ,
+\\
+v(x,y) & = \frac{1}{2y} \int_0^y (\mu(x+t) - \mu(x-t)) dt .
+\end{align*}
+
+Intuitively $\phi$ is a function which ``smoothes'' out any kinks in the function $\mu$ as we get further and further away from the real line.  It therefore intuitively follows that $\phi$ has the worst (highest) dilatation near the $x$ axis, which actually turns out to be true.
+
+\begin{thebibliography}{9}
+\bibitem{ahlfors}
+L.\@ V.\@ Ahlfors.  \emph{\PMlinkescapetext{Lectures on Quasiconformal
+Mappings}}.  Van Nostrand-Reinhold, Princeton, New Jersey, 1966
+\bibitem{ba1956}
+A.\@ Beurling, L\@. V.\@ Ahlfors.  \PMlinkescapetext{The boundary
+correspondence under quasiconformal mappings}.  \emph{Acta Math.}, 96:125-142,
+1956.
+\bibitem{lebl2003}
+J.\@ Lebl.  \emph{\PMlinkescapetext{Quasiconformal Extensions of Quasisymmetric
+Mappings}}.  \PMlinkescapetext{Masters thesis, San Diego State University, San
+Diego, CA, May 2003}.  Also available at
+\PMlinkexternal{http://www.jirka.org/thesis.pdf}{http://www.jirka.org/thesis.pdf}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

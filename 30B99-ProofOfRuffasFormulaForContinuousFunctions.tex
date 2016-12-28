@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRuffasFormulaForContinuousFunctions}
+\pmcreated{2013-03-22 14:56:41}
+\pmmodified{2013-03-22 14:56:41}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of Ruffa's formula for continuous functions}
+\pmrecord{8}{36636}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B99}
+\pmclassification{msc}{26B15}
+\pmclassification{msc}{78A45}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Define $s_n$ to be the following sum:
+ $$s_n = \sum\limits_{m = 1}^{2^n - 1} 2^{ - n} f\left( {a + m(b - a)/2^n } \right)$$
+Making the substitution $m' = 2m$ and using the fact that $1 + (-1)^{m'} = 0$ when $m'$ is odd to express the sum over even values of $m'$ as a sum over all values of $m'$, this becomes
+ $$s_n = \sum\limits_{m = 1}^{2^{n+1} - 1} (1 + (-1)^{m'}) 2^{- 1 - n} f\left( {a + m(b - a)/2^n } \right)$$
+Subtracting this sum from $s_{n+1}$ and simplifying gives
+ $$s_{n+1} - s_n = \sum\limits_{m = 1}^{2^{n+1} - 1} (-1)^{m + 1} 2^{- n} f\left( {a + m(b - a)/2^n } \right)$$
+Using the telescoping sum trick, we may write
+ $$s_k = \sum_{n=1}^k (s_n - s_{n-1}) = \sum\limits_{n = 1}^k {\sum\limits_{m = 1}^{2^n - 1} {\left( { - 1} \right)^{m + 1} } } 2^{ - n} f\left( {a + m(b - a)/2^n } \right)$$
+
+To complete the proof, we must investigate the limit as $k \to \infty$.  Since $f$ is assumed continuous and the interval $[a,b]$ is compact, $f$ is uniformly continuous.  This means that, for every $\epsilon > 0$, there exists a $\delta > 0$ such that $|x-y| < \delta$ implies $|f(x) - f(y)| < \epsilon$.  By the Archimedean property, there exists an integer $k > 0$ such that $2^k \delta > |a-b|$.  Hence, $|f(x) - f\left( {a + m(b - a)/2^n } \right)| \le \epsilon$ when $x$ lies in the interval $[a + (m-1) (b - a)/2^n, a + (m+1) (b - a)/2^n]$.  Thus, $(a - b) s_k + |a - b| \epsilon$ is a Darboux upper sum for the integral 
+ $$\int_a^b f(x) \, dx$$
+and $(b - a) s_k - |a - b| \epsilon$ is a Darboux lower sum.  (Darboux's definition of the integral may be thought of as a modern incarnation of the ancient method of exhaustion.)  Hence
+ $$|\int_a^b f(x) \, dx - s_k| \le |a-b| \epsilon$$
+Taking the limit $\epsilon \to 0$, we see that
+\[
+\int\limits_a^b {f(x)dx = \sum\limits_{n = 1}^\infty {A_n } = \left( {b - a} \right)} \sum\limits_{n = 1}^\infty {\sum\limits_{m = 1}^{2^n - 1} {\left( { - 1} \right)^{m + 1} } } 2^{ - n} f\left( {a + m(b - a)/2^n } \right)
+\]
+%%%%%
+%%%%%
+\end{document}

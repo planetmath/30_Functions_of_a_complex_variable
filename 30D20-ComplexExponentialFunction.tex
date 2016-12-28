@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexExponentialFunction}
+\pmcreated{2013-03-22 14:43:08}
+\pmmodified{2013-03-22 14:43:08}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{complex exponential function}
+\pmrecord{22}{36341}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D20}
+\pmclassification{msc}{32A05}
+\pmrelated{ExponentialFunctionDefinedAsLimitOfPowers}
+\pmrelated{ExponentialFunction}
+\pmrelated{ComplexSineAndCosine}
+\pmrelated{ProofOfEquivalenceOfFormulasForExp}
+\pmrelated{DerivativeOfExponentialFunction}
+\pmrelated{ConvergenceOfRiemannZetaSeries}
+\pmdefines{exponential function}
+\pmdefines{prime period}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The {\em complex exponential function}\,\, $\exp:\,\mathbb{C}\to \mathbb{C}$\, may be defined in many equivalent ways:\, Let\, $z = x\!+\!iy$\, where\, $x,\,y\in\mathbb{R}$.
+\begin{itemize}
+ \item $\displaystyle\exp{z} \;:=\; e^x(\cos{y}+i\sin{y})$
+ \item $\displaystyle\exp{z} \;:=\; \lim_{n\to\infty}\left(1+\frac{z}{n}\right)^n$
+ \item $\displaystyle\exp{z} \;:=\; \sum_{n = 0}^\infty\frac{z^n}{n!}$
+\end{itemize}
+The complex exponential function is usually denoted in power form:
+                          $$e^z \;:=\; \exp{z},$$
+where $e$ is the Napier's constant.\, It also coincincides with the real exponential function when $z$ is real (choose\,  $y = 0$).\, It has  all the properties of power, e.g.\, $e^{-z} = \frac{1}{e^z}$;\, these are consequences of the addition formula
+                     $$e^{z_1+z_2} \;=\; e^{z_1}e^{z_2}$$
+of the complex exponential function.
+
+The function gets all complex values except 0 and is \PMlinkname{periodic}{PeriodicityOfExponentialFunction} having the \PMlinkescapetext{{\em prime period}} (the \PMlinkescapetext{period} with least non-zero modulus) $2\pi i$.\, The $\exp$ is holomorphic, its derivative 
+               $$\frac{d}{dz}e^z \;=\; e^z,$$
+which is obtained from the series form via termwise differentiation, is similar as in $\mathbb{R}$.
+
+So we have a fourth way to define 
+\begin{itemize}
+ \item $\exp{z} \;:=\; w(z)$ 
+\end{itemize}
+with $w$ the solution of the differential equation \,$\displaystyle\frac{dw}{dz} = w$\, under the initial condition\, $w(0) = 1$.
+
+\textbf{Some formulae:}
+ $$|e^z| \;=\; e^x, \quad \arg{e^z} \;=\; y+2n\pi\quad(n = 0,\,\pm1,\,\pm2,\,\ldots),$$
+ $$\mbox{Re}(e^z) \;=\; e^x\cos{y}, \quad \mbox{Im}(e^z) \;=\; e^x\sin{y}$$
+%%%%%
+%%%%%
+\end{document}

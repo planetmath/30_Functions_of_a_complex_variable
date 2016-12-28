@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfWeakMaximumPrincipleForRealDomains}
+\pmcreated{2013-03-22 14:35:21}
+\pmmodified{2013-03-22 14:35:21}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of weak maximum principle for real domains}
+\pmrecord{6}{36152}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30F15}
+\pmclassification{msc}{31B05}
+\pmclassification{msc}{31A05}
+\pmclassification{msc}{30C80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+First, we show that, if $\Delta f > 0$ (where $\Delta$ denotes the Laplacian on $\mathbb{R}^d$) on $K$, then $f$ cannot attain a maximum on the interior of $K$.  Assume, to the contrary, that $f$ did attain a maximum at a point $p$ located on the interior of $K$.  By the second derivative test, the matrix of second partial derivatives of $f$ at $p$ would have to be negative semi-definite.  This would imply that the trace of the matrix is negative.  But the trace of this matrix is the Laplacian, which was assumed to be strictly positive on $K$, so it is impossible for $f$ to attain a maximum on the interior of $K$.
+
+Next, suppose that $\Delta f = 0$ on $K$ but that $f$ does not attain its maximum on the boundary of $K$.  Since $K$ is compact, $f$ must attain its maximum somewhere, and hence there exists a point $p$ located in the interior of $K$ at which $f$ does attain its maximum.  Since $K$ is compact, the boundary of $K$ is also compact, and hence the image of the boundary of $K$ under $f$ is also compact.  Since every element of this image is strictly smaller than $f(p)$, there must exist a constant $C$ such that $f(x) < C < f(p)$ whenever $x$ lies on the boundary of $K$.  Furthermore Since $K$ is a compact subset of $\mathbb{R}^d$, it is bounded.  Hence, there exists a constant $R>0$ so that $|x - p| < R$ for all $x \in K$.
+
+Consider the function $g$ defined as
+ \[g(x) = f(x) + (f(p) - C) {|x-p|^2 \over R^2}\]
+At any point $x \in K$,
+ \[g(x) < f(x) + f(p) - C\]
+In particular, if $x$ lies on the boundary of $K$, this implies that
+ \[g(x) < f(p)\]
+Since $g(p) = f(p)$ this inequality implies that $g$ cannot attain a maximum on the boundary of $K$.
+
+This leads to a contradiction.  Note that, since $\Delta f = 0$ on $K$,
+ \[\Delta g = {d (f(p) - C) \over R^2} > 0\]
+which implies that $g$ cannot attain a maximum on the interior of $K$.  However, since $K$ is compact, $g$ must attain a maximum somewhere on $K$.  Since we have ruled out both the possibility that this maximum occurs in the interior and the possibility that it occurs on the boundary, we have a contradiction.  The only way out of this contradiction is to conclude that $f$ does attain its maximum on the boundary of $K$.
+%%%%%
+%%%%%
+\end{document}

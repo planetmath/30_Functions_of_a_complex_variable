@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFundamentalTheoremOfAlgebradueToDAlembert}
+\pmcreated{2013-03-22 14:36:06}
+\pmmodified{2013-03-22 14:36:06}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of fundamental theorem of algebra (due to d'Alembert)}
+\pmrecord{10}{36171}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{12D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This proof, due to d'Alembert, relies on the following three facts:
+
+\begin{itemize}
+\item  Every polynomial with real coefficients which is of odd order has a real root.  (This is a corollary of the intermediate value theorem.
+\item  Every second order polynomial with complex coefficients has two complex roots.
+\item  For every polynomial $p$ with real coefficients, there exists a field $E$ in which the polynomial may be factored into linear terms.  (For more information, see the entry ``splitting field''.)
+\end{itemize}
+
+Note that it suffices to prove that every polynomial with real coefficients has a complex root.  Given a polynomial with complex coefficients, one can construct a polynomial with real coefficients by multiplying the polynomial by its complex conjugate.  Any root of the resulting polynomial will either be a root of the original polynomial or the complex conjugate of a root.
+
+The proof proceeds by induction.  Write the degree of the polynomial as $2^n (2m+1)$.  If $n = 0$, then we know that it must have a real root.  Next, assume that we already have shown that the fundamental theorem of algebra holds whenver $n < N$.  We shall show that any polynomial of degree $2^N (2m+1)$ has a complex root if a certain other polynomial of order $2^{N-1} (2m' + 1)$ has a root.  By our hypothesis, the other polynomial does have a root, hence so does the original polynomial.  Hence, by induction on $n$, every polynomial with real coefficients has a complex root.
+
+Let $p$ be a polynomial of order $d = 2^N (2m+1)$ with real coefficients.  Let its factorization over the extension field $E$ be
+ $$p(x) = (x - r_1) (x - r_2) \cdots (x - r_d)$$
+Next construct the $d(d-1)/2 = 1$ polynomials
+ $$q_k (x) = \prod_{i < j} (x - r_i - r_j - k r_i r_j)$$
+where $k$ is an integer between $1$ and $d(d-1)/2 = 1$.  Upon expanding the product and collecting terms, the coefficient of each power of $x$ is a symmetric function of the roots $r_i$.  Hence it can be expressed in terms of the coefficients of $p$, so the coefficients of $q_k$ will all be real.
+
+Note that the order of each $q_k$ is $d(d-1)/2 = 2^{N-1} (2m+1) (2^N (2m+1) - 1)$.  Hence, by the induction hypothesis, each $q_k$ must have a complex root.  By construction, each root of $q_k$ can be expressed as $r_i + r_j + k r_i r_j$ for some choice of integers $i$ and $j$.  By the pigeonhole principle, there must exist integers $i, j, k_1, k_2$ such that both
+ $$u = r_i + r_j + k_1 r_i r_j$$
+and
+ $$v = r_i + r_j + k_2 r_i r_j$$
+are complex.  But then $r_i$ and $r_j$ must be complex as well. because they are roots of the polynomial
+ $$x^2 + bx + c$$
+where
+ $$b = -{k_2 u + k_1 v \over (k_1 + k_2)}$$
+and
+ $$c = {u - v \over k_1 - k_2}$$
+
+\textbf{Note.}\, D'Alembert was an avid supporter (in fact, the co-editor) of the famous French philosophical encyclopaedia.  Therefore it is a fitting tribute to have his proof appear in the web pages of this encyclopaedia.
+
+\begin{thebibliography}{8}
+\bibitem{J}{\sc Jean le Rond D'Alembert}: ``Recherches sur le calcul int\'egral''.
+\, \emph{Histoire de l'Acad\'mie Royale des Sciences et Belles Lettres}, ann\'ee MDCCXLVI, 182--224. Berlin (1746).
+\bibitem{R}{\sc R. Argand}: ``R\'eflexions sur la nouvelle th\'eorie d'analyse''.\, \emph{Annales de math\'ematiques} \textbf{5}, 197--209 (1814).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

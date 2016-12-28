@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEquivalenceOfFormulasForExp}
+\pmcreated{2013-03-22 15:22:52}
+\pmmodified{2013-03-22 15:22:52}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{proof of equivalence of formulas for exp}
+\pmrecord{11}{37210}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmrelated{ComplexExponentialFunction}
+\pmrelated{ExponentialFunction}
+\pmrelated{MatrixExponential}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\nat}{\mathbb{N}}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\begin{document}
+We present an elementary proof that:
+\begin{align*}
+\sum_{k=0}^\infty \frac{z^k}{k!} = \lim_{n\to\infty} \left( 1 + \frac{z}{n} \right)^n\,.
+\end{align*}
+There are of course other proofs, but this one has the advantage that it carries verbatim for the matrix exponential and the operator exponential. 
+
+At the outset, we observe that 
+$\sum_{k=0}^\infty z^k/k!$ converges by the ratio test. 
+For definiteness, the notation $e^z$ below will refer to exactly this series.
+
+\begin{proof}
+We expand the right-hand \PMlinkescapetext{side} in the straightforward manner:
+\begin{align*}
+\left( 1 + \frac{z}{n} \right)^n &= \sum_{k=0}^n \binom{n}{k} \left(\frac{z}{n}\right)^k \\
+&= \sum_{k=0}^n \frac{n \cdot (n-1) \dotsm (n-k+1) }{n^k} \frac{z^k}{k!} 
+= \sum_{k=0}^n \pi(k, n) \, \frac{z^k}{k!}\,,
+\end{align*}
+where $\pi(k, n)$ denotes the coefficient
+\begin{align*}
+1 \left(1 - \frac{1}{n}\right) \cdot \left(1 -\frac{2}{n} \right) \dotsm \left(1 - \frac{k-1}{n} \right)\,.
+\end{align*}
+Let $\abs{z} \leq M$.
+Given $\epsilon > 0$, there is a $N \in \nat$ such that whenever $n \geq N$, then
+$\sum_{k=n+1}^\infty M^k/k! < \epsilon/2$, 
+since the sum is the tail of the convergent series $e^M$.
+
+Since $\lim_{n \to \infty} \pi(k,n) = 1$ for \PMlinkescapetext{fixed} $k$, there is also a $N' \in \nat$, with $N' \geq N$, so that whenever $n \geq N'$ and $0 \leq k \leq N$, then
+$\abs{\pi(k, n) - 1} < \epsilon/(2e^{M})$.
+(Note that $k$ is chosen only from a \emph{finite} set.)
+
+Now, when $n \geq N'$, we have
+\begin{align*}
+\absW{ \sum_{k=0}^n \pi(k,n) \frac{z^k}{k!} \,-\, \sum_{k=0}^\infty \frac{z^k}{k!} } 
+&= \absW{
+\sum_{k=0}^n (\pi(k,n)-1) \frac{z^k}{k!} \,-\, \sum_{k=n+1}^\infty \frac{z^k}{k!} } \\
+&\leq 
+\sum_{k=0}^n \abs{\pi(k,n) -1} \, \frac{M^k}{k!} + \sum_{k=n+1}^\infty \frac{M^k}{k!} \\
+&=
+\sum_{k=0}^{N} \abs{\pi(k,n) -1} \, \frac{M^k}{k!} + \sum_{k=N+1}^n
+\abs{\pi(k,n) -1} \, \frac{M^k}{k!} 
++ \sum_{k=n+1}^\infty \frac{M^k}{k!} \\
+&< \frac{\epsilon}{2e^M} \sum_{k=0}^{N} \frac{M^k}{k!} + \sum_{k=N + 1}^n \frac{M^k}{k!} + \sum_{k=n+1}^\infty \frac{M^k}{k!} \\
+\intertext{(In the middle sum, we use the bound $\abs{\pi(k,n) -1} = 1 - \pi(k,n) \leq 1$ for all $k$ and $n$.)} &< \frac{\epsilon}{2e^M} \cdot e^M + \frac{\epsilon}{2} = \epsilon\,. \qedhere
+\end{align*}
+\end{proof}
+
+In fact, we have proved uniform convergence of $\lim_{n\to\infty} \left( 1 + \frac{z}{n} \right)^n$
+over $\abs{z} \leq M$.
+Exploiting this fact we can also show:
+\begin{align*}
+\left( 1 + \frac{z}{n} + o\left(\frac{1}{n}\right) \right)^n
+= 
+\left( 1 + \frac{z + o(1)}{n} \right)^n
+ \to 
+\sum_{k=0}^\infty \frac{z^k}{k!} \quad \textrm{(pointwise, as $n \to \infty$)}
+\end{align*}
+
+\begin{proof}
+\PMlinkescapetext{Fix} $\abs{z} < M$.
+Given $\epsilon > 0$, for large enough $n$, we have
+\begin{align*}
+\absW{ \left( 1 + \frac{w}{n} \right)^n - e^w } < \epsilon/2 \quad
+\textrm{uniformly for all $\abs{w} \leq M$.}
+\end{align*}
+Since $o(1) \to 0$, for large enough $n$ we can set $w = z+o(1)$ above.
+Since the exponential is continuous\footnote{follows from uniform convergence on bounded subsets of either expression for $e^z$}, for large enough $n$ we also have $\abs{e^{z+o(1)} - e^z} < \epsilon/2$.  Thus
+\begin{align*}
+\absW{\left( 1 + \frac{z + o(1)}{n} \right)^n - e^z}
+\leq 
+\absW{ \left( 1 + \frac{z + o(1)}{n} \right)^n
+- e^{z+o(1)}} + \abs{e^{z+o(1)} - e^z} < \epsilon\,.
+\qedhere
+\end{align*}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

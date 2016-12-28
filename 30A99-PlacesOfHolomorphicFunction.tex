@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PlacesOfHolomorphicFunction}
+\pmcreated{2013-03-22 18:54:18}
+\pmmodified{2013-03-22 18:54:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{places of holomorphic function}
+\pmrecord{8}{41753}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmrelated{ZerosAndPolesOfRationalFunction}
+\pmrelated{IdentityTheorem}
+\pmrelated{TopologyOfTheComplexPlane}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If $c$ is a complex constant and $f$ a holomorphic function in a domain $D$ of $\mathbb{C}$, then $f$ has in every compact (\PMlinkname{closed}{TopologyOfTheComplexPlane} and \PMlinkname{bounded}{Bounded}) subdomain of $D$ at most a finite set of \PMlinkid{$c$-places}{9084}, i.e. the points $z$ where\, $f(z) = c$,\, except when\, $f(z) \equiv c$\, in the whole $D$.\\
+
+\emph{Proof.}\, Let $A$ be a \PMlinkescapetext{closed and bounded} subdomain of $D$.\, Suppose that there is an infinite amount of $c$-places of $f$ in $A$.\, By \PMlinkid{Bolzano--Weierstrass theorem}{2125}, these $c$-places have an accumulation point $z_0$, which belongs to the closed set $A$.\, Define the constant function $g$ such that
+$$g(z) \;=\; c$$
+for all $z$ in $D$.\, Then $g$ is holomorphic in the domain $D$ and\, $g(z) = c$\, in an infinite subset of $D$ with the accumulation point $z_0$.\, Thus in the $c$-places of $f$ we have
+$$g(z) \;=\; f(z).$$
+Consequently, the identity theorem of holomorphic functions implies that
+$$f(z) \;=\; g(z) \;=\; c$$
+in the whole $D$.\, Q.E.D.
+%%%%%
+%%%%%
+\end{document}

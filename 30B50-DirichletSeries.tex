@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirichletSeries}
+\pmcreated{2013-03-22 13:59:22}
+\pmmodified{2013-03-22 13:59:22}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{Dirichlet series}
+\pmrecord{8}{34764}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B50}
+\pmrelated{DirichletLFunction}
+\pmrelated{RiemannZetaFunction}
+\pmrelated{DirichletLSeries}
+\pmdefines{ordinary Dirichlet series}
+\pmdefines{Stoltz angle}
+\pmdefines{abscissa of convergence}
+\pmdefines{abscissa of absolute convergence}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand*{\C}{\mathbb{C}}
+
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{arithmetic}
+\PMlinkescapeword{complex}
+\PMlinkescapeword{analytic}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{properties}
+
+Let $(\lambda_n)_{n\ge 1}$ be an increasing sequence of
+positive real numbers tending to $\infty$.
+A \emph{Dirichlet series} with exponents $(\lambda_n)$ is
+a series of the form
+$$\sum_n a_n e^{-\lambda_nz}$$
+where $z$ and all the $a_n$ are complex numbers.
+
+An \emph{ordinary Dirichlet series} is one having $\lambda_n=\log n$
+for all $n$.
+It is written
+$$\sum\frac{a_n}{n^z}\;.$$
+The best-known examples are the Riemann zeta function (in which $a_n$
+is the \PMlinkname{constant}{ConstantFunction} $1$) and the more general Dirichlet L-series
+(in which the mapping $n\mapsto a_n$ is multiplicative and periodic).
+
+When $\lambda_n=n$, the Dirichlet series is just a power series
+in the variable $e^{-z}$.
+
+The following are the basic convergence properties of Dirichlet series.
+There is nothing profound about their proofs, which can be found
+in \cite{cite:serre_arithm_course_vi} and in various other works on complex analysis and analytic
+number theory.
+
+Let $f(z)=\sum_n a_n e^{-\lambda_nz}$ be a Dirichlet series.
+\begin{enumerate}
+\item
+If $f$ converges at $z=z_0$, then $f$ converges uniformly in the region
+$$\Re(z-z_0)\ge 0\qquad -\alpha\le\arg(z-z_0)\le \alpha$$
+where $\alpha$ is any real number such that $0<\alpha<\pi/2$.
+(Such a region is known as a ``Stoltz angle''.)
+\item Therefore, if $f$ converges at $z_0$, its sum defines a holomorphic
+function on the region $\Re(z)>\Re(z_0)$, and moreover $f(z)\to f(z_0)$
+as $z\to z_0$ within any Stoltz angle.
+\item $f=0$ identically if and only if all the coefficients $a_n$ are zero.
+\end{enumerate}
+So, if $f$ converges somewhere but not everywhere in $\C$, then
+the domain of its convergence is the region $\Re(z)>\rho$ for
+some real number $\rho$, which is called the \emph{abscissa of convergence}
+of the Dirichlet series.
+The abscissa of convergence of the series
+$f(z)=\sum_n |a_n| e^{-\lambda_nz}$, if it exists,
+is called the \emph{abscissa of absolute convergence} of $f$.
+
+Now suppose that the coefficients $a_n$ are all real and nonnegative.
+If the series $f$ converges for $\Re(z)>\rho$, and the resulting function
+admits an \PMlinkname{analytic extension}{AnalyticContinuation} to a neighbourhood of $\rho$,
+then the series $f$ converges in a neighbourhood of $\rho$.
+Consequently, the domain of convergence of $f$ (unless it is the whole
+of $\C$) is bounded by a singularity at a point on the real axis.
+
+Finally, return to the general case of any complex numbers $(a_n)$, but
+suppose $\lambda_n=\log n$, so $f$ is an ordinary Dirichlet series
+$\sum\frac{a_n}{n^z}$.
+\begin{enumerate}
+\item
+If the sequence $(a_n)$ is bounded, then $f$ converges absolutely in the
+region $\Re(z)>1$.
+\item
+If the partial sums $\sum_{n=k}^l a_n$ are bounded, then $f$ converges
+(not necessarily absolutely) in the region $\Re(z)>0$.
+\end{enumerate}
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:serre_arithm_course_vi}
+{Jean-Pierre} Serre.
+\newblock {\em A Course in Arithmetic}, chapter~VI.
+\newblock Springer-Verlag, 1973.
+\newblock \PMlinkexternal{Zbl 0256.12001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0256.12001}.
+
+\bibitem{cite:tichmarsh_theory_of_func}
+E.~C. Titchmarsh.
+\newblock {\em The Theory of Functions}.
+\newblock Oxford Univ. Press, second edition, 1958.
+\newblock \PMlinkexternal{Zbl 0336.30001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0336.30001}.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

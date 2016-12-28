@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ResidueAtInfinity}
+\pmcreated{2013-03-22 19:15:00}
+\pmmodified{2013-03-22 19:15:00}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{residue at infinity}
+\pmrecord{9}{42175}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmrelated{Residue}
+\pmrelated{RegularAtInfinity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{order}
+
+If in the Laurent expansion
+\begin{align}
+f(z) \;=\; \sum_{k=-\infty}^\infty c_kz^k
+\end{align}
+of the function $f$, the coefficient $c_n$ is distinct from zero ($n > 0$) and\, $c_{n+1} = c_{n+2} = \ldots = 0$,\, then there exists the numbers $M$ and $K$ such that
+$$|z^{-n}f(z)| \;<\; M \quad \mbox{always when} \quad |z| \;>\; K.$$
+In this case one says that $\infty$ is a \emph{pole of order} $n$ of the function $f$ (cf. zeros and poles of rational function).
+
+If there is no such positive integer $n$, (1) \PMlinkescapetext{contains} infinitely many positive powers of $z$, and one may say that $\infty$ is an \emph{essential singularity} of $f$.\\
+
+In both cases one can define for $f$ the \emph{residue at infinity} as
+\begin{align}
+\frac{1}{2i\pi}\!\oint_C\!f(z)\,dz \;=\; c_{-1},
+\end{align}
+where the integral is taken along a closed contour $C$ which goes once anticlockwise around the origin, i.e. once clockwise around the point \,$z = \infty$ (see the Riemann sphere).
+
+Then the usual form 
+$$\frac{1}{2i\pi}\!\oint_C\!f(z)\,dz \;=\; \sum_j\mbox{Res}(f;\,a_j)$$
+of the residue theorem may be expressed as follows:\\
+
+\emph{The sum of all residues of an analytic function having only a finite number of points of singularity is equal to zero.}
+
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Le calcul des r\'esidus et ses applications \`a la th\'eorie des fonctions}.\, Gauthier-Villars, Paris (1905).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

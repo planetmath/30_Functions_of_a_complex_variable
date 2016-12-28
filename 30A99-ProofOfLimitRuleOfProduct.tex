@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLimitRuleOfProduct}
+\pmcreated{2013-03-22 17:52:22}
+\pmmodified{2013-03-22 17:52:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{proof of limit rule of product}
+\pmrecord{6}{40352}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{26A06}
+%\pmkeywords{limit rule of product}
+\pmrelated{ProductOfFunctions}
+\pmrelated{TriangleInequality}
+\pmrelated{ProductAndQuotientOfFunctionsSum}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $f$ and $g$ be \PMlinkname{real}{RealFunction} or complex functions having the limits
+$$\lim_{x\to x_0}f(x) = F \quad \mbox{and} \quad \lim_{x\to x_0}g(x) = G.$$
+Then also the limit $\displaystyle\lim_{x\to x_0}f(x)g(x)$ exists and equals $FG$.\\
+
+{\em Proof.}\, Let $\varepsilon$ be any positive number.\, The assumptions imply the existence of the positive numbers $\delta_1,\,\delta_2,\,\delta_3$ such that
+\begin{align}
+|f(x)-F| < \frac{\varepsilon}{2(1+|G|)}\;\;\mbox{when}\;\;0 < |x-x_0| < \delta_1
+\end{align}
+\begin{align}
+|g(x)-G| < \frac{\varepsilon}{2(1+|F|)}\;\;\mbox{when}\;\;0 < |x-x_0| < \delta_2,
+\end{align}
+\begin{align}
+|g(x)-G| < 1\;\;\mbox{when}\;\;0 < |x-x_0| < \delta_3.
+\end{align}
+According to the condition (3) we see that
+$$|g(x)| = |g(x)\!-\!G\!+\!G| \leqq |g(x)\!-\!G|+|G| < 1\!+\!|G|\;\;\mbox{when}\;\;0 < |x-x_0| < \delta_3.$$
+Supposing then that\, $0 < |x-x_0| < \min\{\delta_1,\,\delta_2,\,\delta_3\}$\, and using (1) and (2) we obtain
+\begin{align*}
+|f(x)g(x)-FG|\;& = |f(x)g(x)-Fg(x)+Fg(x)-FG|\\
+               & \leqq |f(x)g(x)\!-\!Fg(x)|+|Fg(x)\!-\!FG|\\
+               & = |g(x)|\cdot|f(x)\!-\!F|+|F|\cdot|g(x)\!-\!G|\\
+               & < (1\!+\!|G|)\frac{\varepsilon}{2(1\!+\!|G|)}+(1\!+\!|F|)\frac{\varepsilon}{2(1\!+\!|F|)}\\ 
+               & = \varepsilon
+\end{align*}
+This settles the proof.
+
+
+
+%%%%%
+%%%%%
+\end{document}

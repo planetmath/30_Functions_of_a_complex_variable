@@ -1,0 +1,161 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HarnackTheorem}
+\pmcreated{2013-03-22 16:02:55}
+\pmmodified{2013-03-22 16:02:55}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{Harnack theorem}
+\pmrecord{8}{38099}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem*}{Theorem}
+\newtheorem{corollary*}{Corollary}
+
+\begin{document}
+\paragraph{Introduction.}
+It is frequent to make use of Cauchy integral formula to represent analytically some functions that are useful in mathematical physics applications. However, it must be noted that such representation is not unique, so that the same function can be represented by different integrals of Cauchy's type. An important case has to do with the equality of the two Cauchy integrals
+\begin{align*}
+\frac{1}{2\pi i}\oint_C\frac{\psi_1(\zeta)}{\zeta-z}d\zeta=
+\frac{1}{2\pi i}\oint_C\frac{\psi_2(\zeta)}{\zeta-z}d\zeta
+\end{align*}
+for all values of $z$ in the interior of $C$. In general no conclusion can be drawn concerning the equality of the density functions $\psi_1(\zeta)$ and $\psi_2(\zeta)$. We shall see, however, that if some additional restriction are imposed on the density functions and on the contour $C$, then the equality will occur. That is the matter of {\em Harnack theorem}. In considering the applications of the theory of functions of a complex variable to problems in continuum mechanics, for instance, we shall most frequently deal with the region bounded by the unit circle, i.e. the compact disc $|z|\leq 1$ that we shall draw  in the $z$-plane, its boundary will be denoted by $\gamma$ and the points of $\gamma$ by $\zeta=e^{i\theta}$. All density functions of the argument $\theta$ will be assumed to be $2\pi$-periodic.
+\begin{theorem*}
+{\footnote{A less restrictive form of Harnack theorem is discussed in \cite{cite:Musk}.}}Let $f(\theta)$ and $g(\theta)$ be continuous real functions of the argument $\theta$ defined on the boundary $\gamma$; if
+\begin{align}
+\frac{1}{2\pi i}\oint_\gamma\frac{f(\theta)d\zeta}{\zeta-z}=
+\frac{1}{2\pi i}\oint_\gamma\frac{g(\theta)d\zeta}{\zeta-z}
+\end{align}
+then
+\begin{align*}
+f(\theta)\equiv g(\theta) \qquad if \qquad |z|<1
+\end{align*}
+\begin{align*}
+f(\theta)=g(\theta)+const. \qquad if \qquad |z|>1.
+\end{align*}
+\end{theorem*}
+\begin{proof}
+\begin{enumerate}
+\item $|z|<1$. From equality (1) we obtain
+\begin{align*}
+\frac{1}{2\pi i}\oint_\gamma\frac{f(\theta)-g(\theta)}{\zeta-z}d\zeta\equiv
+\frac{1}{2\pi i}\oint_\gamma\frac{h(\theta)}{\zeta-z}d\zeta\equiv 0,
+\end{align*}
+where $h(\theta)\equiv f(\theta)-g(\theta)$. We shall prove that $h(\theta)\equiv 0$. Since $|z|<1$ we can write,
+\begin{align*}
+\frac{1}{\zeta-z}=\sum_{n=0}^\infty\frac{z^n}{\zeta^{n+1}}\:,
+\end{align*}
+then
+\begin{align}
+\frac{1}{2\pi i}\oint_\gamma\frac{h(\theta)}{\zeta-z}d\zeta=
+\frac{1}{2\pi i}
+\oint_\gamma\sum_{n=0}^\infty\frac{h(\theta)}{\zeta^{n+1}}z^n d\zeta=
+\frac{1}{2\pi i}\sum_{n=0}^\infty(a_n-ib_n)z^n,
+\end{align}
+the complex form of Fourier series {\footnote{The restrictions imposed upon the expanded function are known as the Dirichlet conditions, but it is sufficient to demand that it be a function of bounded variation.}}where the coefficients are given by (we are using the Euler's formula)
+\begin{align*}
+a_n-ib_n=\frac{1}{2\pi i}\oint_\gamma\frac{h(\theta)}{\zeta^{n+1}}d\zeta
+=\frac{1}{2\pi}\int_0^{2\pi}\!\!h(\theta)e^{-in\theta}d\theta.
+\end{align*}
+But (2) vanishes for all values of $z$, therefore $a_n=b_n=0,\, n\in\mathbb{N}$ and a reference to Fourier complex expansion 
+\begin{align*}
+h(\theta)=\sum_{n=-\infty}^\infty c_ne^{in\theta}, \qquad 
+c_n=\frac{1}{2\pi}\int_0^{2\pi}h(t)e^{-int}dt, \quad n\in\mathbb{Z},
+\end{align*}
+shows that all Fourier coefficients of the function $h(\theta)$ vanish, and hence $h(\theta)\equiv 0$. 
+\item $|z|>1$. By analytic continuation, we have
+\begin{align*}
+\frac{1}{\zeta-z}=\sum_{n=0}^\infty -\frac{\zeta^n}{z^{n+1}}\:,
+\end{align*}
+so that
+\begin{align}
+\frac{1}{2\pi i}\oint_\gamma\frac{h(\theta)}{\zeta-z}d\zeta=
+-\frac{1}{2\pi i}
+\oint_\gamma\sum_{n=1}^\infty\frac{\zeta^{n-1}h(\theta)}{z^n}d\zeta=
+-\sum_{n=1}^\infty\frac{a_n+ib_n}{z^n}\:,
+\end{align}
+where
+\begin{align*}
+a_n+ib_n=\frac{1}{2\pi i}\oint_\gamma\zeta^{n-1}h(\theta)d\zeta=
+\frac{1}{2\pi}\int_0^{2\pi}\!\!h(\theta)e^{in\theta}d\theta, \quad 
+n\in\mathbb{N}\backslash\{0\}.
+\end{align*}
+Since (3) vanishes for all values of $|z|>1$, 
+$a_n=b_n=0,\, n\in\mathbb{N}\backslash\{0\}$. Thus, all Fourier coefficients of $h(\theta)$, with the possible exception of $a_0$, vanish and hence
+\begin{align*}
+g(\theta)=f(\theta)+const.
+\end{align*}
+\end{enumerate}
+\end{proof}
+Moreover, from this theorem if $|z|>1$ and in addition to (1) we have the equality
+\begin{align*}
+\frac{1}{2\pi i}\oint_\gamma\frac{f(\theta)}{\zeta}d\zeta=
+\frac{1}{2\pi i}\oint_\gamma\frac{g(\theta)}{\zeta}d\zeta,
+\end{align*}
+then $f(\theta)=g(\theta)$.
+\begin{corollary*}
+Given the continuous real functions $f_1,f_2,g_1,g_2$ and the following simultaneous equalities for all values of $z$.
+\begin{align*}
+\frac{1}{2\pi i}\oint_\gamma\frac{f_1+if_2}{\zeta-z}d\zeta=
+\frac{1}{2\pi i}\oint_\gamma\frac{g_1+ig_2}{\zeta-z}d\zeta,
+\end{align*}
+\begin{align*}
+\frac{1}{2\pi i}\oint_\gamma\frac{f_1-if_2}{\zeta-z}d\zeta=
+\frac{1}{2\pi i}\oint_\gamma\frac{g_1-ig_2}{\zeta-z}d\zeta,
+\end{align*}
+then 
+\begin{align*}
+g_1=f_1, \qquad g_2=f_2, \qquad if \quad |z|<1,
+\end{align*}
+and
+\begin{align*}
+g_1=f_1+const., \qquad g_2=f_2+const., \qquad if \quad |z|>1.
+\end{align*}
+By adding and substracting those equalities, this corollary follows from Harnack theorem.
+\end{corollary*}
+\begin{thebibliography}{99}
+\bibitem{cite:Musk}
+N. I. Muskhelishvili's, {\em Singular Integral Equations,} p.64, 1953.
+\bibitem{Titchmarsh}
+E.C. Titchmarsh, {\em The Theory of Functions,} Oxford University Press, New York, 2d ed., pp. 64-101, 399-428. 
+\bibitem{Osgood}
+W.F. Osgood, {\em Lehrbuch der Funktionentheorie}, Teubner Verlagsgesellschaft, Leipzig, vol. 1. 
+\bibitem{Goursat}
+Ã‰. Goursat, {\em Course d'analyse,} Gauthiers-Villars \& Cie, Paris, vol. 2. 
+\bibitem{Picard}
+E. Picard, {\em Le\c cons sur quelques types simples d'Ã©quations aux dÃ©rivÃ©es partielles,} Gauthiers-Villars \& Cie, Paris. 
+\end{thebibliography}
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

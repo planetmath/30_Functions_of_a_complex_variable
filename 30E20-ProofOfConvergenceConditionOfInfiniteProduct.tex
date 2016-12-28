@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfConvergenceConditionOfInfiniteProduct}
+\pmcreated{2013-03-22 17:22:27}
+\pmmodified{2013-03-22 17:22:27}
+\pmowner{fernsanz}{8869}
+\pmmodifier{fernsanz}{8869}
+\pmtitle{proof of convergence condition of infinite product}
+\pmrecord{5}{39738}
+\pmprivacy{1}
+\pmauthor{fernsanz}{8869}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% define commands here
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\begin{document}
+\title{proof of theorem of convergence of infinite product}%
+\author{Fernando Sanz Gamiz}%
+
+\begin{proof}
+Let $p_n=\prod_{i=1}^n u_i$. We have to study the convergence of the
+sequence $\{p_n\}$. The sequence $\{p_n\}$ converges to a not null limit iff
+$\{\log p_n\}$ ($\log$ is restricted to its principal branch) converges
+to a finite limit. By the Cauchy criterion, this happens iff for
+every $\epsilon^{\prime}>0$ there exist $N$ such that $\abs{\log
+p_{n+k} - \log p_n} < \epsilon^{\prime}$ for all $n>N$ and all
+$k=1,2,\ldots$, i.e, iff
+$$\abs{\log \frac{p_{n+k}}{p_n}} = \abs{\log u_{n+1}u_{n+2}\cdots u_{n+k}} < \epsilon^{\prime};$$
+as $\log(z)$ is an injective function and continuous at $z=1$ and
+$\log(1)=0$ this will happen iff for every $\epsilon>0$
+$$\abs{u_{n+1}u_{n+2}\cdots u_{n+k}-1} < \epsilon$$ for $n$ greater
+than $N$ and $k=1,2,\ldots$
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

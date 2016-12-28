@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SineIntegral}
+\pmcreated{2015-02-04 12:58:26}
+\pmmodified{2015-02-04 12:58:26}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{sine integral}
+\pmrecord{17}{36844}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmsynonym{sinus integralis}{SineIntegral}
+\pmsynonym{Si}{SineIntegral}
+\pmrelated{SincFunction}
+\pmrelated{SineIntegralInInfinity}
+\pmrelated{LogarithmicIntegral2}
+\pmrelated{CurvatureOfNielsensSpiral}
+\pmrelated{LaplaceTransformOfIntegralSine}
+\pmrelated{FresnelIntegrals}
+\pmrelated{HyperbolicSineIntegral}
+\pmdefines{sine integral}
+\pmdefines{sinus integralis}
+\pmdefines{cosine integral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Si}{Si}
+\DeclareMathOperator{\si}{si}
+\DeclareMathOperator{\ci}{ci}
+\DeclareMathOperator{\sinc}{sinc}
+\begin{document}
+The function {\em sine integral} (in Latin {\em sinus integralis}) from $\mathbb{R}$ to $\mathbb{R}$ is defined as
+\begin{align}   
+\mbox{Si }{x} \;:=\; \int_0^x\frac{\sin t}{t}\,dt = 
+\int_0^x\mbox{sinc}(t)\;dt,
+\end{align}
+or alternatively as
+$$\mbox{Si }{x} \,:=\,  \int_0^1\frac{\sin{tx}}{t}\,dt.$$
+
+It isn't an elementary function.\, The equation (1) implies the Taylor series \PMlinkescapetext{expansion}
+   $$\mbox{Si }{z} = z\!-\!\frac{z^3}{3\!\cdot\!3!}\!+\!\frac{z^5}{5\!\cdot\!5!}
+                \!-\!\frac{z^7}{7\!\cdot\!7!}\!+-\ldots,$$
+which converges for all complex values $z$ and thus defines an entire transcendental function.\\
+
+$\mbox{Si }{x}$ satisfies the linear third \PMlinkescapetext{order} differential equation
+          $$xf'''(x)\!+\!2f''(x)\!+\!xf'(x) =  0.$$
+
+\begin{center}
+\includegraphics[scale=0.4]{sinint}
+\end{center}
+
+\textbf{Remark 1.} \quad$\lim_{x\to\infty}\mbox{Si }{x} = \frac{\pi}{2}$\\
+
+\textbf{Remark 2.}\, There is also another ``sine integral''
+$$\mbox{si }{x}\; :=\; \int_\infty^x\frac{\sin t}{t}\,dt\; =\; \mbox{Si }{x}-\frac{\pi}{2}$$
+and the corresponding {\em cosine integral}
+$$\mbox{ci }{x} \;:=\; \int_\infty^x\frac{\cos t}{t}\,dt = \gamma\!+\ln{x}+\!\int_0^x\frac{\cos{t}\!-\!1}{t}\,dt$$
+where $\gamma$ is the \PMlinkname{Euler--Mascheroni constant}{EulerMascheroniConstant}.
+
+%%%%%
+%%%%%
+\end{document}

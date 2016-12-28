@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyIntegralFormula}
+\pmcreated{2013-03-22 12:04:46}
+\pmmodified{2013-03-22 12:04:46}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{Cauchy integral formula}
+\pmrecord{25}{31150}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\paragraph{The formulas.}
+Let $D=\{z\in\mathbb{C} : |z-z_0| <R\}$ be an open disk in the
+complex plane, and let $f(z)$ be a holomorphic\footnote{It is
+  necessary to draw a distinction between holomorphic functions (those having
+  a complex derivative) and analytic functions (those representable by
+  power series).  The two concepts are, in fact, equivalent, but
+  the standard proof of this fact uses the Cauchy Integral Formula
+  with the (apparently) weaker holomorphicity hypothesis.} function
+defined on some open domain that contains $D$ and its boundary.  Then,
+for every $z\in D$ we have
+\begin{eqnarray*}
+f(z) &=& \frac{1}{2 \pi i} \oint_C \frac{f(\zeta)}{\zeta-z}\ d\zeta \\
+f'(z) &=& \frac{1}{2 \pi i} \oint_C \frac{f(\zeta)}{(\zeta-z)^2}\ d\zeta \\
+& \vdots & \\
+f^{(n)}(z) &=& \frac{n!}{2 \pi i} \oint_C \frac{f(\zeta)}{(\zeta-z)^{n+1}}\ d\zeta  
+\end{eqnarray*}
+Here $C=\partial D$ is the corresponding circular boundary contour,
+oriented counterclockwise, with the most obvious parameterization
+given by
+$$\zeta=z_0+R e^{it},\quad 0\leq t\leq 2\pi.$$
+
+\paragraph{Discussion.}
+The first of the above formulas underscores the ``rigidity'' of
+holomorphic functions.  Indeed, the values of the holomorphic function
+inside a disk $D$ are completely specified by its values on the
+boundary of the disk.  The second formula is useful, because it gives
+the derivative in terms of an integral, rather than as the outcome of
+a limit process.
+
+\paragraph{Generalization.}
+The following technical generalization of the formula is needed for
+the treatment of removable singularities.  Let $S$ be a finite subset
+of $D$, and suppose that  $f(z)$ is holomorphic for all $z\notin
+ S$, but also that
+$f(z)$ is bounded near all $z\in S$.  Then, the
+above formulas are valid for all $z\in D\setminus S$.
+
+Using the Cauchy residue theorem, one can further generalize the integral formula to the situation where $D$ is any domain and $C$ is any closed rectifiable curve in $D$; in this case, the formula becomes
+$$
+\eta(C,z) f(z) = \frac{1}{2 \pi i} \oint_C \frac{f(\zeta)}{\zeta-z}\ d\zeta
+$$
+where $\eta(C,z)$ denotes the winding number of $C$. It is valid for all points $z \in D \setminus S$ which are not on the curve $C$.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

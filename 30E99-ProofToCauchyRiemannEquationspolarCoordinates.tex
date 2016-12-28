@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofToCauchyRiemannEquationspolarCoordinates}
+\pmcreated{2013-03-22 14:06:13}
+\pmmodified{2013-03-22 14:06:13}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{proof to Cauchy-Riemann equations (polar coordinates)}
+\pmrecord{5}{35504}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $f(z)$ is differentialble at $z_0$ then the following limit
+\begin{eqnarray*}
+f'(z_0) & = & \lim_{\xi \to 0} \frac{f(z_0+\xi)-f(z_0)}{\xi}
+\end{eqnarray*}
+will remain the same approaching from any direction.  First we fix $\theta$ as $\theta_0$ then we take the limit along the ray where the argument is equal to $\theta_0$. Then
+\begin{eqnarray*}
+f'(z_0) & = &  \lim_{h \to 0} \frac{f(r_0e^{i\theta_0} + he^{i\theta_0})-f(r_0e^{i\theta_0})}{he^{i\theta_0}} \\
+& = & \lim_{h\to 0} \frac{f((r_0+h)e^{i\theta_0})-f(r_0e^{i\theta_0})}{he^{i\theta_0}} \\
+& = & \lim_{h\to 0} \frac{u(r_0+h,\theta_0) + iv(r_0+h,\theta_0) - u(r_0,\theta_0) - iv(r_0,\theta_0)}{he^{i\theta_0}}\\
+& = & \frac{1}{e^{i\theta_0}} \Bigg[ \lim_{h\to 0} \frac{u(r_0+h,\theta_0) - u(r_0,\theta_0)}{h} + i \lim_{h\to 0} \frac{v(r_0+h,\theta_0) - v(r_0,\theta_0)}{h} \Bigg]\\
+& = & \frac{1}{e^{i\theta_0}}\Bigg[ \frac{\partial u}{\partial r}(r_0,\theta_0) + i\frac{\partial v}{\partial r}(r_0,\theta_0) \Bigg]
+\end{eqnarray*}
+
+Similarly, if we take the limit along the circle with fixed $r$ equals $r_0$.  Then
+
+\begin{eqnarray*}
+f'(z_0) & = & \lim_{h\to 0} \frac{f(r_0e^{i\theta_0} + r_0e^{i(\theta_0+h)})-f(r_0e^{i\theta_0})}{r_0e^{i\theta_0}(e^{ih}-1)}\\
+& = & \lim_{h\to 0} \frac{f(r_0e^{i(\theta_0+h)})-f(r_0e^{i\theta_0})}{he^{i\theta_0}}\\
+& = & \lim_{h\to 0} \frac{u(r_0,\theta_0+h) + iv(r_0,\theta_0+h) -u(r_0,\theta_0) - iv(r_0,\theta_0)}{he^{i\theta_0}}\\
+& = & \frac{1}{r_0e^{i\theta_0}} \Bigg[ \lim_{h\to 0} \frac{u(r_0+h,\theta_0) - u(r_0,\theta_0)}{h}\cdot \frac{h}{e^{ih}-1} + i \lim_{h\to 0} \frac{v(r_0+h,\theta_0) - v(r_0,\theta_0)}{h}\cdot \frac{h}{e^{ih}-1} \Bigg]\\
+& = & \frac{1}{r_0e^{i\theta_0}} \Bigg[ \lim_{h\to 0} \frac{u(r_0+h,\theta_0) - u(r_0,\theta_0)}{h}\cdot \lim_{h\to 0}  \frac{h}{e^{ih}-1} + i \lim_{h\to 0} \frac{v(r_0+h,\theta_0) - v(r_0,\theta_0)}{h}\cdot \lim_{h\to 0} \frac{h}{e^{ih}-1} \Bigg]\\
+& = & \frac{1}{r_0e^{i\theta_0}} \Bigg[ \frac{\partial u}{\partial \theta}(r_0,\theta_0)\frac{1}{i} + \frac{\partial v}{\partial \theta}(r_0,\theta_0) \Bigg]\\
+& = & \frac{1}{r_0e^{i\theta_0}} \Bigg[ \frac{\partial v}{\partial \theta}(r_0,\theta_0) - i\frac{\partial u}{\partial \theta}(r_0,\theta_0) \Bigg]
+\end{eqnarray*}
+
+Note: We use l'H\^opital's rule to obtain the following result used above $\lim_{h\to 0} \frac{h}{e^{ih}-1} =  \frac{1}{i}$.
+
+Now, since the limit is the same along the circle and the ray then they are equal:
+\begin{eqnarray*}
+\frac{1}{e^{i\theta_0}}\Bigg[ \frac{\partial u}{\partial r}(r_0,\theta_0) + i\frac{\partial v}{\partial r}(r_0,\theta_0) \Bigg]
+& = & \frac{1}{r_0e^{i\theta_0}} \Bigg[ \frac{\partial v}{\partial \theta}(r_0,\theta_0) - i\frac{\partial u}{\partial \theta}(r_0,\theta_0) \Bigg]\\
+\Bigg[ \frac{\partial u}{\partial r}(r_0,\theta_0) + i\frac{\partial v}{\partial r}(r_0,\theta_0) \Bigg]
+& = & \frac{1}{r_0} \Bigg[ \frac{\partial v}{\partial \theta}(r_0,\theta_0) - i\frac{\partial u}{\partial \theta}(r_0,\theta_0) \Bigg]\\
+\end{eqnarray*}
+which implies that
+\begin{eqnarray*}
+\frac{\partial u}{\partial r} & = & \frac{1}{r}\frac{\partial v}{\partial \theta}\\
+\frac{\partial v}{\partial r} & = & -\frac{1}{r}\frac{\partial u}{\partial \theta}
+\end{eqnarray*}
+QED
+%%%%%
+%%%%%
+\end{document}

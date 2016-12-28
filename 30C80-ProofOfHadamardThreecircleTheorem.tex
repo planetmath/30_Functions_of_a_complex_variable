@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHadamardThreecircleTheorem}
+\pmcreated{2013-03-22 15:56:02}
+\pmmodified{2013-03-22 15:56:02}
+\pmowner{Simone}{5904}
+\pmmodifier{Simone}{5904}
+\pmtitle{proof of Hadamard three-circle theorem}
+\pmrecord{5}{37943}
+\pmprivacy{1}
+\pmauthor{Simone}{5904}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C80}
+\pmclassification{msc}{30A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $f$ be holomorphic on a closed annulus $0<r_1\le |z|\le r_2$. Let
+$$
+s=\frac{\log r_1-\log r}{\log r_2-\log r_1}.
+$$
+Let $M(r)=M_f(r)=||f||_r=\max_{|z|=r}|f(z)|$. Then we have to prove that
+$$
+\log M(r)\le (1-s)\log M(r_1)+s\log M(r_2).
+$$
+For this, let $\alpha$ be a real number; the function $\alpha\log|z|+\log|f(z)|$ is harmonic outside the zeros of $f$. Near the zeros of $f$ the above function has values which are large negative. Hence by the maximum modulus principle this function has its maximum on the boundary of the annulus, specifically on the two circles $|z|=r_1$ and $|z|=r_2$. Therefore
+$$
+\alpha\log|z|+\log|f(z)|\le\max(\alpha\log r_1+\log M(r_1),\alpha\log r_2+\log M(r_2)) 
+$$
+for all $z$ in the annulus. In particular, we get the inequality
+$$
+\alpha\log r+\log M(r)\le\max(\alpha\log r_1+\log M(r_1),\alpha\log r_2+\log M(r_2)). 
+$$
+Now let $\alpha$ be such that the two values inside the parentheses on the right are equal, that is
+$$
+\alpha=\frac{\log M(r_2)-\log M(r_1)}{\log r_1-\log r_2}.
+$$
+Then from the previous inequality, we get
+$$
+\log M(r)\le\alpha\log r_1+\log M(r_1)-\alpha\log r,
+$$
+which upon substituting the value for $\alpha$ gives the result stated in the theorem.
+
+\begin{thebibliography}
+{}Lang, S.
+\emph{Complex analysis, Fourth edition}. Graduate Texts in Mathematics, 103.
+Springer-Verlag, New York, 1999. xiv+485 pp. ISBN 0-387-98592-1 
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRiemannsRemovableSingularityTheorem}
+\pmcreated{2013-03-22 13:33:03}
+\pmmodified{2013-03-22 13:33:03}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of Riemann's removable singularity theorem}
+\pmrecord{5}{34153}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose that $f$ is holomorphic on $U\setminus\{a\}$ and $\lim_{z\to a}(z-a)f(z)=0$.  Let
+$$
+f(z)=\sum_{k=-\infty}^{\infty}c_k (z-a)^k
+$$
+be the Laurent series of $f$ centered at $a$.  We will show that $c_k=0$ for $k<0$, so that $f$ can be holomorphically extended to all of $U$ by defining $f(a)=c_0$.
+
+For any non-negative integer $n$, the residue of $(z-a)^n f(z)$ at $a$ is
+$$
+\operatorname{Res}((z-a)^n f(z),a)=\frac{1}{2\pi i}
+\lim_{\delta\to 0^+}\oint_{|z-a|=\delta}(z-a)^n f(z)\mathrm{d}z.
+$$
+This is equal to zero, because
+\begin{eqnarray*}
+\left|\oint_{|z-a|=\delta}(z-a)^n f(z)\mathrm{d}z\right|
+&\le&2\pi\delta\max_{|z-a|=\delta}|(z-a)^n f(z)|\\
+&=&2\pi\delta^n\max_{|z-a|=\delta}|(z-a)f(z)|
+\end{eqnarray*}
+which, by our assumption, goes to zero as $\delta\to 0$.  Since the residue of $(z-a)^n f(z)$ at $a$ is also equal to $c_{-n-1}$, the coefficients of all negative powers of $z$ in the Laurent series vanish.
+
+Conversely, if $a$ is a removable singularity of $f$, then $f$ can be expanded in a power series centered at $a$, so that
+$$
+\lim_{z\to a}(z-a)f(z)=0
+$$
+because the constant term in the power series of $(z-a)f(z)$ is zero.
+
+A corollary of this theorem is the following: if $f$ is bounded near $a$, then
+$$
+|(z-a)f(z)|\le|z-a|M
+$$
+for some $M>0$.  This implies that $(z-a)f(z)\to 0$ as $z\to a$, so $a$ is a removable singularity of $f$.
+%%%%%
+%%%%%
+\end{document}

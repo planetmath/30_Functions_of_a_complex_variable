@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulerReflectionFormula}
+\pmcreated{2013-03-22 16:23:37}
+\pmmodified{2013-03-22 16:23:37}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{Euler reflection formula}
+\pmrecord{5}{38539}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{33B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary} 
+
+
+\begin{document}
+\begin{thm} (Euler Reflection Formula)
+\[\Gamma(x)\Gamma(1-x)=\frac{\pi}{\sin(\pi x)}\]
+\end{thm}
+
+\textbf{Proof:}
+We have
+\[\frac{1}{\Gamma(x)}=xe^{\gamma x}\prod_{n=1}^{\infty} \left(\left(1+\frac{x}{n}\right)e^{-x/n}\right)\]
+and thus
+\[\frac{1}{\Gamma(x)}\frac{1}{\Gamma(-x)}=-x^2e^{\gamma x}e^{-\gamma x}\prod_{n=1}^{\infty}
+\left(\left(1+\frac{x}{n}\right)e^{-x/n}\right)\left(\left(1-\frac{x}{n}\right)e^{x/n}\right)=-x^2\prod_{n=1}^{\infty}\left(1-\frac{x^2}{n^2}\right)\]
+But $\Gamma(1-x)=-x\Gamma(-x)$ and thus
+\[\frac{1}{\Gamma(x)}\frac{1}{\Gamma(1-x)}=x\prod_{n=1}^{\infty}\left(1-\frac{x^2}{n^2}\right)\]
+Now, using the \PMlinkname{formula}{ExamplesOfInfiniteProducts} for $\sin x/x$, we have
+\[\sin(\pi x)=\pi x\prod_{n=1}^{\infty}\left(1-\frac{x^2}{n^2}\right)\]
+so that
+\[\frac{1}{\Gamma(x)}\frac{1}{\Gamma(1-x)}=\frac{\sin(\pi x)}{\pi}\]
+and the result follows.
+
+%%%%%
+%%%%%
+\end{document}

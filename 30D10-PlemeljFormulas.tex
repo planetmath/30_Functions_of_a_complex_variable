@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PlemeljFormulas}
+\pmcreated{2013-03-22 16:02:02}
+\pmmodified{2013-03-22 16:02:02}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{Plemelj formulas}
+\pmrecord{5}{38079}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\psi(\zeta)$ be a density function of a complex variable satisfying the H\"older condition (the Lipschitz condition of order $\alpha$){\footnote{A function $f(\zeta)$ satisfies the H\"older condition on a smooth curve $C$ if for every $\zeta_1,\zeta_2\in C$ $|f(\zeta_2)-f(\zeta_1)|\leq M|\zeta_2-\zeta_1|^\alpha$, $M>0$, $0<\alpha\leq 1$. It is clear that the H\"older condition is a weaker restriction than a bounded derivative for $f(\zeta)$.}} on a smooth closed contour $C$ in the integral
+\begin{align}
+\Psi(z)=\frac{1}{2\pi i}\int_C\frac{\psi(\zeta)}{\zeta-z}d\zeta,
+\end{align}
+then the limits $\Psi^+(t)$ and $\Psi^-(t)$ as $z$ approaches an arbitrary point $t$ on $C$ from the interior and the exterior of $C$, respectively, are
+\begin{align}
+\left\{ \begin{array}{ll}
+\Psi^+(t) \equiv \frac{1}{2}\psi(t)+
+\frac{1}{2\pi i}\int_C\frac{\psi(\zeta)}{\zeta-t}d\zeta, \\ 
+\Psi^-(t) \equiv -\frac{1}{2}\psi(t)+
+\frac{1}{2\pi i}\int_C\frac{\psi(\zeta)}{\zeta-t}d\zeta.
+\end{array}
+\right.
+\end{align}
+These are the Plemelj\cite{cite:Plemelj} formulas {\footnote{cf.\cite{cite:Musk}, where restrictions that Plemelj made, were relaxed.}}  and the improper integrals in (2) must be interpreted as Cauchy's principal values.
+\begin{thebibliography}{99}
+\bibitem{cite:Plemelj}
+J. Plemelj, {\em Monatshefte f\"ur Mathematik und Physik,} vol. 19, pp. 205- 210, 1908.
+\bibitem{cite:Musk}
+N. I. Muskhelishvili, {\em Singular Integral Equations,} Groningen: Noordhoff (based on the second Russian edition published in 1946), 1953.
+\end{thebibliography} 
+	
+
+
+  
+%%%%%
+%%%%%
+\end{document}

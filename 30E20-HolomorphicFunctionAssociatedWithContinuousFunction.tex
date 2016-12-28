@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HolomorphicFunctionAssociatedWithContinuousFunction}
+\pmcreated{2013-03-22 19:14:29}
+\pmmodified{2013-03-22 19:14:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{holomorphic function associated with continuous function}
+\pmrecord{11}{42166}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmclassification{msc}{30D20}
+\pmrelated{DifferentiationUnderIntegralSign}
+\pmrelated{CauchyIntegralFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If $f(z)$ is continuous on a (finite) contour $\gamma$ of the complex plane, then the contour integral
+\begin{align}
+g(z) \;=:\; \int_{\gamma}\frac{f(t)}{t\!-\!z}\,dt,
+\end{align}
+defines a function \,$z \mapsto g(z)$\, which is holomorphic in any domain $D$ not containing points of $\gamma$.\, Moreover, the derivative has the expression
+\begin{align}
+g'(z) \;=\; \int_{\gamma}\!\frac{f(t)}{(t\!-\!z)^2}\,dt.
+\end{align}
+
+
+
+\emph{Proof.}\, The right hand side of (2) is defined since its integrand is continuous.\, On has to show that it equals
+$$\lim_{\Delta z \to 0}\frac{g(z\!+\!\Delta z)\!-\!g(z)}{\Delta z}.$$
+Let\, $z_1 =: z\!+\!\Delta z \notin \gamma$,\; $\Delta z \neq 0$.\, We may write first
+$$\frac{g(z_1)-g(z)}{z_1\!-\!z} 
+\;=\; \frac{1}{\Delta z}\int_{\gamma}f(t)\left[\frac{1}{t\!-\!z_1}-\frac{1}{t\!-\!z}\right]\,dt
+\;=\; \int_{\gamma}\frac{f(t)}{(t\!-\!z_1)(t\!-\!z)}\,dt,$$
+whence
+$$E \;=:\; \frac{g(z_1)-g(z)}{z_1\!-\!z}-\int_{\gamma}\frac{f(t)}{(t\!-\!z)^2} 
+\;=\; \Delta z\cdot\!\int_{\gamma}\frac{f(t)}{(t\!-\!z_1)(t\!-\!z)^2}\,dt.$$
+Because $f$ is continuous in the compact set $\gamma$, there is a positive constant $M$ such that
+$$|f(t)| \;<\; M \quad \forall\; t \in \gamma.$$
+As well, we have a positive constant $d$ such that
+$$|t\!-\!z| \;\geqq\; d \quad \forall\; t \in \gamma.$$
+When we choose\, $|\Delta z| < \frac{d}{2}$,\, it follows that
+$$|t\!-\!z_1| \;=\; |(t\!-\!z)-\Delta z| \;\geqq\; |t\!-\!z|-|\Delta z| \;>\; d\!-\!\frac{d}{2} \;=\; \frac{d}{2}.$$
+Consequently, 
+$$\left|\frac{f(t)}{(t\!-\!z_1)(t\!-\!z)^2}\right| \;=\; \frac{|f(t)|}{|t\!-\!z_1||t\!-\!z|^2} 
+\;<\; \frac{M}{\frac{d}{2}\cdot d^2} \;=\; \frac{2M}{d^3}$$
+and, by the estimating theorem of contour integral, 
+$$|E| \;=\; |\Delta z|\cdot\left|\int_{\gamma}\frac{f(t)}{(t\!-\!z_1)(t\!-\!z)^2}\,dt\right|
+\;<\; |\Delta z|\cdot\frac{2M}{d^3}\cdot k,$$
+where $k$ is the length of the contour.\, The last expression tends to zero as\, $\Delta z \to 0$.\, This settles the proof.\\
+
+
+\textbf{Remark 1.}\, By induction, one can prove the following generalisation of (2):
+\begin{align}
+g^{(n)}(z) \;=\; n!\!\int_{\gamma}\!\frac{f(t)}{(t\!-\!z)^{n+1}}\,dt \qquad (n \;=\; 0,\,1,\,2,\,\ldots)
+\end{align}
+
+\textbf{Remark 2.}\, The contour $\gamma$ may be \PMlinkescapetext{open or closed}.\, If it especially is a circle, then (1) defines a holomorphic function inside $\gamma$ and another outside it.
+
+%%%%%
+%%%%%
+\end{document}

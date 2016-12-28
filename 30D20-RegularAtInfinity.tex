@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularAtInfinity}
+\pmcreated{2013-03-22 17:37:30}
+\pmmodified{2013-03-22 17:37:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{regular at infinity}
+\pmrecord{8}{40045}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D20}
+\pmclassification{msc}{32A10}
+\pmsynonym{analytic at infinity}{RegularAtInfinity}
+%\pmkeywords{regular}
+\pmrelated{RegularFunction}
+\pmrelated{ClosedComplexPlane}
+\pmrelated{VanishAtInfinity}
+\pmrelated{ResidueAtInfinity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+When the function $w$ of one complex variable is regular in the annulus
+               $$\varrho \;<\; |z| \;<\; \infty,$$
+it has a Laurent expansion
+\begin{align}
+  w(z) \;=\; \sum_{n=-\infty}^{\infty}c_nz^n.
+\end{align}
+If especially the coefficients $c_1,\, c_2,\,\ldots$ vanish, then we have
+   $$w(z) \;=\; c_0+\frac{c_{-1}}{z}+\frac{c_{-2}}{z^2}+\ldots$$
+Using the inversion \,$z = \frac{1}{\zeta}$,\, we see that the function
+     $$w\!\left(\frac{1}{\zeta}\right) \;=\; c_0+c_{-1}\zeta+c_{-2}\zeta^2+\ldots$$
+is regular in the disc \,$|\zeta| < \varrho$.\, Accordingly we can define that the function $w$ is {\em regular at infinity} also.
+
+For example,\, $\displaystyle w(z) \;:=\; \frac{1}{z}$\, is regular at the point \,$z = \infty$\, and\, $w(\infty) = 0$.\, Similarly, $e^{\frac{1}{z}}$ is regular at $\infty$ and has there the value 1.
+
+%%%%%
+%%%%%
+\end{document}

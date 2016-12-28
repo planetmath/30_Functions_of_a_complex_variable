@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexFunction}
+\pmcreated{2014-02-23 10:20:21}
+\pmmodified{2014-02-23 10:20:21}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{pahio}{2872}
+\pmtitle{complex function}
+\pmrecord{12}{36226}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{03E20}
+\pmrelated{RealFunction}
+\pmrelated{Meromorphic}
+\pmrelated{Holomorphic}
+\pmrelated{Entire}
+\pmrelated{IndexOfSpecialFunctions}
+\pmrelated{ValuesOfComplexCosine}
+\pmdefines{real part}
+\pmdefines{imaginary part}
+\pmdefines{function theory}
+\pmdefines{complex analysis}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A {\em complex function} is a function $f$ from a subset $A$ of 
+$\mathbb{C}$ to $\mathbb{C}$.
+
+For every\, $z = x+iy\in A\,\,\,(x,\,y \in \mathbb{R})$\, the 
+complex value $f(z)$ can be split into its real and imaginary 
+parts $u$ and $v$, respectively, which can be considered as 
+real functions of two real variables:
+\begin{align}
+f(z) \;=\; u(x,y)+iv(x,y)
+\end{align}
+The functions $u$ and $v$ are called the {\em real part} and 
+the {\em imaginary part} of the complex function $f$, 
+respectively.\, Conversely, any two functions $u(x,y)$ and 
+$v(x,y)$ defined in some subset of $\mathbb{R}^2$ determine via 
+(1) a complex function $f$.\\
+
+If $f(z)$ especially is defined as a polynomial 
+of $z$, then both $u(x,y)$ and $v(x,y)$ are polynomials of $x$ and 
+$y$ with real coefficients.\\
+
+Following are the notations for $u$ and $v$ that
+are used most commonly (the parentheses around $f(z)$ may be 
+omitted):
+
+$$u(x,y) \;=\; \mbox{Re}\left(f(z)\right) = \Re\left(f(z)\right)$$
+$$v(x,y) \;=\; \mbox{Im}\left(f(z)\right) = \Im\left(f(z)\right)$$
+
+The \PMlinkescapetext{branch} of mathematics concerning differentiable complex functions is called {\em function theory} or {\em complex analysis}.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VariantOfCauchyIntegralFormula}
+\pmcreated{2013-03-22 18:54:15}
+\pmmodified{2013-03-22 18:54:15}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{variant of Cauchy integral formula}
+\pmrecord{6}{41752}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmsynonym{Cauchy integral formula}{VariantOfCauchyIntegralFormula}
+\pmrelated{CauchyIntegralFormula}
+\pmrelated{CorollaryOfCauchyIntegralTheorem}
+\pmrelated{ExampleOfFindingTheGeneratingFunction}
+\pmrelated{GeneratingFunctionOfLaguerrePolynomials}
+\pmrelated{GeneratingFunctionOfHermitePolynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\; Let $f(z)$ be holomorphic in a domain $A$ of $\mathbb{C}$.\, If $C$ is a closed contour not intersecting itself which with its \PMlinkescapetext{inner} domain is contained in $A$ and if $z$ is an arbitrary point inside $C$, then
+\begin{align}
+f(z) \;=\; \frac{1}{2i\pi}\oint_C\frac{f(t)}{t\!-\!z}\,dt.
+\end{align}
+
+
+\emph{Proof.}\, Let $\varepsilon$ be any positive number.\, Denote by $C_r$ the circles with radius $r$ and centered in $z$.\, We have
+$$\oint_C\frac{f(t)}{t\!-\!z}\,dt \;=\; \oint_C\frac{f(z)\!+\!(f(t)\!-\!f(z))}{t\!-\!z}\,dt
+\;=\; \underbrace{\oint_C\frac{f(z)}{t\!-\!z}\,dt}_I+\underbrace{\oint_C\frac{f(t)\!-\!f(z)}{t\!-\!z}\,dt}_J.$$
+According to the corollary of Cauchy integral theorem and its example, we may write
+$$I \;=\; f(z)\oint_C\frac{dt}{t\!-\!z} \;=\; 2i\pi f(z).$$
+If\, $0 < r < \mbox{ some } r_0$,\, we have
+$$J \;=\; \oint_{C_r}\frac{f(t)\!-\!f(z)}{t\!-\!z}\,dt.$$
+The continuity of $f$ in the point $z$ implies, that
+$$|f(t)\!-\!f(z)| < \varepsilon$$
+when\, $0 < |t\!-\!z| < \mbox{ some } \delta_\varepsilon$\, i.e. when
+\begin{align} 
+t \in C_r\, \mbox{ and }\, 0 < r < \mbox{ some } r_1.
+\end{align}
+If (2) is in \PMlinkescapetext{force}, we obtain first
+$$\left|\frac{f(t)\!-\!f(z)}{t\!-\!z}\right| \;=\; \frac{|f(t)\!-\!f(z)|}{|t\!-\!z|} 
+\;=\; \frac{|f(t)\!-\!f(z)|}{r} \;<\; \frac{\varepsilon}{r},$$
+whence, by the estimation theorem of integral,
+$$|J| \;\leqq\; \frac{\varepsilon}{r}\cdot2\pi r \;=\; 2\pi\varepsilon \quad 
+\mbox{for} \quad 0 < r < \min\{r_0,\,r_1\},$$
+and lastly
+\begin{align}
+\left|\frac{1}{2i\pi}\oint_C\frac{f(t)}{t\!-\!z}\,dt-f(z)\right| \;=\; \left|\frac{1}{2i\pi}J\right| \;\leqq\; \frac{1}{2\pi}\cdot2\pi\varepsilon \;=\; \varepsilon \quad \mbox{when  } 0 < r < \min\{r_0,\,r_1\}.
+\end{align}
+This result implies (1).
+
+
+%%%%%
+%%%%%
+\end{document}

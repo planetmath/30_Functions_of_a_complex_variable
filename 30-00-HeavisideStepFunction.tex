@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HeavisideStepFunction}
+\pmcreated{2013-03-22 13:46:14}
+\pmmodified{2013-03-22 13:46:14}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Heaviside step function}
+\pmrecord{8}{34476}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{26A06}
+\pmsynonym{Heaviside function}{HeavisideStepFunction}
+\pmrelated{SignumFunction}
+\pmrelated{DelayTheorem}
+\pmrelated{TelegraphEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+The \emph{Heaviside step function} is the function $H:\sR\to \sR$ defined as
+ \begin{eqnarray*}
+ H(x) &=& \left\{ \begin {array}{ll} 0 & \mbox{when}\,\, x< 0, \\
+ 1/2 & \mbox{when}\,\, x= 0,\\
+ 1 & \mbox{when}\,\, x> 0.\\
+ \end{array} \right.
+ \end{eqnarray*}
+Here, there are many conventions for the value at $x=0$. The
+motivation for setting $H(0)=1/2$ is that we can then write
+$H$ as a function of the signum function (see
+\PMlinkname{this page}{SignumFunction}). In applications, such as
+the Laplace transform, where the Heaviside function is used extensively,
+the value of $H(0)$ is irrelevant.
+The Fourier transform of heaviside function is 
+$$\mathcal{F}_0 H(t)=\frac{1}{2}\left(\delta(t)-\frac{i}{\pi t}\right)$$
+where $\delta$ denotes the Dirac delta centered at $0$.
+The function is named after Oliver Heaviside (1850-1925)
+\cite{heaviside_bib}. However, the function was already used by
+Cauchy\cite{cauchy_bib}, who defined the function as
+$$ u(t) = \frac{1}{2}\big( 1 + t/\sqrt{t^2}\big)$$
+and called it a \emph{coefficient limitateur} \cite{hoskins}.
+
+\begin{thebibliography}{9}
+\bibitem{heaviside_bib}
+ The MacTutor History of Mathematics archive,
+ \PMlinkexternal{Oliver Heaviside}{http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Heav
+iside.html}.
+\bibitem{cauchy_bib}
+ The MacTutor History of Mathematics archive,
+ \PMlinkexternal{Augustin Louis Cauchy}{http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Cauc
+hy.html}.
+\bibitem{hoskins}
+ R.F. Hoskins, \emph{Generalised functions},
+ Ellis Horwood Series: Mathematics and its applications,
+ John Wiley \& Sons, 1979.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExponentialIntegral}
+\pmcreated{2013-03-22 18:44:17}
+\pmmodified{2013-03-22 18:44:17}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{exponential integral}
+\pmrecord{8}{41510}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{26A36}
+\pmsynonym{Ei}{ExponentialIntegral}
+\pmrelated{LogarithmicIntegral}
+\pmrelated{TableOfLaplaceTransforms}
+\pmrelated{IndexOfSpecialFunctions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The antiderivative of the function
+$$x \mapsto \frac{e^{-x}}{x}$$
+is not expressible in closed form.\, Thus such \PMlinkname{integrals}{ImproperIntegral} as
+$$\int_x^\infty\!\frac{e^{-t}}{t}\,dt \quad \mbox{and} \quad \int_\infty^{-x}\!\frac{e^{-t}}{t}\,dt,$$
+define certain \PMlinkname{non-elementary}{ElementaryFunction} transcendental functions.\, They are called \emph{exponential integrals} and denoted usually
+${\rm E}_1$ and ${\rm Ei}$, respectively.\, Accordingly,
+$${\rm E}_1(x) \;:=\; \int_x^\infty\!\frac{e^{-t}}{t}\,dt$$
+$${\rm Ei}\,x \;:=\; \int_\infty^{-x}\!\frac{e^{-t}}{t}\,dt \;=\; -\int_{-x}^\infty\!\frac{e^{-t}}{t}\,dt
+\;:=\; \int_{-\infty}^x\!\frac{e^{-u}}{u}\,du.$$
+Then one has the connection
+$${\rm E}_1(x) \;=\; -{\rm Ei}\,(-x).$$
+For positive values of $x$ the series expansion
+$${\rm Ei}\,x \;=\; \gamma+\ln{x}+\sum_{j=1}^\infty\frac{x^j}{j!j},$$
+where $\gamma$ is the \PMlinkid{Euler--Mascheroni constant}{1883}, is valid.\\
+
+Note: Some authors use the convention\; ${\rm Ei}\,x \,:=\, \int_x^\infty\!\frac{e^{-t}}{t}\,dt$.\\
+
+\subsection{Laplace transform of $\frac{1}{t+a}$}
+
+By the definition of Laplace transform,
+$$\mathcal{L}\{\frac{1}{t\!+\!a}\} \;=\; \int_0^\infty\frac{e^{-st}}{t\!+\!a}\,dt.$$
+The \PMlinkname{substitution}{ChangeOfVariableInDefiniteIntegral}\, $t\!+\!a = u$\, gives
+$$\mathcal{L}\{\frac{1}{t\!+\!a}\} \;=\; \int_a^\infty\frac{e^{as-su}}{u}\,du 
+\;=\; e^{as}\int_a^\infty\frac{e^{-su}}{u}\,du,$$
+from which the substitution\, $su = t$\, yields
+$$\mathcal{L}\{\frac{1}{t\!+\!a}\} \;=\; e^{as}\int_{as}^\infty\frac{e^{-t}}{t}\,dt,$$
+i.e. 
+\begin{align}
+\mathcal{L}\{\frac{1}{t\!+\!a}\} \;=\; e^{as}{\rm E}_1(as).
+\end{align}
+Using \PMlinkname{the rule}{LaplaceTransformOfDerivative}\, $\mathcal{L}\{f'(t)\} = sF(s)\!-\!f(0)$,\, one easily derives from (1) the \PMlinkescapetext{formula}
+\begin{align}
+\mathcal{L}\{\frac{1}{(t\!+\!a)^2}\} \;=\; \frac{1}{a}\!-\!se^{as}{\rm E}_1(as).
+\end{align}
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

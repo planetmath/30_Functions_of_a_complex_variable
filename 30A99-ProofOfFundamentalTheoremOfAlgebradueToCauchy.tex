@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFundamentalTheoremOfAlgebradueToCauchy}
+\pmcreated{2013-03-22 19:11:10}
+\pmmodified{2013-03-22 19:11:10}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{proof of fundamental theorem of algebra (due to Cauchy)}
+\pmrecord{8}{42094}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{12D99}
+\pmsynonym{Cauchy proof of fundamental theorem of algebra}{ProofOfFundamentalTheoremOfAlgebradueToCauchy}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We will prove that any equation
+$$f(z) \;:=\; z^n\!+\!a_1z^{n-1}\!+\!a_2z^{n-2}\!+\ldots+\!a_{n-1}z\!+\!a_n \;=\; 0,$$
+where the coefficients $a_j$ are complex numbers and\, $n \geqq 1$,\, has at least one \PMlinkname{root}{Equation} in 
+$\mathbb{C}$.\\
+
+\emph{Proof.}\, We can suppose that\, $a_n \neq 0$.\, Denote\, $z := x\!+\!iy$\, where\, $x,\,y$ are real.\, Then the function
+$$g(x,\,y) \;:=\; |f(z)| \;=\; |f(x\!+\!iy)|$$
+is defined and continuous in the whole $\mathbb{R}^2$.\, Let\, $c := \sum_{j=1}^n|a_j|$; it is positive.\, Using the triangle inequality we make the estimation
+\begin{align*}
+|f(z)| &\;=\; |z|^n\left|1+\frac{a_1}{z}+\frac{a_2}{z^2}+\ldots+\frac{a_n}{z^n}\right|\\
+       &\;\geqq\; \left(1-\frac{|a_1|}{|z|}-\frac{|a_2|}{|z|^2}+\ldots-\frac{|a_n|}{|z|^n}\right)\\
+       &\;\geqq\; \left(1-\frac{|a_1|}{|z|}-\frac{|a_2|}{|z|}+\ldots-\frac{|a_n|}{|z|}\right)\\
+       &\;=\; |z|^n\left(1-\frac{c}{|z|}\right) \;\geqq\; \frac{1}{2}|z|^n,
+\end{align*}
+being true for\, $|z| > \max\{1,\,2c\}$.\,  Denote\, $r := \max\{1,\,2c,\,\sqrt[n]{2|a_n|}\}$.\, Consider the disk 
+\,$x^2\!+\!y^2 \leqq r^2$.\, Because it is compact, the function\, $g(x,\,y)$\, attains at a point \,$(x_0,\,y_0)$\, of the disk its absolute minimum value (infimum) in the disk.\, If\, $|z| > r$,\, we have
+$$g(x,\,y) \;=\; |f(z)| \;\geqq\; \frac{1}{2}|z|^n \;>\; \frac{1}{2}r^n 
+\;\geqq\; \frac{1}{2}\left(\sqrt[n]{2|a_n|}\right)^n \;=\; |a_n| \;>\; 0.$$
+Thus
+$$g(x_0,\,y_0) \;\leqq\; g(0,\,0) \;=\; |a_n| \;<\; |f(z)| \quad \mbox{for}\;\; |z| \;>\; r.$$
+Hence $g(x_0,\,y_0)$ is the absolute minimum of $g(x,\,y)$ in the whole complex plane.\, We show that\, 
+$g(x_0,\,y_0) = 0$.\, Therefore we make the antithesis that\, $g(x_0,\,y_0) > 0$.
+
+Denote\, $z_0 := x_0\!+\!iy_0$, \; $z := z_0\!+\!u$\, and
+$$f(z) \;=\; f(z_0\!+\!u) \;:=\; b_n\!+\!b_{n-1}u\!+\!b_{n-2}u^2\!+\ldots+b_1u^{n-1}\!+\!u^n.$$
+Then\, $b_n = f(z_0) \neq 0$\, by the antithesis.\, Moreover, denote
+$$c_j \;:=\; \frac{b_j}{b_n} \quad (j \;=\; 1,\,2,\,\ldots,\,n), \;\; c_0 \;:=\; \frac{1}{b_n}.$$
+and assume that\, $c_{n-1} = c_{n-2} = \ldots = c_{n-k+1} = 0$\, but\, $c_{n-k} \neq 0.$\, Thus we may write
+$$f(z) \;=\; b_n(1\!+\!c_{n-k}u^k\!+\!c_{n-k-1}u^{k+1}\!+\ldots\!+\!c_0u^n).$$
+If\, $c_{n-k} = p(\cos\alpha+i\sin\alpha)$\, and\, $u = \varrho(\cos\varphi+i\sin\varphi)$, then 
+$$c_{n-k}u^k \;=\; p\varrho^k[\cos(\alpha\!+\!k\varphi)+i\sin(\alpha\!+\!k\varphi)]$$
+by de Moivre identity.\, Choosing\, $\varrho \leqq 1$\, and\, $\varphi = \frac{\pi\!-\!\alpha}{k}$\, we get\, 
+$c_{n-k}u^k = -p\varrho^k$\, and can make the estimation
+$$|\underbrace{c_{n-k-1}u^{k+1}\!+\ldots+\!c_0u^n}_{h(u)}| 
+\;\leqq\; |c_{n-k-1}|\varrho^{k+1}\!+\ldots+\!|c_0|\varrho^n 
+\;\leqq\; (|c_{n-k-1}|\!+\ldots+\!|c_0|)\varrho^{k+1} \;:=\; R\varrho^{k+1}$$
+where $R$ is a constant.\, Let now\, $\varrho = \min\{1,\,\sqrt[k]{\frac{1}{p}},\,\frac{p}{2R}\}$.\; We obtain
+\begin{align*}
+|f(z)| &\;=\; |b_n|\!\cdot\!|1\!-\!p\varrho^k+h(u)|\\
+       &\;\leqq\; |b_n|\left[|1\!-\!p\varrho^k|+|h(u)|\right]\\
+       &\;\leqq\; |b_n|\left[1\!-\!p\varrho^k\!+\!R\varrho^{k+1}\right]\\  
+       &\;\leqq\; |b_n|\left[1\!-\!\varrho^k(p\!-\!R\varrho)\right]\\  
+       &\;\leqq\; |b_n|\left[1\!-\!\varrho^k(p\!-\!R\cdot\frac{p}{2R})\right]\\
+       &\;\leqq\; |b_n|\left[1\!-\!\frac{1}{p}\!\cdot\!\frac{p}{2}\right]\\
+       &\;\leqq\; \frac{|b_n|}{2} \;<\; |b_n| \;=\; |f(z_0)|,
+\end{align*}
+which result is impossible since $|f(z_0|$ was the absolute minimum.\, Consequently, the antithesis is wrong, and the proof is settled.
+
+%%%%%
+%%%%%
+\end{document}

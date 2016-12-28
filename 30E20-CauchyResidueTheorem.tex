@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyResidueTheorem}
+\pmcreated{2013-03-22 12:04:58}
+\pmmodified{2013-03-22 12:04:58}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{Cauchy residue theorem}
+\pmrecord{10}{31154}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmsynonym{Cauchy residue formula}{CauchyResidueTheorem}
+\pmsynonym{residue theorem}{CauchyResidueTheorem}
+\pmrelated{Residue}
+\pmrelated{CauchyIntegralFormula}
+\pmrelated{CauchyIntegralTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+Let $U \subset \mathbb{C}$ be a simply connected domain, and suppose $f$ is a complex valued function which is defined and analytic on all but finitely many points $a_1, \dots, a_m$ of $U$. Let $C$ be a closed curve in $U$ which does not intersect any of the $a_i$. Then
+$$
+\int_C f(z)\ dz = 2 \pi i \sum_{i=1}^m \eta(C,a_i) \operatorname{Res}(f;a_i),
+$$
+where
+$$
+\eta(C,a_i) := \frac{1}{2 \pi i} \int_C \frac{dz}{z-a_i}
+$$
+is the winding number of $C$ about $a_i$, and $\operatorname{Res}(f;a_i)$ denotes the residue of $f$ at $a_i$.
+
+The Cauchy residue theorem generalizes both the Cauchy integral theorem (because analytic functions have no poles) and the Cauchy integral formula (because $f(x)/(x-a)^n$ for analytic $f$ has exactly one pole at $x=a$ with residue $\operatorname{Res}(f(x)/(x-a)^n,a) = f^{(n)}(a)/n!)$.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

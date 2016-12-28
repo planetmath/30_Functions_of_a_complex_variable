@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UsingResidueTheoremNearBranchPoint}
+\pmcreated{2013-03-22 18:42:50}
+\pmmodified{2013-03-22 18:42:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{using residue theorem near branch point}
+\pmrecord{15}{41480}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmrelated{GeneralPower}
+\pmrelated{ComplexLogarithm}
+\pmrelated{ExampleOfUsingResidueTheorem}
+\pmrelated{FresnelFormulas}
+\pmrelated{ExampleOfChangingVariable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{cut}
+
+Find the value of the improper integral
+\begin{align}
+\int_0^\infty\!\frac{x^{-k}}{x+1}\,dx \qquad (0 < k < 1)
+\end{align}
+by using the Cauchy residue theorem.\\
+
+Since $k$ is not an integer,
+a circuit around the origin changes the argument of 
+$$z^{-k} \;=\; e^{-k\log z} \;=\; e^{-k(\ln|z|+i\arg{z})},$$
+by the amount $-2k\pi$, thus giving to $z^{-k}$ a new value.\, Consequently the integrand 
+$\displaystyle\frac{z^{-k}}{z+1}$ of (1) has the origin as a branch point.\, In the annulus between the origin-centered circles $\Gamma$ and $\gamma$, \PMlinkescapetext{cut open} along the positive real axis, any branch of the integrand is single-valued.\, Let's take the branch with\, $0 \leqq \arg{z} \leqq 2\pi$\, and suppose\, $0 < r < 1 < R$.\, Then the integrand function is analytic in the cut annulus except at the point \,$z = -1$\, which is a simple pole.
+
+\begin{center}
+\begin{pspicture}(-4.2,-4)(4.2,4)
+\rput(-4.2,-4){.}
+\rput(4.2,4){.}
+\psaxes[Dx=10,Dy=10]{->}(0,0)(-4.2,-3.5)(4.2,3.5)
+\pscircle[linewidth=0.05,linecolor=blue](0,0){0.75}
+\pscircle[linewidth=0.05,linecolor=blue](0,0){3}
+\psline[linewidth=0.08,linecolor=blue](0.75,0)(3,0)
+\psline{->}(1.5,0.25)(2.5,0.25)
+\psline{->}(2.5,-0.25)(1.5,-0.25)
+\psline{->}(0.5,0.8)(0.8,0.5)
+\psline{->}(2.5,2.1)(2.1,2.5)
+\psdots[linecolor=blue](0.75,0)(3,0)
+\psdot[linecolor=red](-1.5,0)
+\psdot[linecolor=cyan](0,0)
+\rput(0.85,-0.25){$r$}
+\rput(3.15,-0.25){$R$}
+\rput(-1.5,-0.25){$-1$}
+\rput(-0.7,0.7){$\gamma$}
+\rput(-2.5,2.5){$\Gamma$}
+\end{pspicture}
+\end{center}
+By the residue theorem,
+\begin{align}
+\displaystyle\oint\!\frac{z^{-k}}{z\!+\!1}\,dz 
+   \;=\; 2\pi i \operatorname{Res}\!\left(\frac{z^{-k}}{z\!+\!1};\,-1\right),
+\end{align}
+the integral taken around the border of the cut annulus.
+
+One has first
+$$\operatorname{Res}\!\left(\frac{z^{-k}}{z\!+\!1};\,-1\right) \;=\;
+\lim_{z\to-1}(z+1)\frac{z^{-k}}{z\!+\!1} \;=\; (-1)^{-k} \;=\; e^{-i\pi k}.$$
+
+The integral (2) is split to four parts, two of them are the integrals around $\Gamma$ and $\gamma$, and the other two the integrals along the cut on the real axis, in two directions.\, Using the estimating theorem of contour integral, one obtains
+$$\left|\int_\Gamma\!\frac{z^{-k}}{z\!+\!1}\,dz\right| \;\leqq\; \frac{R^{-k}}{R\!-\!1}\cdot2\pi R 
+\;=\; \frac{2\pi R^{-k}}{1\!-\!\frac{1}{R}} \;\to\; 0 \quad \mbox{as} \quad R \to \infty,$$
+$$\left|\int_\gamma\!\frac{z^{-k}}{z\!+\!1}\,dz\right| \;\leqq\; \frac{r^{-k}}{1\!-\!r}\cdot2\pi r 
+\;=\; \frac{2\pi r^{1-k}}{1\!-\!r} \;\to\; 0 \,\quad \mbox{as} \,\quad r \to 0\!+\!.$$
+Thus the two first parts of the integral (2) have the limits 0 as\, $R \to \infty$\, and\, $r \to 0\!+$.\, When one integrates on the real axis from $R$ to $r$ along the ``lower edge'' of the cut, denoting\, $z = x\!+\!iy$ ($x,\,y \in \mathbb{R}$), one has\, 
+$\arg{z} = 2\pi$\, and
+$$z^{-k} \;=\; e^{-k(\ln{x}+i\cdot2\pi)} \;=\; x^{-k}e^{-2i\pi k},$$
+whence
+$$\int_R^r\!\frac{z^{-k}}{z\!+\!1}\,dz \;=\; e^{-2i\pi k}\int_R^r\!\frac{x^{-k}}{x\!+\!1}\,dx 
+\;=\; -e^{-2i\pi k}\int_r^R\!\frac{x^{-k}}{x\!+\!1}\,dx.$$
+But the last written integral equals to the integral gotten as one integrates from $r$ to $R$ along the ``upper edge'' of the cut, because on this path one has\, $\arg{z} = 0$\, and thus\, $z^{-k} = x^{-k}$.\, Accordingly, the sum of the integrals taken along the cut has the value
+$$\left(1-e^{-2i\pi k}\right)\!\int_r^R \frac{x^{-k}}{x\!+\!1}\,dx.$$
+Accordingly, (2) gives the limit equation
+$$\left(1-e^{-2i\pi k}\right)\!\int_0^\infty\!\frac{x^{-k}}{x\!+\!1}\,dx \;=\; 2i\pi e^{-i\pi k},$$
+and this implies moreover
+$$\int_0^\infty\!\frac{x^{-k}}{x\!+\!1}\,dx \;=\; 2i\pi\frac{e^{-i\pi k}}{1-e^{-2i\pi k}} 
+\;=\; \frac{2i\pi}{e^{i\pi k}\!-\!e^{-i\pi k}}.$$
+Thus the \PMlinkname{Euler formula}{ComplexSineAndCosine} lastly yields the result
+\begin{align}
+\int_0^\infty\!\frac{x^{-k}}{x\!+\!1}\,dx \;=\; \frac{\pi}{\sin{\pi k}} \qquad (0 \,<\, k \,<\, 1).
+\end{align}
+%%%%%
+%%%%%
+\end{document}

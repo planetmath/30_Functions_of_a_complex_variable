@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFundamentalTheoremOfAlgebraargumentPrinciple}
+\pmcreated{2013-03-22 14:36:14}
+\pmmodified{2013-03-22 14:36:14}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of fundamental theorem of algebra (argument principle)}
+\pmrecord{11}{36174}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{12D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The fundamental theorem of algebra can be proven using the argument principle.  Not only is this proof interesting because it demonstrates an important result, it also serves as an example of how to use the argument principle.  Since it is so simple, it can be thought of as a ``toy model'' (see toy theorem) for theorems on the zeros of analytic functions.  For a variant of this proof using Rouch\'e's theorem (which is a consequence of the argument principle) please see the proof of the fundamental theorem of algebra (Rouch\'e's theorem).
+
+\emph{Proof.}\, Consider the rational function
+ $$g(z) = {z f'(z) \over f(z)}.$$
+Denote the degree of the polynomial $f$ by $n$.  Then we can write
+ $$g(z) = {n z^n + \hbox{lower degree terms} \over z^n + \hbox{lower degree terms}}.$$
+This makes it clear that $\lim_{z \to \infty} g(z) = n$.  Hence there exists a real constant $R$ such that $|g(z) - n| < 1/2$ whenever $|z| \ge R$.
+
+Consider the integral
+ $$I = \oint_{|z| = R} {f'(z) \over f(z)} dz.$$
+This can be rewritten as
+ $$I = \oint_{|z| = R} {g(z) \over z} dz.$$
+Split the integral into two parts, writing $I = I_1 + I_2$ where
+ $$I_1 = \oint_{|z| = R} {n \over z} dz, \qquad I_2 = \oint_{|z| = R} {g(z) - n \over z} |dz|.$$
+The integral $I_1$ is easy: $I_1 = 2 \pi i n$.  As for $I_2$, we shall bound it using our bound for $|g(z) - n|$.
+ $$|I_2| \le \oint_{|z| = R} {|g(z) - n| \over |z|} dz \le {1 \over 2} \oint {|dz| \over |z|} = \pi.$$
+Since polynomials are analytic functions in the whole complex plane, $f$ is an analytic function of $z$ when $|z| \le R$, so the argument principle applies and we conclude that $I / 2 \pi i$ must equal the number of zeros of $f$, counted with multiplicity.  Among other things, this means that $I / 2 \pi i$ must be an integer.  By explicit computation, we already know that $I_1 / 2\pi i$ is also an integer.  Hence $|I / (2 \pi i) - I_1 /  (2 \pi i)|$ is an integer.  But 
+ $$\left| {I \over (2 \pi i)} - {I_1 \over  (2 \pi i)} \right| = \left| {I_2 \over (2 \pi i)} \right| \le {1 \over 2}.$$
+Now, the only integer smaller that $1/2$ in absolute value is $0$, so we must have $I = I_1$.  This implies that $f$ has $n$ zeros (counting with multiplicity) when $|z| < R$.  (By the way we chose $R$, $f(z) \ne 0$ whenever $z \ge R$, so $f$ has exactly n zeros in the whole complex plane.)
+%%%%%
+%%%%%
+\end{document}

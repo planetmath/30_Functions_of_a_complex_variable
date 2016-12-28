@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRadiusOfConvergenceOfAComplexFunction}
+\pmcreated{2013-03-22 14:40:35}
+\pmmodified{2013-03-22 14:40:35}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of radius of convergence of a complex function}
+\pmrecord{9}{36279}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Without loss of generality, it may be assumed that $z_0 = 0$.
+
+Let $c_n$ denote the coefficient of the $n$-th term in the Taylor series of $f$ about $0$.  Let $r$ be a real number such that $0 < r < R$.  Then $c_n$ may be expressed as an integral using the Cauchy integral formula.
+ $$c_n = {1 \over 2 \pi i} \oint_{|z| = r} {f(z) \over z^{n+1}} \, dz = {1 \over 2 \pi r^n} \int_{-\pi}^{+\pi} e^{-n \theta} f(r e^{i \theta}) \, d \theta$$
+
+Since $f$ is analytic, it is also continuous.  Since a continuous function on a compact set is bounded, $|f| < B$ for some constant $B > 0$ on the circle $|z| = r$.  Hence, we have
+ $$|c_n| = {1 \over 2 \pi r^n} \left| \int_{-\pi}^{+\pi} e^{-n \theta} f(r e^{i \theta}) \, d \theta \right| \le {1 \over 2 \pi r^n} \int_{-\pi}^{+\pi} | e^{-n \theta} f(r e^{i \theta}) | \, d \theta \le {1 \over 2 \pi r^n} \int_{-\pi}^{+\pi} B d \theta = {B \over r^n}$$
+
+Consequently, $\sqrt[n]{c_n} \le \sqrt[n]{B} / r$.  Since $\lim_{n \to \infty} \sqrt[n]{B} = 1$, the radius of convergence must be greater than or equal to $r$.  Since this is true for all $r < R$, it follows that the radius of convergence is greater than or equal to $R$.
+%%%%%
+%%%%%
+\end{document}

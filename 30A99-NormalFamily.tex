@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalFamily}
+\pmcreated{2013-03-22 14:17:49}
+\pmmodified{2013-03-22 14:17:49}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{normal family}
+\pmrecord{7}{35753}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+A set (sometimes called a family) ${\mathcal{F}}$
+of continuous functions $f \colon X \to Y$ for some (\PMlinkname{complete}{Complete})
+metric spaces $X$ and $Y$
+is called {\em \PMlinkescapetext{normal}} if each sequence of functions in ${\mathcal{F}}$
+contains a subsequence which converges uniformly on compact subsets of $X$ to a 
+continuous function from $X$ to $Y$.
+\end{defn}
+
+This definition is often used in complex analysis for spaces of holomorphic functions.  It turns out that a sequence of holomorphic functions that converges uniformly on compact sets converges to a holomorphic function.  So you can replace
+$X$ with a region in the complex plane, $Y$ with the complex plane itself
+and every instance of ``continuous'' with ``holomorphic'' and you get a version of the definition most used in complex analysis.
+
+Another space where this is often used is the space of meromorphic functions.
+This is similar to the holomorphic case, but instead of using the standard
+metric for convergence we must use the spherical metric.  That is if $\sigma$
+is the spherical metric, then want $f_n(z) \to f(z)$ uniformly on compact
+subsets to mean that $\sigma(f_n(z),f(z))$ goes to 0 uniformly on compact
+subsets.
+
+Note that this is a classical definition that, while very often used, is not really \PMlinkescapetext{consistent}
+with modern naming.  In more modern \PMlinkescapetext{language},
+one would give a metric
+on the space of continuous (holomorphic) functions that corresponds to 
+convergence on compact subsets and then you'd say ``precompact set of functions'' in such a metric space instead of saying ``\PMlinkescapetext{normal} family of continuous (holomorphic) functions''.  This added generality however
+makes it more cumbersome to use since one would need to define the metric mentioned above.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

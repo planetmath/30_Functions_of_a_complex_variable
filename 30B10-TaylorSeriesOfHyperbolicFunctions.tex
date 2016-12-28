@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TaylorSeriesOfHyperbolicFunctions}
+\pmcreated{2013-03-22 19:07:04}
+\pmmodified{2013-03-22 19:07:04}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Taylor series of hyperbolic functions}
+\pmrecord{7}{42012}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmclassification{msc}{26A09}
+\pmrelated{HyperbolicIdentities}
+\pmrelated{HigherOrderDerivatives}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{expansion}
+The differentiation rules
+$$\frac{d}{dx}\cosh{x} \;=\; \sinh{x}, \quad \frac{d}{dx}\sinh{x} \;=\; \cosh{x}$$
+ of the hyperbolic functions imply
+$$\frac{d^{2n}}{dx^{2n}}\cosh{x} \;=\; \cosh{x}, \quad \frac{d^{2n+1}}{dx^{2n+1}}\cosh{x} \;=\; \sinh{x} 
+\qquad (n = 0,\,1,\,2,\,\ldots).$$
+In the origin \,$x = 0$,\, all \PMlinkname{even}{Even}-order derivatives of the hyperbolic cosine have the value 1, but the \PMlinkname{odd}{Odd}-order derivatives vanish.\, Thus the Taylor series expansion
+$$f(x) \;=\; f(0)+\frac{f'(0)}{1!}x+\frac{f''(0)}{2!}x^2+\frac{f'''(0)}{3!}x^3+\ldots$$
+of\, $f(x) := \cosh{x}$\, contains only the terms of even degree and writes simply
+\begin{align}
+\cosh{x} \;=\; 1+\frac{x^2}{2!}+\frac{x^4}{4!}+\ldots \;=\; \sum_{n=0}^\infty\frac{x^{2n}}{(2n)!}.
+\end{align}
+
+
+Similarly, one can derive for the hyperbolic sine the expansion
+\begin{align}
+\sinh{x} \;=\; x+\frac{x^3}{3!}+\frac{x^5}{5!}+\ldots \;=\; \sum_{n=0}^\infty\frac{x^{2n+1}}{(2n\!+\!1)!}.
+\end{align}
+
+
+Both series \PMlinkescapetext{presentations} \PMlinkname{converge}{AbsoluteConvergence} and \PMlinkescapetext{represent} the functions for all real (and complex) values of $x$.\, Comparing the expansions (1) and (2) with the corresponding ones of the circular functions cosine and sine, one sees easily that
+$$\cosh{x} \;=\; \cos{ix}, \qquad \sinh{x} \;=\; -i\sin{ix}.$$\\
+
+As for the Taylor expansion of the third important hyperbolic function \PMlinkname{tangens hyperbolica}{HyperbolicFunctions} tanh, it is obtained via \PMlinkname{division of the Taylor series}{TaylorSeriesViaDivision} (2) and (1); the begin of the quotient series is
+\begin{align}
+\tanh{x} \;=\; x-\frac{1}{3}x^3+\frac{2}{15}x^5-\frac{17}{315}x^7+-\ldots \qquad (|x| < \frac{\pi}{2}).
+\end{align}
+The coefficients of this power series may be expressed with the Bernoulli numbers.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

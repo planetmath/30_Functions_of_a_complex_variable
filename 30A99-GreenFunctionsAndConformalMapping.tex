@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GreenFunctionsAndConformalMapping}
+\pmcreated{2013-03-22 15:57:06}
+\pmmodified{2013-03-22 15:57:06}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Green functions and conformal mapping}
+\pmrecord{5}{37963}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section{Introduction}
+
+The Green function for the Laplacian operator in two dimensions is closely related to conformal mappings to the unit disk.  Given the Green function for a simply-connected region with Dirichlet boundary conditions, one can construct the mapping by exponentiating the sum of the Green function and its conjugate harmonic function.  In practise, this can be used to construct mapping functions for various regions for which it is possible to solve the Dirichlet problem.  In principle, it can be used to prove results about conformal mappings using the theory of differential equations.  For instance, one can prove the Riemann mapping theorem as a consequence of the existence of a solution to the Dirichlet problem.
+
+\section{Definition}
+
+Let $D$ be a simply connected subset of the complex plane with boundary $\partial D$ and let $a$ be a point in the interior of $D$.  The Green's function is a function $g \colon D \to \mathbf{R}$ such that 
+\begin{enumerate}
+\item $g = 0$ on $\partial D$.
+\item $\nabla^2 g = 0$ on the interior of $D$.
+\item $g(z) - \log |z - a|$ is bounded as $z$ approaches $a$.
+\end{enumerate}
+
+Note: The third condition actually is equivalent to the stronger condition that $g(z) - \log |z-a|$ is analytic at $a$.  This follows from the general fact about harmonic functions.
+
+\section{Construction of the mapping function}
+
+Let $h$ be the conjugate harmonic function of to $g$.  It can be shown that $h(z) - \arg (z-a)$ is bounded as $z \to a$ and, consequently, that $h$ is a multiple-valued function with branch point at $a$ which increases by $2 \pi$ every time one encircles $a$.
+
+Now consider the function $f$ defined as $e^{-(g + ih)}$.  This function is single valued because, when one circles about $a$, the argument of the exponential increases by $2 \pi i$, but adding $2 \pi i$ to an exponential does not change its value.  Since $h$ is the conjugate harmonic function of $g$, it follows that $g + ih$ is holomorphic and, hence $f$ is also holomorphic.
+
+Therefore, $f$ maps $D \setminus \{a\}$ to $\mathbf{C}$.  Various things can be said about this mapping.
+
+Because of the maximum princliple, $g(z) > 0$ for all $z$ in the interior of $D$.  Hence, $f$ maps the interior of $D$ into the interior of the unit disk and maps $\partial D$ to the unit circle.
+
+Furthermore, it can be shown that the function $f$ is invertible so, in fact, it  is a conformal diffeomorphism between $D$ and the unit disk.
+%%%%%
+%%%%%
+\end{document}

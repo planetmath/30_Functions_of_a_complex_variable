@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FresnelIntegrals}
+\pmcreated{2014-07-11 21:15:59}
+\pmmodified{2014-07-11 21:15:59}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Fresnel integrals}
+\pmrecord{24}{40992}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{33B20}
+%\pmkeywords{Fresnel integral}
+\pmrelated{SineIntegral}
+\pmdefines{clothoid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{expansions}
+
+\subsection{The functions $C$ and $S$}
+
+For any real value of the argument $x$, the {\em Fresnel integrals} $C(x)$ and $S(x)$ are defined as the integrals
+\begin{align}
+C(x) \;:=\; \int_0^x\cos{t^2}\,dt, \quad\quad
+S(x) \;:=\; \int_0^x\sin{t^2}\,dt.
+\end{align}
+
+In optics, both of them express the \PMlinkescapetext{intensity of diffracted light behind an illuminated edge}.
+
+Using the Taylor series expansions of \PMlinkname{cosine and sine}{ComplexSineAndCosine}, we get easily the expansions of the functions (1):
+$$C(z) \,=\, \frac{z}{1}\!-\!\frac{z^5}{5\!\cdot\!2!}\!
++\!\frac{z^9}{9\!\cdot\!4!}\!-\!\frac{z^{13}}{13\!\cdot\!6!}\!+\!-\ldots$$
+$$S(z) \,=\, \frac{z^3}{3\cdot1!}\!-\!\frac{z^7}{7\!\cdot\!3!}\!
++\!\frac{z^{11}}{11\!\cdot\!5!}\!-\!\frac{z^{15}}{15\!\cdot\!7!}\!+\!-\ldots$$
+These converge for all complex values $z$ and thus define entire transcendental functions.\\
+
+The Fresnel integrals at infinity have the finite value
+$$\lim_{x\to\infty}C(x) \;=\; \lim_{x\to\infty}S(x) \;=\; \frac{\sqrt{2\pi}}{4}.$$
+
+\subsection{Clothoid}
+
+The parametric presentation 
+\begin{align}
+x \;=\; C(t), \quad\quad y \;=\; S(t)
+\end{align}
+\PMlinkescapetext{represents} a curve called {\em clothoid}.\, Since the equations (2) both define odd functions, the clothoid has symmetry about the origin.\, The curve has the shape of a ``$\sim$''
+(see this \PMlinkexternal{diagram}{http://www.wakkanet.fi/~pahio/A/A/clothoid.png}).
+
+\begin{center}
+\includegraphics{Clothoid}
+\end{center}
+
+The arc length of the clothoid from the origin to the point \,$(C(t),\,S(t))$\, is simply
+$$\int_0^t\sqrt{C'(u)^2+S'(u)^2}\,du = \int_0^t\sqrt{\cos^2(u^2)+\sin^2(u^2)}\,du = \int_0^tdu = t.$$
+Thus the \PMlinkescapetext{length} of the whole curve (to the point\, 
+$(\frac{\sqrt{2\pi}}{4},\,\frac{\sqrt{2\pi}}{4})$) is infinite.
+
+The \PMlinkname{curvature}{CurvaturePlaneCurve} of the clothoid also is extremely \PMlinkescapetext{simple},
+$$\varkappa \,=\, 2t,$$
+i.e. \PMlinkname{proportional}{Variation} to the arc lenth; thus in the origin only the curvature is zero.
+
+Conversely, if the curvature of a plane curve varies proportionally to the arc length, the curve is a clothoid.
+
+This property of the curvature of clothoid is utilised in way and railway construction, since the form of the clothoid is very efficient when a \PMlinkescapetext{straight} portion of way must be bent to a turn:\, the zero curvature of the line can be continuously raised to the wished curvature.
+
+%%%%%
+%%%%%
+\end{document}

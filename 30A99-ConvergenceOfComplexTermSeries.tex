@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvergenceOfComplexTermSeries}
+\pmcreated{2014-10-31 19:04:59}
+\pmmodified{2014-10-31 19:04:59}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{convergence of complex term series}
+\pmrecord{8}{41451}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{40A05}
+\pmrelated{OrderOfFactorsInInfiniteProduct}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{terms}
+A series
+\begin{align}
+\sum_{\nu=1}^\infty c_\nu \;=\; c_1\!+\!c_2\!+\!c_3\!+\ldots
+\end{align}
+with complex terms
+$$c_\nu \;=\; a_\nu\!+\!ib_\nu \qquad (a_\nu,\,b_\nu \in \mathbb{R}\;\; \forall\, \nu)$$
+is convergent iff the sequence of its partial sums converges to a complex number.\\
+
+\textbf{Theorem 1.}\, The series (1) converges iff the series
+\begin{align}
+\sum_{\nu=1}^\infty a_\nu \quad \mbox{and} \quad \sum_{\nu=1}^\infty b_\nu
+\end{align}
+formed by real parts and the imaginary parts of its terms both are convergent.
+
+{\em Proof.}\, Let\, $\varepsilon > 0$.\, Denote\, 
+$$\sum_{\nu=1}^n a_\nu \,:=\, s_n, \quad \sum_{\nu=1}^n b_\nu \,:=\, t_n, \quad \sum_{\nu=1}^n c_\nu \,:=\, u_n.$$
+If the series (2) are convergent with sums $S$ and $T$, then there is a number $N$ such that
+$$|s_n-S| < \frac{\varepsilon}{2}, \quad |t_n-T| < \frac{\varepsilon}{2} \quad \mbox{when} \quad n \geqq N.$$
+Accordingly,
+$$|u_n-(S\!+\!iT)| = \sqrt{(s_n-S)^2+(t_n-T)^2} \leqq |s_n-S|+|t_n-T| < \varepsilon \quad \mbox{when} \quad n \geqq N,$$
+i.e. the series (1) converges to $S\!+\!iT$.\, If, conversely, (1) converges to a complex number\, 
+$$u \,=\, s\!+\!it \quad (s,\,t \in\mathbb{R}),$$
+then\, 
+$$|s_n-s| \,\leqq\, |(s_n-s)+i(t_n-t)| \,=\, |u_n-u|, \quad |t_n-t| \,\leqq\, |(s_n-s)+i(t_n-t)| \,=\, |u_n-u|,$$
+and consequently,\, $\displaystyle\lim_{n\to\infty}s_n \,=\, s$\, and\, $\displaystyle\lim_{n\to\infty}t_n \,=\, t$, i.e. the series (2) are convergent with sums the real numbers $s$ and $t$.\\
+
+\textbf{Theorem 2.}\, The series (1) converges absolutely iff the series (2) both converge absolutely.
+
+{\em Proof.}\, The absolute convergence of (1) means that the series
+$$\sum_{\nu=1}^\infty |c_\nu|$$
+converges.\, But since\, $|c_\nu|^2 \,=\, |a_\nu|^2+|b_\nu|^2$,\, we have
+$$|a_\nu| \,\leqq\, |c_\nu|; \quad |b_\nu| \,\leqq\, |c_\nu| \,\leqq\, |a_\nu|+|c_\nu|.$$
+From these inequalities we can infer the assertion of the theorem 2.
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc R. Nevanlinna \& V. Paatero}: {\em Funktioteoria}.\, Kustannusosakeyhti\"o Otava. Helsinki (1963).
+\end{thebibliography}
+
+
+
+%%%%%
+%%%%%
+\end{document}

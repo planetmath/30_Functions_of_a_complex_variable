@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoremsOnComplexFunctionSeries}
+\pmcreated{2013-03-22 16:47:55}
+\pmmodified{2013-03-22 16:47:55}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{theorems on complex function series}
+\pmrecord{9}{39032}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B99}
+\pmclassification{msc}{40A30}
+\pmrelated{IdentityTheoremOfPowerSeries}
+\pmrelated{WeierstrassDoubleSeriesTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem 1.}\, If the complex functions\, $f_1,\,f_2,\,f_3,\,\ldots$\, are continuous on the path $\gamma$ and the series 
+\begin{align}
+f_1(z)+f_2(z)+f_3(z)+\ldots
+\end{align}
+converges uniformly on $\gamma$ to the sum function $F$, then one has
+$$\int_{\gamma}F(z)\,dz \;=\; \int_{\gamma}f_1(z)\,dz+\int_{\gamma}f_2(z)\,dz+\int_{\gamma}f_3(z)\,dz+\ldots$$
+
+\textbf{Theorem 2.}\, If the functions\, $f_1,\,f_2,\,f_3,\,\ldots$\, are holomorphic in a domain $A$ and the series (1) converges uniformly in every \PMlinkname{closed}{ClosedSet} disc of $A$, then also the sum function $F$ of (1) is holomorphic in $A$ and the equality
+\begin{align}
+\frac{d^nF(z)}{dz^n} \;=\; F^{(n)}(z) \;=\; 
+f_1^{(n)}(z)+f_2^{(n)}(z)+f_3^{(n)}(z)+\ldots
+\end{align}
+is true for every positive integer $n$ in all points of $A$.\, The series (2) converges uniformly in every compact subdomain of $A$.
+
+\textbf{Theorem 3.}\, If $f(z)$ is holomorphic in a domain $A$ and $z_0$ is a point of $A$, then one can expand $f(z)$ to a power series (the so-called {\em Taylor series})
+$$f(z) \;=\; \sum_{n=0}^\infty a_n(z\!-\!z_0)^n \quad \mathrm{where} 
+\quad a_n \;=\; \frac{f^{(n)}(z_0)}{n!}\quad(n \,=\, 0,\,1,\,2,\,\ldots).$$
+This \PMlinkescapetext{expansion} is valid at least in the greatest disk\, 
+$|z-z_0| < r\; (\leqq \infty)$\, which contains points of $A$ only.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGoursatsTheorem}
+\pmcreated{2013-03-22 12:54:37}
+\pmmodified{2013-03-22 12:54:37}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{proof of Goursat's theorem}
+\pmrecord{13}{33261}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\newtheorem{lemma}[proposition]{Lemma}
+\begin{document}
+We argue by contradiction.  Set
+$$\eta = \oint_{\partial R} f(z)\, dz,$$
+and suppose that $\eta\neq
+0$. Divide $R$ into four congruent rectangles $R_1, R_2, R_3, R_4$
+(see Figure 1), and set
+$$\eta_i = \oint_{\partial R_i} f(z)\, dz.$$
+
+  \begin{center}
+    \includegraphics[scale=.7]{ProofGoursatTheorem.eps}
+
+    {\tiny Figure 1: subdivision of the rectangle contour.}
+  \end{center}
+  
+  Now subdivide each of the four sub-rectangles, to get 16 congruent
+  sub-sub-rectangles $R_{i_1i_2},\; i_1,i_2=1\ldots 4$, and then continue ad
+  infinitum to obtain a sequence of nested families of rectangles
+  $R_{i_1\ldots i_k}$, with $\eta_{i_1\ldots i_k}$ the values of $f(z)$
+  integrated along the corresponding contour.
+
+Orienting the boundary of
+$R$ and all the sub-rectangles in the usual counter-clockwise fashion
+we have
+$$\eta = \eta_1+\eta_2+\eta_3+\eta_4,$$
+and more generally
+$$\eta_{i_1\ldots i_k} = \eta_{i_1\ldots i_k1}+\eta_{i_1\ldots i_k2}+\eta_{i_1\ldots i_k3}+\eta_{i_1\ldots i_k4}.$$
+In as much as the integrals along oppositely oriented line
+segments cancel, the contributions from the interior segments cancel,
+and that is why the right-hand side reduces to the integrals along the
+segments at the boundary of the composite rectangle.
+
+Let $j_1\in\{1,2,3,4\}$ be such that $\vert\eta_{j_1}\vert$ is the maximum of
+$\vert \eta_i \vert,\, i=1,\ldots,4$. By the triangle inequality we have
+$$\vert\eta_1\vert+\vert\eta_2\vert+\vert\eta_3\vert+\vert\eta_4\vert \geq \vert\eta\vert,$$
+and hence
+$$\vert\eta_{j_1}\vert\geq 1/4 \vert\eta\vert.$$
+Continuing inductively, let $j_{k+1}$ be such that 
+$\vert\eta_{j_1\ldots j_k j_{k+1}}\vert$ is the maximum of
+$\vert\eta_{j_1 \ldots j_k i}\vert,\, i=1,\ldots,4$.  We then have
+\begin{equation}
+  \label{eq:etaest}
+\vert\eta_{j_1\ldots j_k j_{k+1}}\vert \geq 4^{-(k+1)} |\eta|.  
+\end{equation}
+
+Now the sequence of nested rectangles $R_{j_1 \ldots j_k}$
+converges to some point $z_0\in R$; more formally
+$$\{z_0\} = \bigcap_{k=1}^\infty R_{j_1\ldots j_k}.$$
+The derivative
+$f'(z_0)$ is assumed to exist, and hence for every $\epsilon>0$ there
+exists a $k$ sufficiently large, so that for all $z\in R_{j_1\ldots j_k}$
+we have
+$$\vert f(z)-f'(z_0)(z-z_0) \vert \leq \epsilon \vert z-z_0\vert.$$
+Now we make use of the following.
+\begin{lemma}
+  Let $Q\subset\cnums$ be a rectangle, let $a,b\in\cnums$, and let
+  $f(z)$ be a continuous, complex valued function defined and bounded
+  in a domain containing $Q$.  Then,
+  \begin{eqnarray*}
+    &&\oint_{\partial Q} (az+b) dz = 0 \\
+    &&\left\vert \oint_{\partial Q} \!\!\!f(z) \right \vert \leq MP,
+  \end{eqnarray*}
+  where $M$ is an upper bound for $|f(z)|$ and where $P$ is the length
+  of $\partial Q$.
+\end{lemma}
+The first of these assertions follows by the Fundamental Theorem of
+Calculus; after all the function $az+b$ has an anti-derivative.  The
+second assertion follows from the fact that the absolute value of an
+integral is smaller than the integral of the absolute value of the
+integrand --- a standard result in integration theory.
+
+Using the Lemma and the fact that the perimeter of a rectangle is
+greater than its diameter we infer that for every $\epsilon>0$ there
+exists a $k$ sufficiently large that 
+$$\eta_{j_1\ldots j_k} = \left\vert \oint_{\partial R_{j_1\ldots
+      j_k}}\hskip -2em f(z)\, dz \right\vert \leq \epsilon
+\vert\partial R_{j_1\ldots j_k}\vert^2 =  4^{-k}\, \vert
+\partial R\vert^2 \epsilon.$$
+where $\vert\partial R\vert$ denotes the
+length of perimeter of the rectangle $R$.  This contradicts the
+earlier estimate \eqref{eq:etaest}.  Therefore 
+$\eta=0$.
+%%%%%
+%%%%%
+\end{document}

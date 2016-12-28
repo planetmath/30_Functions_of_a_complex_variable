@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbsoluteConvergenceOfInfiniteProductAndSeries}
+\pmcreated{2013-03-22 18:41:18}
+\pmmodified{2013-03-22 18:41:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{absolute convergence of infinite product and series}
+\pmrecord{6}{41440}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Axiom}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+%\pmkeywords{absolute convergence}
+%\pmkeywords{necessary and sufficient condition}
+\pmrelated{AbsoluteConvergentInfiniteProductConverges}
+\pmrelated{InfiniteProductOfSums1a_i}
+\pmrelated{OrderOfFactorsInInfiniteProduct}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\; The infinite product 
+$$\prod_{n=1}^\infty(1\!+\!c_n)$$
+\PMlinkname{converges absolutely}{AbsoluteConvergenceOfInfiniteProduct} if and only if the series
+$$\sum_{n=1}^\infty c_n$$
+with complex \PMlinkescapetext{terms} $c_n$ \PMlinkname{converges absolutely}{AbsoluteConvergence}.\\
+
+{\em Proof.}\; The theorem follows directly from the theorems of the entries absolutely convergent infinite product converges and \PMlinkname{infinite product of sums $1\!+\!a_i$}{InfiniteProductOfSums1a_i}.
+
+%%%%%
+%%%%%
+\end{document}

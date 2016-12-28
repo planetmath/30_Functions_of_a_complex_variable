@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InnerFunction}
+\pmcreated{2013-03-22 15:36:20}
+\pmmodified{2013-03-22 15:36:20}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{inner function}
+\pmrecord{6}{37522}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30H05}
+\pmrelated{FactorizationTheoremForHinftyFunctions}
+\pmdefines{singular inner function}
+\pmdefines{outer function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+If $f \colon \mathbb{D} \to \mathbb{C}$ is an analytic function on the unit disc, we denote by
+$f^*(e^{i\theta})$ the radial limit of $f$ where it exists, that is
+\begin{equation*}
+f^*(e^{i\theta}) := \lim_{r\to 1, r<1} f(re^{i\theta}) .
+\end{equation*}
+A bounded analytic function on the disc will have radial limits almost everywhere (with respect to the Lebesgue measure on the $\partial \mathbb{D}$).
+
+\begin{defn}
+A bounded analytic function $f$ is called an \emph{inner function} if $\lvert f^*(e^{i\theta}) \rvert = 1$ almost everywhere.  If $f$ has no zeros on the unit disc, then $f$ is called a \emph{singular inner function}. 
+\end{defn}
+
+\begin{thm}
+Every inner function can be written as
+\begin{equation*}
+f(z) := \alpha B(z) \exp \left( - \int \frac{e^{i\theta}+z}{e^{i\theta}-z}d\mu(e^{i\theta}) \right) ,
+\end{equation*}
+where $\mu$ is a positive singular measure on $\partial \mathbb{D}$, $B(z)$
+is a Blaschke product and $\lvert \alpha \rvert = 1$ is a constant.
+\end{thm}
+
+Note that all the zeros of the function come from the Blaschke product.
+
+\begin{defn}
+Let
+\begin{equation*}
+f(z) := \exp \left(\int \frac{e^{i\theta}+z}{e^{i\theta}-z}h(e^{i\theta})dm(e^{i\theta}) \right) ,
+\end{equation*}
+where $h$ is a real valued Lebesgue integrable function on the unit circle and $m$ is the Lebesgue measure.  Then $f$ is called
+an \emph{outer function}.
+\end{defn}
+
+The significance of these definitions is that every bounded holomorphic function can be written as an inner function times an outer function.  See the \PMlinkname{factorization theorem for $H^\infty$ functions}{FactorizationTheoremForHinftyFunctions}.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexII}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable II}}.
+Springer-Verlag, New York, New York, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

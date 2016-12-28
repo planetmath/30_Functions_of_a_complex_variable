@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PersistenceOfDifferentialEquations}
+\pmcreated{2013-03-22 16:20:35}
+\pmmodified{2013-03-22 16:20:35}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{persistence of differential equations}
+\pmrecord{10}{38475}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The persistence of analytic relations has important consequences 
+for the theory of differential equations in the complex plane.
+Suppose that a function $f$ satisfies a differential equation
+$F(x,f(x), f'(x), \ldots, f^{(n)}) = 0$ where $F$ is a polynomial.  
+This equation may be viewed as a polynomial relation between the 
+$n+2$ functions $\mathrm{id},f, f', \ldots, f^{(n)}$ hence, by the 
+persistence of analytic relations, it will also hold for the analytic
+continuations of these functions.  In other words, if an
+algebraic differential equation holds for a function in some
+region, it will still hold when that function is analytically 
+continued to a larger region.
+
+An interesting special case is that of the homogeneous linear 
+differential equation with polynomial coefficients.  In that
+case, we have the principle of superposition which guarantees 
+that a linear combination of solutions is also a solution. 
+Hence, if we start with a basis of solutions to our equation 
+about some point and analytically continue them back to our 
+starting point, we obtain linear combinations of those 
+solutions.  This observation plays a very important role in the
+theory of differential equations in the complex plane and is
+the foundation for the notion of monodromy group and Riemann's 
+global characterization of the hypergeometric function.  
+
+For a less exalted illustrative example, we can consider the
+complex logarithm.  The differential equation
+ \[x y'' + y' = 0\]
+has as solutions $y = 1$ and $y = \log x$.  While the former 
+is as singly valued as functions get, the latter is multiply
+valued.  Hence upon performong analytic continuation, we expect
+that the second solution will continue to a linear combination
+of the two solutions.  This, of course is exactly what happens;
+upon analytic continuation, the second solution becomes the
+solution $y = \log x + n \pi i$ where $n$ is an integer whose
+value depends on how we carry out the analytic continuation. 
+%%%%%
+%%%%%
+\end{document}

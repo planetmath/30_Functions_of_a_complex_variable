@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMorerasTheorem}
+\pmcreated{2013-03-22 18:53:34}
+\pmmodified{2013-03-22 18:53:34}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{proof of Morera's theorem}
+\pmrecord{10}{41740}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We provide a proof of Morera's theorem
+under the hypothesis that
+\begin{math}
+\int_\Gamma f(z)dz=0
+\end{math}
+for any circuit $\Gamma$ contained in $G$.
+This is apparently more restrictive, but actually equivalent,
+to supposing
+\begin{math}
+\int_{\partial\Delta} f(z)dz=0
+\end{math}
+for any triangle $\Delta\subseteq G$,
+provided that $f$ is continuous in $G$.
+
+The idea is to prove that $f$ has an antiderivative $F$ in $G$.
+Then $F$, being holomorphic in $G$,
+will have derivatives of any order in $G$;
+but $F^{(n)}(z)=f^{(n-1)}(z)$ for all $z\in G$, $n\in\mathbb{N}$, $n\geq 1$.
+
+First, suppose $G$ is connected.
+Then $G$, being open, is also pathwise connected.
+
+Fix $z_0\in G$.
+For any $z\in G$ define $F(z)$ as
+\begin{equation} \label{eq:antid}
+F(z) = \int_{\gamma(z_0,z)}f(w)dw\;,
+\end{equation}
+where $\gamma(z_0,z)$ is a path entirely contained in $G$
+with initial point $z_0$ and final point $z$.
+
+The function $F:G\to\mathbb{C}$ is well defined.
+In fact, let $\gamma_1$ and $\gamma_2$
+be any two paths entirely contained in $G$
+with initial point $z_0$ and final point $z$;
+define a circuit $\Gamma$ by joining $\gamma_1$ and $-\gamma_2$,
+the path obtained from $\gamma_2$ by
+``reversing the parameter direction''.
+Then by linearity and additivity of integral
+\begin{equation} \label{eq:wd}
+\int_\Gamma f(w)dw
+=\int_{\gamma_1}f(w)dw+\int_{-\gamma_2}f(w)dw
+=\int_{\gamma_1}f(w)dw-\int_{\gamma_2}f(w)dw\;;
+\end{equation}
+but the left-hand side is 0 by hypothesis,
+thus the two integrals on the right-hand side are equal.
+
+We must now prove that $F'=f$ in $G$.
+Given $z\in G$, there exists $r>0$
+such that the ball $B_r(z)$ of radius $r$ centered in $z$
+is contained in $G$.
+Suppose $0<|\Delta{z}|<r$:
+then we can choose as a path from $z$ to $z+\Delta{z}$
+the segment $\gamma:[0,1]\to G$ parameterized by $t\mapsto z+t\Delta{z}$.
+Write $f=u+iv$ with $u,v:G\to\mathbb{R}$:
+by additivity of integral and the mean value theorem,
+%%\begin{equation} \label{eq:ir}
+%%\frac{F(z+\Delta{z})-F(z)}{\Delta{z}}
+%%=\frac{1}{\Delta{z}}\int_{\gamma}f(w)dw
+%%=\frac{1}{\Delta{z}}\int_0^1f(z+t\Delta{z})\Delta{z}dt
+%%=u(z+\theta_u\Delta{z})+iv(z+\theta_v\Delta{z})
+%%\end{equation}
+\begin{eqnarray*}
+\frac{F(z+\Delta{z})-F(z)}{\Delta{z}}
+& = & \frac{1}{\Delta{z}}\int_{\gamma}f(w)dw \\
+& = & \frac{1}{\Delta{z}}\int_0^1f(z+t\Delta{z})\Delta{z}dt \\
+& = & u(z+\theta_u\Delta{z})+iv(z+\theta_v\Delta{z})
+\end{eqnarray*}
+for some $\theta_u,\theta_v\in(0,1)$.
+Since $f$ is continuous, so are $u$ and $v$, and
+\begin{displaymath}
+\lim_{\Delta{z}\to 0} \frac{F(z+\Delta{z})-F(z)}{\Delta{z}}
+= u(z) + iv(z) = f(z) \,.
+\end{displaymath}
+In the general case, we just repeat the procedure
+once for each connected component of $G$.
+
+%%%%%
+%%%%%
+\end{document}

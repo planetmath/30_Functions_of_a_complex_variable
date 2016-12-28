@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaussMeanValueTheorem}
+\pmcreated{2013-03-22 13:35:33}
+\pmmodified{2013-03-22 13:35:33}
+\pmowner{Johan}{1032}
+\pmmodifier{Johan}{1032}
+\pmtitle{Gauss' mean value theorem}
+\pmrecord{12}{34216}
+\pmprivacy{1}
+\pmauthor{Johan}{1032}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmrelated{GaussMeanValueTheoremForHarmonicFunctions}
+\pmrelated{AverageValueOfFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\Omega$ be a domain in $\mathbb{C}$ 
+and suppose $f$ is an analytic function on $\Omega$. 
+Furthermore, let $C$ be a circle inside $\Omega$ 
+with center $z_0$ and radius $r$. Then $f(z_0)$ 
+is the mean value of $f$ along $C$, that is, 
+\begin{displaymath}
+f(z_0)=\frac{1}{2\pi}\int_0^{2\pi}f(z_0+re^{i\theta})d\theta.
+\end{displaymath}
+%%%%%
+%%%%%
+\end{document}

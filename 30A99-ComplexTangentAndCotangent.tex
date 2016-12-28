@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexTangentAndCotangent}
+\pmcreated{2013-03-22 16:49:56}
+\pmmodified{2013-03-22 16:49:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{complex tangent and cotangent}
+\pmrecord{10}{39074}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{30D10}
+\pmclassification{msc}{33B10}
+\pmrelated{ExamplesOfInfiniteProducts}
+\pmrelated{QuasiPeriodicFunction}
+\pmrelated{HyperbolicFunctions}
+\pmrelated{QuasiperiodicFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The tangent and the cotangent function for complex values of the \PMlinkescapetext{argument} $z$ are defined with the equations
+$$\tan{z} := \frac{\sin{z}}{\cos{z}},\quad \cot{z} := \frac{\cos{z}}{\sin{z}}.$$
+Using the \PMlinkname{Euler's formulae}{ComplexSineAndCosine}, one also can define
+\begin{align}
+\tan{z} := -i\frac{e^{iz}-e^{-iz}}{e^{iz}+e^{-iz}},\quad 
+\cot{z} := i\frac{e^{iz}+e^{-iz}}{e^{iz}-e^{-iz}}.
+\end{align}
+The subtraction formulae of \PMlinkname{cosine and sine}{ComplexSineAndCosine} yield an additional \PMlinkescapetext{connection} between the cotangent and tangent:
+$$\cot{(\frac{\pi}{2}-z)} =
+\frac{\cos{(\frac{\pi}{2}-z)}}{\sin{(\frac{\pi}{2}-z)}} =
+\frac{\cos{\frac{\pi}{2}}\cos{z}+\sin{\frac{\pi}{2}}\sin{z}}
+     {\sin{\frac{\pi}{2}}\cos{z}-\cos{\frac{\pi}{2}}\sin{z}} = 
+\frac{\sin{z}}{\cos{z}} = \tan{z}.$$
+Thus the properties of the tangent are easily derived from the corresponding properties of the cotangent.
+
+Because of the identic equation\, $\cos^2{z}+\sin^2{z} = 1$\, the cosine and sine do not vanish simultaneously, and so their quotient $\cot{z}$ is finite in all finite points $z$ of the complex plane except in the zeros\, $z = n\pi$\, ($n = 0,\,\pm1,\,\pm2,\,\ldots$) of $\sin{z}$, where $\cot{z}$ becomes infinite.\, We shall see that these multiples of $\pi$ are simple poles of $\cot{z}$.
+
+If one moves from $z$ to $z\!+\!\pi$, then both $\cos{z}$ and $\sin{z}$ change their signs (cf. antiperiodic function), and therefore their quotient remains unchanged.\, Accordingly, $\pi$ is a period of $\cot{z}$.\, But if $\omega$ is an arbitrary period of $\cot{z}$, we have\, $\cot{(z\!+\!\omega)} = \cot{z}$,\, and especially\, $z = 0$ gives\, $\cot{\omega} = \infty$;\, then (1) says that\, 
+$e^{i\omega} = e^{-i\omega}$,\, i.e.\, $e^{2i\omega} = 1$.\, Since the prime period of the complex exponential function is $2i\pi$, the last equation is valid only for the values\, $\omega = n\pi$\, ($n = 0,\,\pm1,\,\pm2,\,\ldots$).\, Thus we have shown that the prime period of $\cot{z}$ is $\pi$.
+
+We know that
+$$\frac{\sin{z}}{z} = \frac{\sin{z}-\sin{0}}{z} \to \cos{0} = 1
+\quad \mathrm{as} \quad z\to 0;$$
+therefore
+$$z\cot{z} = \frac{z}{\sin{z}}\cdot\cos{z} \to 1\cdot\cos{0} = 1
+\quad \mathrm{as} \quad z\to 0.$$
+This result, together with
+$$\cot{z} \to \infty \quad \mathrm{as} \quad z\to 0,$$
+means that\, $z = 0$\, is a simple pole of $\cot{z}$.\, 
+
+Because of the periodicity, $\cot{z}$ has the simple poles in the points 
+$z = 0,\,\pm\pi,\,\pm 2\pi,\,\ldots$.\, Since one has the derivative
+        $$\frac{d\cot{z}}{dz} = -\frac{1}{\sin^2{z}},$$
+$\cot{z}$ is holomorphic in all finite points except those poles, which accumulate only to the point\, $z = \infty$.\, Thus the cotangent is a meromorphic function.\, The same concerns naturally the tangent function.
+
+As all meromorphic functions, the cotangent may be expressed as a series with  the \PMlinkname{partial fraction}{PartialFractionsOfExpressions} terms of the form $\frac{a_{jk}}{(z-p_j)^k}$, where $p_j$'s are the poles --- see \PMlinkname{this entry}{ExamplesOfInfiniteProducts}.
+
+The \PMlinkname{real}{CmplexFunction} and imaginary parts of tangent and cotangent are seen from the formulae
+$$\tan(x+iy) = \frac{\sin{x}\cos{x}+i\sinh{y}\cosh{y}}{\cos^2{x}+\sinh^2{y}},$$
+$$\cot(x+iy) = \frac{\sin{x}\cos{x}-i\sinh{y}\cosh{y}}{\sin^2{x}+\sinh^2{y}},$$
+which may be derived from (1) by substituting\, $z := x\!+\!iy$ 
+($x,\,y \in\mathbb{R}$).
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc R. Nevanlinna \& V. Paatero}: {\em Funktioteoria}.\, Kustannusosakeyhti\"o Otava. Helsinki (1963).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

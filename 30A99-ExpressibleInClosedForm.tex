@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExpressibleInClosedForm}
+\pmcreated{2013-03-22 18:29:09}
+\pmmodified{2013-03-22 18:29:09}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{expressible in closed form}
+\pmrecord{8}{41162}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{26E99}
+\pmrelated{ClosedForm}
+\pmrelated{IrreducibilityOfBinomialsWithUnityCoefficients}
+\pmrelated{ReductionOfEllipticIntegralsToStandardForm}
+\pmdefines{closed form}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+An expression is \PMlinkescapetext{{\em expressible in a closed form}}, if it can be converted (simplified) into an expression containing only elementary functions, combined by a finite amount of rational operations and compositions.
+Thus, such a closed form must not \PMlinkescapetext{contain} e.g. limit signs, integral signs, sum signs and ``\ldots''.
+
+For example, 
+$$\int\!\!\frac{dx}{x^4\!+\!1},$$
+may be expressed in the closed form
+$$\frac{1}{4\sqrt{2}}\ln\frac{x^2\!+\!x\sqrt{2}\!+\!1}{x^2\!-\!x\sqrt{2}\!+\!1}+
+\frac{1}{2\sqrt{2}}\arctan\frac{x\sqrt{2}}{1\!-\!x^2}+C$$
+but for
+$$\int\!\!\frac{dx}{\sqrt{x^4\!+\!1}}\,dx,$$
+there exists no closed form.\\
+
+In certain contexts, the \PMlinkescapetext{scope} of the ``elementary functions'' may be enlarged by allowing in it some other functions, e.g. the error function.
+
+%%%%%
+%%%%%
+\end{document}

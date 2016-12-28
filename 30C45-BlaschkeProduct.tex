@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BlaschkeProduct}
+\pmcreated{2013-03-22 14:19:35}
+\pmmodified{2013-03-22 14:19:35}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Blaschke product}
+\pmrecord{8}{35795}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C45}
+\pmdefines{Blascke factor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Suppose that $\{ a_n \}$ is a sequence of complex numbers with $0 < \lvert a_n \rvert < 1$ and $\sum_{n=1}^\infty (1 - \lvert a_n \rvert) < \infty$, then
+\begin{equation*}
+B(z) := \prod_{n=1}^\infty \frac{\lvert a_n \rvert}{a_n} \left(
+\frac{a_n - z}{1-\bar{a}_nz} \right)
+\end{equation*}
+is called the {\em Blaschke product}.
+\end{defn}
+
+This product converges uniformly on compact subsets of the unit disc, and thus $B$ is
+a holomorhic function on the unit disc.
+Further it is the function on the disc that has zeros exactly at $\{ a_n \}$.
+And finally for $z$ in the unit
+disc, $\left\lvert B(z) \right\rvert \leq 1$.
+
+
+\begin{defn}
+Sometimes $B_a(z) := \frac{z-a}{1-\bar{a}z}$ is called the {\em Blaschke factor}.
+\end{defn}
+
+With this definition, the Blascke product becomes $B(z) = \prod_{n=1}^\infty
+\frac{\lvert a_n \rvert}{a_n} B_{a_n}(z)$.
+
+%
+% TODO: how is this used for the canonical factorization of a holomorphic
+% function f ... inner functions
+%
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

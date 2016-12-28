@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExistenceOfPowerSeries}
+\pmcreated{2013-03-22 12:56:27}
+\pmmodified{2013-03-22 12:56:27}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{existence of power series}
+\pmrecord{5}{33298}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+In this entry we shall demonstrate the logical equivalence of the holomorphic
+and analytic concepts.   As is the case with so many basic results in
+complex analysis, the proof of these facts hinges on the Cauchy
+integral theorem, and the Cauchy integral formula.
+
+\paragraph{Holomorphic implies analytic.}
+\begin{theorem}
+Let $U\subset\cnums$ be an open domain that contains the origin, and
+let $f:U\rightarrow\cnums,$
+be a function such that
+the complex derivative
+$$f'(z) = \lim_{\zeta\rightarrow 0} \frac{f(z+\zeta)-f(z)}{\zeta}$$
+exists for all $z\in U$.  Then,  there exists a power series representation
+$$f(z) = \sum_{k=0}^\infty a_k z^k,\quad \Vert z\Vert < R,\quad
+a_k\in\cnums$$ 
+for a
+sufficiently small radius of convergence $R>0$.  
+\end{theorem}
+Note: it is just as
+easy to show the existence of a power series representation around
+every basepoint in $z_0\in U$; one need only consider the holomorphic
+function $f(z-z_0)$.
+
+\emph{Proof.}  Choose an $R>0$ sufficiently small so that the 
+disk $\Vert z\Vert \leq R$ is contained in $U$.
+By the Cauchy integral formula we have
+that
+$$f(z) = \frac{1}{2\pi i} \oint_{\Vert \zeta \Vert = R} \frac{f(\zeta)}{\zeta-z}\,
+d\zeta,\quad \Vert z\Vert < R,$$
+where, as usual, the integration contour is oriented
+counterclockwise.  For every $\zeta$  of modulus $R$, we can expand
+the integrand as a geometric power series in $z$, namely
+$$\frac{f(\zeta)}{\zeta-z} = \frac{f(\zeta)/\zeta}{1-z/\zeta} =
+\sum_{k=0}^\infty\, \frac{f(\zeta)}{\zeta^{k+1}}\, z^k,\quad \Vert
+z\Vert < R.$$
+The circle of radius $R$ is a compact set; hence
+$f(\zeta)$ is bounded on it; and hence, the power series above
+converges uniformly with respect to $\zeta$.  Consequently, the order
+of the infinite summation and the integration operations can be
+interchanged. Hence,
+$$f(z) = \sum_{k=0}^\infty a_k z^k,\quad \Vert z\Vert< R,$$
+where
+$$a_k = \frac{1}{2\pi i} \oint_{\Vert \zeta \Vert = R}
+\frac{f(\zeta)}{\zeta^{k+1}},$$
+as desired.  QED
+
+\paragraph{Analytic implies holomorphic.}
+\begin{theorem}
+Let 
+$$f(z) = \sum_{n=0}^\infty a_n z^n,\quad a_n\in\cnums,\quad \Vert
+z\Vert<\epsilon$$ 
+be a power series, converging in $D=D_\epsilon(0)$, the open disk of radius
+$\epsilon>0$ about the origin.  Then the complex derivative
+$$f'(z) =\lim_{\zeta\rightarrow 0} \frac{f(z+\zeta)-f(z)}{\zeta}$$
+exists for all $z\in D$, i.e. the function $f:D\rightarrow
+\cnums$ is holomorphic.
+\end{theorem}
+Note: this theorem generalizes immediately to shifted power series in
+$z-z_0,\; z_0\in\cnums$.
+
+\emph{Proof.} For every $z_0\in D$, the function $f(z)$ can be recast
+as a power series centered at $z_0$.  Hence, without loss of
+generality it suffices to prove the theorem for $z=0$.  The power
+series
+$$\sum_{n=0}^\infty a_{n+1} \zeta^n,\quad \zeta\in D$$
+converges, and equals
+$(f(\zeta)-f(0))/\zeta$ for $\zeta\neq 0$. Consequently, the complex
+derivative $f'(0)$ exists; indeed it is equal to $a_1$.  QED
+%%%%%
+%%%%%
+\end{document}

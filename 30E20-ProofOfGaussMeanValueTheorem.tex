@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGaussMeanValueTheorem}
+\pmcreated{2013-03-22 13:35:36}
+\pmmodified{2013-03-22 13:35:36}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{proof of Gauss' mean value theorem}
+\pmrecord{18}{34217}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmrelated{CauchyIntegralFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We can parameterize the circle by letting $z=z_0 + r e^{i\phi}$.
+Then $dz=ir e^{i\phi}d\phi$. Using the Cauchy integral formula we can express $f(z_0)$ in the following way:
+\begin{eqnarray*}
+f(z_0)&=&\frac{1}{2\pi i} \oint_{C} \frac{f(z)}{z-z_0}dz\\
+&=&\frac{1}{2\pi i} \int_{0}^{2\pi} \frac{f(z_0 + r e^{i\phi})}{r e^{i\phi}} ir e^{i\phi} d\phi\\
+&=&\frac{1}{2\pi} \int_{0}^{2\pi} f(z_0 + r e^{i\phi}) d\phi .
+\end{eqnarray*}
+
+%%%%%
+%%%%%
+\end{document}

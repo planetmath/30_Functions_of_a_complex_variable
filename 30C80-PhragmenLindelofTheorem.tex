@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PhragmenLindelofTheorem}
+\pmcreated{2013-03-22 14:12:09}
+\pmmodified{2013-03-22 14:12:09}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Phragm\'en-Lindel\"of theorem}
+\pmrecord{9}{35634}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C80}
+\pmsynonym{Phragm\'en-Lindel\"of principle}{PhragmenLindelofTheorem}
+\pmrelated{MaximalModulusPrinciple}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+First some notation.  Let $\partial_\infty G$ be the extended boundary of $G$.  That is, the boundary of $G$, plus optionally the point at infinity if in fact
+$G$ is unbounded.
+
+\begin{thm}
+Let $G$ be a simply connected region and let $f \colon G \to {\mathbb{C}}$
+and $\varphi \colon G \to {\mathbb{C}}$ be analytic functions.  Furthermore
+suppose that $\varphi$ never vanishes and is bounded on $G$.  If $M$ is a constant
+and $\partial_\infty G = A \cup B$ such that
+\begin{enumerate}
+\item for every $a \in A$, $\varlimsup_{z\rightarrow a} \lvert f(z) \rvert \leq M$, and
+\item for every $b \in B$, and $\eta > 0$, $\varlimsup_{z \rightarrow b} \lvert f(z) \rvert \lvert \varphi(z) \rvert^\eta \leq M$,
+\end{enumerate}
+then $\lvert f(z) \rvert \leq M$ for all $z \in G$.
+\end{thm}
+
+This theorem is a generalization of the maximal modulus principle, but instead of requiring that the function is bounded as we approach the boundary, we only need a restriction on its growth to \PMlinkescapetext{force} it to in fact be bounded in all of $G$.
+
+If you let $A = \partial_\infty G$ (and $\varphi \equiv 1$ perhaps), then you get almost exactly one version of the maximal modulus principle.  In this case it turns out that $G$ need not be simply connected since that is only needed to
+define $z \mapsto \varphi(z)^\eta$.
+
+In fact the requirement that $G$ be simply connected can be eased up a bit in this theorem since it is only needed locally.  So the theorem is still true if for every point
+$z \in \partial_\infty G$ there exists an open neighbourhood $N$ of $z$ such
+that $N \cap G$ is simply connected.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

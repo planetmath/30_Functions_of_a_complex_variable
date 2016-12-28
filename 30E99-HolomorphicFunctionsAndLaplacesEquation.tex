@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HolomorphicFunctionsAndLaplacesEquation}
+\pmcreated{2013-03-22 17:47:32}
+\pmmodified{2013-03-22 17:47:32}
+\pmowner{invisiblerhino}{19637}
+\pmmodifier{invisiblerhino}{19637}
+\pmtitle{holomorphic functions and Laplace's equation}
+\pmrecord{7}{40253}
+\pmprivacy{1}
+\pmauthor{invisiblerhino}{19637}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+\pmrelated{PotentialTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+It can be easily shown that the real and imaginary parts of any holomorphic functions (that is, functions satisfying the Cauchy-Riemann equations) separately satisfy Laplace's equation. Consider the Cauchy-Riemann equations:
+\[
+\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}
+\]
+\[
+\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}
+\]
+Now differentiate the first equation with respect to $x$ and the second with respect to $y$:
+\[
+\frac{\partial^2 u}{\partial x^2} = \frac{\partial^2 v}{\partial x \partial y}
+\]
+\[
+\frac{\partial^2 u}{\partial y^2} = -\frac{\partial^2 v}{\partial y \partial x}
+\]
+Now add both equations together:
+\[
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = \frac{\partial^2 v}{\partial x \partial y}-\frac{\partial^2 v}{\partial y \partial x}
+\]
+$v$ must be continuous, as it is holomorphic, and the mixed derivatives of continuous functions are equal. Hence:
+\[
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0
+\]
+\[
+\nabla^2 u = 0
+\]
+The same process, repeated for $v$, yields Laplace's equation for $v$. $u$ and $v$ are harmonic functions, as they satisfy Laplace's equation, and they are referred to as conjugate harmonics. Functions satisfying Laplace's equation are important in electromagnetism, and the search for harmonic functions forms part of potential theory.
+%%%%%
+%%%%%
+\end{document}

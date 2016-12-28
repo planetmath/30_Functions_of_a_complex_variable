@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WhenAllSingularitiesArePoles}
+\pmcreated{2014-11-21 21:30:22}
+\pmmodified{2014-11-21 21:30:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{when all singularities are poles}
+\pmrecord{17}{40043}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D10}
+\pmclassification{msc}{30C15}
+\pmclassification{msc}{30A99}
+%\pmkeywords{poles only}
+\pmrelated{RiemannSphere}
+\pmrelated{ZeroesOfAnalyticFunctionsAreIsolated}
+\pmrelated{Meromorphic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+In the \PMlinkname{parent entry}{ZerosAndPolesOfRationalFunction} we see that a rational function has as its only singularities a finite set of poles.  It is also valid the converse
+
+\textbf{Theorem.}  Any single-valued analytic function, which has in the whole closed complex plane no other singularities than poles, is a rational function.\\
+
+{\em Proof.}  Suppose that\, $z\mapsto w(z)$\, is such an analytic function.  The number of the poles of $w$ must be finite, since otherwise the set of the poles would have in the closed complex plane an accumulation point which is neither a \PMlinkname{point of regularity}{Holomorphic} nor a pole.  Let $b_1,\,b_2,\,\ldots,\,b_k$ and possibly $\infty$ be the poles of the function $w$.
+
+For every\, $i = 1,\,2,\,\ldots,\,k$,\, the function has at the pole $b_i$ with the order $n_i$, the Laurent expansion of the form
+\begin{align}
+  w(z) = \frac{c_{-n_i}}{(z-b_i)^{n_i}}+\frac{c_{-n_i+1}}{(z-b_i)^{n_i-1}}+\ldots+c_0+c_1(z-b_i)+\ldots
+\end{align}
+This is in \PMlinkescapetext{force} in the greatest open disc containing no other poles.  We write (1) as
+\begin{align}
+  w(z) = F_{n_i}\!\left(\frac{1}{z-b_i}\right)+P(z-b_i),
+\end{align}
+where the first addend is the principal part of (1), i.e. consists of the terms of (1) which become infinite in\, $z = b_i$.
+
+If we think a circle having center in the origin and containing all the finite poles $b_i$ (an annulus\, 
+$\varrho < |z| < \infty$), then $w(z)$ has outside it the Laurent series expansion
+$$w(z) = d_mz^m+d_{m-1}z^{m-1}+\ldots+d_0+\frac{d_{-1}}{z}+\ldots,$$
+which we write, corresponding to (2), as
+\begin{align}
+  w(z) = G_m(z)+Q\!\left(\frac{1}{z}\right)\!,
+\end{align}
+where $G_m(z)$ is a polynomial of $z$ and $Q\left(\frac{1}{z}\right)$ a power series in $\frac{1}{z}$.  Then the equation
+$$R(z)\, := \sum_{i=1}^kF_{n_i}\!\left(\frac{1}{z-b_i}\right)+G_m(z)$$
+defines a rational function having the same poles as $w$.  Therefore the function defined by
+$$f(z)\, :=\, w(z)-R(z)$$
+is \PMlinkname{analytic}{Analytic} everywhere except possibly at the points\, $z = b_i$\, and\, $z = \infty$.\, If we write
+$$f(z) = 
+\left[w(z)-F_{n_i}\!\left(\frac{1}{z-b_i}\right)\right]-\sum_{j\neq i}F_{n_j}\!\left(\frac{1}{z-b_j}\right)-G_m(z),$$
+we see that $f(z)$ is bounded in a neighbourhood of the point $b_i$ and is analytic also in this point ($i = 1,\,2,\,\ldots,\,k$).  But then again, the \PMlinkescapetext{presentation} 
+$$f(z) = 
+\left[w(z)-G_m(z)\right]-\sum_{j=1}^kF_{n_j}\!\left(\frac{1}{z-b_j}\right)$$
+shows that $f$ is analytic in the \PMlinkname{infinity}{RiemannSphere}, too.  Thus $f$ is analytic in the whole closed complex plane.  By Liouville's theorem, $f$ is a constant function.\, We conclude that\, $R(z)+f(z) = w(z)$\, is a rational function. Q.E.D.\\
+
+The theorem implies, that if a meromorphic function is regular at infinity or has there a pole, then it is a rational function.
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc R. Nevanlinna \& V. Paatero}: {\em Funktioteoria}.\, Kustannusosakeyhti\"o Otava, Helsinki (1963).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

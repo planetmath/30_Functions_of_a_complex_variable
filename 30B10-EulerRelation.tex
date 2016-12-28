@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulerRelation}
+\pmcreated{2013-03-22 11:57:05}
+\pmmodified{2013-03-22 11:57:05}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{Euler relation}
+\pmrecord{17}{30714}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmsynonym{Euler's formula}{EulerRelation}
+\pmrelated{TaylorSeries}
+\pmrelated{DeMoivreIdentity}
+\pmrelated{ComplexSineAndCosine}
+\pmdefines{Euler identity}
+\pmdefines{Euler's identity}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\newcommand{\Complex}{\mathbb{C}}
+
+\begin{document}
+\PMlinkescapeword{fields}
+\PMlinkescapeword{terms}
+{\em Euler's relation} (also known as {\em Euler's formula}) is considered the first \PMlinkescapetext{bridge} between the fields of algebra and geometry, as it relates the exponential function to the trigonometric sine and cosine functions.
+
+Euler's relation states that
+\[e^{ix} = \cos{x}+i\sin{x}\]
+
+Start by noting that
+\[
+i^k=\begin{cases} 
+1 & \mbox{if\; } k\equiv 0\!\!\pmod 4\\
+i & \mbox{if\; } k\equiv 1\!\!\pmod 4\\
+-1 & \mbox{if\; } k\equiv 2\!\!\pmod 4\\
+-i & \mbox{if\; } k\equiv 3\!\!\pmod 4
+\end{cases}
+\]
+
+Using the Taylor series expansions of $e^x$, $\sin x$ and $\cos x$ (see the entries on the complex exponential function and the complex sine and cosine), it follows that
+\begin{eqnarray*}
+e^{ix} & = \sum_{n=0}^{\infty} \frac{i^n x^n}{n!}\\
+& = \sum_{n=0}^{\infty}\left(\frac{x^{4n}}{(4n)!}+
+\frac{ix^{4n+1}}{(4n+1)!}
+-\frac{x^{4n+2}}{(4n+2)!}-\frac{ix^{4n+3}}{(4n+3)!}\right)
+\end{eqnarray*}
+Because the series expansion above is absolutely convergent for all $x$,
+we can rearrange the terms of the series as
+\begin{eqnarray*}
+e^{ix} &=  \sum_{n=0}^{\infty} (-1)^n\frac{x^{2n}}{(2n)!}+
+i\sum_{n=0}^{\infty} (-1)^n\frac{x^{2n+1}}{(2n+1)!}\\
+&= \cos{x}+i\sin{x}
+\end{eqnarray*}
+
+As a special case, we get the beautiful and well-known identity, often called \emph{Euler's identity}:
+\[e^{i\pi}=-1\]
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArgumentOfProductAndQuotient}
+\pmcreated{2013-03-22 17:45:20}
+\pmmodified{2013-03-22 17:45:20}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{argument of product and quotient}
+\pmrecord{8}{40208}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{26A09}
+\pmsynonym{product and quotient of complex numbers}{ArgumentOfProductAndQuotient}
+%\pmkeywords{multiplication}
+%\pmkeywords{division}
+\pmrelated{Argument}
+\pmrelated{PolarCoordinates}
+\pmrelated{ModulusOfComplexNumber}
+\pmrelated{Complex}
+\pmrelated{EqualityOfComplexNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{formula}  \PMlinkescapeword{factors}
+Using the distributive law, we perform the multiplication
+$$(\cos\varphi_1+i\sin\varphi_1)(\cos\varphi_2+i\sin\varphi_2)
+ = (\cos\varphi_1\cos\varphi_2-\sin\varphi_1\sin\varphi_2)+i(\sin\varphi_1\cos\varphi_2+\cos\varphi_1\sin\varphi_2).$$
+Using the addition formulas of \PMlinkname{cosine}{GoniometricFormulae} and \PMlinkname{sine}{GoniometricFormulae} we still obtain the formula
+\begin{align}
+(\cos\varphi_1+i\sin\varphi_1)(\cos\varphi_2+i\sin\varphi_2)
+ = \cos(\varphi_1+\varphi_2)+i\sin(\varphi_1+\varphi_2).
+\end{align}
+
+The inverse number of\, $\cos\varphi_2+i\sin\varphi_2$\, is calculated as follows:
+$$\frac{1}{\cos\varphi_2+i\sin\varphi_2} = 
+\frac{\cos\varphi_2-i\sin\varphi_2}{(\cos\varphi_2-i\sin\varphi_2)(\cos\varphi_2+i\sin\varphi_2)}
+= \frac{\cos\varphi_2-i\sin\varphi_2}{\cos^2\varphi_2+\sin^2\varphi_2}$$
+This equals\, $\cos\varphi_2-i\sin\varphi_2$,\, and since the cosine is an \PMlinkname{even}{EvenFunction} and the sine an odd function, we have 
+\begin{align}
+\frac{1}{\cos\varphi_2+i\sin\varphi_2} = \cos(-\varphi_2)+i\sin(-\varphi_2).
+\end{align}
+The equations (1) and (2) imply
+$$\frac{\cos\varphi_1+i\sin\varphi_1}{\cos\varphi_2+i\sin\varphi_2} = 
+(\cos\varphi_1+i\sin\varphi_1)(\cos(-\varphi_2)+i\sin(-\varphi_2))= 
+\cos(\varphi_1+(-\varphi_2))+i\sin(\varphi_1+(-\varphi_2)),$$
+i.e.
+\begin{align}
+\frac{\cos\varphi_1+i\sin\varphi_1}{\cos\varphi_2+i\sin\varphi_2} =  
+\cos(\varphi_1-\varphi_2)+i\sin(\varphi_1-\varphi_2).
+\end{align}
+According to the formulae (1) and (3), for the complex numbers
+$$z_1 = r_1(\cos\varphi_1+i\sin\varphi_1)\;\;\mbox{and}\;\;z_2 = r_2(\cos\varphi_2+i\sin\varphi_2)$$
+we have
+$$z_1z_2 = r_1r_2(\cos(\varphi_1+\varphi_2)+i\sin(\varphi_1+\varphi_2)),$$
+$$\frac{z_1}{z_2} \;=\; \frac{r_1}{r_2}(\cos(\varphi_1-\varphi_2)+i\sin(\varphi_1-\varphi_2)).$$
+Thus we have the 
+
+\textbf{Theorem.}\; The modulus of the product of two complex numbers equals the product of the moduli of the factors and the argument equals the sum of the arguments of the \PMlinkname{factors}{Product}.\; The modulus of the quotient of two complex numbers equals the quotient of the moduli of the dividend and the divisor and the argument equals the difference of the arguments of the dividend and the divisor.\\
+
+\textbf{Remark.}\, The equation (1) may be by induction generalised for more than two factors of the left hand \PMlinkescapetext{side}; then the special case where all factors are equal gives de Moivre identity.\\
+
+\textbf{Example.}\, Since
+$$(2\!+\!i)(3\!+\!i) = 5\!+\!5i \;=\; 5e^{\frac{\pi}{4}},$$
+one has
+$$\arctan\frac{1}{2}+\arctan\frac{1}{3} \;=\; \frac{\pi}{4}.$$
+
+%%%%%
+%%%%%
+\end{document}

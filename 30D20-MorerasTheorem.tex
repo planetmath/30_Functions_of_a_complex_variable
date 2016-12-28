@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MorerasTheorem}
+\pmcreated{2013-03-22 12:58:09}
+\pmmodified{2013-03-22 12:58:09}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{Morera's theorem}
+\pmrecord{12}{33339}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+Morera's theorem provides the converse of Cauchy's integral theorem.  
+
+{\bf Theorem} \cite{rudin_real}
+Suppose $G$ is a region in $\sC$, and $f:G\to \sC$ is a continuous 
+function. If for every closed triangle $\Delta$ in $G$, we have 
+$$\int_{\partial \Delta} f\, dz = 0,$$
+then $f$ is analytic on $G$. (Here, $\partial \Delta$ is the piecewise linear
+\PMlinkname{boundary}{BoundaryInTopology} of $\Delta$.)
+
+In particular, if for every rectifiable closed curve $\Gamma$ in $G$, we have 
+$\int_{\Gamma} f\, dz = 0,$
+then $f$ is analytic on $G$. Proofs of this can be found most
+undergraduate books on complex analysis \cite{kreyszig93, silverman}.
+
+\begin{thebibliography}{9}
+\bibitem{rudin_real}
+ W. Rudin, \emph{Real and complex analysis}, 3rd ed., McGraw-Hill Inc., 1987.
+ \bibitem {kreyszig93} E. Kreyszig,
+ \emph{Advanced Engineering Mathematics},
+ John Wiley \& Sons, 1993, 7th ed.
+\bibitem{silverman}
+ R.A. Silverman, \emph{Introductory Complex Analysis},
+ Dover Publications, 1972.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

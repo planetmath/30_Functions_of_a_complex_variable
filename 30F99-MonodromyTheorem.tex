@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MonodromyTheorem}
+\pmcreated{2013-03-22 14:44:35}
+\pmmodified{2013-03-22 14:44:35}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{monodromy theorem}
+\pmrecord{8}{36380}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30F99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $C(t)$ be a one-parameter family of smooth paths in the complex plane with common endpoints $z_0$ and $z_1$. (For definiteness, one may suppose that the parameter $t$ takes values in the interval $[0,1]$.)  Suppose that an analytic function $f$ is defined in a neighborhood of $z_0$ and that it is possible to analytically continue $f$ along every path in the family.  Then the result of analytic continuation does not depend on the choice of path.
+
+Note that it is \emph{crucial} that it be possible to continue $f$ along all paths of the family.  As the following example shows, the result will no longer hold if it is impossible to analytically continue $f$ along even a single path.   Let the family of paths be the set of circular arcs (for the present purpose, the straight line is to be considered as a degenerate case of a circular arc) with endpoints $+1$ and $-1$ and let $f(z) = \sqrt{z}$.  It is possible to analytically continue $f$ along every arc in the family except the line segment passing through $0$.  The conclusion of the theorem does not hold in this case because continuing along arcs which lie above $0$ leads to $f(z_1) = +i$ whilst continuing along arcs which lie below $0$ leads to $f(z_1) = -i$.
+%%%%%
+%%%%%
+\end{document}

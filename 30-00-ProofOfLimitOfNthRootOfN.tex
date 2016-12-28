@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLimitOfNthRootOfN}
+\pmcreated{2014-02-28 7:21:31}
+\pmmodified{2014-02-28 7:21:31}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of limit of nth root of n}
+\pmrecord{19}{40113}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{improving proof}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{12D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+In this entry, we present a self-contained, elementary
+proof of the fact that\, $\lim_{n \to \infty} n^{1/n} = 1$.
+We begin by with inductive proofs of two integer 
+inequalities --- real numbers will not enter until
+the very end.
+
+\begin{lemma}
+For all integers $n$ greater than or equal to $5$,
+\[
+ 2^n > n^2
+\]
+\end{lemma}
+
+\begin{proof}
+We begin with a few easy observations.  First,
+a bit of arithmetic:
+\[
+ 2^5 = 32 > 25 = 5^2
+\]
+Second, some algebraic manipulation of the inequality $n > 4$:
+\begin{align*}
+ n - 1 &> 3 \\
+ (n - 1)^2 &> 9 \\
+ (n - 1)^2 &> 2 \\
+ n^2 - 2n + 1 &> 2 \\
+ 2n^2 &> n^2 + 2n + 1 \\
+ 2n^2 &> (n + 1)^2
+\end{align*}
+
+These observations provide us with the makings of an
+inductive proof.  Suppose that $2^n > n^2$ for some
+integer $n \ge 5$.  Using the inequality we just showed,
+\[
+ 2^{n+1} = 2 \cdot 2^n > 2 n^2 > (n+1)^2.
+\]
+Snce $2^5 > 5^2$ and  $2^n > n^2$ implies that $2^{n+1} > 
+(n + 1)^2$ when $n \ge 5$ we conclude that $2^n > n^2$ dor
+all $n \ge 5$.
+\end{proof}
+
+\begin{lemma}
+For all integers $n$ greater than or equal to $3$,
+\[
+ n^{n+1} > (n+1)^n
+\]
+\end{lemma}
+
+\begin{proof}
+We begin by noting that
+\[
+ 3^4 = 81 > 64 = 4^3.
+\]
+Next, we make assume that
+\[
+ (n-1)^n > n^{(n-1)}.
+\]
+for some $n$.
+Multiplying both sides by $n$:
+\[
+ n (n-1)^n > n^n.
+\]
+Multiplying both sides by $(n+1)^n$ and making 
+use of the identity $(n+1)(n-1) = n^2 - 1$,
+\[
+ n (n^2 - 1)^n > n^n (n +1)^n.
+\]
+Since $n^2 > n^2 - 1$, the left-hand side is 
+less than $n^{2n+1}$, hence
+\[
+ n^{2n+1} > n^n (n +1)^n.
+\]
+Canceling $n^n$ from both sides,
+\[
+ n^{(n+1)} > (n+1)^n.
+\]
+Hence, by induction, $n^{(n+1)} > (n+1)^n$
+for all $n \ge 3$.
+\end{proof}
+
+\begin{theorem}
+\[
+ \lim_{n \to \infty} n^{1/n} = 1
+\]
+\end{theorem}
+
+\begin{proof}
+Consider the subsequence where $n$ is a power of $2$.
+We then have
+\[
+ (2^m)^{(1/2^m)} =
+ 2^{m/2^m}.
+\]
+By lemma 1, $m/2^m < 1/m$ when $m \ge 5$.  Hence,
+$(2^m)^{1/2^m} < 2^{1/m}$.  Since $\lim_{m \to 0}
+2^{1/m} = 1$, and $(2^m)^{1/2^m)} > 1$, we conclude
+by the squeeze rule that
+\[
+ \lim_{m \to 0} (2^m)^{1/2^m} = 1.
+\]
+
+By lemma 2, the sequence $\{n^{1/n}\}$ is decreasing.  It 
+is clearly bounded from below by $1$.  Above, we exhibited
+a subsequence which tends towards $1$.   Thus it follows that
+\[
+ \lim_{n \to \infty} n^{1/n} = 1.
+\]
+
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

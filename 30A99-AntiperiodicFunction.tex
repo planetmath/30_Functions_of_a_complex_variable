@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AntiperiodicFunction}
+\pmcreated{2015-12-16 15:19:14}
+\pmmodified{2015-12-16 15:19:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{antiperiodic function}
+\pmrecord{12}{40324}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmrelated{PeriodicFunctions}
+\pmrelated{QuasiperiodicFunction}
+\pmdefines{antiperiodicity}
+\pmdefines{antiperiodic}
+\pmdefines{antiperiod}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+A special case of the \PMlinkname{quasiperiodicity}{Period3} of functions is the {\em antiperiodicity}.  
+An {\em antiperiodic} function $f$ satisfies for a certain constant $p$ the equation
+$$f(z+p) \;=\; -f(z)$$
+for all values of the variable $z$.\, The constant $p$ is the {\em antiperiod} of $f$.  Then, $f$ has also other antiperiods,  e.g. $-p$, and generally $(2n\!+\!1)p$ with any\, $n \in \mathbb{Z}$.
+
+The antiperiodic function $f$ is always as well periodic with period $2p$, since
+$$f(z+2p) \;=\; f((z+p)+p) \;=\; -f(z+p) \;=\; -(-f(z)) \;=\;
+f(z).$$
+Naturally, then there are all periods $2np$ with\, $n \in \mathbb{Z}$.
+
+Not all periodic functions are antiperiodic.\\
+
+For example, the sine and cosine functions are antiperiodic with\, $p = \pi$, which is their absolutely least antiperiod:
+$$\sin(z+\pi) \;=\; -\sin{z}, \qquad \cos(z+\pi) \;=\; -\cos{z}$$
+The \PMlinkname{tangent}{Trigonometry} and cotangent functions are not antiperiodic although they are periodic (with the prime period $\pi$; see complex tangent and cotangent).
+
+The exponential function is antiperiodic with the antiperiod $i\pi$ (see Euler relation):
+$$e^{z+i\pi}\;=\; e^z e^{i\pi} \;=\; -e^z$$
+%%%%%
+%%%%%
+\end{document}

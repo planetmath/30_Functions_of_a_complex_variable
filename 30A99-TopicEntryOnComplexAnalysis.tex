@@ -1,0 +1,297 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopicEntryOnComplexAnalysis}
+\pmcreated{2013-05-20 18:11:35}
+\pmmodified{2013-05-20 18:11:35}
+\pmowner{pahio}{2872}
+\pmmodifier{unlord}{1}
+\pmtitle{topic entry on complex analysis}
+\pmrecord{60}{39009}
+\pmprivacy{1}
+\pmauthor{pahio}{1}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmrelated{HarmonicConjugateFunction}
+\pmrelated{TakingSquareRootAlgebraically}
+\pmrelated{CalculatingTheNthRootsOfAComplexNumber}
+\pmrelated{FundamentalTheoremOfAlgebra}
+\pmrelated{FundamentalTheoremsInComplexAnalysis}
+\pmdefines{complex analytic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\subsection*{Introduction}
+Complex analysis may be defined as the study of analytic 
+functions of a complex variable.  The origins of this subject
+lie in the observation that, given a function which has a
+convergent Taylor series, one can substitute complex numbers
+for the variable and obtain a convergent series which defines
+a function of a complex variable.  Putting
+imaginary numbers into the power series for the exponential
+function, we find
+\begin{eqnarray*}
+e^{ix} &=& 1 + i x - \frac{x^2}{2} - i \frac{x^3}{3!} + 
+\frac{x^4}{4!} + i \frac{x^5}{5!} - \frac{x^6}{6!} - i 
+\frac{x^7}{7!}+\cdots \\
+e^{-ix} &=& 1 - i x - \frac{x^2}{2} + i \frac{x^3}{3!} + 
+\frac{x^4}{4!} - i \frac{x^5}{5!} - \frac{x^6}{6!} + i 
+\frac{x^7}{7!}+\cdots 
+\end{eqnarray*}
+Adding and subtracting these series, we find
+\begin{eqnarray*}
+\frac{1}{2} (e^{ix} + e^{-ix}) &=& 1 - \frac{x^2}{2!} + 
+\frac{x^4}{4!} - \frac{x^6}{6!} +- \cdots \\
+\frac{1}{2i} (e^{ix} - e^{-ix}) &=& x - \frac{x^3}{3!} + 
+\frac{x^5}{5!} - \frac{x^7}{7!} +- \cdots
+\end{eqnarray*}
+We recognize these series as the Taylor-Madhava series for 
+the sine and the cosine functions respectively.  We hence have
+\begin{eqnarray*}
+\sin x &=& \frac{1}{2i} (e^{ix} - e^{-ix}) \\
+\cos x &=& \frac{1}{2} (e^{ix} + e^{-ix}) \\
+e^{ix} &=& \cos x + i \sin x .
+\end{eqnarray*}
+These equations let us re-express trigonometric functions
+in terms of complex exponentials.  Using them, deriving and
+verifying trigonometric identities becomes a straightforward
+exercise in algebra using the laws of exponents.
+
+We call functions of a complex variable which can be
+expressed in terms of a power series as \emph{complex
+analytic}.  More precisely, if $D$ is an open 
+subset of $\mathbb{C}$, we say that a function $f
+\colon D \to \mathbb{C}$ is complex analytic
+if, for every point $w$ in $D$, there exists a positive
+number $\delta$ and a sequence of complex numbers
+$c_k$ such that the series
+\[
+\sum_{k=0}^\infty c_k (z-w)^k
+\]
+converges to $f(z)$ when\, $z \in D$\, and\, 
+$|z - w| < \delta$.
+
+An important feature of this definition is that it 
+is not required that a single series works for
+all points of $D$.  For instance, suppose
+we define the function\, $f \colon \mathbb{C}\!\smallsetminus\!\{1\} \to \mathbb{C}$\, as 
+\[
+f(z) = {1 \over 1 - z}.
+\]
+While it it turns out that $f$ is analytic, no single
+series will give us the values of $f$ for all allowed
+values of $z$.  For instance, we have the familiar
+geometric series:
+\[
+f(z) = \sum_{k=0}^\infty z^k
+\]
+However, this series diverges when\, $|z| > 1$.\,  For
+such values of $z$, we need to use other series.
+For instance, when $z$ is near $2$, we have the
+following series:
+\[
+f(z) = \sum_{k=0}^\infty (-1)^{k+1} (z-2)^k
+\]
+This series, however, diverges when\, $|z-2| > 1$.\,
+While, for every allowed value of $z$ we can find
+some power series which will converge to $f(z)$, no
+single power series will converge to $f(z)$ for 
+all permissible values of $z$.
+
+It is possible to define the operations of
+differentiation and integration for complex
+functions.  These operations are well-defined
+for analytic functions and have the usual
+properties familiar from real analysis.
+
+The class of analytic functions is interesting
+to study for at least two main reasons.  Firstly,
+many functions which arise in pure and applied
+mathematics, such as polynomials, rational functions,
+exponential functions. logarithms, trigonometric
+functions, and solutions of differential equations
+are analytic.  Second, the class of analytic functions
+enjoys many remarkable properties which do not hold
+for other classes of functions, such as the following:
+\begin{description}
+\item[Closure]  The class of complex analytic functions 
+is closed under the usual algebraic operations,
+taking derivative and integrals, composition,
+and taking uniform limits.
+\item[Rigidity]  Given a complex analytic function\,
+$f \colon D \to \mathbb{C}$, where $D$ is
+an open subset of $\mathbb{C}$,\, if we know the
+values of $f$ at an infinite number of points of
+$D$ which have a limit point in $D$, then we 
+know the value of $f$ at all points of $D$.  For
+instance, given a complex analytic function on
+some neighborhood of the real axis, the values
+of that function in the whole neighborhood will
+be determined by its values on the real axis.
+\item[Cauchy and Morera theorems]  The integral of a 
+complex analytic function along any contractible
+closed loop equals zero.  Conversely, if the integral
+of a complex function about every contractible loop 
+happens to be zero, then that function is analytic.
+\item[Complex differentiability]  If a complex
+function is differentiable, then it has derivatives
+of all orders.  This contrasts sharply with the
+case of real analysis, where a function may be
+differentiable only a fixed number of times.
+\item[Harmonicity]  The real and imaginary parts
+of a complex analytic function are harmonic, i.e.
+satisfy Laplace's equation.  Conversely, given a
+harmonic function on the plane, there exists a
+complex analytic function of which it is the real
+part.
+\item[Conformal mapping]  A complex function is
+analytic if and only if it preserves maps pairs
+of intersecting curves into pairs which intersect 
+at the same angle.
+\end{description}
+As one can see, there are many ways to characterize
+complex analytic functions, many of which have
+nothing to do with power series.  This suggests that
+analytic functions are somehow a naturally occurring
+subset of complex functions.  This variety of distinct
+ways of characterizing analytic functions means that
+one has a variety of methods which may be used to
+study them and prove deep and surprising results
+by bringing insights and techniques from geometry,
+differential equations, and functional analysis to
+bear on problems of complex analysis.  This also
+works the other way --- one can use complex analysis
+to prove results in other branches of mathmatics 
+which have nothing to do with complex numbers.  For
+instance, the problem of minimal surfaces can be
+solved by using complex analysis.
+
+\subsection{Complex numbers}
+\begin{enumerate}
+\item complex plane, equality of complex numbers
+\item topology of the complex plane
+\item triangle inequality of complex numbers
+\item argument of product and quotient
+\item unit disc, annulus, closed complex plane
+\item \PMlinkname{$n$th root}{CalculatingTheNthRootsOfAComplexNumber}
+\item taking square root algebraically
+\item quadratic equation in $\mathbb{C}$
+\item \PMlinkname{complex function}{ComplexFunction}
+\end{enumerate}
+
+\subsection{Complex functions}
+\begin{enumerate}
+\item de Moivre identity
+\item addition formula
+\item complex exponential function
+\item periodicity of exponential function
+\item complex sine and cosine
+\item values of complex cosine
+\item complex tangent and cotangent
+\item example of summation by parts
+\item Euler's formulas (see also \PMlinkname{this}{ComplexSineAndCosine})
+\item complex logarithm
+\item general power
+\item fundamental theorems in complex analysis
+\item index of special functions
+\end{enumerate}
+
+\subsection{Analytic function}
+\begin{enumerate}
+\item holomorphic
+\item meromorphic
+\item periodic functions
+\item isolated singularity
+\item complex derivative
+\item Cauchy-Riemann equations
+\item \PMlinkname{power series}{PowerSeries}
+\item Bohr's theorem
+\item identity theorem of holomorphic functions
+\item Weierstrass double series theorem
+\item entire functions
+\item properties of entire functions
+\item \PMlinkname{pole of function}{Z_0IsAPoleOfF}
+\item zeros and poles of rational function
+\item when all singularities are poles
+\item Casorati-Weierstrass theorem
+\item Picard's theorem
+\item Laurent series
+\item coefficients of Laurent series
+\item residue
+\item regular at infinity
+\item Nevanlinna theory
+\end{enumerate}
+
+\subsection{Complex integration}
+\begin{enumerate}
+\item contour integral
+\item estimating theorem of contour integral 
+\item theorems on complex function series
+\item holomorphic function associated with continuous function
+\item Cauchy integral theorem
+\item Cauchy integral formula; variant of Cauchy integral formula
+\item \PMlinkname{residue theorem}{CauchyResidueTheorem}
+\item example of using residue theorem
+\item argument principle
+\item complex antiderivative
+\end{enumerate}
+
+\subsection{Analytic continuation}
+\begin{enumerate}
+\item analytic continuation
+\item meromorphic continuation
+\item analytic continuation by power series
+\item monodromy theorem
+\item Schwarz' reflection principle
+\item example of analytic continuation
+\item analytic continuation of gamma function
+\item analytic continuation of Riemann zeta to critical strip
+\item \PMlinkname{analytic continuation of Riemann zeta (using integral)}{AnalyticContinuationOfRiemannZetaUsingIntegral}
+\end{enumerate}
+
+\subsection{Riemann zeta function}
+\begin{enumerate}
+\item Riemann zeta function
+\item Euler product formula
+\item \PMlinkname{Riemann functional equation}{FunctionalEquationOfTheRiemannZetaFunction}
+\item critical strip
+\item \PMlinkid{value of the Riemann zeta function at 0}{8190},\, 
+\PMlinkid{at 2}{4719},\, \PMlinkid{at 4}{11009}
+\item formulae for zeta in the critical strip
+\end{enumerate}
+
+\subsection{Conformal mapping}
+\begin{enumerate}
+\item conformal mapping
+\item conformal mapping theorem
+\item simple example of composed conformal mapping
+\item example of conformal mapping
+\item \PMlinkid{Schwarz--Christoffel transformation}{6289}
+\end{enumerate}
+%%%%%
+%%%%%.
+\end{document}

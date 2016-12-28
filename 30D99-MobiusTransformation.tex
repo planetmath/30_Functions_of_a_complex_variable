@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MobiusTransformation}
+\pmcreated{2013-03-22 12:23:19}
+\pmmodified{2013-03-22 12:23:19}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{M\"obius transformation}
+\pmrecord{21}{32181}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D99}
+\pmsynonym{fractional linear transformation}{MobiusTransformation}
+\pmsynonym{linear fractional transformation}{MobiusTransformation}
+\pmrelated{ProofOfConformalMobiusCircleMapTheorem}
+\pmrelated{AutomorphismsOfUnitDisk}
+\pmrelated{UnitDiskUpperHalfPlaneConformalEquivalenceTheorem}
+\pmrelated{InversionOfPlane}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{M\"obius transformation} is a bijection on the extended complex plane $\mathbb{C} \cup \{\infty\}$ given by
+
+$$f(z) =
+\begin{cases}
+\frac{a}{c} &\text{if } z = \infty \\
+\infty &\text{if } z = -{d \over c}\\
+\frac{az+b}{cz+d} &\text{otherwise}
+\end{cases}
+$$
+
+where $a,b,c,d \in \mathbb{C}$ and $ad - bc \ne 0$
+
+It can be shown that the inverse, and composition of two M\"obius transformations are similarly defined, and so the M\"obius transformations form a group under composition.
+
+The geometric interpretation of the M\"obius group is that it is the group of automorphisms of the Riemann sphere.
+
+Any M\"obius map can be composed from the elementary transformations - dilations, translations and inversions. If we define a line to be a circle passing through $\infty$ then it can be shown that a M\"obius transformation maps circles to circles, by looking at each elementary transformation.
+%%%%%
+%%%%%
+\end{document}

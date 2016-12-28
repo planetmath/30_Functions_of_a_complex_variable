@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MonodromyGroup}
+\pmcreated{2013-03-22 16:21:51}
+\pmmodified{2013-03-22 16:21:51}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{monodromy group}
+\pmrecord{11}{38501}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmrelated{Monodromy}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Consider an ordinary linear differential equation 
+ \[\sum_{k = 0}^n c_k (x) {d^n y \over dx^n} = 0\]
+in which the coefficients are polynomials.  If $c_n$ 
+is not constant, then it is possible that the solutions
+of this equation will have branch points at the zeros
+of $c_n$.  (To see if this actually happens, we need to
+examine the indicial equation.)
+
+By the persistence of differential equations, the analytic
+continuation of a solution of this equation will be another
+solution.  Pick a neighborhood which does not contain any
+zeros of $c_n$.  Since the differential equation is of order 
+$n$, there will be $n$ independent solutions $y = f_1 (x),
+\ldots, y = f_n (x)$.  (For example, one may exhibit these
+solutions as power series about some point in the neighborhood.)
+
+Upon analytic continuation back to the original neighborhood via 
+a chain of neghborhoods, suppose 
+that the solution $y = f_i (x)$ is taken to a solution $y = {g}_i (x)$.
+Because the solutions are linearly independent, there will exist a matrix 
+$\{m_{ij}\}_{i,j=1}^n$ such that
+ \[ {g}_i = \sum_{j=1}^n m_{ij} f_j. \]
+Now consider the totality of all such matrices corresponding to
+all possible ways of making analytic continuations along chains
+which begin and end wit the original neighborhood.  They form a
+group known as the \emph{monodromy group} of the differential 
+equation.  The reason this set is a group is some basic facts
+about analytic continuation.  First, there is the trivial analytic
+continuation which simply takes a function element to itself.  This 
+will correspond to the identity matrix.  Second, we can reverse a
+process of analytic continuation.  This will correspond to the inverse
+matrix.  Third, we can follow continuation along one chain of 
+neighborhoods by continuation along another chain.  This will 
+correspond to multiplying the matrices corresponding to the two chains.
+
+
+%%%%%
+%%%%%
+\end{document}

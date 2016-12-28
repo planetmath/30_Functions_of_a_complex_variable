@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CoefficientsOfLaurentSeries}
+\pmcreated{2013-03-22 15:19:22}
+\pmmodified{2013-03-22 15:19:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{coefficients of Laurent series}
+\pmrecord{15}{37130}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmrelated{LaurentSeries}
+\pmrelated{TechniqueForComputingResidues}
+\pmrelated{UniquenessOfLaurentExpansion}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Suppose that $f$ is analytic in the annulus \,
+$\{z\in\mathbb{C}\,\vdots\,\, R_1 < |z-a| < R_2 \}$,\, where $R_1$ may be 0 and $R_2$ may be $\infty$.\, Then the coefficients of the \PMlinkname{Laurent series}{LaurentSeries} \PMlinkescapetext{expansion}
+           $$\sum_{n = -\infty}^\infty c_n (z-a)^n$$
+of $f$ can be obtained from
+\begin{align}
+   c_n \;=\; \frac{1}{2\pi i}\oint_{\gamma} \frac{f(t)}{(t-a)^{n+1}}\,dt
+           \quad (n = 0,\,\pm 1,\,\pm 2,\,\ldots),
+\end{align}
+where the \PMlinkname{path}{ContourIntegral} $\gamma$ goes anticlockwise once around the point \,$z = a$\, within the annulus.\, Especially, the residue of $f$ in the point $a$ is
+\begin{align}
+       c_{-1} \;=\; \frac{1}{2\pi i}\oint_{\gamma} f(t)\,dt.
+\end{align}
+
+\textbf{Remark.}\, Usually, the Laurent series of a function, i.e. the coefficients $c_n$, are not determined by using the integral formula (1), but directly from known series \PMlinkescapetext{expansions}.\, Often it is sufficient to know the value of $c_{-1}$ or the residue, which is used to compute integrals (see the Cauchy residue theorem ---\, cf. (2)).\, There is also the usable 
+
+\textbf{Rule.}\, In the case that the limit \,
+$\displaystyle\lim_{z\to a}(z-a)f(z)$\, exists and has a non-zero value $r$, the point\, $z = a$\, is a pole of the \PMlinkescapetext{order} 1 for the function $f$ and 
+$$\operatorname{Res}(f;\,a) \;=\; r.$$
+
+\textbf{Examples}
+\begin{enumerate}
+\item Let\, $f(z) := \frac{1}{\sin{z}}$,\, and\, $a = 0$.\, Using the Taylor series of the complex sine we obtain
+    $$\lim_{z\to 0}z\frac{1}{\sin{z}} \;=\; 
+      \lim_{z\to 0}\frac{1}{1-\frac{z^2}{3!}+-\ldots} \;=\; 1,$$
+whence\, $\operatorname{Res}(\frac{1}{\sin{z}};\,0) = 1$.\, Thus we can write
+$$\oint_{\gamma}\frac{dz}{\sin{z}} \;=\; 2\pi i,$$
+where the \PMlinkescapetext{path} must be chosen such that it encloses only the pole $0$ of 
+$\frac{1}{\sin{z}}$.
+\item The Taylor series of the complex exponential function gives the Laurent series
+   $$e^{\frac{1}{z}} \;\equiv\; 1+\frac{1}{z}+\frac{1}{2!z^2}+\frac{1}{3!z^3}+\ldots$$
+which shows that\, $\operatorname{Res}(e^{\frac{1}{z}};\,0) = 1.$
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

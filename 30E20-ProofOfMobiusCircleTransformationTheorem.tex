@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMobiusCircleTransformationTheorem}
+\pmcreated{2013-03-22 13:38:00}
+\pmmodified{2013-03-22 13:38:00}
+\pmowner{brianbirgen}{2180}
+\pmmodifier{brianbirgen}{2180}
+\pmtitle{proof of M\"obius circle transformation theorem}
+\pmrecord{5}{34282}
+\pmprivacy{1}
+\pmauthor{brianbirgen}{2180}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Case 1: $f(z)=az+b$. 
+
+Case 1a: The points on $|z-C|=R$ can be written as $z=C+R e^{i \theta}$. They are mapped to the points $w = aC + b + a R e^{i \theta}$ which all lie on the circle $|w - (aC+b)| = |a|R$. 
+
+Case 1b: The line $\mbox{Re}(e^{i \theta} z) = k$ are mapped to the line $\mbox{Re}\left(\frac{e^{i \theta}w}{a}\right)=k+\mbox{Re}\left(\frac{b}{a}\right)$.
+
+Case 2: $f(z) = \frac{1}{z}$. 
+
+Case 2a: Consider a circle passing through the origin. This can be written as $|z-C|=|C|$. This circle is mapped to the line ${\mbox{Re}(Cw)}=\frac{1}{2}$ which does not pass through the origin. To show this, write $z=C+|C|e^{i \theta}$. $w=\frac{1}{z}=\frac{1}{C+|C|e^{i \theta}}$. 
+
+$$ \mbox{Re}(Cw)=\frac{1}{2} (Cw+\overline{Cw}) 
+= \frac{1}{2} \left( \frac{C}{C+|C|e^{i \theta}} + \frac{\overline{C}}{\overline{C}+|C|e^{-i \theta}} \right) $$
+
+$$= \frac{1}{2} \left( \frac{C}{C+|C|e^{i \theta}} + \frac{\overline{C}}{\overline{C}+|C|e^{-i \theta}} 
+\frac{e^{i \theta}}{e^{i \theta}} 
+\frac{C/|C|}{C/|C|} \right) 
+= \frac{1}{2} \left( \frac{C}{C+|C|e^{i \theta}} + 
+\frac{|C| e^{i \theta}}{|C|e^{i \theta}+C} \right) = \frac{1}{2} $$
+
+Case 2b: Consider the line which does not pass through the origin. 
+This can be written as $\mbox{Re}(a z )=1$ for $a \ne 0$. Then
+$az+\overline{az}=2$ which is mapped to $\frac{a}{w} + \frac{\overline{a}}{\overline{w}} = 2$. This is simplified as
+$a\overline{w} + \overline{a}w=2 w\overline{w}$ which becomes
+$(w - a/2)(\overline{w}- \overline{a}/2) = a\overline{a}/4$ or 
+$\left|w-\frac{a}{2}\right|=\frac{|a|}{2}$ which is a circle passing through the origin.
+
+Case 2c: Consider a circle which does not pass through the origin. This can be written as $|z-C|=R$ with $|C| \ne R$. This circle is mapped to the circle 
+$$ \left| w - \frac{\overline{C}}{|C|^2-R^2} \right|= \frac{R}{\left|{|C|^2 - R^2}\right|} $$
+which is another circle not passing through the origin. To show this, we will demonstrate that 
+$$ \frac{\overline{C}}{|C|^2-R^2} + \frac{C-z}{R} \frac{\overline{z}}{z} \frac{R}{|C|^2 - R^2} = \frac{1}{z}
+$$
+Note:$\left|\frac{C-z}{R} \frac{\overline{z}}{z}\right|=1$. 
+$$ \frac{\overline{C}}{|C|^2-R^2} + \frac{C-z}{R} \frac{\overline{z}}{z} \frac{R}{|C|^2 - R^2} = \frac{z\overline{C} - z\overline{z} + \overline{z}C}{z(|C|^2-R^2)}$$
+$$ = \frac{C\overline{C} - (z - C)(\overline{z} - \overline{C})}{z(|C|^2-R^2)} = \frac{|C|^2 - R^2}{z(|C|^2-R^2)} = \frac{1}{z}$$
+
+Case 2d: Consider a line passing through the origin. This can be written as $\mbox{Re}(e^{i \theta} z) = 0$. This is mapped to the set $\mbox{Re}\left(\frac{e^{i \theta}}{w}\right)=0$, which can be rewritten as $\mbox{Re}(e^{i \theta} \overline{w}) = 0$ or $\mbox{Re}(w e^{-i \theta})=0$ which is another line passing through the origin. 
+
+Case 3: An arbitrary Mobius transformation can be written as $f(z) = \frac{az+b}{cz+d}$. If $c=0$, this falls into Case 1, so we will assume that $c \ne 0$. Let 
+$$f_1(z) = cz+d \qquad f_2(z) = \frac{1}{z} \qquad 
+f_3(z) = \frac{bc-ad}{c}z + \frac{a}{c} $$
+Then $f = f_3 \circ f_2 \circ f_1$. By Case 1, $f_1$ and $f_3$ map circles to circles and by Case 2, $f_2$ maps circles to circles.
+%%%%%
+%%%%%
+\end{document}

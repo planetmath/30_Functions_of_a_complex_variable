@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfWeierstrassMtest}
+\pmcreated{2013-03-22 12:58:01}
+\pmmodified{2013-03-22 12:58:01}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{proof of Weierstrass M-test}
+\pmrecord{5}{33336}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmrelated{CauchySequence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\N{\mathbb{N}}
+\def\eps{\epsilon}
+\begin{document}
+Consider the sequence of partial sums $s_n=\sum_{m=1}^n f_m$.
+Take any $p,q\in\N$ such that $p\le q$,then, for every $x\in X$, we have
+\begin{eqnarray*}
+	|s_q(x)-s_p(x)| &=& \left|\sum_{m=p+1}^q f_m(x)\right| \\
+		&\le& \sum_{m=p+1}^q |f_m(x)| \\
+		&\le& \sum_{m=p+1}^q M_m
+\end{eqnarray*}
+But since $\sum_{n=1}^\infty M_n$ converges, for any $\eps>0$ we can
+find an $N\in\N$ such that, for any $p,q>N$ and $x\in X$, we have
+$|s_q(x)-s_p(x)|\le\sum_{m=p+1}^q M_m<\eps$. Hence the sequence
+$s_n$ converges uniformly to $\sum_{n=1}^\infty f_n$.
+%%%%%
+%%%%%
+\end{document}

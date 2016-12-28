@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfConverseOfMobiusTransformationCrossratioPreservationTheorem}
+\pmcreated{2013-03-22 17:01:51}
+\pmmodified{2013-03-22 17:01:51}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of converse of M\"obius transformation cross-ratio preservation theorem}
+\pmrecord{6}{39316}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Suppose that $a,b,c,d$ are distinct.  Consider the transform $\mu$ defined as
+\[
+\mu (z) = {(b-d) (c-d) \over (c-b) (z-d)} - {b-d \over c-b} .
+\]
+Simple calculation reveals that $\mu (b) = 1$, $\mu (c) = 0$, and $\mu(d) = \infty$.
+Furthermore, $\mu (a)$ equals the cross-ratio of $a,b,c,d$.
+
+Suppose we have two tetrads with a common cross-ratio $\lambda$.  Then, as above, we may
+construct a transform $\mu_1$ which maps the first tetrad to $(\lambda, 1, 0, \infty)$ and a 
+transform $\mu_2$ which maps the first tetrad to $(\lambda, 1, 0, \infty)$.  Then $\mu_2^{-1} 
+\circ \mu_1$ maps the former tetrad to the latter and, by the group property, it is also a
+M\"obius transformation.
+
+%%%%%
+%%%%%
+\end{document}

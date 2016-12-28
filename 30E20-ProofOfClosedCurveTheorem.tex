@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfClosedCurveTheorem}
+\pmcreated{2013-03-22 13:33:34}
+\pmmodified{2013-03-22 13:33:34}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of closed curve theorem}
+\pmrecord{6}{34164}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let
+\[
+  f(x+iy) = u(x,y) + i v(x,y).
+\]
+Hence we have
+\[
+  \int_C f(z)\, dz = \int_C \omega + i \int_C \eta 
+\]
+where $\omega$ and $\eta$ are the differential forms
+\[
+  \omega = u(x,y)\,dx - v(x,y)\, dy,\qquad
+   \eta = v(x,y)\, dx + u(x,y)\, dy.
+\]
+Notice that by Cauchy-Riemann equations $\omega$ and $\eta$ are closed differential forms. Hence by the lemma on closed differential forms on a simply connected domain we get 
+\[
+  \int_{C_1} \omega = \int_{C_2} \omega,\quad
+  \int_{C_1} \eta = \int_{C_2} \eta.
+\]
+and hence
+\[
+  \int_{C_1} f(z)\, dz = \int_{C_2} f(z)\, dz
+\]
+%%%%%
+%%%%%
+\end{document}

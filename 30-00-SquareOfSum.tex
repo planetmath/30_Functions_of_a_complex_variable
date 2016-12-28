@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SquareOfSum}
+\pmcreated{2013-03-22 15:32:03}
+\pmmodified{2013-03-22 15:32:03}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{square of sum}
+\pmrecord{9}{37427}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{26-00}
+\pmclassification{msc}{11-00}
+\pmrelated{SquareRootOfPolynomial}
+\pmrelated{DifferenceOfSquares}
+\pmrelated{HeronianMeanIsBetweenGeometricAndArithmeticMean}
+\pmrelated{ContraharmonicMeansAndPythagoreanHypotenuses}
+\pmrelated{CompletingTheSquare}
+\pmrelated{TriangleInequalityOfComplexNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+The well-known \PMlinkescapetext{formula} for squaring a sum of two numbers or \PMlinkescapetext{terms} is
+\begin{align}
+(a\!+\!b)^2 \;=\; a^2\!+\!2ab\!+\!b^2.
+\end{align}
+It may be derived by multiplying the binomial $a\!+\!b$ by itself.
+
+Similarly one can get the squaring \PMlinkescapetext{formula} for a sum of three summands:
+\begin{align}
+(a\!+\!b\!+\!c)^2 \;=\; a^2\!+\!b^2\!+\!c^2\!+\!2bc\!+\!2ca\!+\!2ab
+\end{align}
+Its contents may be expressed as the
+
+\textbf{Rule.}\, The square of a sum is equal to the sum of the squares of all the summands plus the sum of all the double products of the summands in twos:
+$$\left(\sum_ia_i\right)^2 \;=\; \sum_ia_i^2+2\!\sum_{i<j}a_ia_j.$$\\
+
+This is true for any number of summands.\, The rule may be formulated also as
+\begin{align}
+(a\!+\!b\!+\!c+...)^2 \;=\;
+ (a)a+(2a\!+\!b)b+(2a\!+\!2b\!+\!c)c+...
+\end{align}
+which in the case of four summands is
+\begin{align}
+(a\!+\!b\!+\!c\!+\!d)^2 \;=\;
+ (a)a+(2a\!+\!b)b+(2a\!+\!2b\!+\!c)c+(2a\!+\!2b\!+\!2c\!+\!d)d.
+\end{align}
+One can use the idea of (3) to find the \PMlinkescapetext{{\em square root of a polynomial}}, when one tries to arrange the polynomial into the form of the right hand \PMlinkname{side}{Equation} of (3).
+%%%%%
+%%%%%
+\end{document}

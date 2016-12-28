@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZerosAndPolesOfRationalFunction}
+\pmcreated{2014-02-23 18:12:33}
+\pmmodified{2014-02-23 18:12:33}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{zeros and poles of rational function}
+\pmrecord{15}{39084}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D10}
+\pmclassification{msc}{30C15}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{26C15}
+\pmrelated{MinimalAndMaximalNumber}
+\pmrelated{OrderValuation}
+\pmrelated{RolfNevanlinna}
+\pmrelated{PlacesOfHolomorphicFunction}
+\pmrelated{ZeroOfPolynomial}
+\pmdefines{order of rational function}
+\pmdefines{order}
+\pmdefines{c-place}
+\pmdefines{place}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{factor}
+
+A rational function of a complex variable $z$ may be presented by the equation
+\begin{align}
+R(z) \;=\; 
+\frac{a_0z^m+a_1z^{m-1}+\ldots+a_m}{b_0z^n+b_1z^{n-1}+\ldots+b_n},
+\end{align}
+where the numerator and the denominator are mutually irreducible polynomials with complex coefficients $a_j$ and $b_k$ ($a_0b_0\neq 0$).\, If\, $z = x\!+\!iy$ 
+($x,\,y\in\mathbb{R}$), then the real and imaginary parts of $R(z)$ are rational functions of $x$ and $y$.
+
+When we factorize the numerator and the denominator in the ring\, $\mathbb{C}[z]$, we can write 
+\begin{align}
+R(z) \;=\; 
+\frac{a_0(z-\alpha_1)^{\mu_1}(z-\alpha_2)^{\mu_2}\ldots(z-\alpha_r)^{\mu_r}} {b_0(z-\beta_1)^{\nu_1}(z-\beta_2)^{\nu_2}\ldots(z-\beta_s)^{\nu_s}},
+\end{align}
+where\, $\alpha_j \neq \beta_k$\, for all $j,\,k$.
+
+The form (2) of the rational function expresses the zeros $\alpha_j$ and the infinity places $\beta_k$ of the function.\, One can write (2) as
+$$R(z) \;=\; (z\!-\!\alpha_j)^{\mu_j}S_j(z)$$
+where $S_j(z)$ is a rational function which in\, $z = \alpha_j$\, gets a finite non-zero value.\, Accordingly one says that the point $\alpha_j$ is a {\em zero} of  $R(z)$ with the order $\mu_j$ ($j = 1,\,2,\,\ldots,\,r$).\, One can also write (2) as
+$$R(z) \;=\; \frac{1}{(z\!-\!\beta_k)^{\nu_k}}T_k(z)$$
+where $T_k(z)$ is a rational function getting in the point $\beta_k$ a finite non-zero value.\, 
+As\, $z\to\beta_k$,\, the modulus $|R(z)|$ increases unboundedly in such a manner that\, $|z-\beta_k|^{\nu_k}|R(z)|$\, tends to a finite non-zero limit.\, So one says that $R(z)$ has in the point $\beta_k$ a {\em pole} with the order $\nu_k$ ($k \,=\, 1,\,2,\,\ldots,\,s$).\\
+
+\textbf{Behaviour at infinity}
+
+Now let $|z|$ increase unboundedly.\, When we write
+$$R(z) \;=\; z^{m-n}\cdot\frac
+{a_0+\frac{a_1}{z}+\ldots+\frac{a_m}{z^m}}
+{b_0+\frac{b_1}{z}+\ldots+\frac{b_n}{z^n}},$$
+we get three cases:
+\begin{itemize}
+\item If\, $m > n$,\, then\, $\lim_{z\to\infty}R(z) = \infty$.\, Since\, $\lim_{z\to\infty}\frac{R(z)}{z^{m-n}} = \frac{a_0}{b_0}$\, is finite and non-zero, the point\, $z = \infty$\, is the pole of $R(z)$ with the order $m\!-\!n$.
+\item If\, $m = n$,\, we have\, $\lim_{z\to\infty}R(z) = \frac{a_0}{b_0}$\, and thus $R(z)$ has in the infinity a finite non-zero value.
+\item If\, $m < n$,\, we have\, $\lim_{z\to\infty}R(z) = 0$\, in such a manner that\, $\lim_{z\to\infty}z^{n-m}R(z) = \frac{a_0}{b_0}$.\, This means that $R(z)$ has in infinity a zero with the order $n\!-\!m$.
+\end{itemize}
+In any case, $R(z)$ has equally many zeros and poles, provided that each zero and pole is counted so many times as its order says.\, The common number of the zeros and poles is called the {\em order of the rational function}.\, It is the greatest of the \PMlinkname{degrees}{PolynomialRing} $m$ and $n$ of the numerator and denominator.\\
+
+\textbf{$c$-places}
+
+Denote by $c$ any non-zero complex number.\, The $c$-{\em place} of $R(z)$ means such a point $z$ for which\, $R(z) = c$.\, If $z_0$ is a $c$-place of 
+$$R(z) \;=\; \frac{P(z)}{Q(z)}$$
+where the polynomials $P(z)$ and $Q(z)$ have no common \PMlinkname{factor}{DivisibilityInRings}, then $z_0$ is a zero of
+\begin{align}
+  R(z)\!-\!c \;=\; \frac{P(z)\!-\!c\,Q(z)}{Q(z)}.
+\end{align}
+If this zero is of order $\mu$, then one says that $z_0$ is of order $\mu$ as the $c$-place of $R(z)$.\, The numerator and denominator of (3) cannot have common factor (otherwise any common factor would be also a factor of $P(z)$).\, This implies that the order of the rational function defined by (3) is the same as the order $k$ of $R(z)$.\, Because (3) gets $k$ times the value $0$, also $R(z)$ gets $k$ times the value $c$.\, Thus we have derived the
+
+\textbf{Theorem.}\, A rational function attains any complex value so many times as its order is.
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc R. Nevanlinna \& V. Paatero}: {\em Funktioteoria}.\, Kustannusosakeyhti\"o Otava. Helsinki (1963).
+\end{thebibliography}\\
+
+
+%%%%%
+%%%%%
+\end{document}

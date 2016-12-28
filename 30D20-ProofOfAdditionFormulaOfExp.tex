@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAdditionFormulaOfExp}
+\pmcreated{2013-03-22 16:32:03}
+\pmmodified{2013-03-22 16:32:03}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{proof of addition formula of exp}
+\pmrecord{4}{38715}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D20}
+\pmrelated{AdditionFormula}
+\pmrelated{AdditionFormulas}
+\pmdefines{addition formula of exponential function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{constant} \PMlinkescapeword{product}
+
+The addition formula 
+$$e^{z_1+z_2} = e^{z_1}e^{z_2}$$
+of the complex exponential function may be proven by applying Cauchy multiplication rule to the \PMlinkname{Taylor series expansions}{TaylorSeries} of the right side \PMlinkname{factors}{Product}.\, We present a proof which is based on the derivative of the exponential function.
+
+Let $a$ be a complex constant.\, Denote\, $e^z = w(z)$.\, Then\, 
+$w'(z) \equiv w(z)$.\, Using the product rule and the chain rule we calculate:
+ $$\frac{d}{dz_1}[w(z_1)w(a-z_1)] = w'(z_1)w(a-z_1)+w(z_1)w'(a-z_1)(-1) = 
+   e^{z_1}e^{a-z_1}-e^{z_1}e^{a-z_1} \equiv 0$$
+Thus we see that the product\, $w(z_1)w(a-z_1) = e^{z_1}e^{a-z_1}$\, must be a constant $A$.\, If we choose specially\, $z_1 = 0$,\, we obtain:
+   $$A = w(0)w(a-0) = e^0e^a = e^a$$
+Therefore\, 
+   $$e^{z_1}e^{a-z_1} \equiv e^a.$$
+If we denote\, $a-z_1 := z_2$, the preceding equation reads\, $e^{z_1}e^{z_2} = e^{z_1+z_2}$. Q.E.D.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

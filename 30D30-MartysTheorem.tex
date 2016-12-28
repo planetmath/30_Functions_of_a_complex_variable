@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MartysTheorem}
+\pmcreated{2013-03-22 14:18:39}
+\pmmodified{2013-03-22 14:18:39}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Marty's theorem}
+\pmrecord{7}{35774}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{thm}[Marty]
+A set ${\mathcal{F}}$ of meromorphic functions is a normal family
+on a domain $G \subset {\mathbb{C}}$ if and only if the spherical
+derivatives are uniformly bounded (uniformly over ${\mathcal{F}}$)
+on each compact subset of $G$.
+\end{thm}
+
+Here normal convergence (convergence on compact subsets) is given using the
+spherical metric and not the standard metric of the complex plane.  That is, if
+$\sigma$ is the spherical metric then we will say $f_n \to f$ normally
+if $\sigma(f_n(z),f(z))$ converges to 0 uniformly on compact subsets.
+
+A related theorem can be stated.
+
+\begin{thm}
+If $f_n(z) \to f(z)$ uniformly in the spherical metric on compact subsets of
+$G \subset {\mathbb{C}}$ then $f_n^\sharp(z) \to f^\sharp(z)$ uniformly
+on compact subsets of $G$.
+\end{thm}
+
+Here $f^\sharp$ denotes the spherical derivative of $f$.
+
+\begin{thebibliography}{9}
+\bibitem{Gamelin:complex}
+Theodore~B.\@ Gamelin.
+{\em \PMlinkescapetext{Complex Analysis}}.
+Springer-Verlag, New York, New York, 2001.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

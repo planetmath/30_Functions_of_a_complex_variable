@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnitDiskUpperHalfPlaneConformalEquivalenceTheorem}
+\pmcreated{2013-03-22 13:37:52}
+\pmmodified{2013-03-22 13:37:52}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{unit disk upper half plane conformal equivalence theorem}
+\pmrecord{12}{34279}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C20}
+\pmrelated{UnitDisk}
+\pmrelated{UpperHalfPlane}
+\pmrelated{MobiusTransformation}
+\pmrelated{MobiusCircleTransformationTheorem}
+\pmrelated{ConvertingBetweenThePoincareDiscModelAndTheUpperHalfPlaneModel}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm} There is a conformal map from $\Delta$, the unit disk, to $UHP$, the upper half plane. \end{thm}
+
+\begin{proof} Define $f \colon \hat{{\mathbb C}} \to \hat{{\mathbb C}}$ (where $\hat{{\mathbb C}}$ denotes the Riemann Sphere) to be $f(z) = \displaystyle{\frac{z-i}{z+i}}$. Notice that $f^{-1}(w)= \displaystyle{i \frac{1+w}{1-w}}$ and that $f$ (and therefore $f^{-1}$) is a Mobius transformation. 
+
+Notice that $f(0)=-1$, $f(1)=\displaystyle{\frac{1-i}{1+i}} = -i$ and $f(-1) = \displaystyle{\frac{-1-i}{-1+i}} = i$. By the Mobius Circle Transformation Theorem, $f$ takes the real axis to the unit circle. Since $f(i)=0$, $f$ maps $UHP$ to $\Delta$ and $f^{-1}:\Delta \to UHP$. \end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArgumentPrinciple}
+\pmcreated{2013-03-22 14:34:28}
+\pmmodified{2013-03-22 14:34:28}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{argument principle}
+\pmrecord{10}{36133}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmsynonym{Cauchy's argument principle}{ArgumentPrinciple}
+%\pmkeywords{argument}
+%\pmkeywords{complex anaysis}
+%\pmkeywords{contour integration}
+\pmdefines{argument principle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{origin}
+\PMlinkescapeword{side}
+\PMlinkescapeword{sides}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{relation}
+
+If a function $f$ is meromorphic on the interior of a rectifiable simple closed curve $C$, then
+\begin{align}\label{eq:arg-princ}
+{1 \over 2 \pi i} \oint_C {f'(z) \over f(z)} dz
+\end{align}
+equals the difference between the number of zeros and the number of poles of $f$ counted with multiplicity. (For example, a zero of order two counts as two zeros; a pole of order three counts as three poles.)
+This fact is known as the \emph{argument principle}.
+
+The principle may be stated in another form which makes the origin of the name apparent:  If a function $f$ is meromorphic on the interior of a rectifiable simple closed curve $C$ and has $m$ poles and $n$ zeros on the interior of $C$, then the argument of $f$ increases by $2 \pi (n - m)$ upon traversing $C$.  The relation of this statement to the previous statement is easy to see.  Note that $f'/f = (\log f)'$ and that $\log (z) = \log |z| + i \arg z$.  Substituting this into formula \eqref{eq:arg-princ}, we find
+\[
+2 \pi i (n - m) = \oint_C {f'(z) \over f(z)} dz = \oint_C d \log |f(z)| +  i \oint_C d \arg (f(z))\,.
+\]
+The first integral on the rightmost side of this equation equals zero because $\log|f|$ is single-valued.  The second integral on the rightmost side equals the change in the argument as one traverses $C$.  Cancelling the $i$ from both sides, we conclude that the change in the argument equals $2 \pi (n - m)$.
+
+Note also that the integral \eqref{eq:arg-princ}
+is the winding number, about zero, of the image curve $f \circ C$.
+
+
+%%%%%
+%%%%%
+\end{document}

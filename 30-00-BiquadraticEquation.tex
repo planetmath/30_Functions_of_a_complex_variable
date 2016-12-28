@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BiquadraticEquation}
+\pmcreated{2013-03-22 17:52:45}
+\pmmodified{2013-03-22 17:52:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{biquadratic equation}
+\pmrecord{11}{40360}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{12D99}
+\pmrelated{BiquadraticExtension}
+\pmrelated{BiquadraticField}
+\pmrelated{EulersDerivationOfTheQuarticFormula}
+\pmrelated{IrreduciblePolynomialsObtainedFromBiquadraticFields}
+\pmrelated{LogicalOr}
+\pmdefines{biquadratic equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+A {\em biquadratic equation} (in a narrower sense) is the special case of the \PMlinkname{quartic equation}{QuarticFormula} containing no odd degree terms:
+\begin{align}
+ax^4+bx^2+c = 0
+\end{align}
+Here, $a$, $b$, $c$ are known real or complex numbers and\, $a \neq 0$.
+
+For solving a biquadratic equation (1) one does not need the \PMlinkname{quartic formula}{QuarticFormula} since the equation may be thought a quadratic equation with respect to $x^2$, i.e.
+$$a(x^2)^2+bx^2+c = 0,$$
+whence
+$$x^2 = \frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+(see quadratic formula or \PMlinkname{quadratic equation in $\mathbb{C}$}{QuadraticEquationInMathbbC}).\, Taking square roots of the values of $x^2$ (see taking square root algebraically), one obtains the four \PMlinkname{roots}{Equation} of (1).\\
+
+\textbf{Example.}\, Solve the biquadratic equation
+\begin{align}
+x^4+x^2-20 = 0.
+\end{align}
+We have
+\begin{align}
+x^2 = \frac{-1\pm\sqrt{1^2-4\cdot1\cdot(-20)}}{2\cdot1} = \frac{-1\pm9}{2},
+\end{align}
+i.e.\, $x^2 = 4$\, or\, $x^2 = -5$.\, The solution is
+\begin{align}
+x = \pm2 \quad \lor \quad x = \pm i\sqrt{5}.
+\end{align}
+
+\textbf{Remark.}\, In one wants to form of rational numbers a polynomial equation with rational coefficients and most possibly low degree by using two square root operations, then one gets always a biquadratic equation.\, A couple of examples:
+
+1) $x = 1+\sqrt2+\sqrt3$\\
+$(x-1)^2 = 2+2\sqrt{6}+3$\\
+$y^2-5 = 2\sqrt{6}$\\
+$y^4-10y^2+1 = 0$\, (one has \PMlinkname{substituted}{TchirnhausTransformations}\, $x-1 := y$)\\
+
+2) $x = \sqrt{\sqrt{2}-1}$\\
+$x^2 = \sqrt{2}-1$\\
+$(x^2+1)^2 = 2$\\
+$x^4+2x^2-1 = 0$
+
+
+%%%%%
+%%%%%
+\end{document}

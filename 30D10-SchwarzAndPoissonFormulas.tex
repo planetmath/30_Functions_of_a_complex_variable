@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchwarzAndPoissonFormulas}
+\pmcreated{2013-03-22 16:05:58}
+\pmmodified{2013-03-22 16:05:58}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{Schwarz and Poisson formulas}
+\pmrecord{12}{38163}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D10}
+\pmdefines{Schwarz formula}
+\pmdefines{Poisson formula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\section*{Introduction}
+Fundamental boundary-value problems of potential theory, \PMlinkname{i.e.}{Ie}, the so-called Dirichlet and Neumann problems occur in many \PMlinkescapetext{branches} of applied mathematics such as hydrodynamics, elasticity \PMlinkescapetext{theory} and electrodynamics. While solving  the two-dimensional problem for special \PMlinkescapetext{types} of boundaries is likely to present serious computational difficulties, it is possible to write down formulas for a \PMlinkname{circular}{Circle} boundary. We shall give Schwarz and Poisson formulas that solve the Dirichlet problem for a circular domain.
+\section*{Schwarz formula}
+Without loss of generality, we shall consider the compact disc $\overline{D}:|z|\leq 1$ in the $z-$plane, its boundary will be denoted by $\gamma$ and any point on this one by $\zeta=e^{i\theta}$. Let it be required to determine a harmonic function $u(x,y)$, which on the boundary $\gamma$ assumes the values
+\begin{align}
+u\big\vert_\gamma=f(\theta),
+\end{align}
+where $f(\theta)$ is a continuous single-valued function of $\theta$. Let $v(x,y)$ be the conjugate harmonic function which is determined to within an arbitrary constant from the knowledge of the function $u$. {\footnote{Since $u+iv$ is an analytic function of $z=x+iy$,it is clear from the Cauchy-Riemann equations that the function $v(x,y)$ is determined by
+\begin{align*}
+v(x,y)=\int_{z_0}^z\frac{\partial v}{\partial x}dx+
+\frac{\partial v}{\partial y}dy=\int_{z_0}^z -\frac{\partial u}{\partial y}dx+
+\frac{\partial u}{\partial x}dy\:,
+\end{align*}
+where the integral is evaluated over an arbitrary path joining some point $z_0$ with an arbitrary point $z$ belonging to the unitary open disc $D$. We are concerned to a simply connected domain, so that the function $v(x,y)$ will be single-valued.}}Then the function
+\begin{align*}
+w(z)=u(x,y)+iv(x,y)
+\end{align*}
+is an analytic function for all values of $z\in D$. We shall suppose that $w(z)\in C(\overline{D})$ the class of continuous functions.  Therefore, we may write the boundary condition (1) as
+\begin{align}
+w(\zeta)+\overline{w}(\overline{\zeta})=2f(\theta) \quad on \,\, \gamma.
+\end{align}
+We define here $\overline{w}(\zeta)=\overline{w(\overline{\zeta})}$ and $\overline{w}(\overline{\zeta})=\overline{w(\zeta)}$. Next, we multiply (2) by $\frac{1}{2\pi i}\frac{d\zeta}{\zeta-z}$ and, by integrating over $\gamma$, we obtain
+\begin{align}
+\frac{1}{2\pi i}\int_\gamma\frac{w(\zeta)}{\zeta-z}d\zeta+
+\frac{1}{2\pi i}\int_\gamma\frac{\overline{w}(\overline{\zeta})}{\zeta-z}d\zeta
+=\frac{1}{\pi i}\int_\gamma\frac{f(\theta)}{\zeta-z}d\zeta\:,
+\end{align}
+which, by Harnack's theorem, is \PMlinkescapetext{equivalent} to (2). Notice that the first integral on the left is equal to $w(z)$ by Cauchy's integral formula, and for the same reason {\footnote{From Taylor's formula
+\begin{align*}
+w(z)=w(0)+w'(0)z+\frac{1}{2!}w''(0)z^2+O(z^3).
+\end{align*}
+But on $\gamma$,\; $\overline{z}=1/\zeta$, so
+\begin{align*}
+\overline{w}(\overline{\zeta})=\overline{w}(0)+\overline{w}'(0)\frac{1}{\zeta}+
+\frac{1}{2!}\overline{w}''(0)\frac{1}{\zeta^2}+O\bigg(\frac{1}{\zeta^3}\bigg)
+\end{align*}
+and term-by-term integration gives the desired result recalling that
+\begin{align*}
+\frac{1}{2\pi i}\int_\gamma\frac{d\zeta}{\zeta^n(\zeta-z)}=
+\left\{ \begin{array}{ll}
+1, & if \;\; n=0, \\
+0, & otherwise.
+\end{array}
+\right.
+\end{align*}}} the second one is equal to $\overline{w}(0)$. Let $\overline{w}(0)=a-ib$, thus (3) becomes
+\begin{align}
+w(z)=\frac{1}{\pi i}\int_\gamma\frac{f(\theta)}{\zeta-z}d\zeta-a+ib.
+\end{align}
+By setting $z=0$ in (4), we get
+\begin{align*}
+a+ib=\frac{1}{\pi i}\int_\gamma\frac{f(\theta)}{\zeta}d\zeta-a+ib,
+\end{align*}
+whence
+\begin{align}
+2a=\frac{1}{\pi i}\int_\gamma\frac{f(\theta)}{\zeta}d\zeta=
+\frac{1}{\pi i}\int_0^{2\pi} f(\theta)d\theta.
+\end{align}
+As one would expect, $b$ is left undetermined because the conjugate harmonic function $v(x,y)$ is determined to within an arbitrary real constant. Finally we substitute $a$ from (5) in (4),
+\begin{align}
+w(z)=\frac{1}{\pi i}\int_\gamma\frac{f(\theta)}{\zeta-z}d\zeta-
+\frac{1}{2\pi i}\int_\gamma\frac{f(\theta)}{\zeta}d\zeta+ib=
+\frac{1}{2\pi i}\int_\gamma f(\theta)\frac{\zeta+z}{\zeta-z}\frac{d\zeta}{\zeta}
++ib,
+\end{align}
+the aimed Schwarz formula.{\footnote{It is possible to prove that, if $f(\theta)$ satisfies H\"older condition, then the function $w(z)$ given by (6) will be continuous in $\overline{D}$. Such a condition is less restrictive than the requirement of the existence of a bounded derivative.}}
+\section*{Poisson formula}
+If we substitute $z=\rho\: e^{i\phi}$ and $\zeta=e^{i\theta}$ in (6) and separate the real and imaginary parts, we find
+\begin{align}
+\Re{w(z)}\equiv u(\rho,\phi)=\frac{1}{2\pi}\int_0^{2\pi}\!\!
+\frac{(1-\rho^2)f(\theta)}{1-2\rho\cos{(\theta-\phi)}+\rho^2}\;d\theta\:.
+\end{align}
+This is the Poisson formula (so-called also Poisson integral), which gives the solution of Dirichlet problem. It is possible to prove that (7) also \PMlinkescapetext{represents} the solution under the assumption that $f(\theta)$ is a piecewise continuous function.{\footnote{See \cite{cite:Kellog}.}} It is also possible to generalize the formulas obtained above so as to make them apply to any simply connected region. This is done by introducing a mapping function and the idea of conformal mapping of simply connected domains.{\footnote{For a discussion of Neumann problem, see \cite{cite:Evans}.}}    
+\begin{thebibliography}{99}
+\bibitem{cite:Kellog}
+O. D. Kellog, {\em Foundations of Potential Theory}, Dover, 1954.
+\bibitem{cite:Evans}
+G. C. Evans, {\em The Logarithmic Potential}, Chap. IV, New York, 1927.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMaximalModulusPrinciple}
+\pmcreated{2013-03-22 15:46:15}
+\pmmodified{2013-03-22 15:46:15}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{proof of maximal modulus principle}
+\pmrecord{19}{37728}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30F15}
+\pmclassification{msc}{31B05}
+\pmclassification{msc}{31A05}
+\pmclassification{msc}{30C80}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Complex}{\mathbb{C}}
+\begin{document}
+$f: U \to \Complex $ is holomorphic and therefore continuous, so $|f|$ will also be continuous on $U$.
+$K\subset U$ is compact and since $|f|$ is continuous on $K$ it must attain a maximum and a minimum value there.
+
+Suppose the maximum of $|f|$ is attained at $z_0$ in the interior of $K$.
+
+By definition there will exist $r>0$ such that the set $S_r = \left\{z\in \Complex: |z-z_0|^2\le r^2 \right\} \subset K $.
+
+Consider $C_r$ the boundary of the previous set parameterized counter-clockwise.
+Since $f$ is holomorphic by hypothesis, Cauchy integral formula says that
+
+\begin{equation}
+\label{cauchy}
+f(z_0)= \frac{1}{2\pi i} \oint_C \frac{f(z)}{z-z_0} dz
+\end{equation}
+
+A canonical parameterization of $C_r$ is $z=z_0 + r e^{i\frac{\theta}{r}}$, for $\theta \in [0,2 \pi r]$.
+%So $dz=2\pi i r e^{i2\pi\theta} d\theta$ and the integral becomes
+
+
+\begin{equation}
+\label{int1}
+f(z_0)= \frac{1}{2\pi r} \int_0^{2\pi r}  f(z_0 + r e^{i \frac{\theta}{r}}) d \theta
+\end{equation}
+
+Taking modulus on both sides and using the estimating theorem of contour integral
+
+$$|f(z_0)| \le \operatorname{max}_{z \in C_r}|f(z)|$$
+
+Since $|f(z_0)|$ is a maximum, the last inequality must be verified by having the equality in the $\le$ verified.
+
+The \PMlinkname{proof of the estimating theorem of contour integral}{ProofOfEstimatingTheoremOfContourIntegral} implies that equality is only verified when
+
+$$ \frac{f(z_o + r e^{i \frac{\theta}{r}})}{r e^{i \frac{\theta}{r}}} = \lambda \overline{i e^{i \frac{\theta}{r}}} $$
+
+where $\lambda\in \mathbb{C}$ is a constant.
+Therefore, $f(z_o + r e^{i \frac{\theta}{r}})$ is constant and to verify equation \ref{int1} its value must be $f(z_0)$.
+
+So $f$ is holomorphic and constant on a circumference.
+It's a well known result that if 2 holomorphic functions are equal on a curve, then they are equal on their entire domain, so $f$ is constant.
+
+\PMlinkescapetext{One way} to see this in this particular circumstance is using equation \ref{cauchy} to calculate the value of $f$ on a point $\xi \in $ interior $S_r$ different than $z_0$. Bearing in mind that $f(z)=f(z_0)$ is  constant in $C_r$ the formula reads $f(\xi)=\frac{f(z_0)}{2 \pi i}\oint_{C_r} \frac{1}{z-\xi}dz = f(z_0)$. So $f$ is really constant in the interior of $S_r$ and the only holomorphic function defined in $K$ that is constant in the interior of $S_r$ is the constant function on all $K$. 
+ 
+Thus if the maximum of $|f|$ is attained in the interior of $K$, then $f$ is constant.
+If $f$ isn't constant, the maximum must be attained somewhere in $K$, but not in its interior.
+Since $K$ is compact, by definition it must be attained at $\partial K$.
+%%%%%
+%%%%%
+\end{document}

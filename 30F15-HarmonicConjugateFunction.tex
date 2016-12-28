@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HarmonicConjugateFunction}
+\pmcreated{2013-03-22 14:45:11}
+\pmmodified{2013-03-22 14:45:11}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{harmonic conjugate function}
+\pmrecord{21}{36392}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30F15}
+\pmclassification{msc}{31A05}
+\pmsynonym{harmonic conjugate}{HarmonicConjugateFunction}
+\pmsynonym{conjugate harmonic function}{HarmonicConjugateFunction}
+\pmsynonym{conjugate harmonic}{HarmonicConjugateFunction}
+\pmrelated{ComplexConjugate}
+\pmrelated{OrthogonalCurves}
+\pmrelated{TopicEntryOnComplexAnalysis}
+\pmrelated{ExactDifferentialEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Two harmonic functions $u$ and $v$ from an \PMlinkname{open}{OpenSet} subset $A$ of $\mathbb{R}\!\times\!\mathbb{R}$ to $\mathbb{R}$, which satisfy the Cauchy-Riemann equations
+\begin{align}
+u_x \;=\; v_y, \quad u_y \;=\; -v_x,
+\end{align}
+are the {\em harmonic conjugate functions} of each other. 
+
+\begin{itemize}
+
+\item The relationship between $u$ and $v$ has a \PMlinkescapetext{simple} geometric meaning:\, Let's determine the slopes of the constant-value curves\, $u(x,\,y) = a$\, and\, $v(x,\,y) = b$\, in any point\, $(x,\,y)$\, by differentiating these equations.\, The first gives\, $u_x dx+u_y dy = 0$,\, or
+ $$\frac{dy}{dx}^{(u)} \;=\; -\frac{u_x}{u_y} \;=\; \tan\alpha,$$
+and the second similarly
+ $$\frac{dy}{dx}^{(v)} \;=\; -\frac{v_x}{v_y}$$
+but this is, by virtue of (1), equal to
+ $$\frac{u_y}{u_x} \;=\; -\frac{1}{\tan\alpha}.$$
+Thus, by the condition of orthogonality, the curves intersect at right angles in every point.
+
+\item If one of $u$ and $v$ is known, then the other may be determined with (1):\, When e.g. the function $u$ is known, we need only to \PMlinkescapetext{calculate} the line integral
+$$v(x, y) \;=\; \int_{(x_0, y_0)}^{(x, y)}(-u_y\,dx+u_x\,dy)$$
+along any \PMlinkescapetext{path} connecting \,$(x_0,\,y_0)$\, and\, 
+$(x,\,y)$\, in $A$.\, The result is the harmonic conjugate $v$ of $u$, unique up to a real addend if $A$ is simply connected.
+
+\item It follows from the preceding, that every harmonic function has a harmonic conjugate function.
+
+\item The real part and the imaginary part of a holomorphic function are always the harmonic conjugate functions of each other.
+
+\end{itemize}
+
+
+\textbf{Example.}\, $\sin{x}\cosh{y}$\, and\, $\cos{x}\sinh{y}$\, are harmonic conjugates of each other.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyRiemannEquationscomplexCoordinates}
+\pmcreated{2013-03-22 14:24:28}
+\pmmodified{2013-03-22 14:24:28}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Cauchy-Riemann equations (complex coordinates)}
+\pmrecord{6}{35909}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+\pmrelated{CauchyRiemannEquations}
+\pmrelated{Holomorphic}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $f \colon G \subset {\mathbb{C}} \to {\mathbb{C}}$ be a continuously differentiable function in the real sense, using ${\mathbb{R}}^2$ instead of
+${\mathbb{C}}$, identifying $f(z)$ with $f(x,y)$ where $z = x + iy$ and we also write $\bar{z} = x - iy$ (the complex conjugate).  Then we have the following partial derivatives:
+\begin{align*}
+\frac{\partial f}{\partial z} & :=
+\frac{1}{2} \left(
+\frac{\partial f}{\partial x} - i \frac{\partial f}{\partial y}
+\right) ,
+\\
+\frac{\partial f}{\partial \bar{z}} & :=
+\frac{1}{2} \left(
+\frac{\partial f}{\partial x} + i \frac{\partial f}{\partial y}
+\right) .
+\end{align*}
+Sometimes these are written as $f_z$ and $f_{\bar{z}}$ respectively.
+
+The classical Cauchy-Riemann equations are equivalent to
+\begin{equation*}
+\frac{\partial f}{\partial \bar{z}} = 0 .
+\end{equation*}
+This can be seen if we write $f = u+iv$ for real valued $u$ and $v$ and
+then the differentials become
+\begin{align*}
+\frac{\partial f}{\partial z} & =
+\frac{1}{2} \left(
+\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}
+\right)
++
+\frac{i}{2} \left(
+\frac{\partial v}{\partial x} - \frac{\partial u}{\partial y}
+\right) ,
+\\
+\frac{\partial f}{\partial \bar{z}} & =
+\frac{1}{2} \left(
+\frac{\partial u}{\partial x} - \frac{\partial v}{\partial y}
+\right)
++
+\frac{i}{2} \left(
+\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}
+\right) .
+\end{align*}
+
+
+In several complex dimensions, for a function
+$f \colon G \subset {\mathbb{C}}^n \to {\mathbb{C}}$ which maps
+$(z_1,\ldots,z_n) \mapsto f(z_1,\ldots,z_n)$ where $z_j = x_j + i y_j$ we generalize simply by
+\begin{align*}
+\frac{\partial f}{\partial z_j} & :=
+\frac{1}{2} \left(
+\frac{\partial f}{\partial x_j} - i \frac{\partial f}{\partial y_j}
+\right) ,
+\\
+\frac{\partial f}{\partial \bar{z}_j} & :=
+\frac{1}{2} \left(
+\frac{\partial f}{\partial x_j} + i \frac{\partial f}{\partial y_j}
+\right) .
+\end{align*}
+
+Then the Cauchy-Riemann equations are given by
+\begin{equation*}
+\frac{\partial f}{\partial \bar{z}_j} = 0 \qquad \text{for all $1 \leq j \leq n$} .
+\end{equation*}
+That is, $f$ is holomorphic if and only if it satisfies the above equations.
+
+\begin{thebibliography}{9}
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

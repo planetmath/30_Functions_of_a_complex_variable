@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfEntireFunctions}
+\pmcreated{2013-03-22 14:52:09}
+\pmmodified{2013-03-22 14:52:09}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{properties of entire functions}
+\pmrecord{19}{36545}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D20}
+\pmrelated{RationalFunction}
+\pmrelated{AlgebraicFunction}
+\pmrelated{BesselsEquation}
+\pmdefines{entire rational function}
+\pmdefines{entire transcendental function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\begin{enumerate}
+
+ \item If \,$f\!:\mathbb{C}\to\mathbb{C}$\, is an entire function and \,$z_0\in\mathbb{C}$, then $f(z)$ has the Taylor series \PMlinkescapetext{expansion}
+$$f(z) = a_0\!+\!a_1(z\!-\!z_0)\!+\!a_2(z\!-\!z_0)^2\!+\cdots$$
+which is valid in the whole complex plane.
+
+ \item If, conversely, such a power series converges for every complex value $z$, then the \PMlinkname{sum of the series}{SumFunctionOfSeries} is an entire function.
+
+ \item The entire functions may be divided in two disjoint \PMlinkescapetext{classes}:
+
+a) The {\em entire rational functions}, i.e. polynomial functions; in their series \PMlinkescapetext{expansion} there is an $n_0$ such that\, $a_n = 0\,\,\forall n\geqq n_0$.
+
+b) The {\em entire transcendental functions}; in their series \PMlinkescapetext{expansion} one has \,$a_n \neq 0$\, for infinitely many values of $n$.\, Examples are complex sine and cosine, complex exponential function, sine integral,  error function.
+
+ \item A consequence of Liouville's theorem: \,If $f$ is a non-constant entire function and if $R$ and $M$ are two arbitrarily great positive numbers, then there exist such points $z$ that
+        $$|z| > R \,\,\,\mathrm{and}\,\,\, |f(z)| > M.$$
+This \PMlinkescapetext{means} that the non-constant entire functions are \PMlinkname{unbounded}{BoundedFunction}.
+
+ \item The \PMlinkname{sum}{SumOfFunctions}, the \PMlinkname{product}{ProductOfFunctions} and the composition of two entire functions are entire functions.
+
+ \item The ring of all entire functions is a Pr\"ufer domain.
+
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{OH}{\sc O. Helmer:} ``{Divisibility properties of integral functions}''.\, -- {\em Duke Math. J.} \textbf{6} (1940), 345--356.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

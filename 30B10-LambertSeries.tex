@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LambertSeries}
+\pmcreated{2013-03-22 18:46:42}
+\pmmodified{2013-03-22 18:46:42}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Lambert series}
+\pmrecord{13}{41572}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmclassification{msc}{40A05}
+\pmrelated{NecessaryConditionOfConvergence}
+\pmrelated{CauchysRootTest}
+\pmrelated{TauFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{terms}
+
+The series
+\begin{align}
+\sum_{n=1}^\infty\frac{a_nz^n}{1\!-\!z^n} \;=\; \frac{a_1z}{1\!-\!z}+\frac{a_2z^2}{1\!-\!z^2}+\ldots
+\end{align}
+is called {\em Lambert series}.\, We here consider more closely only the special case
+\begin{align}
+\sum_{n=1}^\infty\frac{x^n}{1\!-\!x^n} \;=\; \frac{x}{1\!-\!x}+\frac{x^2}{1\!-\!x^2}+\ldots
+\end{align}
+for the real \PMlinkescapetext{variable} $x$.\\
+
+
+
+\textbf{I.\; Convergence}\\
+
+$1^\circ.$\; $x = \pm1$:\; The series is not defined.\\
+
+$2^\circ.$\;  $|x| > 1$:\; We have
+
+\[
+\frac{x^n}{1\!-\!x^n} \;=\; \frac{1}{\frac{1}{x^n}\!-\!1} \;\to\; -1 \neq 0 
+\quad \mbox{as}\;\; n \to \infty,
+\]
+whence the series (2) diverges.\\
+
+$3^\circ.$\;  $0 \leqq x < 1$:\; The series with nonnegative terms converges, since
+\[
+\sqrt[n]{\frac{x^n}{1\!-\!x^n}} \;=\; \frac{x}{\sqrt[n]{1\!-\!x^n}} \;\to\; x < 1
+\quad \mbox{as}\;\; n \to \infty.
+\]
+
+$4^\circ.$\;  $-1 < x < 0$:\; We get an alternating series with
+\[
+\left|\frac{x^n}{1\!-\!x^n}\right| \;=\; \frac{|x|^n}{|1\!-\!x^n|} \;\leqq\; \frac{|x|^n}{1\!-\!|x|^n}
+\;\leqq\; \frac{|x|^n}{1\!-\!|x|} \;\to\; 0 \quad \mbox{as}\;\; n \to \infty,
+\]
+and by Leibniz theorem, the series converges.\\
+
+Thus we have the result that the Lambert series (2) converges, \PMlinkescapetext{even} absolutely, when\, $|x| < 1$.\\
+
+
+\PMlinkescapetext{\textbf{II.\; Power series expansion}}\\
+
+Let\, $|x| < 1$.\, \PMlinkescapetext{Expand} the terms to geometric series:\\
+\begin{tabular}{lcrrrrrrrrrrrrrrr}
+$\displaystyle\frac{x}{1\!-\!x}$&$=$&$x$&$+$&$x^2$&$+$&$x^3$&$+$&$x^4$&$+$&$x^5$&$+$&$x^6$&$+$&$\ldots$\\
+$\displaystyle\frac{x^2}{1\!-\!x^2}$&$=$&$$&$$&$x^2$&$$&$$&$+$&$x^4$&$$&$$&$+$&$x^6$&$+$&$\ldots$\\
+$\displaystyle\frac{x^3}{1\!-\!x^3}$&$=$&$$&$$&$$&$$&$x^3$&$$&$$&$$&$$&$+$&$x^6$&$+$&$\ldots$\\
+$\displaystyle\frac{x^4}{1\!-\!x^4}$&$=$&$$&$$&$$&$$&$$&$$&$x^4$&$$&$$&$$&$$&$+$&$\ldots$\\
+$\displaystyle\frac{x^5}{1\!-\!x^5}$&$=$&$$&$$&$$&$$&$$&$$&$$&$$&$x^5$&$$&$$&$+$&$\ldots$\\
+$\displaystyle\frac{x^6}{1\!-\!x^6}$&$=$&$$&$$&$$&$$&$$&$$&$$&$$&$$&$$&$x^6$&$+$&$\ldots$\\
+$\displaystyle\;\;\ldots$&$$&$\ldots$&$$&$\ldots$&$$&$\ldots$&$$&$\ldots$&$$&$\ldots$&$$&$\ldots$&$$&$\ldots$\\
+\end{tabular}
+
+Those geometric series converge absolutely,
+\[
+|x^k|+|x^{2k}|+|x^{3k}|+\ldots \;=\; \frac{|x|^k}{1\!-\!|x|^k}
+\]
+and the series $\displaystyle\sum_{k=1}^\infty\frac{|x|^k}{1\!-\!|x|^k}$ converges.\, Thus we can sum the geometric series by the columns:
+\[
+\sum_{n=1}^\infty\frac{x^n}{1\!-\!x^n} \;=\; x+2x^2+2x^3+3x^4+2x^5+4x^6+\ldots
+\]
+Apparently, the coefficient of any $x^k$ in this power series expresses, by how many positive integers the number $k$ is divisible, i.e. the coefficient is given by the divisor function $\tau$.\, So we may write the power series form of the Lambert series as
+\[
+\sum_{n=1}^\infty\frac{x^n}{1\!-\!x^n} \;=\; \tau(1)x+\tau(2)x^2+\tau(3)x^3+\ldots
+\]
+
+%%%%%
+%%%%%
+\end{document}

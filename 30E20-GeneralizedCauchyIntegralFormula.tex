@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedCauchyIntegralFormula}
+\pmcreated{2013-03-22 17:46:41}
+\pmmodified{2013-03-22 17:46:41}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{generalized Cauchy integral formula}
+\pmrecord{6}{40236}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmsynonym{generalized Cauchy formula}{GeneralizedCauchyIntegralFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\begin{document}
+\begin{thm}
+Let $U \subset \mathbb{C}$ be a domain with $C^1$ boundary.  Let $f \colon U \to \mathbb{C}$
+be a $C^1$ function that is $C^1$ up to the boundary.  Then for $z \in U,$
+\begin{equation*}
+f(z) =
+\frac{1}{2\pi i}
+\int_{\partial U} \frac{f(w)}{w-z} dw
+-
+\frac{1}{2\pi i}
+\int_{U} \frac{\frac{\partial f}{\partial \bar{z}}(w)}{w-z} d\bar{w} \wedge dw .
+\end{equation*}
+\end{thm}
+
+Note that $C^1$ up to the boundary means that the function and the derivative extend to be continuous
+functions on the closure of $U.$  The theorem follows from Stokes' theorem.  When $f$ is holomorphic,
+then the second term is zero and this is the classical Cauchy integral formula.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

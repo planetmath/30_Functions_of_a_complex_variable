@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfUsingResidueTheorem}
+\pmcreated{2013-03-22 15:19:30}
+\pmmodified{2013-03-22 15:19:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of using residue theorem}
+\pmrecord{19}{37136}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmrelated{ImproperIntegral}
+\pmrelated{Residue}
+\pmrelated{IntegralsOfEvenAndOddFunctions}
+\pmrelated{UsingResidueTheoremNearBranchPoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We take an example of applying the Cauchy residue theorem in evaluating usual real improper integrals.
+
+We shall \PMlinkescapetext{calculate} the integral
+$$I \;:=\; \int_0^\infty\frac{\cos{kx}}{1+x^2}\,dx$$
+where $k$ is any real number.\, One may prove that the integrand has no antiderivative among the elementary functions if\, $k \neq 0$.
+
+Since the integrand is an \PMlinkname{even}{EvenoddFunction} and\, $x\mapsto\frac{\sin{kx}}{1+x^2}$\, an odd function, we may write
+$$I \;=\; \frac{1}{2}\int_{-\infty}^\infty\frac{\cos{kx}+i\sin{kx}}{1+x^2}\,dx
+    \;=\; \frac{1}{2}\int_{-\infty}^\infty\frac{e^{ikx}}{1+x^2}\,dx,$$
+using also Euler's formula.\, Let's consider the contour integral
+$$J \;:=\; \oint_\gamma\frac{e^{ikz}}{1+z^2}\,dz$$
+where $\gamma$ is the perimeter of the semicircle consisting of the line segment from $(-R,\,0)$ to $(R,\,0)$ and the semi-circular arc $c$ connecting these points in the upper half-plane ($R > 1$).\, The integrand is analytic on and inside of $\gamma$ except in the point\, $z = i$\, which is a simple pole.\, Because we have (cf. the coefficients of Laurent series)
+$$\operatorname{Res}\left(\frac{e^{ikz}}{1+z^2},\;i\right) \;=\; 
+  \lim_{z\to i}(z-i)\frac{e^{ikz}}{z^2+1} \;=\; \lim_{z\to i}\frac{e^{ikz}}{z+i}
+\;=\; \frac{e^{-k}}{2i},$$
+the \PMlinkname{residue theorem}{CauchyResidueTheorem} yields 
+$$J \;=\; 2\pi i\!\cdot\!\frac{e^{-k}}{2i} \;=\; \pi e^{-k}.$$
+This does not depend on the radius $R$ of the circle.
+\begin{center}
+\begin{pspicture}(-3,-1)(3,3)
+\rput(-2.9,-1){.}
+\rput(2.9,2.9){.}
+\psline{->}(0,-0.7)(0,3)
+\psline(-3,0)(-2.5,0)
+\psline{->}(2.5,0)(3,0)
+\psdot[linecolor=red](0,1)
+\rput(-0.25,1){$i$}
+\rput(2.5,-0.3){$R$}
+\rput(-0.25,-0.25){0}
+\rput(1.9,1.9){$c$}
+\psline[linecolor=blue](-2.5,0)(2.5,0)
+\psline[linecolor=blue](-2.5,0.02)(2.5,0.02)
+\psarc[linecolor=blue](0,0){2.5}{0}{180}
+\end{pspicture}
+\end{center}
+We split the integral $J$ in two portions:\, one along the diameter and the other along the circular arc $c$.\, So we obtain
+$$\int_{-R}^R\frac{e^{ikx}}{1+x^2}\,dx+\!\int_c\frac{e^{ikz}}{1+z^2}\,dz \;\,=\;\, 
+  \pi e^{-k}.$$
+When \,$R\to\infty$,\, the former portion tends to the limit $2I$ and the latter --- as we at once shall see --- to the limit 0.\, Hence we get the result
+$$I \;=\; \int_0^\infty\frac{\cos{kx}}{1+x^2}\,dx \;=\; \frac{\pi}{2e^k}.$$
+
+As for the latter part of $J$, we denote\, $z := x+iy$ ($x,\,y\in\mathbb{R}$);\, then on the arc $c$, where\, $|z| = R$\, and \,$y\geqq 0$, we have
+$$\left|\frac{e^{ikz}}{1+z^2}\right| \;=\; \frac{|e^{-ky+ikx}|}{|1+z^2|} 
+ \;=\; \frac{e^{-ky}}{|1+z^2|} \;\leqq\; \frac{1}{R^2\!-\!1}.$$
+Using this estimation of the integrand we get, according the integral estimating theorem, the inequality
+$$\left|\int_c\frac{e^{ikz}}{1+z^2}\,dz\right| \;\leqq\; \frac{1}{R^2\!-\!1}\!\cdot\!\pi R \;=\; \frac{\pi}{R\!-\!\frac{1}{R}}.$$
+Since the right hand member tends to 0 as\, $R\to\infty$, then also the left hand member.
+
+%%%%%
+%%%%%
+\end{document}

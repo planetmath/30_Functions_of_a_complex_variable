@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyIntegralTheorem}
+\pmcreated{2013-03-22 12:54:12}
+\pmmodified{2013-03-22 12:54:12}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Cauchy integral theorem}
+\pmrecord{16}{33253}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmsynonym{fundamental theorem of complex analysis}{CauchyIntegralTheorem}
+\pmrelated{ClosedCurveTheorem}
+\pmrelated{CauchyResidueTheorem}
+\pmdefines{Goursat's Theorem}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+\newtheorem{theorem}[proposition]{Theorem}
+\newcommand{\nl}[1]{{\PMlinkescapetext{{#1}}}}
+\newcommand{\pln}[2]{{\PMlinkname{{#1}}{#2}}}
+\begin{document}
+\begin{theorem}
+Let $U\subset\cnums$ be an open, simply connected domain, and let
+$f:U\rightarrow \cnums$ be a function whose complex derivative, that is
+$$\lim_{w\rightarrow z} \frac{f(w)-f(z)}{w-z},$$
+exists for all $z\in U$.
+Then, the \PMlinkname{integral}{Integral2} around  every closed contour
+$\gamma\subset U$ vanishes; in symbols
+$$\oint_\gamma f(z)\, dz = 0.$$
+\end{theorem}
+
+We also have the following, technically important generalization
+involving  removable singularities.
+\begin{theorem}
+  Let $U\subset\cnums$ be an open, simply connected domain, and
+  $S\subset U$ a finite subset. Let $f:U\backslash S \rightarrow
+  \cnums$ be a function whose complex derivative exists for all $z\in
+  U\backslash S$, and that is bounded near all $z\in S$.  Let $\gamma\subset    
+   U\backslash S$ be a closed contour 
+  that avoids the exceptional points.  Then, the integral of $f$ around $\gamma$ vanishes.
+\end{theorem}
+
+
+Cauchy's theorem is an essential stepping stone in the theory of
+complex analysis. It is required for the proof of the Cauchy integral
+formula, which in turn is required for the proof that the existence of
+a complex derivative implies a power series representation.
+
+The original version of the theorem, as stated by Cauchy in the early
+1800s, requires that the derivative $f'(z)$ exist and be continuous.
+The existence of $f'(z)$ implies the Cauchy-Riemann equations, which
+in turn can be restated as the fact that the complex-valued
+differential $f(z)\, dz$ is closed. The original proof makes use of
+this fact, and calls on Green's Theorem to conclude that the contour
+integral vanishes. The proof of Green's theorem, however, involves an
+interchange of order in a double integral, and this can only be
+justified if the integrand, which involves the real and imaginary
+parts of $f'(z)$, is assumed to be continuous. To this date, many
+authors prove the theorem this way, but erroneously fail to mention
+the continuity assumption.
+
+In the latter part of the $19\supth$ century E. Goursat found a proof
+of the integral theorem that merely required that $f'(z)$ exist.
+Continuity of the derivative, as well as the existence of all higher
+derivatives, then follows as a consequence of the Cauchy integral
+formula. Not only is Goursat's version a sharper result, but it is
+also more elementary and self-contained, in that sense that it is does
+not require Green's theorem. Goursat's argument makes use of
+rectangular contour (many authors use triangles though), but the
+extension to an arbitrary simply-connected domain is relatively
+straight-forward.
+
+\begin{theorem}[Goursat]
+Let $U$ be an open domain containing a rectangle
+$$R = \{ x+iy\in\cnums: a\leq x\leq b\,, c\leq y\leq d\}.$$
+If the complex derivative of a function $f:U\rightarrow \cnums$ exists
+at all points of $U$, then the contour integral of $f$ around the
+boundary of $R$ vanishes; in symbols
+$$\oint_{\partial R} f(z)\,dz = 0.$$
+\end{theorem}
+
+\paragraph{Bibliography.}
+\begin{itemize}
+\item  Ahlfors, L., Complex Analysis. McGraw-Hill, 1966.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

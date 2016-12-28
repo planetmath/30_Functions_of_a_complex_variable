@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MobiusTransformationCrossratioPreservationTheorem}
+\pmcreated{2013-03-22 13:35:50}
+\pmmodified{2013-03-22 13:35:50}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{M\"obius transformation cross-ratio preservation theorem}
+\pmrecord{9}{34222}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmrelated{CrossRatio}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A M\"obius transformation $f: z \mapsto w$ preserves the cross-ratios, i.e. \\
+\begin{displaymath}
+\frac{(w_1-w_2)(w_3-w_4)}{(w_1-w_4)(w_3-w_2)} = \frac{(z_1-z_2)(z_3-z_4)}{(z_1-z_4)(z_3-z_2)}
+\end{displaymath}
+
+Conversely, given two quadruplets which have the same cross-ratio, there
+exists a M\"obius transformation which maps one quadruplet to the other.
+
+A consequence of this result is that the cross-ratio of $(a,b,c,d)$ is the
+value at $a$ of the M\"obius transformation that takes $b$, $c$, $d$, to
+$1$, $0$, $\infty$ respectively.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EvaluatingTheGammaFunctionAt12}
+\pmcreated{2013-03-22 16:57:13}
+\pmmodified{2013-03-22 16:57:13}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{evaluating the gamma function at 1/2}
+\pmrecord{4}{39223}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{33B15}
+\pmrelated{AreaUnderGaussianCurve}
+\pmrelated{LaplaceTransformOfPowerFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In the entry on the gamma function it is mentioned that $\Gamma(1/2) =
+\sqrt{\pi}$.  In this entry we reduce the proof of this claim to the
+problem of computing the area under the bell curve.  First note that by
+definition of the gamma function,
+\begin{align*}
+\Gamma(1/2) 
+&= \int_0^{\infty} e^{-x} x^{-1/2}\,dx \\
+&=  2\int_0^{\infty} e^{-x} \frac{1}{2\sqrt{x}}\,dx.
+\end{align*}
+Performing the substitution $u = \sqrt{x}$, we find that $du =
+\frac{1}{2\sqrt{x}}\,dx$, so
+\[
+\Gamma(1/2) = 2\int_0^{\infty} e^{-u^2}\,du = \int_{\mathbb{R}} e^{-u^2}\,du,
+\]
+where the last equality holds because $e^{-u^2}$ is an even function.
+Since the area under the bell curve is $\sqrt{\pi}$, it follows that
+$\Gamma(1/2) = \sqrt{\pi}$.
+
+\PMlinkescapeword{equality}
+%%%%%
+%%%%%
+\end{document}

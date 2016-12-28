@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HyperbolicSineIntegral}
+\pmcreated{2013-03-22 18:27:48}
+\pmmodified{2013-03-22 18:27:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{hyperbolic sine integral}
+\pmrecord{7}{41131}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmsynonym{Shi}{HyperbolicSineIntegral}
+\pmrelated{HyperbolicFunctions}
+\pmrelated{SineIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Shi}{Shi}
+\DeclareMathOperator{\Si}{Si}
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{expansion}
+The function {\em hyperbolic sine integral} (in Latin {\em sinus hyperbolicus integralis}) from $\mathbb{R}$ to $\mathbb{R}$ is defined as
+\begin{align}
+\Shi{x} \,:=\, \int_0^x\frac{\sinh t}{t}\,dt,
+\end{align}
+or alternatively as
+$$\Shi{x} \,:=\, \int_0^1\frac{\sinh{tx}}{t}\,dt.$$\\
+
+It isn't an elementary function.\, The equation (1) implies the Taylor series expansion
+   $$\Shi{z} = z\!+\!\frac{z^3}{3\!\cdot\!3!}\!+\!\frac{z^5}{5\!\cdot\!5!}
+                \!+\!\frac{z^7}{7\!\cdot\!7!}\!+\cdots,$$
+which converges for all complex values $z$ and thus defines an entire transcendental function.\, 
+Using the Taylor expansions, it is easily seen that
+$$\Shi x \;=\; i\,\Si{ix}$$
+connects Shi to the sine integral function.\\
+
+$\Shi{x}$ satisfies the linear third \PMlinkescapetext{order} differential equation
+          $$xf'''(x)\!+\!2f''(x)\!-\!xf'(x) = 0.$$
+
+%%%%%
+%%%%%
+\end{document}

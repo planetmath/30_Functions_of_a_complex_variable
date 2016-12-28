@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimpleExampleOfComposedConformalMapping}
+\pmcreated{2013-03-22 16:47:25}
+\pmmodified{2013-03-22 16:47:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{simple example of composed conformal mapping}
+\pmrecord{8}{39023}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+\pmclassification{msc}{53A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let's consider the mapping
+$$f\colon \mathbb{C}\to\mathbb{C} \quad \mathrm{with}\quad f(z) = az\!+\!b,$$
+where $a$ and $b$ are complex \PMlinkescapetext{constants} and\, $a \neq 0$.
+
+Because\, $f'(z) \equiv a \neq 0$,\, the mapping is conformal in the whole 
+$z$-plane.\, Denote\, $\displaystyle a := \varrho e^{i\alpha}$ (where\, $\varrho,\,\alpha \in\mathbb{R}$) and
+\begin{align}
+z_1 := \varrho z,
+\end{align}
+\begin{align}
+z_2 := e^{i\alpha}z_1,
+\end{align}
+\begin{align}
+w := z_2\!+\!b.
+\end{align}
+Then the mapping\, $z\mapsto z_1$\, means a dilation in the complex plane, the mapping\, $z_1\mapsto z_2$\, a rotation by the angle $\alpha$ and the mapping\, $z_2\mapsto w$\, a translation determined by the vector from the origin to the point $b$.\, Thus $f$ is composed of these three consecutive mappings which all are conformal.
+
+\begin{figure}
+\begin{center}
+\includegraphics{simple1}
+\end{center}
+\caption{The mapping from $z$ to $z_1$}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics{simple2}
+\end{center}
+\caption{The mapping from $z_1$ to $z_2$}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics{simple3}
+\end{center}
+\caption{The mapping from $z_2$ to $w$}
+\end{figure}
+
+%%%%%
+%%%%%
+\end{document}

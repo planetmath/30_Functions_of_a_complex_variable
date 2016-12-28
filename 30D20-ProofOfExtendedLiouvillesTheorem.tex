@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfExtendedLiouvillesTheorem}
+\pmcreated{2013-03-22 16:18:31}
+\pmmodified{2013-03-22 16:18:31}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of extended Liouville's theorem}
+\pmrecord{8}{38431}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+\begin{document}
+This is a proof of the second, more general, form of Liouville's theorem given in the \PMlinkname{parent}{LiouvillesTheorem2} article.
+
+Let $f:\Complex\to\Complex$ be a holomorphic function such that
+$$|f(z)| < c \cdot |z|^n$$
+for some $c\in\Reals$ and for $z\in\Complex$ with $|z|$ sufficiently large. Consider
+$$g(z)=\begin{cases}\frac{f(z)-f(0)}{z}&z\neq 0\\
+f'(0)&z=0
+\end{cases}
+$$
+Since $f$ is holomorphic, $g$ is as well, and by the bound on $f$, we have
+\[|g(z)|< c_1 + c_2 \cdot |z|^{n-1} < c'\cdot |z|^{n-1}\]
+again for $|z|$ sufficiently large.
+
+By induction, $g$ is a polynomial of degree at most $n-1$, and thus $f$ is a polynomial of degree at most $n$.
+%%%%%
+%%%%%
+\end{document}

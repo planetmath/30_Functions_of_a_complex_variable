@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeierstrassFactorizationTheorem}
+\pmcreated{2013-03-22 14:19:31}
+\pmmodified{2013-03-22 14:19:31}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Weierstrass factorization theorem}
+\pmrecord{8}{35794}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C15}
+\pmsynonym{Weierstrass product theorem}{WeierstrassFactorizationTheorem}
+\pmrelated{MittagLefflersTheorem}
+\pmdefines{elementary factor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+There are several different statements of this theorem, but in essence this theorem will allow us to prescribe zeros and their orders of a holomorphic function.  It also allows us to factor any holomorphic function into
+a product of zeros and a non-zero holomorphic function.  We will need to know
+here how an infinite product converges.  It can then be shown
+that if $\prod_{k=1}^\infty f_k(z)$ converges uniformly and \PMlinkname{absolutely}{AbsoluteConvergenceOfInfiniteProduct}
+on compact subsets, then it converges to a holomorphic function given that all the $f_k(z)$ are holomorphic.  This is what we will \PMlinkescapetext{mean} by the infinite product in what follows.
+
+Note that once we can prescribe zeros of a function then we can also prescribe the poles as well and get a meromorphic function just by dividing
+two holomorphic functions $f/h$ where $f$ will contribute zeros, and
+$h$ will make poles at the points where $h(z) = 0$.  So let's start with the existence statement.
+
+\begin{thm}[Weierstrass Product]
+Let $G \subset {\mathbb{C}}$ be a domain, let $\{a_k\}$ be a sequence of
+points in $G$ with no accumulation points in $G$, and let $\{n_k\}$ be any
+sequence of non-zero integers (positive or negative).
+Then there exists a function
+$f$ meromorphic in $G$ whose poles and zeros are exactly at the points $a_k$
+and the order of the pole or zero at $a_k$ is $n_k$
+(a positive order stands for zero, negative stands for pole).
+\end{thm}
+
+Next let's look at a more specific statement with more \PMlinkescapetext{restrictions}.  For
+one let's start looking at the whole complex plane and further let's forget about poles for now to make the following formulas simpler.
+
+\begin{defn}
+We call
+\begin{align*}
+E_0(z) & := 1-z,
+\\
+E_p(z) & := (1-z) e^{z+\frac{1}{2}z^2 + \cdots + \frac{1}{p} z^p} \qquad \text{for $p \geq 1$},
+\end{align*}
+an {\em elementary factor}.
+\end{defn}
+
+Now note that for some $a \in {\mathbb{C}} \backslash \{ 0 \}$, $E_p(z/a)$ has a \PMlinkescapetext{simple} zero (zero of order 1) at $a$.
+
+\begin{thm}[Weierstrass Factorization]
+Suppose $f$ be an entire function and let $\{ a_k \}$ be the zeros of $f$
+such that $a_k \not= 0$ (the non-zero zeros of $f$).  Let $m$ be the order of
+the zero of $f$ at $z=0$ ($m=0$ if $f$ does not have a zero at $z=0$).  Then
+there exists an entire function $g$ and a sequence of non-negative
+integers $\{ p_k \}$ such that
+\begin{equation*}
+f(z) = z^m e^{g(z)} \prod_{k=1}^\infty E_{p_k} \left( \frac{z}{a_k} \right) .
+\end{equation*}
+\end{thm}
+
+Note that we can always choose $p_k = k-1$ and the product above will converge as needed, but we may be able to choose better $p_k$ for specific functions.
+
+\begin{example}
+As an example we can try to factorize the function $\sin (\pi z)$, which has zeros at all the integers.  Applying the Weierstrass factorization theorem directly we get that
+\begin{equation*}
+\sin (\pi z) =
+z e^{g(z)} \prod_{k = -\infty, k \not= 0}^\infty \left( 1 - \frac{z}{k} \right) e^{z/k},
+\end{equation*}
+where $g(z)$ is some holomorphic function.  It turns out that $e^{g(z)} = \pi$,
+and rearranging the product we get
+\begin{equation*}
+\sin (\pi z) =
+z \pi \prod_{k = 1}^\infty \left( 1 - \frac{z^2}{k^2} \right) .
+\end{equation*}
+This is an example where we could choose the $p_k = 1$ for all $k$ and thus
+we could then get rid of the ugly parts of the infinite product.  For \PMlinkescapetext{complete}
+calculations in this example see Conway \cite{Conway:complexI}.
+\end{example}
+
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\bibitem{Gamelin:complex}
+Theodore~B.\@ Gamelin.
+{\em \PMlinkescapetext{Complex Analysis}}.
+Springer-Verlag, New York, New York, 2001.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

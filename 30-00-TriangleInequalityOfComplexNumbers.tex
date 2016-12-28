@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TriangleInequalityOfComplexNumbers}
+\pmcreated{2013-03-22 18:51:47}
+\pmmodified{2013-03-22 18:51:47}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{triangle inequality of complex numbers}
+\pmrecord{11}{41678}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{12D99}
+\pmsynonym{triangle inequality}{TriangleInequalityOfComplexNumbers}
+\pmrelated{Modulus}
+\pmrelated{ComplexConjugate}
+\pmrelated{SquareOfSum}
+\pmrelated{TriangleInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, All complex numbers $z_1$ and $z_2$ satisfy the triangle inequality
+\begin{align}
+|z_1\!+\!z_z| \;\leqq\;|z_1|+|z_2|.
+\end{align}
+
+\emph{Proof.}
+\begin{align*}
+|z_1\!+\!z_2|^2 &\;=\; (z_1+z_2)\overline{(z_1+z_2)}\\
+&\;=\; (z_1+z_2)(\overline{z_1}+\overline{z_2})\\
+&\;=\; z_1\overline{z_1}+z_2\overline{z_2}+z_1\overline{z_2}+\overline{z_1}z_2\\
+&\;=\; |z_1|^2+|z_2|^2+z_1\overline{z_2}+\overline{z_1\overline{z_2}}\\
+&\;=\; |z_1|^2+|z_2|^2+2\mbox{Re}(z_1\overline{z_2})\\
+&\;\leqq\; |z_1|^2+|z_2|^2+2|z_1\overline{z_2}|\\
+&\;=\; |z_1|^2+|z_2|^2+2|z_1|\cdot|\overline{z_2}|\\
+&\;=\; (|z_1|+|z_2|)^2
+\end{align*}
+Taking then the nonnegative square root, one obtains the asserted inequality.\\
+
+
+\textbf{Remark.}\, Since the real numbers are complex numbers, the inequality (1) and its proof are valid also for all real numbers; however the inequality \PMlinkescapetext{chain} may be simplified to
+$$|x+y|^2 \leqq (x+y)^2 = x^2+2xy+y^2 \leqq x^2+2|x||y|+y^2 = |x|^2+2|x||y|+|y|^2 = (|x|+|y|)^2.$$
+
+%%%%%
+%%%%%
+\end{document}

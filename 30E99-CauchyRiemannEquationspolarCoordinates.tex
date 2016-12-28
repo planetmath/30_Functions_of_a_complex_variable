@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyRiemannEquationspolarCoordinates}
+\pmcreated{2013-03-22 14:03:58}
+\pmmodified{2013-03-22 14:03:58}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Cauchy-Riemann equations (polar coordinates)}
+\pmrecord{8}{35423}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+\pmrelated{TangentialCauchyRiemannComplexOfCinftySmoothForms}
+\pmrelated{ACRcomplex}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose $A$ is an open set in $\mathbb{C}$ and $f(z)=f(re^{i\theta})=u(r,\theta)+iv(r,\theta): A\subset\mathbb{C} \to \mathbb{C}$ is a function.  If the derivative of $f(z)$ exists at $z_0=(r_0,\theta_0)$.  Then the functions $u$, $v$ at $z_0$ satisfy:
+\begin{eqnarray*}
+\frac{\partial u}{\partial r} & = & \frac{1}{r}\frac{\partial v}{\partial \theta}\\
+\frac{\partial v}{\partial r} & = & -\frac{1}{r}\frac{\partial u}{\partial \theta}
+\end{eqnarray*}
+which are called \emph{Cauchy-Riemann equations} in polar form.\\\\
+%%%%%
+%%%%%
+\end{document}

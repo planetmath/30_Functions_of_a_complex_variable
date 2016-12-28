@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralPower}
+\pmcreated{2013-03-22 14:43:17}
+\pmmodified{2013-03-22 14:43:17}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{general power}
+\pmrecord{31}{36347}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmsynonym{complex power}{GeneralPower}
+\pmrelated{Logarithm}
+\pmrelated{ExponentialOperation}
+\pmrelated{GeneralizedBinomialCoefficients}
+\pmrelated{PuiseuxSeries}
+\pmrelated{PAdicExponentialAndPAdicLogarithm}
+\pmrelated{FractionPower}
+\pmrelated{SomeValuesCharacterisingI}
+\pmrelated{UsingResidueTheoremNearBranchPoint}
+\pmdefines{base of the power}
+\pmdefines{base}
+\pmdefines{exponent}
+\pmdefines{branch}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The {\em general power}\, $z^\mu$, where $z\,(\neq 0)$ and $\mu$ are arbitrary complex numbers, is defined via the complex exponential function and complex logarithm (denoted here by ``$\log$'') of the \PMlinkescapetext{base} by setting
+$$z^\mu := e^{\mu\log{z}} = e^{\mu(\ln{|z|}\!+\!i\arg{z})}.$$
+The number $z$ is the {\em base of the power} $z^\mu$ and $\mu$ is its {\em exponent}.
+
+Splitting the exponent\, $\mu = \alpha+i\beta$\, in its real and imaginary parts one obtains
+$$z^\mu = e^{\alpha\ln{|z|}-\beta\arg{z}}\cdot e^{i(\beta\ln{|z|}+\alpha\arg{z})},$$
+and thus
+$$|z^\mu| =e^{\alpha\ln{|z|}-\beta\arg{z}}, 
+          \quad \arg{z^\mu} = \beta\ln{|z|}\!+\!\alpha\arg{z}.$$
+This shows that both the modulus and the \PMlinkname{argument}{Complex} of the general power are in general multivalued.\, The modulus is unique only if\, $\beta = 0$,\, i.e. if the exponent\, $\mu = \alpha$\, is real; in this case we have
+$$|z^\mu| = |z|^\mu, \quad \arg{z^\mu} = \mu\cdot\arg{z}.$$
+
+Let\, $\beta \neq 0$.\, If one lets the point $z$ go round the origin anticlockwise, $\arg{z}$ gets an addition $2\pi$ and hence the \PMlinkescapetext{power} $z^\mu$ has been multiplied by a \PMlinkescapetext{factor} having the modulus\, $e^{-2\pi\beta} \neq 1$, and we may say that $z^\mu$ has come to a new {\em branch}.\\
+
+
+\textbf{Examples}
+\begin{enumerate}
+\item $z^{\frac{1}{m}}$, where $m$ is a positive integer, coincides with the $m^\mathrm{th}$ \PMlinkname{root}{CalculatingTheNthRootsOfAComplexNumber} of $z$.
+\item $\displaystyle 3^2 = e^{2\log{3}} = e^{2(\ln{3}+2n\pi i)} = 9(e^{2\pi i})^{2n} = 9$\,\,
+  $\forall n\in\mathbb{Z}$.
+\item $\displaystyle i^i = e^{i\log{i}} = e^{i(\ln{1}+\frac{\pi}{2}i-2n\pi i)} =
+  e^{2n\pi-\frac{\pi}{2}}$\,\, (with\, $n = 0,\,\pm1,\,\pm2,\,\ldots$);\, all these values are positive real numbers, the simplest of them is\, $\displaystyle\frac{1}{\sqrt{e^\pi}} \approx 0.20788$.
+\item $(-1)^i = e^{(2n+1)\pi}$\, (with\, $n = 0,\,\pm1,\,\pm2,\,\ldots$)\, also are situated on the positive real axis.
+\item $\displaystyle (-1)^{\sqrt{2}} = e^{\sqrt{2}\log{(-1)}} = 
+  e^{\sqrt{2}i(\pi+2n\pi)} = e^{i(2n+1)\pi\sqrt{2}}$\,\, (with\, 
+$n = 0,\,\pm1,\,\pm2,\,\ldots$);\, all these are \PMlinkescapetext{{\em imaginary numbers}} (meaning here that their imaginary parts are distinct from 0), situated on the circumference of the unit circle such that all points of the circumference are accumulation points of the sequence of the \PMlinkescapetext{powers} $\displaystyle (-1)^{\sqrt{2}}$ (see \PMlinkname{this entry}{SequenceAccumulatingEverywhereIn11}). 
+\item $2^{1-i} = 2e^{2n\pi}(\cos\ln{2}+i\sin\ln{2})$\,\, (with\, $n = 0,\pm1,\,\pm2,\,\ldots$), are situated on the half line beginning from the origin with the argument $\ln{2} \approx 0.69315$ radians.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

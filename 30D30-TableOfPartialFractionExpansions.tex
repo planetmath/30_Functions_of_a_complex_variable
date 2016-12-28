@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TableOfPartialFractionExpansions}
+\pmcreated{2013-03-22 15:44:29}
+\pmmodified{2013-03-22 15:44:29}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{table of partial fraction expansions}
+\pmrecord{20}{37692}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmrelated{ElementaryFunction}
+\pmrelated{GammaFunction}
+\pmrelated{HypergeometricFunction}
+\pmrelated{EllipticFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The purpose of this entry is to collect a table of Mittag-Leffler type
+partial fraction expansions for various functions.
+
+\section{Elementary Functions}
+
+\begin{eqnarray}
+\pi \cot (\pi z) &=& {1 \over z} + \sum_{n=1}^\infty \left( {1 \over z -
+n} + {1 \over z + n} \right) \\
+\pi \sec (\pi z) &=& {2 \over 1 - 2z} + \sum_{k=1}^\infty (-1)^{k+1}
+\left( {2 \over 2k - 1 - 2z} - {2 \over 2k + 1 - 2z}   \right) \\
+\end{eqnarray}
+
+\section{Hypergeometric Functions}
+\begin{eqnarray}
+{}_2F_1 (z,1;z+1;w) &=& \sum_{k=0}^\infty {w^k \over z+k} \\
+\end{eqnarray}
+
+\section{Gamma Functions}
+
+\begin{eqnarray}
+\psi (z) = {\Gamma'(z) \over \Gamma(z)} + \gamma &=& {1 \over z} +
+\sum_{k=1}^\infty \left( {1 \over k} - {1 \over z + k} \right) \\
+(-1)^n {\psi^{(n)} (z) \over n!} &=& \sum_{k=0}^\infty {1 \over (z + k)^n} \\
+{\Gamma (x) \Gamma(\frac{1}{2}) \over \Gamma (x + \frac{1}{2})} &=&
+\sum_{n=0}^\infty {(2n)! \over 2^{2n} (n!)^2} {1 \over x + n} \\
+\end{eqnarray}
+
+Here $\gamma$ is Mascheroni's constant.
+
+\section{Elliptic Functions}
+
+\begin{eqnarray}
+\wp \left(z \left| \frac{1}{2} \omega, \frac{1}{2} \omega' \right.\right) &=&
+{1 \over z^2} + \sum_{|k| + |k'| \neq 0} \left( 
+{1 \over (z - k \omega - k' \omega')^2} -
+{1 \over (k \omega + k' \omega')^2} \right) \\
+\end{eqnarray}
+%%%%%
+%%%%%
+\end{document}

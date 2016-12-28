@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SignumFunction}
+\pmcreated{2013-03-22 13:36:41}
+\pmmodified{2013-03-22 13:36:41}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{signum function}
+\pmrecord{11}{34243}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{26A06}
+\pmrelated{ModulusOfComplexNumber}
+\pmrelated{HeavisideStepFunction}
+\pmrelated{PlusSign}
+\pmrelated{SineIntegralInInfinity}
+\pmrelated{ListOfImproperIntegrals}
+\pmdefines{Heavyside step function}
+\pmdefines{step function}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\signum}[0]{\mathop{\mathrm{sgn}}}
+\newcommand{\R}[0]{\mathbb{R}}
+
+\begin{document}
+\PMlinkescapeword{analysis}
+\PMlinkescapeword{applications}
+\PMlinkescapeword{arguments}
+\PMlinkescapeword{calculate}
+\PMlinkescapeword{clear}
+\PMlinkescapeword{equation}
+\PMlinkescapeword{onto}
+\PMlinkescapeword{point}
+\PMlinkescapeword{points}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{relation}
+\PMlinkescapeword{relations}
+
+The \emph{signum function} is the function $\signum\colon\R\to \R$
+ \begin{eqnarray*}
+ \signum (x) &=& \left\{ \begin {array}{ll} 
+ -1 & \mbox{when}\,\, x<0, \\
+  0 & \mbox{when}\,\, x=0,\\
+  1 & \mbox{when}\,\, x>0. \\ \end{array} \right.
+ \end{eqnarray*}
+ 
+The following properties hold:
+ \begin{enumerate}
+ \item For all $x\in \R$, $\signum(-x) = -\signum(x).$
+ \item For all $x\in \R$, $|x|=\signum(x) x.$
+ \item For all $x\neq 0$, $\frac{d}{dx}|x|=\signum(x)$.
+ \end{enumerate}
+ 
+Here, we should point out that the signum function
+is often defined simply as $1$ for $x>0$ and $-1$ for $x<0$.
+Thus, at $x=0$, it is left undefined. See for example \cite{kreyszig93}.
+In applications such as the Laplace transform this definition is adequate,
+since the value of a function at a single point does not change the analysis.
+One could then, in fact, set $\signum(0)$ to any value.
+However, setting $\signum(0)=0$ is motivated by the above relations.
+On a related note, we can extend the definition to the extended real numbers
+$\overline{\mathbb{R}}=\mathbb{R}\cup\{\infty,-\infty\}$
+by defining $\signum(\infty)=1$ and $\signum(-\infty)=-1$.
+ 
+A related function is the \emph{Heaviside step function}
+ defined as
+ \begin{eqnarray*}
+ H(x) &=& \left\{ \begin {array}{ll} 0 & \mbox{when}\,\, x< 0, \\
+  1/2 & \mbox{when}\,\, x= 0,\\
+  1 & \mbox{when}\,\, x> 0.\\
+ \end{array} \right.
+ \end{eqnarray*}
+ Again, this function is sometimes left undefined at $x=0$.
+ The motivation for setting $H(0)=1/2$ is that
+ for all $x\in\R$, we then have the relations
+ \begin{eqnarray*}
+ H (x) &=& \frac{1}{2}(\signum(x)+1), \\
+ H(-x) &=& 1-H(x).
+ \end{eqnarray*}
+ This first relation is clear. For the second, we have
+ \begin{eqnarray*}
+ 1-H(x) &=& 1-\frac{1}{2}(\signum(x)+1) \\
+  &=& \frac{1}{2}(1-\signum(x)) \\
+  &=& \frac{1}{2}(1+\signum(- x)) \\
+  &=& H(-x).
+ \end{eqnarray*}
+ 
+{\bf Example} Let $a<b$ be real numbers, and let $f:\R\to\R$ be the
+ piecewise defined function
+ \begin{eqnarray*}
+ f (x) &=& \left\{ \begin {array}{ll} 
+ 4 & \mbox{when}\,\, x\in(a,b), \\
+  0 & \mbox{otherwise.} \\
+ \end{array} \right.
+ \end{eqnarray*}
+ Using the Heaviside step function, we can write
+ \begin{eqnarray}
+ \label{almost}
+  f(x) &=& 4\big(H(x-a) - H(x-b)\big)
+ \end{eqnarray}
+ almost everywhere.
+ Indeed, if we calculate $f$ using equation \ref{almost} we obtain
+ $f(x)=4$ for $x\in(a,b)$, $f(x)=0$ for $x\notin[a,b]$,
+ and $f(a)=f(b)=2$. Therefore, equation \ref{almost}
+ holds at all points except $a$ and $b$.
+ $\Box$
+
+\section{Signum function for complex arguments}
+For a complex number $z$, the signum function is defined as \cite{bachman}
+ \begin{eqnarray*}
+ \signum (z) &=& \left\{ \begin {array}{ll} 
+  0 & \mbox{when}\,\, z=0,\\
+  {z}/{|z|} & \mbox{when}\,\, z\neq 0. \\ \end{array} \right.
+ \end{eqnarray*}
+In other words, if $z$ is non-zero, then $\signum z$ is the projection 
+of $z$ onto the unit circle $\{z\in \mathbb{C} \mid |z| = 1\}$.
+Clearly, the complex signum function reduces to the real signum function
+for real arguments. 
+For all $z\in \mathbb{C}$, we have
+$$ z \signum \overline{z} = |z|,$$
+where $\overline{z}$ is the complex conjugate of $z$. 
+
+\begin{thebibliography}{9}
+ \bibitem {kreyszig93} E. Kreyszig,
+ \emph{Advanced Engineering Mathematics},
+ John Wiley \& Sons, 1993, 7th ed.
+ \bibitem{bachman} G. Bachman, L. Narici, 
+\emph{Functional analysis}, Academic Press, 1966.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConformalRadius}
+\pmcreated{2013-03-22 14:18:33}
+\pmmodified{2013-03-22 14:18:33}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{conformal radius}
+\pmrecord{9}{35771}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C55}
+\pmrelated{RiemannMappingTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn}
+Let $G \subset {\mathbb{C}}$ be a simply connected region that is not the whole
+plane and let $a \in G$ be any point.
+The Riemann mapping theorem tells us that there exists
+a unique one-to-one and onto holomorphic map $f \colon {\mathbb{D}} \to G$ (where
+${\mathbb{D}}$ is the unit disc) such that $f(0) = a$ and $f'(0) > 0$.  Then
+define the {\em conformal radius} $r(G,a) = f'(0)$.
+\end{defn}
+
+\begin{example}
+For example, take $G = B(0,\delta)$ (the open ball of radius $\delta$ around 0) for some $\delta > 0$, then $r(G,0) = \delta$ because
+we have a map $f(z) = \delta \cdot z$ as our unique map.
+And thus this definition
+coincides with our \PMlinkescapetext{normal} definition of radius for this special case.
+\end{example}
+
+\begin{example}
+For another example we look at how the conformal radius is affected by
+the choice of the point $a$.  So suppose that we take $G$ to be the unit disc
+(${\mathbb{D}}$)
+itself and we take some point $a \in {\mathbb{D}}$.
+The unique map that takes 0 to $a$ is
+the map $f(z) = \frac{z+a}{1+\bar{a}z}$ (where $\bar{a}$ is the complex conjugate of $a$) and by the quotient rule we get that
+$f'(z) = \frac{1-\lvert a \rvert^2}{(1+\bar{a}z)^2}$.  And so
+$r({\mathbb{D}},a) = f'(0) = 1-\lvert a \rvert^2$, so the conformal radius
+of the unit disc goes to 0 as we move the point $a$ towards the boundary
+of the disc, and
+it is largest (equal to 1) when $a = 0$.
+\end{example}
+
+From the first example we can now see another way of characterizing the conformal
+radius.  Take the inverse map (inverses of holomorphic one-to-one functions are also always holomorphic) and call it $\varphi \colon 
+G \to {\mathbb{D}}$ (the map such that $\varphi (f(z)) = z$).
+We take the derivative (see the entry on \PMlinkname{univalent functions}{UnivalentFunction}) we get
+$\varphi'(f(0)) = \frac{1}{f'(0)}$, that is
+$\varphi'(a) = \frac{1}{r}$ (where we call $r = r(G,a)$ for brevity now).
+If we multiply the map by
+the conformal radius we get a map $\gamma\colon G \to B(0,r)$ such that
+$\gamma (z) = r \cdot \varphi(z)$ and $\gamma'(a) = 1$.  By uniqueness of the
+map arising from the Riemann mapping theorem we can see that $\gamma$ is
+also unique.  Thus we could define the conformal radius as follows.
+
+\begin{defn}
+Let $G \subset {\mathbb{C}}$ be a region and let $a \in G$ be any
+point.  By application of Riemann mapping
+theorem there exists a unique map $\gamma \colon G \to B(0,r)$ for
+some $r > 0$, such that $\gamma(a) = 0$ and $\gamma'(a) = 1$.  The
+{\em conformal radius} is then defined as $r(G,a) = r$. 
+\end{defn}
+
+This definition gives more of an intuitive understanding of why we'd call this the conformal radius of $G$.  We look at the unique map with $\gamma'(a) = 1$, that is, the map that doesn't ``stretch'' the set.  So the radius of $G$
+with respect to $a$ is really the radius of the unique ball around zero to which $G$ is conformally equivalent without any ``stretching'' needed.
+
+\begin{thebibliography}{9}
+\bibitem{ref1}
+S. Rohde, M. Zinsmeister.  \PMlinkescapetext{Variation of the conformal radius}, \emph{Journal d'Analyse} (to appear).
+Available at
+\PMlinkexternal{http://www.math.washington.edu/~rohde/papers/rozi.ps}{http://www.math.washington.edu/~rohde/papers/rozi.ps}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

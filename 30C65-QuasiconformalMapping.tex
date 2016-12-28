@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuasiconformalMapping}
+\pmcreated{2013-03-22 14:06:43}
+\pmmodified{2013-03-22 14:06:43}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{quasiconformal mapping}
+\pmrecord{13}{35515}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C65}
+\pmclassification{msc}{30C62}
+\pmsynonym{K-quasiconformal mapping}{QuasiconformalMapping}
+%\pmkeywords{quasiconformal}
+%\pmkeywords{quasisymmetric}
+%\pmkeywords{dilatation}
+\pmrelated{QuasisymmetricMapping}
+\pmrelated{BeurlingAhlforsQuasiconformalExtension}
+\pmrelated{ConformalMapping}
+\pmrelated{BeltramiDifferentialEquation}
+\pmdefines{dilatation}
+\pmdefines{small dilatation}
+\pmdefines{maximal dilatation}
+\pmdefines{complex dilatation}
+\pmdefines{$K$-quasiconformal}
+\pmdefines{K-quasiconformal}
+\pmdefines{quasiconformal}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+{\em Quasiconformal mappings} are mappings of the complex plane to itself that are ``almost'' conformal.  That is, they do not distort angles arbitrarily and this ``distortion'' is uniformly bounded throughout their domain of definition.  Alternatively one can think of quasiconformal mappings as mappings which take infinitesimal circles to infinitesimal ellipses.  For example invertible linear maps are quasiconformal.
+
+More rigorously, suppose $f$ is a mapping of the complex plane to itself, and here we will only consider sense-preserving mappings, that is mappings with a positive jacobian.
+
+\begin{defn}
+Define the {\em dilatation} of the mapping $f$ at the point $z$ as
+\begin{equation*}
+D_f(z) := \frac{\lvert f_z \rvert + \lvert f_{\bar{z}} \rvert}{\lvert f_z \rvert-\lvert f_{\bar{z}}\rvert} \geq 1 ,
+\end{equation*}
+and define
+the {\em maximal dilatation} of the mapping as
+\begin{equation*}
+K_f := \sup_z D_f(z) .
+\end{equation*}
+\end{defn}
+
+Now we are ready to define what it means for $f$ to be quasiconformal.
+
+\begin{defn}
+For $f$ as above, we will call $f$ {\em quasiconformal} if the maximal
+dilatation of $f$ is finite.  We will say that $f$
+is $K$-quasiconformal mapping if the maximal dilatation of this mapping is $K$.
+\end{defn}
+
+Note that sometimes the \PMlinkescapetext{term} $K$-quasiconformal is used to \PMlinkescapetext{mean} that the dilatation is $K$ or lower.
+
+It is easy to see that a conformal sense-preserving mapping has a dilatation of $1$ since $\lvert f_{\bar{z}} \rvert = 0$.  We can further define several
+other related quantities
+
+\begin{defn}
+For $f$ as above, define the {\em small dilatation} as
+\begin{equation*}
+d_f(z) := \frac{\lvert f_{\bar{z}} \rvert}{\lvert f_z \rvert} .
+\end{equation*}
+\end{defn}
+
+Again for sense-preserving maps this quantity is less then 1 and it is equal to 0 if the mapping is conformal.  Some authors call a map $k$-quasiconformal if the small dilatation is bounded by $k$.  It is however not ambiguous as the large dilatation is always greater then or equal to 1.  Furthermore this is related to the large dilatation by
+\begin{equation*}
+d_f := \frac{D_f-1}{D_f+1} .
+\end{equation*}
+
+\begin{defn}
+For $f$ as above, define the {\em complex dilatation} as
+\begin{equation*}
+\mu_f(z) := \frac{f_{\bar{z}}}{f_z} .
+\end{equation*}
+\end{defn}
+
+The complex dilatation now appears in the Beltrami differential equation
+\begin{equation*}
+f_{\bar{z}}(z) = \mu_f(z)f_z(z) .
+\end{equation*}
+This means that a quasiconformal mapping is a solution to the Beltrami equation where a non-negative measurable $\mu_f$ is uniformly bounded by some $k < 1$.
+
+The above results are stated for $f\colon {\mathbb{C}} \to {\mathbb{C}}$, but
+the statements are exactly the same if you take $f\colon G \subset {\mathbb{C}} \to {\mathbb{C}}$ for an open set $G$.
+
+The theory generalizes to other dimensions as well.  For example in one real dimension, the analogous mappings are called quasisymmetric.  It is a well-known \PMlinkname{theorem of Beurling and Ahlfors}{BeurlingAhlforsQuasiconformalExtension} that an \PMlinkescapetext{extension} of a mapping of the real line to itself is quasiconformal if and only if the mapping is quasisymmetric.
+
+\begin{thebibliography}{9}
+\bibitem{ahlfors}
+L.\@ V.\@ Ahlfors. \emph{\PMlinkescapetext{Lectures on Quasiconformal
+Mappings}}. Van Nostrand-Reinhold, Princeton, New Jersey, 1966
+\bibitem{lebl2003}
+J.\@ Lebl. \emph{\PMlinkescapetext{Quasiconformal Extensions of Quasisymmetric
+Mappings}}. \PMlinkescapetext{Masters thesis, San Diego State University, San
+Diego, CA, May 2003}. Also available at
+\PMlinkexternal{http://www.jirka.org/thesis.pdf}{http://www.jirka.org/thesis.pdf}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

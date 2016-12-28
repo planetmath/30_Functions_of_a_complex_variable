@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PeriodicFunctions}
+\pmcreated{2013-03-22 16:51:30}
+\pmmodified{2013-03-22 16:51:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{periodic functions}
+\pmrecord{17}{39106}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D20}
+\pmclassification{msc}{30D05}
+\pmclassification{msc}{30A99}
+\pmsynonym{periodic function}{PeriodicFunctions}
+\pmrelated{EllipticFunction}
+\pmrelated{PossibleDegreesOfEllipticFunctions}
+\pmrelated{PeriodicityOfExponentialFunction}
+\pmrelated{PeriodicExtension}
+\pmrelated{CounterperiodicFunction}
+\pmrelated{RolfNevanlinna}
+\pmrelated{ExamplesOfPeriodicFunctions}
+\pmdefines{one-periodic}
+\pmdefines{two-periodic}
+\pmdefines{doubly periodic}
+\pmdefines{prime period}
+\pmdefines{primitive period}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+This entry concerns the periodicity of the meromorphic functions.
+
+\textbf{Theorem 1.}\, If $\omega$ is a period of a function $f$, then also $n\omega$, with $n$ an arbitrary integer, is a period of $f$.
+
+{\em Proof.}\, For the positive values of $n$ the theorem is easily proved by induction.\, If $n$ then is any negative integer $-k$, we can write
+$$f(z-k\omega) = f((z\!-\!k\omega)\!+\!k\omega) = f(z)$$
+which is true for all $z$'s. Q.E.D.
+
+\textbf{Note.}\, If a function has no other periods than\,  $\pm\omega,\,\pm2\omega,\,\pm3\omega,\,\ldots$,\, the function is called {\em one-periodic} and $\omega$ the {\em prime period} or {\em primitive period} of the function.\, Examples of one-periodic functions are the trigonometric functions sine and cosine (with prime period $2\pi$), tangent and cotangent (prime period $\pi$), the exponential function and the \PMlinkname{hyperbolic sine and cosine}{HyperbolicFunctions} (with prime period $2i\pi)$, \PMlinkname{hyperbolic tangent and cotangent}{HyperbolicFunctions} (prime period $i\pi$).
+
+\textbf{Theorem 2.}\, The \PMlinkname{moduli}{Complex} of all periods of a non-constant meromorphic function $f$ have a positive lower bound.
+
+{\em Proof.}\, Antithesis:\, there are periods of $f$ with arbitrarily little modulus.\, Thus we could choose a sequence\, $\omega_1,\,\omega_2,\,\ldots$\, of the periods such that\, $\lim_{n\to\infty}\omega_n = 0$.\, If $z_0$ is a regularity point of $f$, we have 
+$$f(z_0) = f(z_0+\omega_n)\quad\forall\, n = 1,\,2,\,\ldots,$$
+i.e. the function $f(z)\!-\!f(z_0)$ has infinitely many zeros\, $z_0+\omega_n$\, ($n = 1,\,2,\,\ldots$)\, which have the accumulation point $z_0$.\, But then $f(z)\!-\!f(z_0)$ vanishes identically (cf. \PMlinkname{this}{IdentityTheoremOfHolomorphicFunctions} entry), i.e. $f(z)$ is a constant function.\, This contradicts the assumption, and therefore the antithesis is wrong. Q.E.D.
+
+\begin{figure}
+\begin{center}
+\includegraphics{accumulate}
+\end{center}
+\caption{The argument of Theorem 2}
+\end{figure}
+
+\textbf{Theorem 3.}\, The periods of a non-constant meromorphic function $f$ do not accumulate to a finite point.
+
+{\em Proof.}\, We make the antithesis, that the periods of $f$ have a finite accumulation point $z_0$.\, Thus we can choose two periods $\omega_1$ and $\omega_2$ within a disc with center $z_0$ and with radius an arbitrary positive number $\varepsilon$.\, The difference $\omega_1\!-\!\omega_2$ is also a period.\, Because $|\omega_1\!-\!\omega_2| < 2\varepsilon$,\, $f(z)$ seems to have periods with arbitrarily little modulus.\, This contradicts the theorem 2, and so the antithesis is wrong.\\
+
+\begin{figure}
+\begin{center}
+\includegraphics{triangle}
+\end{center}
+\caption{The argument of Theorem 3}
+\end{figure}
+
+
+The theorems 2 and 3 imply, that the moduli of all periods of the function $f$ have a positive minimum $m_1$.\, Let $\omega_1$ be such a period that\, 
+$|\omega_1| = m_1$.\, Then each multiple $n\omega_1$\, 
+($n = \pm1,\,\pm2,\,\ldots$)\, is a period.\, The points of the complex plane corresponding these periods lie all on the same line
+\begin{align}
+   \arg{z} = \arg{\omega_1}
+\end{align}
+and are situated at \PMlinkescapetext{regular intervals}.\, The line does not contain points corresponding other periods, since if there were a period $\omega$ on the line between the points $\nu\omega_1$ and $(\nu\!+\!1)\omega_1$, then the period 
+$\omega\!-\!\nu\omega_1$ would have the modulus $< |\omega_1| = m_1$.
+
+Can a function have other periods than those on the line (1)?\, If there are such ones, then it's rather easy to prove, using the theorem 3, that their distances from this line have a positive minimum $m_2$.\, Suppose that $\omega_2$ is such a period giving the minimum distance $m_2$.\, Then also all numbers\, $\omega = n_1\omega_1+n_2\omega_2$,\, with\, 
+$n_1,\,n_2\in\mathbb{Z}$,\, are periods of $f$.\, The corresponding points of the complex plane form the vertices of a lattice of \PMlinkname{congruent}{Congruence} parallelograms.\, Conversely, one can infer that all the periods of $f$ are of the form
+\begin{align}
+\omega = n_1\omega_1\!+\!n_2\omega_2\quad (n_1,\,n_2\in\mathbb{Z}).
+\end{align}
+In fact, if $f$ had some period point other than (2), then one such would be also in the basic parallelogram with the vertices 
+$0,\,\omega_1,\,\omega_2,\,\omega_1\!+\!\omega_2$.\, This however would contradict the minimality of $\omega_1$ and $\omega_2$.
+
+\begin{figure}
+\begin{center}
+\includegraphics{parallelogram}
+\end{center}
+\caption{The basic period parallelogram}
+\end{figure}
+
+
+The numbers $\omega_1$ and $\omega_2$ are called the {\em prime periods} of the function.\, We have the
+
+\textbf{Theorem 4.}\, A non-constant meromorphic function has at most two prime periods.\, Their ratio is not real.
+
+The functions, which have two prime periods, are called {\em two-periodic}, {\em doubly periodic} or {\em elliptic functions}.
+
+\begin{figure}
+\begin{center}
+\includegraphics{lattice}
+\end{center}
+\caption{Lattice generated by the prime periods as the basis}
+\end{figure}
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc R. Nevanlinna \& V. Paatero}: {\em Funktioteoria}.\, Kustannusosakeyhti\"o Otava. Helsinki (1963).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

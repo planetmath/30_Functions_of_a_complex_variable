@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchwarzLemma}
+\pmcreated{2013-03-22 12:44:37}
+\pmmodified{2013-03-22 12:44:37}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Schwarz lemma}
+\pmrecord{8}{33047}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C80}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+\newcommand{\size}[1]{| #1 |}
+\begin{document}
+Let $\Delta = \{z: \size{z} < 1\}$ be the open unit disk in the complex plane $\Complex$.  Let $f\colon\Delta\to\Delta$ be a holomorphic function with $f(0)=0$.  
+Then $\size{f(z)} \le \size{z}$ for all $z\in\Delta$, and $\size{f'(0)} \le 1$.  If the equality $\size{f(z)}=\size{z}$ holds for \emph{any} $z\ne 0$ or $\size{f'(0)}=1$, then $f$ is a rotation: $f(z)=az$ with $\size{a}=1$.
+
+This lemma is less celebrated than the bigger guns (such as the Riemann mapping theorem, which it helps prove); however, it is one of the simplest results capturing the ``rigidity'' of holomorphic functions.  No \PMlinkescapetext{similar} result exists for real functions, of course.
+%%%%%
+%%%%%
+\end{document}

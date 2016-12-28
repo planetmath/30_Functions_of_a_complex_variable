@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContourIntegral}
+\pmcreated{2013-03-22 12:51:44}
+\pmmodified{2013-03-22 12:51:44}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{contour integral}
+\pmrecord{23}{33198}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{30E20}
+\pmsynonym{complex integral}{ContourIntegral}
+\pmsynonym{line integral}{ContourIntegral}
+\pmsynonym{curve integral}{ContourIntegral}
+\pmrelated{CauchyIntegralFormula}
+\pmrelated{PathIntegral}
+\pmrelated{Integral}
+\pmrelated{IntegralTransform}
+\pmrelated{RealAndImaginaryPartsOfContourIntegral}
+\pmdefines{contour}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\renewcommand{\Im}{\operatorname{Im}}
+\begin{document}
+\PMlinkescapeword{cover}
+
+Let $f$ be a complex-valued function defined on the image of a \PMlinkname{curve}{Curve} $\alpha$: $[ a, b ] \rightarrow \mathbb{C}$, let $P = \{ a_{0}, ..., a_{n} \}$ be a \PMlinkname{partition}{Partition3} of $[ a, b ]$.  We will restrict our attention to \emph{contours}, i.e. curves for which the parametric equations consist of a finite number of continuously differentiable arcs. 
+If the sum
+
+$$\sum_{i = 1}^{n} f(z_{i}) (\alpha(a_{i}) - \alpha(a_{i - 1})),$$
+
+where $z_{i}$ is some point $\alpha(t_{i})$ such that $a_{i - 1} \leqslant t_{i} \leqslant a_{i}$, converges as $n$ tends to infinity and the greatest of the numbers $a_{i} - a_{i - 1}$ tends to zero, then we define the \emph{contour integral} of $f$ along $\alpha$ to be the integral
+
+$$\int_{\alpha} f(z) dz:=\int_a^b f(\alpha(t))d\alpha(t)$$
+
+\section*{Notes} (i) If $\Im(\alpha)$ is a segment of the real axis, then this definition reduces to that of the Riemann integral of $f(x)$ between $\alpha (a)$ and $\alpha (b)$.
+
+(ii) An alternative definition, making use of the Riemann-Stieltjes integral, is based on the fact that the definition of this can be extended without any other changes in the wording to cover the cases where $f$ and $\alpha$ are complex-valued functions.
+
+Now let $\alpha$ be any curve $[a, b] \rightarrow \mathbb{R}^{2}$.  Then $\alpha$ can be expressed in terms of the components $(\alpha_{1}, \alpha_{2})$ and can be associated with the complex-valued function
+
+$$z(t) = \alpha_{1}(t) + i \alpha_{2}(t).$$
+
+Given any complex-valued function of a complex variable, $f$ say, defined on $\Im(\alpha)$ we define the \textbf{contour integral} of $f$ along $\alpha$, denoted by
+
+$$\int_{\alpha} f(z) dz$$
+
+by
+
+$$\int_{\alpha} f(z) dz = \int_{a}^{b} f(z(t)) dz(t)$$
+whenever the complex Riemann-Stieltjes integral on the right exists.
+
+(iii) Reversing the direction of the curve changes the sign of the integral.
+
+(iv) The contour integral always exists if $\alpha$ is rectifiable and $f$ is continuous.
+
+(v) If $\alpha$ is piecewise smooth and the contour integral of $f$ along $\alpha$ exists, then
+
+$$\int_{\alpha} f dz = \int_{a}^{b} f(z(t)) z'(t) dt.$$
+%%%%%
+%%%%%
+\end{document}

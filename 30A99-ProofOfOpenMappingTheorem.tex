@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfOpenMappingTheorem}
+\pmcreated{2013-03-22 16:23:31}
+\pmmodified{2013-03-22 16:23:31}
+\pmowner{Statusx}{15142}
+\pmmodifier{Statusx}{15142}
+\pmtitle{proof of open mapping theorem}
+\pmrecord{9}{38537}
+\pmprivacy{1}
+\pmauthor{Statusx}{15142}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{46A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We prove that if $\Lambda:X \rightarrow Y$ is a continuous linear surjective map between Banach spaces, then $\Lambda$ is an open map.  It suffices to show that $\Lambda$ maps the open unit ball in $X$ to a neighborhood of the origin of $Y$.
+
+Let $U$, $V$ be the open unit balls in $X$, $Y$ respectively.  Then $X=\cup_{k \in \mathbb{N}} kU$, so, since $\Lambda$ is surjective, $Y=\Lambda(X)=\Lambda(\cup_{k \in \mathbb{N}} kU)=\cup_{k \in \mathbb{N}} \Lambda(kU)$.  By the Baire category theorem, $Y$ is not the union of countably many nowhere dense sets, so there is some $k \in \mathbb{N}$ and some open set $W \subset Y$ such that $W$ is contained in the closure of $\Lambda(kU)$.  
+
+Let $y_0 \in W$, and pick $\eta>0$ so that $y_0+y \in W$ for all $y$ with $||y||<\eta$.  Then $y_0$ and $y_0+y$ are limit points of $\Lambda(kU)$, so there are sequences ${x_i'}$ and ${x_i''}$ in $kU$ with $\Lambda x_i' \rightarrow y_0$ and $\Lambda x_i'' \rightarrow y_0+y$.  Letting $x_i=x_i''-x_i'$, we have $||x_i|| < 2k$ and $\Lambda x_i \rightarrow y$.  So for any $y \in \eta V$ there is a sequence ${x_i}$ in $2kU$ with $\Lambda x_i \rightarrow y$.  Then by the linearity of $\Lambda$, we have that for any $\epsilon>0$ and any $y \in Y$, there is an $x \in X$ with:
+
+$||x||< \delta^{-1} ||y||$ \mbox{and} $||\Lambda x -y||<\epsilon $ (1)
+
+where $\delta=\eta/2k$.
+
+Now let $y \in \delta V$ and $\epsilon>0$.  Then there is some $x_1$ with $||x_1||< 1$ and $||y-\Lambda x_1||<\epsilon \delta$.  Define a sequence ${x_n}$ inductively as follows.  Assume:
+
+$ ||y-\Lambda(x_1+x_2+...+x_n)||<\epsilon \delta 2^{-n} $ (2)
+
+Then by (1) we can pick $x_{n+1}$ so that:
+
+$||x_{n+1}||< \epsilon 2^{-n}$ (3)
+
+and $||y-\Lambda(x_1+x_2+...+x_n) - \Lambda(x_{n+1})||<\epsilon \delta 2^{-(n+1)}$, so (2) is satisfied for $x_{n+1}$.
+
+Put $s_n=x_1+x_2+...+x_n$.  Then from (3), $s_n$ is a Cauchy sequence, and so, since $X$ is complete, it converges to some $x \in X$.  By (2), $\Lambda s_n \rightarrow y$, and by the continuity of $\Lambda$, $\Lambda s_n \rightarrow \Lambda x$, so $\Lambda x= y$.  Also, $||x||=\lim_{n \rightarrow \infty} ||s_n|| \leq \sum_{n=1}^\infty ||x_n|| < 1+\epsilon$.  Thus $\Lambda((1+\epsilon)U) \supset \eta V$, or $\Lambda(U) \supset (1+\epsilon)^{-1} \delta V$.  Since this is true for all $\epsilon>0$, we have $\Lambda(U) \supset \cup_{\epsilon>0} (1+\epsilon)^{-1} \delta V = \delta V$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{barpartialOperator}
+\pmcreated{2013-03-22 15:10:39}
+\pmmodified{2013-03-22 15:10:39}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{$\bar{\partial}$ operator}
+\pmrecord{7}{36931}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+\pmclassification{msc}{32A99}
+\pmsynonym{d bar operator}{barpartialOperator}
+\pmsynonym{d-bar operator}{barpartialOperator}
+\pmdefines{$\partial$ operator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+Let $G \subset {\mathbb{C}}^n$ be a domain and let
+$f \colon G \to {\mathbb{C}}$ be a $C^1$
+function (continuously differentiable)
+$(z^1,\ldots,z^n) \mapsto f(z^1,\ldots,z^n)$ where $z^j = x^j + i y^j$.
+We can think of $G$ as a subset of ${\mathbb{R}}^{2n}$.
+We therefore
+have the following partial derivatives for all $1 \leq j \leq n$,
+\begin{align*}
+\frac{\partial f}{\partial z^j} & :=
+\frac{1}{2} \left(
+\frac{\partial f}{\partial x^j} - i \frac{\partial f}{\partial y^j}
+\right) ,
+\\
+\frac{\partial f}{\partial \bar{z}^j} & :=
+\frac{1}{2} \left(
+\frac{\partial f}{\partial x^j} + i \frac{\partial f}{\partial y^j}
+\right) .
+\end{align*}
+Now let $d$ be the standard exterior derivative on
+${\mathbb{R}}^{2n}$ and the $dx^j$ and $dy^j$ the standard basis of cotangent
+vectors.  Then if we define
+\begin{align*}
+dz^j & := dx^j + i dy^j , \\
+d\bar{z}^j & := dx^j - i dy^j ,
+\end{align*}
+then we can define two new operators acting on $C^1$ functions on $G$
+giving 1-forms by
+\begin{align*}
+\partial f & := \sum_{j=1}^n \frac{\partial f}{\partial z^j} dz^j , \\
+\bar{\partial} f & := \sum_{j=1}^n \frac{\partial f}{\partial \bar{z}^j}
+d\bar{z}^j .
+\end{align*}
+By direct calculation we immediately see that
+\begin{equation*}
+df = \partial f + \bar{\partial} f .
+\end{equation*}
+
+Similarly we now define $\partial$ and $\bar{\partial}$
+on arbitrary differential form
+$\omega = \sum_{\alpha,\beta} f_{\alpha,\beta} dz^\alpha \wedge
+d\bar{z}^\beta$, where $\alpha$ and $\beta$ range over all multi-indices with
+elements less then $n$, where if $\alpha = (\alpha_1,\ldots,\alpha_k)$
+then $dz^\alpha = dz^{\alpha_1} \wedge \ldots \wedge dz^{\alpha_k}$,
+and $f_{\alpha,\beta}$ is a $C^1$, complex valued function
+on $G$.
+\begin{align*}
+\partial \omega
+& :=
+\sum_{\alpha,\beta} \frac{\partial f_{\alpha,\beta}}{\partial z^j} dz^j
+\wedge
+dz^\alpha \wedge d\bar{z}^\beta
+, \\
+\bar{\partial} \omega
+& :=
+\sum_{\alpha,\beta} \frac{\partial f_{\alpha,\beta}}{\partial \bar{z}^j}
+d\bar{z}^j
+\wedge
+dz^\alpha \wedge d\bar{z}^\beta .
+\end{align*}
+Again a direct calculation shows that $d = \partial + \bar{\partial}$.
+
+The Cauchy-Riemann equations are then given by
+\begin{equation*}
+\bar{\partial} f = 0
+\end{equation*}
+That is, $f$ is holomorphic if and only if it satisfies the above equations.
+Note that this only applies to functions.  If $\bar{\partial}\omega = 0$
+for a differential form, then the coefficients in the standard basis
+need not be holomorphic.
+
+\begin{prop}
+$\bar{\partial}$ and $\partial$ satisfy the following properties
+\begin{itemize}
+\item $\bar{\partial}$ and $\partial$ are linear,
+\item $\bar{\partial}^2 = \bar{\partial} \bar{\partial} = 0$ and $\partial^2 = \partial \partial = 0$,
+\item $\bar{\partial} \partial - \partial \bar{\partial} = 0$.
+\end{itemize} 
+\end{prop}
+
+While $\bar{\partial} u = 0$ is our condition for $u$ to be a
+holomorphic function it turns out that it is more important to solve the inhomogeneous
+$\bar{\partial}u = f$ equation, as that allows us to construct holomorphic
+objects from nonholomorphic ones.
+
+\begin{thebibliography}{9}
+\bibitem{Hormander:several}
+Lars H\"ormander.
+{\em \PMlinkescapetext{An Introduction to Complex Analysis in Several
+Variables}},
+North-Holland Publishing Company, New York, New York, 1973.
+\bibitem{Krantz:several}
+Steven~G.\@ Krantz.
+{\em \PMlinkescapetext{Function Theory of Several Complex Variables}},
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

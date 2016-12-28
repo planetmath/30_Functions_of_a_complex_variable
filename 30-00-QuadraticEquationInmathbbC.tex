@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticEquationInmathbbC}
+\pmcreated{2013-03-22 17:36:36}
+\pmmodified{2013-03-22 17:36:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{quadratic equation in $\mathbb{C}$}
+\pmrecord{11}{40026}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{12D99}
+\pmsynonym{quadratic equation}{QuadraticEquationInmathbbC}
+\pmrelated{QuadraticFormula}
+\pmrelated{DerivationOfQuadraticFormula}
+\pmrelated{CardanosDerivationOfTheCubicFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The quadratic formula
+$$x \;=\; \frac{-b\!\pm\!\sqrt{b^2\!-\!4ac}}{2a}$$
+for solving the quadratic equation
+\begin{align}
+ax^2\!+\!bx\!+\!c \;=\; 0
+\end{align}
+with real coefficients $a$, $b$, $c$ is valid as well for all complex values of these coefficients ($a \neq 0$), when the square root is determined as is presented in the \PMlinkname{parent entry}{TakingSquareRootAlgebraically}.\\
+
+{\em Proof.}\; Multiplying (1) by $4a$ and adding $b^2$ to both sides gives an \PMlinkname{equivalent}{Equivalent3} equation
+$$4a^2x^2\!+\!4abx\!+\!4ac\!+\!b^2 \;=\; b^2$$
+or
+$$(2ax)^2\!+\!2\!\cdot\!2ax\!\cdot\!{b}\!+\!b^2 \;=\; b^2\!-\!4ac$$
+or furthermore
+$$(2ax\!+\!b)^2 \;=\; b^2\!-\!4ac.$$
+Taking square root algebraically yields
+$$2ax\!+\!b \;=\; \pm\!\sqrt{b^2\!-\!4ac},$$
+which implies the quadratic formula.\\
+
+
+\textbf{Note.}\, A \PMlinkescapetext{similar} quadratic formula is meaningful besides $\mathbb{C}$ also in other fields with characteristic $\neq 2$\, if one can find the needed ``square root'' (this may require a field extension).
+
+
+
+%%%%%
+%%%%%
+\end{document}

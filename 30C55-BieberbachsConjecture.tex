@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BieberbachsConjecture}
+\pmcreated{2013-03-22 14:24:07}
+\pmmodified{2013-03-22 14:24:07}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Bieberbach's conjecture}
+\pmrecord{7}{35899}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C55}
+\pmclassification{msc}{30C45}
+\pmsynonym{Bieberbach conjecture}{BieberbachsConjecture}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+The following theorem is known as the Bieberbach conjecture, even though it has
+now been proven.  Bieberbach proposed it in 1916 and it was finally proven in 1984 by Louis de Branges.
+
+Firstly note that if $f \colon {\mathbb{D}} \to {\mathbb{C}}$ is a schlicht function (univalent, $f(0) = 0$ and $f'(0) = 1$) then $f$ has a power series representation
+as
+\begin{equation*}
+f(z) = z + a_2 z^2 + a_3 z^3 + \cdots = z + \sum_{k=2}^\infty a_k z^k .
+\end{equation*}
+
+\begin{thm}[Bieberbach]
+Suppose that $f$ is a schlicht function, then $\lvert a_k \rvert \leq k$ for
+all $k \geq 2$ and furthermore
+if there is some integer $k$ such that $\lvert a_k \rvert = k$, then $f$ is some rotation of the Koebe function.
+\end{thm}
+
+In fact if $f$ is a rotation of the Koebe function then $\lvert a_k \rvert = k$
+for all $k$.
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexII}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable II}}.
+Springer-Verlag, New York, New York, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NaturalBoundary}
+\pmcreated{2013-03-22 16:49:34}
+\pmmodified{2013-03-22 16:49:34}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{natural boundary}
+\pmrecord{7}{39065}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{30B40}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{dfn}{Definition}
+\begin{document}
+It is not always possible to analytically continue a
+function given in a certain region.  It might turn
+out that, as one approaches the boundary of the region
+(or a portion of the boundary), the function always blows 
+up, so there is no way of extending it past that portion
+of the boundary to a larger region.  When this happens,
+we say that our function has a \emph{natural boundary}.  
+More formally, we may make a definition as follows:
+
+\begin{dfn}
+Let $\mathbf{D}$ be an open subset of the complex plane
+and let $f \colon \mathbf{D} \to \mathbb{C}$ be analytic.
+Then the \emph{natural boundary} of $f$ is that subset
+$B$ of $\partial \mathbf{D}$ such that, if $z\in B$,
+then there exists no open neighborhood $\mathbf{N}$ of 
+$z$ and no analytic function $g \colon \mathbf{N} \to
+\mathbb{C}$ such that $f(w) = g(w)$ for all $w \in \mathbf{D}
+\cup \mathbf{N}$.
+\end{dfn}
+
+As an example of this phenomenon, consider the power series
+\[
+\sum_{k=0}^\infty z^{k!}.
+\]
+By comparison with the geometric series, it is seen that this
+series converges absolutely when $|z| < 1$:
+\[
+\sum_{k=0}^\infty |z|^{k!} <
+\sum_{k=0}^\infty |z|^k =
+{1 \over 1 - |z|}
+\]
+However, when we try to take the limit $|z| \to 1$, we find
+that the series diverges.  Namely, let $p/q$ be a rational 
+number and let $r$ be a positive real variable.  Then, if we 
+set $z = r \exp (2 i \pi p / q)$, then, when $k \ge q$, we 
+have that $q$ divides $k!$, so $z^{k!} = r^{k!}$.  However,
+\[
+\lim_{r \to 1} \sum_{k=q}^\infty r^{k!}
+\]
+diverges, so our powers series diverges when we try to take
+the limit $z \to \exp (2 i \pi p / q)$.  Since numbers of the
+form $\exp (2 i \pi p / q)$ are dense amongst complex numbers
+with norm $1$, it follows that the limit $z \to z_0$ diverges
+whenver $|z_0| = 1$.  Hence, the unit circle $|z| = 1$ forms
+a natural boundary for the function defined by our power series.
+
+Natural boundaries are not so familiar to beginners because
+the functions which one encounters in the more elementary
+part of the subject, such as algebraic functions, exponential
+functions, and functions defined by linear differential
+equations, do not have natural boundaries.  To be sure, one
+could technically call a singular point a natural boundary, 
+but this is usually not done, the term ``natural boundary''
+being reserved for cases where the set on which the
+function misbehaves consists of more than just isolated points,
+as in the example above.
+
+However, when one gains some more experience and studies more
+advanced material, then natural boundaries arise rather
+frequently.  For instance, theta functions, elliptic modular 
+functions, and functions defined by non-linear differential 
+equations have natural boundaries.  Natural boundaries also
+play an important role in applications --- for instance, in
+statistical mechanics, phase transitions (such as freezing
+and boiling) are associated with natural boundaries of the
+partition function.
+%%%%%
+%%%%%
+\end{document}

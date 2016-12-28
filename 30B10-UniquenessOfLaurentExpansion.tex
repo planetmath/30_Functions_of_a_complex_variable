@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniquenessOfLaurentExpansion}
+\pmcreated{2013-03-22 19:14:12}
+\pmmodified{2013-03-22 19:14:12}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{uniqueness of Laurent expansion}
+\pmrecord{11}{42161}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmrelated{CoefficientsOfLaurentSeries}
+\pmrelated{UniquenessOfFourierExpansion}
+\pmrelated{UniquenessOfDigitalRepresentation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{expansion} \PMlinkescapeword{expansions}
+
+The Laurent series expansion of a function $f(z)$ in an annulus \, $r < |z\!-\!z_0| < R$\, is unique.\\
+
+\emph{Proof.}\, Suppose that $f(z)$ has in the annulus two Laurent expansions:
+$$f(z) \;=\; \sum_{n=-\infty}^\infty\!a_n(z\!-\!z_0)^n 
+       \;=\; \sum_{n=-\infty}^\infty\!b_n(z\!-\!z_0)^n$$
+It follows that
+$$f(z)(z\!-\!z_0)^{-\nu-1}\;=\; \sum_{n=-\infty}^\infty\!a_n(z\!-\!z_0)^{n-\nu-1} 
+                          \;=\; \sum_{n=-\infty}^\infty\!b_n(z\!-\!z_0)^{n-\nu-1}$$
+where $\nu$ is an integer.\, Let now $\gamma$ be an arbitrary closed contour in the annulus, going once around $z_0$.\, Since $\gamma$ is a compact set of points, those two Laurent series \PMlinkname{converge uniformly}{UniformConvergence} on it and therefore they can be \PMlinkname{integrated termwise}{SumFunctionOfSeries} along $\gamma$, i.e.
+\begin{align}
+\sum_{n=-\infty}^\infty\!a_n\oint_\gamma(z\!-\!z_0)^{n-\nu-1}\,dz \;=\; 
+\sum_{n=-\infty}^\infty\!b_n\oint_\gamma(z\!-\!z_0)^{n-\nu-1}\,dz.
+\end{align}
+But
+\begin{align*}
+ \oint_\gamma(z\!-\!z_0)^{n-\nu-1}\,dz \;=\;
+   \begin{cases}
+     2i\pi \quad \mbox{if} \;\; n \;=\; \nu, \\
+     0    \qquad \mbox{if} \;\; n \;\neq\; \nu, \\
+   \end{cases}
+\end{align*}
+when integrated anticlockwise (see calculation of contour integral).\, Thus (1) reads 
+$$2i\pi a_\nu \;=\; 2i\pi b_\nu,$$
+i.e.\, $a_\nu = b_\nu$,\, for any integer $\nu$, whence both expansions are identical.
+
+
+%%%%%
+%%%%%
+\end{document}

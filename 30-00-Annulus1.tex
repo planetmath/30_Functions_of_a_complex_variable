@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Annulus1}
+\pmcreated{2013-03-22 13:34:52}
+\pmmodified{2013-03-22 13:34:52}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{annulus}
+\pmrecord{7}{34202}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30-00}
+\pmsynonym{open annulus}{Annulus1}
+\pmsynonym{annular region}{Annulus1}
+\pmrelated{Annulus}
+\pmdefines{closed annulus}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\fkm}{\mathfrak{m}}
+\newcommand{\fkp}{\mathfrak{p}}
+\newcommand{\Gal}{\mathrm{Gal}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\ov}[1]{\overline{#1}}
+\newcommand{\ur}{\mathrm{ur}}
+\newcommand{\vp}{\varphi}
+\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\smashedleftarrow}{\setbox0=\hbox{$\longleftarrow$}\ht0=1pt\box0}
+\newcommand{\smashedrightarrow}{\setbox0=\hbox{$\longrightarrow$}\ht0=1pt\box0}
+\newcommand{\lisom}{\buildrel{\hskip+0.04cm\sim}\over{\smashedleftarrow}}
+\newcommand{\risom}{\buildrel{\hskip-0.04cm\sim}\over{\smashedrightarrow}}
+\begin{document}
+An \emph{annulus} is the region bounded between two (usually concentric) circles.
+
+An \emph{open annulus} is a domain in the complex plane of the form
+\[
+A = A_w(r,R) = \{z \in \bbC : r < |z-w| < R\},
+\]
+where $w$ is an arbitrary complex number, and $r$ and $R$ are real numbers with $0 < r < R$.  Such a set is often called an \emph{annular region}.
+
+It should be noted that the \PMlinkescapetext{word} annulus usually refers to an open annulus.
+
+More generally, one can allow $r = 0$ or $R = \infty$.  (This makes sense for the purposes of the bound on $|z-w|$ above.)  This would make an annulus include the cases of a punctured disc, and some unbounded domains.
+
+Analogously, a \emph{closed annulus} is a set of the form
+\[
+\ov{A} = \ov{A}_w(r,R) = \{z \in \bbC : r \leq |z-w| \leq R\},
+\]
+where $w \in \bbC$, and $r$ and $R$ are real numbers with $0 < r < R$.
+
+One can show that two annuli $D_w(r,R)$ and $D_{w'}(r',R')$ are conformally equivalent if and only if $R/r = R'/r'$.  More generally, the complement of any closed disk in an open disk is conformally equivalent to precisely one annulus of the form $D_0(r,1)$.
+%%%%%
+%%%%%
+\end{document}

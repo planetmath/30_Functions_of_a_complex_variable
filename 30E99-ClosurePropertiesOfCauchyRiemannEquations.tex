@@ -1,0 +1,242 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClosurePropertiesOfCauchyRiemannEquations}
+\pmcreated{2013-03-22 17:44:20}
+\pmmodified{2013-03-22 17:44:20}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{closure properties of Cauchy-Riemann equations}
+\pmrecord{14}{40189}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E99}
+\pmrelated{TangentialCauchyRiemannComplexOfCinftySmoothForms}
+\pmrelated{ACRcomplex}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\begin{document}
+The set of solutions of the Cauchy-Riemann equations is closed under
+a surprisingly large number of operations.  For convenience, let
+us introduce the notational conventions that $f$ and $g$ are complex
+functions with $f(x+iy) = u(x,y) + i v(x,y)$ and 
+$g(x + iy) = p(x,y) + i q (x,y)$.  Let $D$  and $D'$ denote
+open subsets of the complex plane.
+
+\begin{thm}
+If $f \colon D \to \mathbb{C}$ and 
+$g \colon D \to \mathbb{C}$ 
+satisfy the Cauchy-Riemann equations, so does $f + g$.  Furthermore, if $z\in \mathbb{C}$, then $zf$ satisfies the Cauchy-Riemann equations.
+\end{thm}
+
+\begin{proof}
+This is an immediate consequence of the linearity of derivatives.
+\end{proof}
+
+\begin{thm}
+If $f \colon D \to \mathbb{C}$ and 
+$g \colon D \to \mathbb{C}$ satisfy the
+Cauchy-Riemann equations, so does $f \cdot g$.
+\end{thm}
+
+\begin{proof}
+Letting $h$ and $k$ denote the real and imaginary parts of $f \cdot g$
+respectively, we have
+\begin{align*}
+ {\partial h \over \partial x} - {\partial k \over \partial y} &=
+ {\partial \over \partial x} \left( up - vq \right) -
+ {\partial \over \partial y} \left( uq + vp \right) \\ &= 
+ u {\partial p \over \partial x} + p {\partial u \over \partial x} -
+ v {\partial q \over \partial x} - q {\partial v \over \partial x} -
+ u {\partial q \over \partial y} - q {\partial u \over \partial y} -
+ v {\partial p \over \partial y} - p {\partial v \over \partial y} \\ &=
+ u \left( {\partial p \over \partial x} - {\partial q \over \partial y} \right) -
+ v \left( {\partial p \over \partial y} + {\partial q \over \partial x} \right) +
+ p \left( {\partial u \over \partial x} - {\partial v \over \partial y} \right) -
+ q \left( {\partial u \over \partial y} + {\partial v \over \partial x} \right) = 0
+\end{align*}
+and
+\begin{align*}
+ {\partial h \over \partial y} + {\partial k \over \partial x} &=
+ {\partial \over \partial y} \left( up - vq \right) +
+ {\partial \over \partial x} \left( uq + vp \right) \\ &= 
+ u {\partial p \over \partial y} + p {\partial u \over \partial y} -
+ v {\partial q \over \partial y} - q {\partial v \over \partial y} +
+ u {\partial q \over \partial x} + q {\partial u \over \partial x} +
+ v {\partial p \over \partial x} + p {\partial v \over \partial x} \\ &=
+ u \left( {\partial p \over \partial y} + {\partial q \over \partial x} \right) +
+ v \left( {\partial p \over \partial x} - {\partial q \over \partial y} \right) +
+ p \left( {\partial u \over \partial y} + {\partial v \over \partial x} \right) +
+ q \left( {\partial u \over \partial x} - {\partial v \over \partial y} \right) = 0 .
+\end{align*}
+\end{proof}
+
+\begin{thm}
+If $f \colon D \to D'$ and 
+$g \colon D' \to \mathbb{C}$ satisfy the
+Cauchy-Riemann equations, so does $f \circ g$.
+\end{thm}
+
+\begin{proof}
+Letting $h$ and $k$ denote the real and imaginary parts of $f \circ g$
+respectively, we have
+\begin{align*}
+ {\partial h \over \partial x} - {\partial k \over \partial y} &=
+ {\partial \over \partial x} u(p(x,y),q(x,y)) -
+ {\partial \over \partial y} v(p(x,y),q(x,y)) \\ &=
+ {\partial u \over \partial p} {\partial p \over \partial x} +
+ {\partial u \over \partial q} {\partial q \over \partial x} -
+ {\partial v \over \partial p} {\partial p \over \partial y} -
+ {\partial v \over \partial q} {\partial q \over \partial y} \\ &=
+ {\partial u \over \partial p} \left( {\partial p \over \partial x} -
+                                      {\partial q \over \partial y} \right) +
+ {\partial q \over \partial y} \left( {\partial u \over \partial p} -
+                                      {\partial v \over \partial q} \right) +
+ {\partial u \over \partial q} \left( {\partial p \over \partial y} +
+                                      {\partial q \over \partial x} \right) -
+ {\partial p \over \partial y} \left( {\partial u \over \partial q} +
+                                      {\partial v \over \partial p} \right) = 0
+\end{align*}
+and
+\begin{align*}
+ {\partial h \over \partial y} + {\partial k \over \partial x} &=
+ {\partial \over \partial y} u(p(x,y),q(x,y)) +
+ {\partial \over \partial x} v(p(x,y),q(x,y)) \\ &=
+ {\partial u \over \partial p} {\partial p \over \partial y} +
+ {\partial u \over \partial q} {\partial q \over \partial y} +
+ {\partial v \over \partial p} {\partial p \over \partial x} +
+ {\partial v \over \partial q} {\partial q \over \partial x} \\ &=
+ {\partial u \over \partial p} \left( {\partial p \over \partial y} +
+                                      {\partial q \over \partial x} \right) -
+ {\partial q \over \partial x} \left( {\partial u \over \partial p} -
+                                      {\partial v \over \partial q} \right) -
+ {\partial u \over \partial q} \left( {\partial p \over \partial x} -
+                                      {\partial q \over \partial y} \right) +
+ {\partial p \over \partial x} \left( {\partial u \over \partial q} +
+                                      {\partial v \over \partial p} \right) = 0
+\end{align*}
+
+\end{proof}
+
+\begin{thm}
+If $f \colon D \to \mathbb{C}$ satisfies the Cauchy-Riemann equations, 
+and has non-vanishing Jacobian, then $f^{-1}$
+also satisfies the Cauchy-Riemann equations.
+\end{thm}
+
+\begin{proof}
+Let us denote the real and imaginary parts of $f^{-1}$ as $h$ and $k$, respectively.
+Then, by definition of inverse function, we have
+\begin{align*}
+ u(h(x,y), k(x,y)) &= x \\
+ v(h(x,y), k(x,y)) &= y .
+\end{align*}
+Taking derivatives,
+\begin{align*}
+ {\partial u \over \partial h} {\partial h \over \partial x} +
+ {\partial u \over \partial k} {\partial k \over \partial x} &= 1 \\
+ {\partial u \over \partial h} {\partial h \over \partial y} +
+ {\partial u \over \partial k} {\partial k \over \partial y} &= 0 \\
+ {\partial v \over \partial h} {\partial h \over \partial x} +
+ {\partial v \over \partial k} {\partial k \over \partial x} &= 0 \\
+ {\partial v \over \partial h} {\partial h \over \partial y} +
+ {\partial v \over \partial k} {\partial k \over \partial y} &= 1
+\end{align*}
+By the Cauchy-Riemann equations, $\partial u / \partial h =
+\partial v / \partial k$ and $\partial u / \partial k = -
+\partial v / \partial h$.  Using these relations to re-express the
+derivatives of $u$ as derivatives of $v$, then subtracting the 
+fourth equation form the first equation and adding the second and 
+third equations, we obtain
+\begin{align*}
+ {\partial u \over \partial h}
+  \left(
+   {\partial h \over \partial x} -
+   {\partial k \over \partial y} 
+  \right) +
+ {\partial u \over \partial k}
+  \left(
+   {\partial h \over \partial y} +
+   {\partial k \over \partial x} 
+  \right) &= 0 \\
+ {\partial u \over \partial h}
+  \left(
+   {\partial h \over \partial y} +
+   {\partial k \over \partial x}
+  \right) -
+ {\partial u \over \partial k}
+  \left(
+   {\partial h \over \partial x} -
+   {\partial k \over \partial y} 
+  \right) &= 0 .
+\end{align*}
+With a little algebraic manipulation, we may conclude
+\begin{align*}
+ \left(
+  \left( 
+   {\partial u \over \partial h}
+  \right)^2 +
+  \left( 
+   {\partial u \over \partial k}
+  \right)^2
+ \right)
+  \left(
+   {\partial h \over \partial y} +
+   {\partial k \over \partial x}
+  \right) &= 0 \\
+ \left(
+  \left( 
+   {\partial u \over \partial h}
+  \right)^2 +
+  \left( 
+   {\partial u \over \partial k}
+  \right)^2
+ \right)
+  \left(
+   {\partial h \over \partial x} -
+   {\partial k \over \partial y} 
+  \right) &= 0 .
+\end{align*}
+Note that, by the Cauchy-Riemann equations, the Jacobian of $f$
+equals the common prefactor of these equations:
+\[
+ {\partial (u,v) \over \partial (h,k)} =
+ {\partial u \over \partial h} {\partial v \over \partial k} -
+ {\partial u \over \partial k} {\partial v \over \partial h} =
+ \left( 
+   {\partial u \over \partial h}
+ \right)^2 +
+ \left( 
+   {\partial u \over \partial k}
+ \right)^2
+\]
+Hence, by assumptions, this quantity differs from zero and we may 
+cancel it to obtain the Cauchy-Riemann equations for $f^{-1}$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

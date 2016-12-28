@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGaussDigammaTheorem}
+\pmcreated{2013-03-22 16:24:07}
+\pmmodified{2013-03-22 16:24:07}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Gauss' digamma theorem}
+\pmrecord{5}{38550}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30D30}
+\pmclassification{msc}{33B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Proof.}
+The proof follows the argument given in \cite{bib:andrews}, which in turn derives from that given in \cite{bib:jensen}.
+
+The first formula is the logarithmic derivative of
+\[\Gamma(x+n)=(x+n-1)(x+n-2)\cdots x\Gamma(x)\]
+
+By the partial fraction decomposition satisfied by the $\psi$ function,
+\[\psi\left(\frac{p}{q}\right)+\gamma=\sum_{n=0}^{\infty}\left(\frac{1}{n+1}-\frac{q}{p+nq}\right)=
+\lim_{t\to 1^-}\sum_{n=0}^{\infty}\left(\frac{1}{n+1}-\frac{q}{p+nq}\right)t^{p+nq}\]
+using Abel's limit theorem.
+
+Now,
+\[\sum_{n=0}^{\infty}\left(\frac{1}{n+1}-\frac{q}{p+nq}\right)t^{p+nq}=
+\sum_{n=0}^{\infty}\frac{t^{p+nq}}{n+1}\ -\ \sum_{n=0}^{\infty}\frac{qt^{p+nq}}{p+nq}=
+t^{p-q}\sum_{n=0}^{\infty}\frac{t^{(n+1)q}}{n+1}\ -\ q\sum_{n=0}^{\infty}\frac{t^{p+nq}}{p+nq}\]
+Since
+\[-\ln(1-t)=\sum_{n=1}^{\infty} \frac{t^n}{n}\]
+the first term is
+\[-t^{p-q}\ln(1-t^q)\]
+Using the algorithm for \PMlinkname{extracting every $q^\mathrm{th}$ term of a series}{ExtractingEveryNthTermOfASeries}, the second term is
+\[\sum_{n=0}^{q-1}\omega^{-np}\ln(1-\omega^n t)\]
+and therefore
+\begin{align*}\sum_{n=0}^{\infty}\left(\frac{1}{n+1}-\frac{q}{p+nq}\right)t^{p+nq}&=-t^{p-q}\ln(1-t^q)+\sum_{n=0}^{q-1}\omega^{-np}\ln(1-\omega^n t)\\
+&=-t^{p-q}\ln\frac{1-t^q}{1-t}-(t^{p-1}-1)\ln(1-t)+\sum_{n=1}^{q-1}\omega^{-np}\ln(1-\omega^n t)
+\end{align*}
+Let $t\to 1^-$ to get
+\[\psi\left(\frac{p}{q}\right)=-\gamma-\ln q+\sum_{n=1}^{q-1}\omega^{-np}\ln(1-\omega^n)\]
+Replace $p$ by $q-p$ and add the two expressions to obtain
+\begin{equation*}\psi\left(\frac{p}{q}\right)+\psi\left(\frac{q-p}{q}\right)=-2\gamma-2\ln q+2\sum_{n=1}^{q-1}\cos\left(\frac{2\pi n p}{q}\right)\ln(1-\omega^n)
+\end{equation*}
+The left side is real, so it is equal to the real part of the right side. But
+\[\Re(\ln(1-\omega^n))=\ln\lvert 1-\omega^n\rvert^{1/2}=\ln\left\lvert \left(1-\cos\frac{2\pi n}{q}\right)^2+\sin^2\frac{2\pi n}{q}\right\rvert^{1/2}=\frac{1}{2}\ln\left(2-2\cos\frac{2\pi n}{q}\right)
+\]
+and so
+\begin{equation}\label{eqn:one}\psi\left(\frac{p}{q}\right)+\psi\left(\frac{q-p}{q}\right)=-2\gamma-2\ln q+\sum_{n=1}^{q-1}\cos\left(\frac{2\pi n 
+p}{q}\right)\ln(2-2\cos\frac{2\pi n}{q})\end{equation}
+But
+\[\psi(x)-\psi(1-x)=\frac{d}{dx}\ln(\Gamma(x)\Gamma(1-x))=-\pi\cot\pi x\]
+by the Euler reflection formula and thus
+\begin{equation}\label{eqn:two}\psi\left(\frac{p}{q}\right)-\psi\left(\frac{q-p}{q}\right)=-\pi\cot \frac{\pi p}{q}\end{equation}
+Add equations (\ref{eqn:one}) and (\ref{eqn:two}) to get
+\begin{align*}\psi\left(\frac{p}{q}\right)&=-\gamma-\frac{\pi}{2}\cot\frac{\pi p}{q}-\ln q+\frac{1}{2}\sum_{n=1}^{q-1}\cos\frac{2\pi n p}{q}\ln\left(2-2\cos\frac{2\pi n}{q}\right)\\
+&=-\gamma-\frac{\pi}{2}\cot\frac{\pi p}{q}-\ln q+\sum_{n=1}^{q-1}\cos\frac{2\pi n p}{q}\ln\left(2\sin\frac{\pi n}{q}\right)
+\end{align*}
+where the last equality holds since
+\[\ln(2-2\cos (2\theta))=\ln(2-2(1-2\sin^2\theta)=\ln(4\sin^2\theta)=2\ln(2\sin\theta)\]
+
+
+\begin{thebibliography}{10}
+\bibitem{bib:andrews}
+G.E.~Andrews, R.~Askey, R.~Roy, \emph{Special Functions}, Cambridge University Press, 2001.
+\bibitem{bib:jensen}
+J.L.~Jensen [1915-1916], An elementary exposition of the theory of the gamma function, \emph{Ann. Math.} \textbf{17}, 124-166.
+\end{thebibliography}
+\include{Footer}
+%%%%%
+%%%%%
+\end{document}

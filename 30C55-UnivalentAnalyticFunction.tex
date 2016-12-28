@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnivalentAnalyticFunction}
+\pmcreated{2013-03-22 14:12:06}
+\pmmodified{2013-03-22 14:12:06}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{univalent analytic function}
+\pmrecord{6}{35633}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30C55}
+\pmsynonym{univalent function}{UnivalentAnalyticFunction}
+\pmsynonym{univalent}{UnivalentAnalyticFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\newtheorem*{prop}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+\begin{document}
+\begin{defn}
+An analytic function on an open set is called {\em univalent} if it is one-to-one.
+\end{defn}
+
+For example mappings of the unit disc to itself $\phi_a : {\mathbb{D}} \rightarrow {\mathbb{D}}$, where
+$\phi_a(z) = \frac{z-a}{1 - \bar{a}z}$, for any $a \in {\mathbb{D}}$ are univalent.
+The following \PMlinkescapetext{proposition} summarizes some
+basic \PMlinkescapetext{properties} of univalent functions.
+
+\begin{prop}
+Suppose that $G,\Omega \subset {\mathbb{C}}$ are regions and
+$f \colon G \to \Omega$ is a univalent mapping such that $f(G) = \Omega$ (it
+is onto), then
+\begin{itemize}
+\item $f^{-1} \colon \Omega \to G$ (where $f^{-1}(f(z)) = z$) is an analytic
+function and $(f^{-1})'(f(z)) = \frac{1}{f'(z)}$,
+\item $f'(z) \not= 0$ for all $z \in G$
+\end{itemize}
+\end{prop}
+
+\begin{thebibliography}{9}
+\bibitem{Conway:complexI}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable I}}.
+Springer-Verlag, New York, New York, 1978.
+\bibitem{Conway:complexII}
+John~B. Conway.
+{\em \PMlinkescapetext{Functions of One Complex Variable II}}.
+Springer-Verlag, New York, New York, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AntiderivativeOfComplexFunction}
+\pmcreated{2014-02-23 15:09:20}
+\pmmodified{2014-02-23 15:09:20}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{pahio}{2872}
+\pmtitle{antiderivative of complex function}
+\pmrecord{10}{37140}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{03E20}
+\pmsynonym{complex antiderivative}{AntiderivativeOfComplexFunction}
+\pmrelated{Antiderivative}
+\pmrelated{CalculationOfContourIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+By the {\em \PMlinkescapetext{antiderivative}} of a complex function $f$ in a domain $D$ of $\mathbb{C}$, we \PMlinkescapetext{mean} every complex function $F$ which in $D$ satisfies the condition
+$$\frac{d}{dz}F(z) = f(z).$$
+
+\begin{itemize}
+
+\item If $f$ is a continuous complex function in a domain $D$ 
+and if the integral
+\begin{align}
+F(z) := \int_{\gamma_z}f(t)\,dt
+\end{align}
+where the path ${\gamma_z}$ begins at a fixed point $z_0$ of 
+$D$ and ends at the point $z$ of $D$, is independent of the 
+path $\gamma_z$ for each value of $z$, then (1) defines an 
+analytic function $F$ with domain $D$.\, This function is an 
+antiderivative of $f$ in $D$, \PMlinkname{i.e.}{Ie} at all 
+points of $D$, the condition
+$$\frac{d}{dz}\int_{\gamma_z}f(t)\,dt = f(z)$$
+is true.
+
+\item If $f$ is an analytic function in a simply connected open domain $U$, then $f$ has an antiderivative in $U$, \PMlinkname{e.g.}{Eg} the function $F$ defined by (1) where the path $\gamma_z$ is within $U$.\, If $\gamma$ lies within $U$ and connects the points $z_0$ and $z_1$, then 
+$$\int_{\gamma}f(z)\,dz = F(z_1)-F(z_0),$$
+where $F$ is an arbitrary antiderivative of $f$ in $U$.
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

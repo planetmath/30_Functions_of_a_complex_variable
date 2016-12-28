@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeierstrassDoubleSeriesTheorem}
+\pmcreated{2013-03-22 16:48:15}
+\pmmodified{2013-03-22 16:48:15}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Weierstrass double series theorem}
+\pmrecord{7}{39038}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{30D30}
+\pmrelated{TheoremsOnComplexFunctionSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If the complex functions\, $f_0,\,f_1,\,f_2,\,\ldots$\, are holomorphic in the disc\, $\vert z-z_0\vert < r$\, and thus
+\begin{align}
+  f_n(z) = \sum_{\nu=0}^\infty a_{n\nu}(z-z_0)^\nu, \quad a_{n\nu} = \frac{f_n^{(\nu)}(z_0)}{\nu!}\quad \forall\,n,\,\nu
+\end{align}
+in this disc, and if the function series
+\begin{align}
+ \sum_{n=0}^\infty f_n = f_0+f_1+f_2+\ldots
+\end{align}
+converges uniformly to the function $F$ in each disc\, $|z-z_0| \leqq \varrho$\, where\, $0 < \varrho < r$,\, then also all the series 
+\begin{align}
+ \sum_{n=0}^\infty a_{n\nu} = a_{0\nu}+a_{1\nu}+a_{2\nu}+\ldots \quad 
+(\nu = 0,\,1,\,2,\,\ldots)
+\end{align}
+converge, and in the disc\, $|z-z_0| < r$\, one has
+\begin{align}
+ F(z) = \sum_{\nu=0}^\infty A_\nu(z-z_0)^\nu
+\end{align}
+where the $A_\nu$s are the sums of the series (3).\\
+
+{\em Proof.}\, Apparently, the series (2) converges uniformly also in every closed sub-disc of the open disc \, $|z-z_0| < r$.\, Therefore the theorem 2 in the entry ``\PMlinkname{theorems on complex function series}{TheoremsOnComplexFunctionSeries}'' says that the sum $F(z)$ is holomorphic in\, $|z-z_0| < r$\, and
+$$F^{(\nu)}(z) = f_0^{(\nu)}(z_0)+f_1^{(\nu)}(z_0)+f_2^{(\nu)}(z_0)+\ldots
+\quad (\nu = 0,\,1,\,2,\,\ldots).$$
+Theorem 3 in the same entry thus guarantees that $F(z)$ has the Taylor expansion of the form (4) wherein
+$$A_\nu = \frac{1}{\nu!}F^{(\nu)}(z_0) \quad (\nu = 0,\,1,\,2,\,\ldots).$$
+According to theorem 2 in the same entry the series (2) may be differentiated termwise,
+$$A_\nu = \frac{1}{\nu!}\sum_{n=0}^\infty f_n^{(\nu)}(z_0) = 
+\sum_{n=0}^\infty \frac{1}{\nu!}f_n^{(\nu)}(z_0) = \sum_{n=0}^\infty a_{n\nu}$$
+Q.E.D.\\
+
+\textbf{Note.}\, In Weierstrass double series theorem it's a question of changing the summing \PMlinkescapetext{order}:
+$$
+\begin{array}{l}
+F(z) = f_0(z)+f_1(z)+\ldots+f_n(z)+\ldots =\\
+= [a_{00}+a_{01}(z-z_0)+a_{02}(z-z_0)^2+\ldots+a_{0\nu}(z-z_0)^\nu+\ldots]\\
+\,+[a_{10}+a_{11}(z-z_0)+a_{12}(z-z_0)^2+\ldots+a_{1\nu}(z-z_0)^\nu+\ldots]\\
+\,+[a_{20}+a_{21}(z-z_0)+a_{22}(z-z_0)^2+\ldots+a_{2\nu}(z-z_0)^\nu+\ldots]\\
+\qquad \qquad \ldots\ldots\\
+\,+[a_{n0}+a_{n1}(z-z_0)+a_{n2}(z-z_0)^2+\ldots+a_{n\nu}(z-z_0)^\nu+\ldots]\\
+\underline{\qquad\qquad\cdots\cdots\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad}\\
+= A_0+A_1(z-z_0)+A_2(z-z_0)^2+\ldots+A_\nu(z-z_0)^\nu+\ldots
+\end{array}
+$$
+
+
+
+%%%%%
+%%%%%
+\end{document}

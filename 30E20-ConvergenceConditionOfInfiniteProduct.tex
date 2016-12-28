@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvergenceConditionOfInfiniteProduct}
+\pmcreated{2013-03-22 14:37:22}
+\pmmodified{2013-03-22 14:37:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{convergence condition of infinite product}
+\pmrecord{16}{36202}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+%\pmkeywords{Cauchy sequence}
+\pmrelated{OrderOfFactorsInInfiniteProduct}
+\pmrelated{NecessaryConditionOfConvergence}
+\pmdefines{infinite product}
+\pmdefines{value of infinite product}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let us think the sequence \,$u_1,\,u_1u_2,\,u_1u_2u_3,\,\ldots$\, In the complex analysis, one often uses the definition of the convergence of an {\em infinite product}\, $\displaystyle\prod_{k = 1}^{\infty}u_k$\, where the case\, $\displaystyle\lim_{k\to\infty}u_1u_2 \ldots u_k = 0$\, is excluded.\, Then one has the
+
+\begin{thmplain}\, The infinite product $\displaystyle\prod_{k = 1}^{\infty}u_k$ of the non-zero complex numbers\, $u_1$, $u_2$, ... is convergent iff for every positive number $\varepsilon$ there exists a positive number $n_\varepsilon$ such that the condition
+ $$\vert u_{n+1}u_{n+2} \ldots u_{n+p}-1 \vert < \varepsilon \quad \forall \,p\in\mathbb{Z}_+$$
+is true as soon as\, $n \geqq n_\varepsilon$.
+\end{thmplain}
+
+\textbf{Corollary.}\, If the infinite product converges, then we necessarily have\, $\displaystyle\lim_{k\to\infty}u_k = 1$. (Cf. the necessary condition of convergence of series.)
+
+When the infinite product converges, we say that the {\em value of the infinite product} is equal to $\displaystyle\lim_{k\to\infty} u_1u_2 \ldots u_k$.
+%%%%%
+%%%%%
+\end{document}

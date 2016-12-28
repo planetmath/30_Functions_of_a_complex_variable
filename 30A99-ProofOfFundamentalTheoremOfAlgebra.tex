@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFundamentalTheoremOfAlgebra}
+\pmcreated{2013-03-22 13:09:39}
+\pmmodified{2013-03-22 13:09:39}
+\pmowner{scanez}{1021}
+\pmmodifier{scanez}{1021}
+\pmtitle{proof of fundamental theorem of algebra}
+\pmrecord{5}{33603}
+\pmprivacy{1}
+\pmauthor{scanez}{1021}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{12D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $f(x) \in \mathbb{C}[x]$ let $a$ be a root of $f(x)$ in some
+extension of $\mathbb{C}$. Let $K$ be a Galois closure of
+$\mathbb{C}(a)$ over $\mathbb{R}$ and set $G = \operatorname{Gal}(K/\mathbb{R})$.
+Let $H$ be a Sylow 2-subgroup of $G$ and let $L = K^H$ (the fixed field of $H$ in $K$).
+By the Fundamental Theorem of Galois Theory we have
+$[L:\mathbb{R}] = [G:H]$, an odd number. We may write $L =
+\mathbb{R}(b)$ for some $b \in L$, so the minimal polynomial
+$m_{b,\mathbb{R}}(x)$ is irreducible over $\mathbb{R}$ and of odd
+degree. That degree must be 1, and hence $L = \mathbb{R}$, which
+means that $G = H$, a 2-group. Thus $G_1 = \operatorname{Gal}(K/\mathbb{C})$ is also a 2-group. If $G_1 \ne 1$ choose $G_2
+\le G_1$ such that $[G_1:G_2] = 2$, and set $M = K^{G_2}$,
+so that $[M:\mathbb{C}] = [G_1:G_2] = 2$. But any polynomial of
+degree 2 over $\mathbb{C}$ has roots in $\mathbb{C}$ by the
+quadratic formula, so such a field $M$ cannot exist. This
+contradiction shows that $G_1 = 1$. Hence $K = \mathbb{C}$ and $a
+\in \mathbb{C}$, completing the proof.
+%%%%%
+%%%%%
+\end{document}

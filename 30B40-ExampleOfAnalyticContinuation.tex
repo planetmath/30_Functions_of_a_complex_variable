@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfAnalyticContinuation}
+\pmcreated{2013-03-22 16:52:06}
+\pmmodified{2013-03-22 16:52:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of analytic continuation}
+\pmrecord{5}{39118}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B40}
+\pmclassification{msc}{30A99}
+\pmrelated{RadiusOfConvergence}
+\pmrelated{GeometricSeries}
+\pmrelated{SetDifference}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The function defined by
+        $$f(z) := \sum_{n=0}^\infty z^n = 1+z+z^2+\ldots$$
+is, as a sum of power series, analytic in the disc of convergence\, 
+$D = \{z\in\mathbb{C}\,\vdots\;\; |z| < 1\}$.\, The function
+   $$g(z) := \frac{1}{1-i}\sum_{n=0}^\infty\left(\frac{z-i}{1-i}\right)^n
+= \frac{1}{1-i}+\frac{z-i}{(1-i)^2}+\frac{(z-i)^2}{(1-i)^3}+\ldots$$
+similarly is analytic in the bigger disc\, 
+$E = \{z\in\mathbb{C}\,\vdots\;\; |z-i| < \sqrt{2}\}$.\, But we have
+$$f(z) = \frac{1}{1-z}\quad\mathrm{in}\; D,$$
+$$g(z) = \frac{1}{1-i}\cdot\frac{1}{1-\frac{z-i}{1-i}} = \frac{1}{1-z}
+\quad\mathrm{in}\; E;$$
+thus $f(z)$ and $g(z)$ coincide in the intersection domain $D \cap E$.\, So we can say that $g(z)$ is the analytic continuation of $f(z)$ to the domain\, $E\!\smallsetminus\!D$.\, It is clear that $\frac{1}{1-z}$ is the analytic continuation of $f(z)$ to the domain $\mathbb{C}\!\smallsetminus\!\{1\}$.
+
+%%%%%
+%%%%%
+\end{document}

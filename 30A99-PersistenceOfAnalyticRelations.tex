@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PersistenceOfAnalyticRelations}
+\pmcreated{2013-03-22 14:44:17}
+\pmmodified{2013-03-22 14:44:17}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{persistence of analytic relations}
+\pmrecord{9}{36373}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmrelated{ComplexSineAndCosine}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The principle of persistence of analytic relations states that any algebraic relation between several analytic functions which holds on a sufficiently large set also holds wherever the functions are defined.
+
+A more explicit statement of this principle is as follows:  Let $f_1, f_2, \ldots f_n$ be complex analytic functions.  Suppose that there exists an open set $D$ on which all these functions are defined and that there exists a polynomial $p$ of $n$ variables such that $p(f_1(z), f_2 (z), \ldots, f_n(z)) = 0$ whenever $z$ lies in a subset $X$ of $D$ which has a limit point in $D$.  Then $p (f_1 (z), f_2 (z), \ldots f_n (z)) = 0$ for all $z \in D$.  
+
+This fact is a simple consequence of the rigidity theorem for analytic functions.  If $f_1, f_2, \ldots f_n$ are all analytic in $D$, then $p (f_1 (z), f_2 (z), \ldots f_n (z))$ is also analytic in $D$.  Hence, if $p (f_1 (z), f_2 (z), \ldots,  f_n (z)) = 0$ when $z$ in $X$, then $p (f_1 (z), f_2 (z), \ldots,  f_n (z)) = 0$ for all $z \in D$.
+
+This principle is very useful in establishing identites involving analytic functions because it means that it suffices to show that the identity holds on a small subset.  For instance, from the fact that the familiar identity $\sin^2 x + \cos^2 x = 1$ holds for all real $x$, it automatically holds for all complex values of $x$.  This principle also means that it is unnecessary to specify for which values of the variable an algebraic relation between analytic functions holds since, if such a relation holds, it will hold for all values for which the functions appearing in the relation are defined.
+%%%%%
+%%%%%
+\end{document}

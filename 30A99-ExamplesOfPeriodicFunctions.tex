@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfPeriodicFunctions}
+\pmcreated{2013-03-22 17:57:29}
+\pmmodified{2013-03-22 17:57:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{examples of periodic functions}
+\pmrecord{10}{40458}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30A99}
+\pmclassification{msc}{26A09}
+\pmsynonym{common periodic functions}{ExamplesOfPeriodicFunctions}
+\pmrelated{PeriodicityOfExponentialFunction}
+\pmrelated{HyperbolicIdentities}
+\pmrelated{RationalAndIrrational}
+\pmrelated{PeriodicFunctions}
+\pmrelated{FloorFunction}
+\pmrelated{Floor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We list common periodic functions. In the parentheses, there are given their period with least modulus.
+
+\begin{itemize}
+
+\item One-periodic functions with a real period:
+
+sine ($2\pi$), cosine ($2\pi$), tangent ($\pi$), cotangent ($\pi$), secant ($2\pi$), cosecant ($2\pi$), and functions depending on them -- especially the triangular-wave function ($2\pi$); \,the mantissa function
+$x\!-\!\lfloor{x}\rfloor$ (1). 
+
+\item One-periodic functions with an \PMlinkname{imaginary}{ImaginaryNumber} period:
+
+exponential  function ($2i\pi$), hyperbolic sine ($2i\pi$), hyperbolic cosine ($2i\pi$), hyperbolic tangent ($i\pi$), hyperbolic cotangent ($i\pi$), and functions depending on them.
+
+\item Two-periodic functions:\, elliptic functions.
+
+\item Functions with \PMlinkname{infinitely}{Infinite} many periods:
+
+the Dirichlet's function
+\begin{eqnarray*}
+ f\!:\; x\mapsto\! & \left\{ \begin {array}{ll} 1 & \mbox{when}\,\,x \in \mathbb{Q}\\
+ 0 & \mbox{when}\,\, x \in \mathbb{R}\!\smallsetminus\!\mathbb{Q}
+ \end{array} \right.
+ \end{eqnarray*}
+has any rational number as its period;\, a constant function has any number as its period.
+
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

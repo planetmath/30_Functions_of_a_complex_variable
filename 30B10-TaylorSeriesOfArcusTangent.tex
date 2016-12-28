@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TaylorSeriesOfArcusTangent}
+\pmcreated{2013-03-22 16:33:37}
+\pmmodified{2013-03-22 16:33:37}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Taylor series of arcus tangent}
+\pmrecord{7}{38748}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B10}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{41A58}
+\pmrelated{GregorySeries}
+\pmrelated{TaylorSeriesOfArcusSine}
+\pmrelated{SubstitutionNotation}
+\pmrelated{ExamplesOnHowToFindTaylorSeriesFromOtherKnownSeries}
+\pmrelated{CyclometricFunctions}
+\pmrelated{LogarithmSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The derivative of the \PMlinkname{arcus tangent}{CyclometricFunctions} function, $\frac{1}{1+x^2}$, can be expanded as a geometric series
+$$\frac{1}{1\!+\!x^2} = 1\!-\!x^2\!+\!x^4\!-\!x^6\!+-\ldots,$$
+the radius of convergence of which is $1$.\, The series \PMlinkescapetext{expansion} is valid only on the open interval\, $-1 < x < 1$,\, because the series apparently diverges for\, $x = \pm 1$.\, The power series may be integrated termwise on its interval of convergence, giving
+$$\int_0^x\!\frac{dt}{1\!+\!t^2} = \sijoitus{0}{\quad x}\!\arctan{t} =\arctan{x} = 
+x\!-\!\frac{x^3}{3}\!+\!\frac{x^5}{5}\!-+\ldots \qquad (|x| < 1).$$
+We can show that this Taylor series of arcus tangent is valid also for the end points\, $x = \pm 1$\, of the interval.
+
+We start from the identical equation
+$$\frac{1}{1\!+\!t^2} = 
+1\!-\!t^2\!+\!t^4\!-+\ldots+\!(-1)^{n-1}t^{2n-2}+(-1)^n\frac{t^{2n}}{1+t^2},$$
+which can be verified by performing the division $1\!:\!(1\!+\!t^2)$.\, Integrating both sides from $0$ to an arbitrary $x$, we obtain
+$$\arctan{x} = 
+\underbrace{x\!-\!\frac{x^3}{3}\!+\!\frac{x^5}{5}\!-+\ldots+\!(-1)^{n-1}\frac{x^{2n-1}}{2n\!-\!1}}_{S_{2n-1}}+
+\underbrace{(-1)^n\int_0^x\frac{t^{2n}}{1+t^2}dt}_{R_{2n-1}}.$$
+We estimate $R_{2n-1}$:
+$$|R_{2n-1}| = \int_0^{|x|}\frac{t^{2n}}{1+t^2}dt \leqq 
+\int_0^{|x|}t^{2n}\,dt = \frac{|x|^{2n-1}}{2n\!-\!1}\,\to\, 0 
+\quad\mathrm{as}\,\,n\to\infty$$
+for\, $x = \pm 1$.\, Accordingly, when\, $x = \pm 1$,\, we see that
+$$S_{2n-1} = \arctan{x}\!-\!R_{2n-1}\,\to\, \arctan{x}$$
+as\, $n\to\infty$.\, This \PMlinkescapetext{means} that
+$$\arctan{(\pm 1)} = \pm\frac{\pi}{4} =
+\pm\left(1\!-\!\frac{1}{3}\!+\!\frac{1}{5}\!-+\ldots\right).$$
+%%%%%
+%%%%%
+\end{document}

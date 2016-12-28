@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticContinuationOfRiemannZetausingIntegral}
+\pmcreated{2013-03-22 16:53:59}
+\pmmodified{2013-03-22 16:53:59}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{analytic continuation of Riemann zeta (using integral)}
+\pmrecord{21}{39157}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30B40}
+\pmclassification{msc}{30A99}
+\pmrelated{EstimatingTheoremOfContourIntegral}
+\pmrelated{PeriodicityOfExponentialFunction}
+\pmrelated{AnalyticContinuationOfRiemannZeta}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The Riemann zeta function can be analytically 
+continued to the whole complex plane minus the point 1
+by means of an integral representation.  Remember that the zeta functon
+is defined by the series
+\[
+\zeta (s) = \sum_{n=1}^\infty {1 \over n^s}.
+\]
+When $\Re s > 1$, this series converges; furthermore, this convergence is 
+uniform on compact subsets of this half-plane, hence the series converges to
+an analytic function on this half plane.  However, the series diverges when 
+we have $\Re s < 1$, so this series cannot be used to define the zeta function
+in the whole complex plane, which is why we must make an analytic continuation.
+
+To make this continuation, we start by changing the variable in an integration:
+\[
+n^s \int_0^{\infty} e^{-nx} x^{s-1} \, dx =
+\int_0^{\infty} e^{-y} y^{s-1} \, dy = 
+\Gamma (s)
+\]
+This provides us with an integral representation of our summand.  
+Substituting this into the series, we find that
+\[
+\zeta (s) = \sum_{n=1}^\infty
+{1 \over \Gamma(s)} \int_0^{\infty} e^{-nx} x^{s-1} \, dx =
+{1 \over \Gamma(s)}
+\sum_{n=1}^\infty \int_0^{\infty}
+e^{-nx} x^{s-1} \, dx.
+\]
+We note that
+\[
+\sum_{n=1}^\infty \int_0^{\infty}
+\left| e^{-nx} x^{s-1} \right| \, dx =
+\sum_{n=1}^\infty \int_0^{\infty}
+e^{-nx} x^{|s-1|} \, dx =
+\sum_{n=1}^\infty {\Gamma (|s - 1| + 1) \over n^s};
+\]
+because the series converges, hence it is possible
+to interchange integration and summation and
+subsequently sum a geometric series.
+\[
+\zeta(s) = {1 \over \Gamma (s)}
+\sum_{n=1}^\infty \int_0^{\infty}
+e^{-nx} x^{s-1} \, dx =
+{1 \over \Gamma (s)}
+\int_0^{\infty} \sum_{n=1}^\infty
+e^{-nx} x^{s-1} \, dx =
+{1 \over \Gamma (s)}
+\int_0^{\infty} 
+{x^{s-1} \over e^x - 1} \, dx
+\]
+
+As it stands, the integral representation we have is not of
+much use for analytically continuing the zeta function 
+because the integral diverges when $\Re s < 1$ on account of 
+the fact that the integrand behaves like $x^{-s}$ when $x$
+is close to zero.  However, it is possible to make use of the
+theorem of Cauchy to move the path of integration away from
+zero.
+
+Given a real number $r > 0$, define the contour $C_r$ on the
+Riemann surface of $z^{s-1}$ as follows: $C_r$ passes from
+$+\infty$ to $r$ along a lift of the real axis, then continues 
+along the circle of radius $r$ clockwise, and finally goes
+from $r$ to $+\infty$.  
+
+We now examine the integral over such a contour by breaking it 
+into three pieces.
+\[
+\int_{C_r}
+{x^{s-1} \over e^x - 1} \, dx =
+\int_r^\infty 
+{x^{s-1} \over e^x - 1} \, dx +
+\int_{|x| = r}
+{x^{s-1} \over e^x - 1} \, dx -
+\int_r^\infty 
+{(e^{-2 \pi i}x)^{s-1} \over e^x - 1} \, dx.
+\]
+We may estimate the third integral in absolute value like so:
+\[
+\left| \int_{|x| = r}
+{x^{s-1} \over e^x - 1} \, dx \right| \le
+2 \pi  r \sup_{|x| = r}
+\left| {x^{s-1} \over e^x - 1} \right|
+\]
+
+The expression $x / (e^x - 1)$ represents an analytic function of
+$x$, and hence a bounded function of $x$ in a neighborhood of $0$.
+When $\Re s > 1$, it happens that $\lim_{x \to 0} |x| x^{s-2} = 0$, so
+\[
+\lim_{r \to 0} \left| \int_{|x| = r}
+{x^{s-1} \over e^x - 1} \, dx \right| = 0.
+\]
+
+The third integral differs from the first integral by a phase, so
+they may be combined by pulling out this common factor.  When 
+$\Re s > 0$, we may take the limit as $r$ approaches $0$ after doing
+so to obtain the following:
+\[
+\lim_{r \to 0}
+\int_{C_r}
+{x^{s-1} \over e^x - 1} \, dx =
+\left( 1 + e^{2 \pi i (1 - s)} \right)
+\int_0^\infty 
+{x^{s-1} \over e^x - 1} \, dx
+\]
+
+Since, aside from the branch point at
+$0$, the only singularities of our integrand occur at multiples
+of $2 \pi i$, it follows from Cauchy's theorem that
+\[
+\int_{C_a} 
+{x^{s-1} \over e^x - 1} \, dx =
+\int_{C_b} 
+{x^{s-1} \over e^x - 1} \, dx
+\]
+whenever $0 < a < 2 \pi$ and $0 < b < 2 \pi$, which trivially implies that
+\[
+\lim_{r \to 0}
+\int_{C_r}
+{x^{s-1} \over e^x - 1} \, dx =
+\int_{C_r}
+{x^{s-1} \over e^x - 1} \, dx
+\]
+for any $r$ between $0$ and $2 \pi$.  Therefore,
+\[
+\zeta (s) = 
+{1 \over \left( 1 + e^{2 \pi i (1 - s)} \right) \Gamma(s)}
+\int_{C_\pi} {x^{s-1} \over e^x - 1} \, dx
+\]
+when $\Re z > 1$.  This integral converges for all complex $s$ because
+the exponential grows more rapidly than the power.  Furthermore, this
+integral defines an analytic function of $s$, so we have an analytic
+continuation of the zeta function to the whole complex plane minus the point 1.
+
+
+%%%%%
+%%%%%
+\end{document}

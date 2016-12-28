@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSimultaneousConvergingOrDivergingOfProductAndSumTheorem}
+\pmcreated{2013-03-22 13:35:57}
+\pmmodified{2013-03-22 13:35:57}
+\pmowner{Johan}{1032}
+\pmmodifier{Johan}{1032}
+\pmtitle{proof of Simultaneous converging or diverging of product and sum theorem}
+\pmrecord{5}{34225}
+\pmprivacy{1}
+\pmauthor{Johan}{1032}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{30E20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+From the fact that $1+x \leq e^{x}$ for $x \geq 0$ we get
+\begin{displaymath}
+\sum_{n=1}^{m} a_n \leq \prod_{n=1}^{m} (1+a_n) \leq e^{\sum_{n=1}^{m} a_n}
+\end{displaymath}
+Since $a_n \geq 0$ both the partial sums and the partial products are monotone increasing with the number of terms. This concludes the proof.
+%%%%%
+%%%%%
+\end{document}
