@@ -1,0 +1,134 @@
+<!DOCTYPE html><html>
+<head>
+<title>Green functions and conformal mapping</title>
+<!--Generated on Fri Feb  9 20:13:42 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Green functions and conformal mapping</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">The Green function for the Laplacian operator in two dimensions is closely related to conformal mappings to the unit disk. Given the Green function for a simply-connected region with Dirichlet boundary conditions, one can construct the mapping by exponentiating the sum of the Green function and its conjugate harmonic function. In practise, this can be used to construct mapping functions for various regions for which it is possible to solve the Dirichlet problem. In principle, it can be used to prove results about conformal mappings using the theory of differential equations. For instance, one can prove the Riemann mapping theorem as a consequence of the existence of a solution to the Dirichlet problem.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Definition</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> be a simply connected subset of the complex plane with boundary <math id="S2.p1.m2" class="ltx_Math" alttext="\partial D" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi>D</mi></mrow></math> and let <math id="S2.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> be a point in the interior of <math id="S2.p1.m4" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>. The Green’s function is a function <math id="S2.p1.m5" class="ltx_Math" alttext="g\colon D\to\mathbf{R}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>𝐑</mi></mrow></mrow></math> such that</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="g=0" display="inline"><mrow><mi>g</mi><mo>=</mo><mn>0</mn></mrow></math> on <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\partial D" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi>D</mi></mrow></math>.
+</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\nabla^{2}g=0" display="inline"><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>g</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> on the interior of <math id="I1.i2.p1.m2" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="g(z)-\log|z-a|" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>z</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></math> is bounded as <math id="I1.i3.p1.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> approaches <math id="I1.i3.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Note: The third condition actually is equivalent to the stronger condition that <math id="S2.p2.m1" class="ltx_Math" alttext="g(z)-\log|z-a|" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>z</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></math> is analytic at <math id="S2.p2.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>. This follows from the general fact about harmonic functions.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Construction of the mapping function</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p1.m1" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> be the conjugate harmonic function of to <math id="S3.p1.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>. It can be shown that <math id="S3.p1.m3" class="ltx_Math" alttext="h(z)-\arg(z-a)" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>arg</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is bounded as <math id="S3.p1.m4" class="ltx_Math" alttext="z\to a" display="inline"><mrow><mi>z</mi><mo>→</mo><mi>a</mi></mrow></math> and, consequently, that <math id="S3.p1.m5" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> is a multiple-valued function with branch point at <math id="S3.p1.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> which increases by <math id="S3.p1.m7" class="ltx_Math" alttext="2\pi" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></math> every time one encircles <math id="S3.p1.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Now consider the function <math id="S3.p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> defined as <math id="S3.p2.m2" class="ltx_Math" alttext="e^{-(g+ih)}" display="inline"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></math>. This function is single valued because, when one circles about <math id="S3.p2.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, the argument of the exponential increases by <math id="S3.p2.m4" class="ltx_Math" alttext="2\pi i" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></math>, but adding <math id="S3.p2.m5" class="ltx_Math" alttext="2\pi i" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></math> to an exponential does not change its value. Since <math id="S3.p2.m6" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> is the conjugate harmonic function of <math id="S3.p2.m7" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>, it follows that <math id="S3.p2.m8" class="ltx_Math" alttext="g+ih" display="inline"><mrow><mi>g</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi></mrow></mrow></math> is holomorphic and, hence <math id="S3.p2.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is also holomorphic.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Therefore, <math id="S3.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> maps <math id="S3.p3.m2" class="ltx_Math" alttext="D\setminus\{a\}" display="inline"><mrow><mi>D</mi><mo>∖</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo stretchy="false">}</mo></mrow></mrow></math> to <math id="S3.p3.m3" class="ltx_Math" alttext="\mathbf{C}" display="inline"><mi>𝐂</mi></math>. Various things can be said about this mapping.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Because of the maximum princliple, <math id="S3.p4.m1" class="ltx_Math" alttext="g(z)&gt;0" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> for all <math id="S3.p4.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> in the interior of <math id="S3.p4.m3" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>. Hence, <math id="S3.p4.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> maps the interior of <math id="S3.p4.m5" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> into the interior of the unit disk and maps <math id="S3.p4.m6" class="ltx_Math" alttext="\partial D" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi>D</mi></mrow></math> to the unit circle.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">Furthermore, it can be shown that the function <math id="S3.p5.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is invertible so, in fact, it is a conformal diffeomorphism between <math id="S3.p5.m2" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> and the unit disk.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Green functions and conformal mapping</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">GreenFunctionsAndConformalMapping</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:57:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:57:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 30A99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:13:42 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

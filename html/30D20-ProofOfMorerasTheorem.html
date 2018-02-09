@@ -1,0 +1,179 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Morera’s theorem</title>
+<!--Generated on Fri Feb  9 20:18:15 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Morera’s theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We provide a proof of Morera’s theorem
+under the hypothesis that
+<math id="p1.m1" class="ltx_Math" alttext="\int_{\Gamma}f(z)dz=0" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi mathvariant="normal">Γ</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>
+for any circuit <math id="p1.m2" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> contained in <math id="p1.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.
+This is apparently more restrictive, but actually equivalent,
+to supposing
+<math id="p1.m4" class="ltx_Math" alttext="\int_{\partial\Delta}f(z)dz=0" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mo>∂</mo><mo>⁡</mo><mi mathvariant="normal">Δ</mi></mrow></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>
+for any triangle <math id="p1.m5" class="ltx_Math" alttext="\Delta\subseteq G" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⊆</mo><mi>G</mi></mrow></math>,
+provided that <math id="p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous in <math id="p1.m7" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The idea is to prove that <math id="p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> has an antiderivative <math id="p2.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> in <math id="p2.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.
+Then <math id="p2.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>, being holomorphic in <math id="p2.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>,
+will have derivatives of any order in <math id="p2.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>;
+but <math id="p2.m7" class="ltx_Math" alttext="F^{(n)}(z)=f^{(n-1)}(z)" display="inline"><mrow><mrow><msup><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="p2.m8" class="ltx_Math" alttext="z\in G" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>G</mi></mrow></math>, <math id="p2.m9" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>, <math id="p2.m10" class="ltx_Math" alttext="n\geq 1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">First, suppose <math id="p3.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is connected.
+Then <math id="p3.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, being open, is also pathwise connected.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Fix <math id="p4.m1" class="ltx_Math" alttext="z_{0}\in G" display="inline"><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>∈</mo><mi>G</mi></mrow></math>.
+For any <math id="p4.m2" class="ltx_Math" alttext="z\in G" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>G</mi></mrow></math> define <math id="p4.m3" class="ltx_Math" alttext="F(z)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> as</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="F(z)=\int_{\gamma(z_{0},z)}f(w)dw\;," display="block"><mrow><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>w</mi></mpadded></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p4.m4" class="ltx_Math" alttext="\gamma(z_{0},z)" display="inline"><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a path entirely contained in <math id="p4.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
+with initial point <math id="p4.m6" class="ltx_Math" alttext="z_{0}" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math> and final point <math id="p4.m7" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The function <math id="p5.m1" class="ltx_Math" alttext="F:G\to\mathbb{C}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> is well defined.
+In fact, let <math id="p5.m2" class="ltx_Math" alttext="\gamma_{1}" display="inline"><msub><mi>γ</mi><mn>1</mn></msub></math> and <math id="p5.m3" class="ltx_Math" alttext="\gamma_{2}" display="inline"><msub><mi>γ</mi><mn>2</mn></msub></math>
+be any two paths entirely contained in <math id="p5.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
+with initial point <math id="p5.m5" class="ltx_Math" alttext="z_{0}" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math> and final point <math id="p5.m6" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>;
+define a circuit <math id="p5.m7" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> by joining <math id="p5.m8" class="ltx_Math" alttext="\gamma_{1}" display="inline"><msub><mi>γ</mi><mn>1</mn></msub></math> and <math id="p5.m9" class="ltx_Math" alttext="-\gamma_{2}" display="inline"><mrow><mo>-</mo><msub><mi>γ</mi><mn>2</mn></msub></mrow></math>,
+the path obtained from <math id="p5.m10" class="ltx_Math" alttext="\gamma_{2}" display="inline"><msub><mi>γ</mi><mn>2</mn></msub></math> by
+“reversing the parameter direction”.
+Then by linearity and additivity of integral</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\int_{\Gamma}f(w)dw=\int_{\gamma_{1}}f(w)dw+\int_{-\gamma_{2}}f(w)dw=\int_{%
+\gamma_{1}}f(w)dw-\int_{\gamma_{2}}f(w)dw\;;" display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi mathvariant="normal">Γ</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>w</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>γ</mi><mn>1</mn></msub></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>w</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><msub><mi>γ</mi><mn>2</mn></msub></mrow></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>w</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>γ</mi><mn>1</mn></msub></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>w</mi></mrow></mrow></mrow><mo>-</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>γ</mi><mn>2</mn></msub></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>w</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">but the left-hand side is 0 by hypothesis,
+thus the two integrals on the right-hand side are equal.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">We must now prove that <math id="p6.m1" class="ltx_Math" alttext="F^{\prime}=f" display="inline"><mrow><msup><mi>F</mi><mo>′</mo></msup><mo>=</mo><mi>f</mi></mrow></math> in <math id="p6.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.
+Given <math id="p6.m3" class="ltx_Math" alttext="z\in G" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>G</mi></mrow></math>, there exists <math id="p6.m4" class="ltx_Math" alttext="r&gt;0" display="inline"><mrow><mi>r</mi><mo>&gt;</mo><mn>0</mn></mrow></math>
+such that the ball <math id="p6.m5" class="ltx_Math" alttext="B_{r}(z)" display="inline"><mrow><msub><mi>B</mi><mi>r</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> of radius <math id="p6.m6" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> centered in <math id="p6.m7" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>
+is contained in <math id="p6.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.
+Suppose <math id="p6.m9" class="ltx_Math" alttext="0&lt;|\Delta{z}|&lt;r" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>r</mi></mrow></math>:
+then we can choose as a path from <math id="p6.m10" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> to <math id="p6.m11" class="ltx_Math" alttext="z+\Delta{z}" display="inline"><mrow><mi>z</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></math>
+the segment <math id="p6.m12" class="ltx_Math" alttext="\gamma:[0,1]\to G" display="inline"><mrow><mi>γ</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><mo>→</mo><mi>G</mi></mrow></mrow></math> parameterized by <math id="p6.m13" class="ltx_Math" alttext="t\mapsto z+t\Delta{z}" display="inline"><mrow><mi>t</mi><mo>↦</mo><mrow><mi>z</mi><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></mrow></math>.
+Write <math id="p6.m14" class="ltx_Math" alttext="f=u+iv" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mi>u</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow></math> with <math id="p6.m15" class="ltx_Math" alttext="u,v:G\to\mathbb{R}" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>:
+by additivity of integral and the mean value theorem,
+</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\frac{F(z+\Delta{z})-F(z)}{\Delta{z}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{\Delta{z}}\int_{\gamma}f(w)dw" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>w</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{\Delta{z}}\int_{0}^{1}f(z+t\Delta{z})\Delta{z}dt" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle u(z+\theta_{u}\Delta{z})+iv(z+\theta_{v}\Delta{z})" display="inline"><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>+</mo><mrow><msub><mi>θ</mi><mi>u</mi></msub><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>+</mo><mrow><msub><mi>θ</mi><mi>v</mi></msub><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some <math id="p6.m16" class="ltx_Math" alttext="\theta_{u},\theta_{v}\in(0,1)" display="inline"><mrow><mrow><msub><mi>θ</mi><mi>u</mi></msub><mo>,</mo><msub><mi>θ</mi><mi>v</mi></msub></mrow><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math>.
+Since <math id="p6.m17" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous, so are <math id="p6.m18" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="p6.m19" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, and</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\lim_{\Delta{z}\to 0}\frac{F(z+\Delta{z})-F(z)}{\Delta{z}}=u(z)+iv(z)=f(z)\,." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>z</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In the general case, we just repeat the procedure
+once for each connected component of <math id="p6.m20" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.</p>
+</div>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Morera’s theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfMorerasTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:53:34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:53:34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Ziosilvio (18733)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Ziosilvio (18733)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Ziosilvio (18733)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 30D20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:18:15 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

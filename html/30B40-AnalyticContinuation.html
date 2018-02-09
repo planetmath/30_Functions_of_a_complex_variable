@@ -1,0 +1,123 @@
+<!DOCTYPE html><html>
+<head>
+<title>analytic continuation</title>
+<!--Generated on Fri Feb  9 20:16:06 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">analytic continuation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="p2.m1" class="ltx_Math" alttext="D_{1}" display="inline"><msub><mi>D</mi><mn>1</mn></msub></math> and <math id="p2.m2" class="ltx_Math" alttext="D_{2}" display="inline"><msub><mi>D</mi><mn>2</mn></msub></math> are connected open subsets of the complex plane
+and that <math id="p2.m3" class="ltx_Math" alttext="D_{1}\subset D_{2}" display="inline"><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>⊂</mo><msub><mi>D</mi><mn>2</mn></msub></mrow></math>. Suppose that <math id="p2.m4" class="ltx_Math" alttext="f\colon D_{1}\to\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> and <math id="p2.m5" class="ltx_Math" alttext="g\colon D_{2}\to\mathbb{C}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> are analytic. If the restriction of <math id="p2.m6" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> to <math id="p2.m7" class="ltx_Math" alttext="D_{1}" display="inline"><msub><mi>D</mi><mn>1</mn></msub></math> equals <math id="p2.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, we say that <math id="p2.m9" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a <em class="ltx_emph ltx_font_italic">direct analytic continuation</em> of <math id="p2.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The reason that the notion of analytic continuation is interesting is the rigidity theorem for complex functions, which implies that analytic continuation is unique. This is in marked contrast to what would happen if, instead of analyticity, we only required a weaker condition such as continuity. In that case, there would exist a great number of continuations of a given function to a larger domain. In fact there are so many possibilities that the choice of continuation is largely arbitrary — one can find a continuation which agrees with any continuous function on a subset of <math id="p3.m1" class="ltx_Math" alttext="D_{2}" display="inline"><msub><mi>D</mi><mn>2</mn></msub></math> which is separated from <math id="p3.m2" class="ltx_Math" alttext="D_{1}" display="inline"><msub><mi>D</mi><mn>1</mn></msub></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">One can generalize this notion to continuation along a chain of open sets.
+Suppose that one has a sequence of open sets 
+<math id="p4.m1" class="ltx_Math" alttext="D_{1},\ldots,D_{n}" display="inline"><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>D</mi><mi>n</mi></msub></mrow></math>  such that
+<math id="p4.m2" class="ltx_Math" alttext="D_{k}\cap D_{k+1}" display="inline"><mrow><msub><mi>D</mi><mi>k</mi></msub><mo>∩</mo><msub><mi>D</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></math> is not empty for <math id="p4.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> between <math id="p4.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> and <math id="p4.m5" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> and <math id="p4.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> functions
+<math id="p4.m7" class="ltx_Math" alttext="f_{k}\colon D_{k}\to\mathbb{C}" display="inline"><mrow><msub><mi>f</mi><mi>k</mi></msub><mo>:</mo><mrow><msub><mi>D</mi><mi>k</mi></msub><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> such that <math id="p4.m8" class="ltx_Math" alttext="f_{k}(z)=f_{k+1}(z)" display="inline"><mrow><mrow><msub><mi>f</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>f</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> when
+<math id="p4.m9" class="ltx_Math" alttext="z\in D_{k}\cap D_{k+1}" display="inline"><mrow><mi>z</mi><mo>∈</mo><mrow><msub><mi>D</mi><mi>k</mi></msub><mo>∩</mo><msub><mi>D</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></mrow></math> for all <math id="p4.m10" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> between <math id="p4.m11" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> and <math id="p4.m12" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>. Then we say
+that <math id="p4.m13" class="ltx_Math" alttext="f_{n}" display="inline"><msub><mi>f</mi><mi>n</mi></msub></math> is the <em class="ltx_emph ltx_font_italic">indirect analytic continuation</em> of
+<math id="p4.m14" class="ltx_Math" alttext="f_{1}" display="inline"><msub><mi>f</mi><mn>1</mn></msub></math> along the chain  <math id="p4.m15" class="ltx_Math" alttext="D_{1},\ldots,D_{n}" display="inline"><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>D</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">A related notion is that of analytic continuation along an arc. Given an arc <math id="p5.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> with endpoints <math id="p5.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p5.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, a function <math id="p5.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> defined in open neighborhood of <math id="p5.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, and a function <math id="p5.m6" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> defined in open neighborhood of <math id="p5.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> we say that <math id="p5.m8" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is the analytic continuation of <math id="p5.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> along the arc <math id="p5.m10" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> if there exists an open set containing <math id="p5.m11" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> and and an analytic function <math id="p5.m12" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> defined on this open set such that <math id="p5.m13" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> agrees with <math id="p5.m14" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> at those points of the complex plane where both <math id="p5.m15" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p5.m16" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> are defined and <math id="p5.m17" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> agrees with <math id="p5.m18" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> at those points of the complex plane where both <math id="p5.m19" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> and <math id="p5.m20" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> are defined. By the rigidity theorem, the analytic continuation of a function along an arc is unique.  This concerns especially extending a real function to an analytic function of a complex variable.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">It is worth noting that it is possible to obtain different analytic continuations of the same function along two arcs with the same endpoints. For instance, if we let <math id="p6.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> be the square root function, let <math id="p6.m2" class="ltx_Math" alttext="x=1" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow></math> and <math id="p6.m3" class="ltx_Math" alttext="y=-1" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>, and let <math id="p6.m4" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> and <math id="p6.m5" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> be the two halves of the unit circle joining <math id="p6.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to <math id="p6.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, then the result of analytically continuing <math id="p6.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> from <math id="p6.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to <math id="p6.m10" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> along <math id="p6.m11" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> differs from the result of analytically continuing <math id="p6.m12" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> from <math id="p6.m13" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to <math id="p6.m14" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> along <math id="p6.m15" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">This seems to contradict the uniqueness of analytic continuation. This contradiction, however, is only apparent because there does not exist a single open set which contains both <math id="p7.m1" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> and <math id="p7.m2" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> to which <math id="p7.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can be analytically continued. In fact, in order to accommodate both the analytic continuation along <math id="p7.m4" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> and the analytic continuation along <math id="p7.m5" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math>, one needs to define <math id="p7.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> on a Riemann surface. Then there exists an open subset of the Riemann surface which contains the lifts of both <math id="p7.m7" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> and <math id="p7.m8" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math>. Since the lift of the endpoint of the lift of <math id="p7.m9" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math> lies on a different sheet of the Riemann surface than the endpoint of the lift of <math id="p7.m10" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math>, there is nothing contradictory about the fact that the analytic continuation of <math id="p7.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> assumes different values at these two distinct points on the Riemann surface.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">The notion of analytic continuation along an arc can be extended to analytic continuation along a path. Any path can be written as the union of overlapping arcs. To continue a function along a path, one successively continues it along the various arcs into which the path has been decomposed. It is a simple consequence of the rigidity theorem that the result of analytically continuing a function along a path is independent of the decomposition of the path into arcs.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">analytic continuation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AnalyticContinuation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-03-13 16:38:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-03-13 16:38:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">16</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30B40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30A99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AnalyticContinuationOfRiemannZeta</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AnalyticContinuationOfGammaFunction</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">analytic continuation along an arc</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">analytic continuation along a path</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:16:06 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

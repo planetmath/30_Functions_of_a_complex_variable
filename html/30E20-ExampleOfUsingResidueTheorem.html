@@ -1,0 +1,190 @@
+<!DOCTYPE html><html>
+<head>
+<title>example of using residue theorem</title>
+<!--Generated on Fri Feb  9 20:20:33 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">example of using residue theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We take an example of applying the Cauchy residue theorem in evaluating usual real improper integrals.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We shall  the integral</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="I\;:=\;\int_{0}^{\infty}\frac{\cos{kx}}{1+x^{2}}\,dx" display="block"><mrow><mpadded width="+2.8pt"><mi>I</mi></mpadded><mo rspace="5.3pt">:=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><mfrac><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p2.m1" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is any real number.  One may prove that the integrand has no antiderivative among the elementary functions if  <math id="p2.m2" class="ltx_Math" alttext="k\neq 0" display="inline"><mrow><mi>k</mi><mo>≠</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Since the integrand is an even (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/EvenoddFunction</span>) and  <math id="p3.m1" class="ltx_Math" alttext="x\mapsto\frac{\sin{kx}}{1+x^{2}}" display="inline"><mrow><mi>x</mi><mo>↦</mo><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></math>  an odd function, we may write</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="I\;=\;\frac{1}{2}\int_{-\infty}^{\infty}\frac{\cos{kx}+i\sin{kx}}{1+x^{2}}\,dx%
+\;=\;\frac{1}{2}\int_{-\infty}^{\infty}\frac{e^{ikx}}{1+x^{2}}\,dx," display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>I</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><mfrac><mrow><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">using also Euler’s formula.  Let’s consider the contour integral</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="J\;:=\;\oint_{\gamma}\frac{e^{ikz}}{1+z^{2}}\,dz" display="block"><mrow><mpadded width="+2.8pt"><mi>J</mi></mpadded><mo rspace="5.3pt">:=</mo><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p3.m2" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> is the perimeter of the semicircle consisting of the line segment from <math id="p3.m3" class="ltx_Math" alttext="(-R,\,0)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>R</mi></mrow><mo>,</mo><mn> 0</mn><mo stretchy="false">)</mo></mrow></math> to <math id="p3.m4" class="ltx_Math" alttext="(R,\,0)" display="inline"><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mn> 0</mn><mo stretchy="false">)</mo></mrow></math> and the semi-circular arc <math id="p3.m5" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> connecting these points in the upper half-plane (<math id="p3.m6" class="ltx_Math" alttext="R&gt;1" display="inline"><mrow><mi>R</mi><mo>&gt;</mo><mn>1</mn></mrow></math>).  The integrand is analytic on and inside of <math id="p3.m7" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> except in the point  <math id="p3.m8" class="ltx_Math" alttext="z=i" display="inline"><mrow><mi>z</mi><mo>=</mo><mi>i</mi></mrow></math>  which is a simple pole.  Because we have (cf. the coefficients of Laurent series)</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\operatorname{Res}\left(\frac{e^{ikz}}{1+z^{2}},\;i\right)\;=\;\lim_{z\to i}(z%
+-i)\frac{e^{ikz}}{z^{2}+1}\;=\;\lim_{z\to i}\frac{e^{ikz}}{z+i}\;=\;\frac{e^{-%
+k}}{2i}," display="block"><mrow><mrow><mrow><mi>Res</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac><mo rspace="5.3pt">,</mo><mi>i</mi><mo rspace="5.3pt">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>z</mi><mo>→</mo><mi>i</mi></mrow></munder><mo>⁡</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mpadded></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>z</mi><mo>→</mo><mi>i</mi></mrow></munder><mo>⁡</mo><mpadded width="+2.8pt"><mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mrow><mi>z</mi><mo>+</mo><mi>i</mi></mrow></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mi>k</mi></mrow></msup><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the residue theorem (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CauchyResidueTheorem</span>) yields</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="J\;=\;2\pi i\!\cdot\!\frac{e^{-k}}{2i}\;=\;\pi e^{-k}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>J</mi></mpadded><mo>=</mo><mrow><mrow><mn> 2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mpadded width="-1.7pt"><mi>i</mi></mpadded></mrow><mo rspace="0.8pt">⋅</mo><mpadded width="+2.8pt"><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mi>k</mi></mrow></msup><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi></mrow></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mi>π</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>k</mi></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This does not depend on the radius <math id="p3.m9" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> of the circle.</p>
+<svg version="1.1" class="ltx_centering" height="113.8pt" width="170.7pt" fragid="p3.pic1" viewBox="0 0 0 0" overflow="visible"><g transform="translate(0,113.8)"><g transform="scale(1 -1)"><g transform="translate(85.36,28.45)"><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text><text dominant-baseline="middle" text-anchor="middle" x="0" y="0" transform="scale(1 -1)" fill="black"><text><text dominant-baseline="middle" baseline-shift="super" text-anchor="start" x="0" y="0" transform="scale(1 -1)" fill="black"></text></text></text></g></g></g></svg>
+<p class="ltx_p">We split the integral <math id="p3.m10" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> in two portions:  one along the diameter and the other along the circular arc <math id="p3.m11" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.  So we obtain</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\int_{-R}^{R}\frac{e^{ikx}}{1+x^{2}}\,dx+\!\int_{c}\frac{e^{ikz}}{1+z^{2}}\,dz%
+\;\,=\;\,\pi e^{-k}." display="block"><mrow><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi>R</mi></mrow><mi>R</mi></msubsup><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo rspace="0.8pt">+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>c</mi></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+4.4pt"><mi>z</mi></mpadded></mrow></mrow></mrow></mrow><mo rspace="6.9pt">=</mo><mrow><mi>π</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>k</mi></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">When  <math id="p3.m12" class="ltx_Math" alttext="R\to\infty" display="inline"><mrow><mi>R</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>,  the former portion tends to the limit <math id="p3.m13" class="ltx_Math" alttext="2I" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>I</mi></mrow></math> and the latter — as we at once shall see — to the limit 0.  Hence we get the result</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="I\;=\;\int_{0}^{\infty}\frac{\cos{kx}}{1+x^{2}}\,dx\;=\;\frac{\pi}{2e^{k}}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>I</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><mfrac><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mfrac><mi>π</mi><mrow><mn>2</mn><mo>⁢</mo><msup><mi>e</mi><mi>k</mi></msup></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">As for the latter part of <math id="p4.m1" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>, we denote  <math id="p4.m2" class="ltx_Math" alttext="z:=x+iy" display="inline"><mrow><mi>z</mi><mo>:=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math> (<math id="p4.m3" class="ltx_Math" alttext="x,\,y\in\mathbb{R}" display="inline"><mrow><mrow><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>);  then on the arc <math id="p4.m4" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, where  <math id="p4.m5" class="ltx_Math" alttext="|z|=R" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>R</mi></mrow></math>  and  <math id="p4.m6" class="ltx_Math" alttext="y\geqq 0" display="inline"><mrow><mi>y</mi><mo>≧</mo><mn>0</mn></mrow></math>, we have</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\left|\frac{e^{ikz}}{1+z^{2}}\right|\;=\;\frac{|e^{-ky+ikx}|}{|1+z^{2}|}\;=\;%
+\frac{e^{-ky}}{|1+z^{2}|}\;\leqq\;\frac{1}{R^{2}\!-\!1}." display="block"><mrow><mrow><mrow><mo>|</mo><mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac><mo rspace="5.3pt">|</mo></mrow><mo rspace="5.3pt">=</mo><mpadded width="+2.8pt"><mfrac><mrow><mo stretchy="false">|</mo><msup><mi>e</mi><mrow><mrow><mo>-</mo><mrow><mi>k</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">|</mo></mrow></mfrac></mpadded><mo rspace="5.3pt">=</mo><mpadded width="+2.8pt"><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>k</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></msup><mrow><mo stretchy="false">|</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">|</mo></mrow></mfrac></mpadded><mo rspace="5.3pt">≦</mo><mfrac><mn>1</mn><mrow><mpadded width="-1.7pt"><msup><mi>R</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using this estimation of the integrand we get, according the integral estimating theorem, the inequality</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\left|\int_{c}\frac{e^{ikz}}{1+z^{2}}\,dz\right|\;\leqq\;\frac{1}{R^{2}\!-\!1}%
+\!\cdot\!\pi R\;=\;\frac{\pi}{R\!-\!\frac{1}{R}}." display="block"><mrow><mrow><mrow><mo>|</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>c</mi></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>z</mi></mrow></msup><mrow><mn>1</mn><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow><mo rspace="5.3pt">|</mo></mrow><mo rspace="5.3pt">≦</mo><mrow><mrow><mpadded width="-1.7pt"><mfrac><mn>1</mn><mrow><mpadded width="-1.7pt"><msup><mi>R</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow></mfrac></mpadded><mo rspace="0.8pt">⋅</mo><mi>π</mi></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mi>R</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mfrac><mi>π</mi><mrow><mpadded width="-1.7pt"><mi>R</mi></mpadded><mo rspace="0.8pt">-</mo><mfrac><mn>1</mn><mi>R</mi></mfrac></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since the right hand member tends to 0 as  <math id="p4.m7" class="ltx_Math" alttext="R\to\infty" display="inline"><mrow><mi>R</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, then also the left hand member.</p>
+</div>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">example of using residue theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfUsingResidueTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:19:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:19:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">19</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30E20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ImproperIntegral</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Residue</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">IntegralsOfEvenAndOddFunctions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">UsingResidueTheoremNearBranchPoint</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:20:33 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html><html>
+<head>
+<title>Riemann surface</title>
+<!--Generated on Fri Feb  9 20:22:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Riemann surface</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Broad Sense</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">In its broadest meaning, the term <em class="ltx_emph ltx_font_italic">Riemann surface</em> means a one-dimensional <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>Note: The term “one-dimensional” here refers to the fact that the location of a point in the domain of a homeomorphism may be specified by a single complex coordinate (namely, the value of the homeomorphism at that point). Of course, a single complex number is equivalent to two real numbers, so a Riemann surface is a two-dimensional real manifold, hence the term surface. This terminology can be somewhat confusing to the beginner — the terms “complex curve” and “real surface” can both be used to refer to the same mathematical object!</span></span></span> complex manifold. Spelled out explicitly, this means that a Riemann surface is a Hausdorff topological space together with a set of homeomorphisms between certain open subsets of that space and open subsets of the complex plane which satisfy the following two conditions:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Every point of the Riemann surface lies in the domain of at least one of the homeomorphisms.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If the domains of two homeomorphisms overlap, the composition of one homeomorphism with the inverse of the restriction of the other homeomorphism to the overlap region is a complex analytic function.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">The simplest example of a Riemann surface which is not a subset of the complex plane is the Riemann sphere.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">The main reason Riemann surfaces are interesting is that one can speak of analytic functions on Riemann surfaces. A complex-valued function on a Riemann surface is said to be <em class="ltx_emph ltx_font_italic">analytic</em> if the composition of this function with the inverse of any of the homeomorphisms mentioned in the definition is a complex analytic function.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Narrow Sense</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">The term “Riemann surface” is often used in a narrower sense. A Riemann surface in the narrower sense is a branched covering of the complex plane. That means that we have a one-dimensional complex manifold together with a projection map from a dense open subset of that manifold to the complex plane. (Note that
+the image of this projection map need not be the whole complex plane —
+in fact, in the case of functions with natural boundary, it may not even
+be a dense subset thereof.)</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">A particularly important motivation for this definition is the result that, given a (possibly multiply-valued) analytic function defined on an open subset of the complex plane, there exists a (single-valued) analytic function defined on a Riemann surface (in the narrow sense) such that the pullback of the restriction of this function to a suitable open subset of the Riemann surface under the projection map corresponds to the original function defined on a subset of the complex plane. To show this result, one needs to exhibit a method whereby, given a function defined on an open subset of the complex plane, one can construct a suitable Riemann surface. Over the years, mathematicians have devised several means for accomplishing these ends, and the remainder of this entry is devoted to an exposition of some of these methods, starting with Riemann’s concrete geometric approach and ending with more abstract approaches typical of contemporary mathematics.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Riemann’s Construction</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">To begin our discussion, we may go back to Riemann’s original motivation for introducing his surfaces. He was trying to make sense of “many-valued functions” such as the square root and the logarithm. One way of making sense of such entities is by making “branch cuts” — i.e. removing certain curves from the complex plane such that one is left with a dense open set on which the function is well-defined (single-valued). For instance, to study the square root or the logarithm, one typically removes the negative real axis.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Of course, if the original function is multiple-valued, there is more than one way of defining it in the dense open set. Each of these possible definitions is called a <em class="ltx_emph ltx_font_italic">branch</em> of the function. For instance, there is the negative branch and the positive branch of the square root. In the case of the logarithm (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ComplexLogarithm</span>), the different branches differ by an additive factor of the form <math id="S3.p2.m1" class="ltx_Math" alttext="2\pi in" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>n</mi></mrow></math>.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Riemann’s clever idea was to combine these different branches by means of a geometric device. He imagined taking as many copies of the open set as there are branches of the function and joining them together along the branch cuts. To understand how this works, imagine cutting out sheets along the branch curves and stacking them on top of the complex plane. On each sheet, we define one branch of the function. We glue the different sheets to each other in such a way that the branch of the function on one sheet joins continuously at the seam with the branch defined on the other sheet. For instance, in the case of the square root, we join each end of the sheet corresponding to the positive branch with the opposite end of the sheet corresponding to the negative branch. In the case of the logarithm, we join one end of the sheet corresponding to the <math id="S3.p3.m1" class="ltx_Math" alttext="2\pi n" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>n</mi></mrow></math> branch with an end of the <math id="S3.p3.m2" class="ltx_Math" alttext="(2n+1)\pi n" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>n</mi></mrow></math> sheet to obtain a spiral structure which looks like a parking garage.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">The advantage of Riemann’s construction is that one has now constructed a geometric space on which the function is well-defined and single valued. The multi-valuedness and the branches are easily understood form this viewpoint —the function appears to have many values at a single point because we did not distinguish between different points on the Riemann surface which project to the same point on the complex plane and instead tried to think (somewhat illogically) of the function as having more than one value at a single point on the complex plane rather than as having different values at several points which correspond to this point.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">The modern reader will recognize in Riemann’s cut-and-paste procedure the same idea of combining open sets to create a space which underlies the modern definition of manifold cited at the beginning of this article. In the nineteeenth century, even though such topological concepts as manifolds were known, they were not rigorously defined. Indeed, even the definition of open and closed sets would not be introduced until the end of the nineteenth century and the beginning of the twentieth century, some 50 years after Riemann. In the meanwhile, Riemann, Betti, Maxwell, Tait, Moebius and others had to rely on intuitive topological ideas.</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">This old description of Riemann surfaces is worth knowing about because it explains terminology such as “sheet of the Riemann surface” which is still in use today. Moreover, the lead author believes that there is no better way of coming to terms with Riemann surfaces than by taking scissors, paper, and tape and constructing models of Riemann surfaces. (he has done this himself several times) It is easiest to start with the Riemann surfaces for the square root and the logarithm. After one gains some experience cutting and gluing together Riemann surfaces, one can try some more complicated examples as the Riemann surface of the function <math id="S3.p6.m1" class="ltx_Math" alttext="f(z)=\sqrt{z^{4}-1}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msqrt><mrow><msup><mi>z</mi><mn>4</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow></math>. When one has constructed this surface and convinced oneself that it has the topology of a torus, one is well on one’s way to developing an intuitive understanding of Riemann surfaces.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Weyl’s Approach</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">A half-century after Riemann, H. Weyl provided a rigorous construction of
+Riemann surfaces using techniques of topology. Aside from its historical
+interest, this construction, which is based upon analytic continuation by
+power series, is rather interesting in its own right, so we
+shall discuss it here.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">The basic strategy of this construction is to construct the surface as a
+subspace of a larger topological space <math id="S4.p2.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. The elements of the
+underlying set of <math id="S4.p2.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> are pairs consisting of a point of the
+complex plane and a convergent power series about that point. The
+topology may be described via a subbasis as follows. Given an element
+<math id="S4.p2.m3" class="ltx_Math" alttext="(z,\{a_{k}\}_{k=0}^{\infty})\in\Omega" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>z</mi><mo>,</mo><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math> and real number <math id="S4.p2.m4" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math>
+between zero and the radius of convergence of <math id="S4.p2.m5" class="ltx_Math" alttext="\{a_{k}\}_{k=0}^{\infty}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup></math>,
+we define a subbaisis element <math id="S4.p2.m6" class="ltx_Math" alttext="B\subset\Omega" display="inline"><mrow><mi>B</mi><mo>⊂</mo><mi mathvariant="normal">Ω</mi></mrow></math> as follows:
+A pair <math id="S4.p2.m7" class="ltx_Math" alttext="(w,\{b_{k}\}_{k=0}^{\infty})" display="inline"><mrow><mo stretchy="false">(</mo><mi>w</mi><mo>,</mo><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>b</mi><mi>k</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mo stretchy="false">)</mo></mrow></math> belongs to <math id="S4.p2.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> if <math id="S4.p2.m9" class="ltx_Math" alttext="|w-z|&lt;\epsilon" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>w</mi><mo>-</mo><mi>z</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>ϵ</mi></mrow></math> and <math id="S4.p2.m10" class="ltx_Math" alttext="\sum_{k=0}^{\infty}a_{k}(\zeta-z)^{k}=\sum_{k=0}^{\infty}b_{k}(\zeta-w)^{k}" display="inline"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>b</mi><mi>k</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>ζ</mi><mo>-</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></mrow></mrow></math> for all <math id="S4.p2.m11" class="ltx_Math" alttext="\zeta\in\mathbb{C}" display="inline"><mrow><mi>ζ</mi><mo>∈</mo><mi>ℂ</mi></mrow></math> such that both series
+converge. (Because <math id="S4.p2.m12" class="ltx_Math" alttext="|w-z|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mi>w</mi><mo>-</mo><mi>z</mi></mrow><mo stretchy="false">|</mo></mrow></math> is less than the radius of convergence of
+the former series, there exists an infinity of such points <math id="S4.p2.m13" class="ltx_Math" alttext="\zeta" display="inline"><mi>ζ</mi></math> and,
+in fact, the <math id="S4.p2.m14" class="ltx_Math" alttext="b_{k}" display="inline"><msub><mi>b</mi><mi>k</mi></msub></math>’s are uniquely determined in terms of the <math id="S4.p2.m15" class="ltx_Math" alttext="\alpha_{k}" display="inline"><msub><mi>α</mi><mi>k</mi></msub></math>’s.)</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">A Riemann surface is then defined to be a closed, connected subspace of
+<math id="S4.p3.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. The projection map from the Riemann surface to the complex
+plane simply is the map which sends each pair to its first component.
+Using this map, one can show that what has been constructed is in fact
+a complex manifold. This is essentially a routine verification; for
+every subbasis element this map is an isomorphism to an open subset of
+the complex plane, so the totality of subbasis elements form an atlas.</p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">An fascinating feature of this construction is that it provides all
+possible Riemann surfaces at once. The topological space <math id="S4.p4.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>
+has many connected components, each of which is a different
+Riemann surface.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Space of Paths</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Another approach is based upon analytic continuation along paths and
+resembles the construction of the universal cover of a manifold as a
+set of paths. In this approach, we start with an analytic function defined
+in the neighborhood of some point. We consider the totality of all paths
+along which this function may be analytically continued. Next, we identify
+paths which have the same endpoints and can be deformed homotopically
+into each other by a one-parameter family of paths along which the
+function can be analytically continued. (By the monodromy theorem,
+analytically continuing the function along paths which are to be
+identified will lead to the same result.) It turns out that this set
+of identified paths has the structure of a complex manifold. Since the
+proof of this latter assertion is somewhat technical and would interrupt
+the flow of exposition, it has been relegated to an attachment (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ConstructionOfRiemannSurfaceUsingPaths</span>).</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">As it turns out, this construction does not produce all Riemann surfaces —
+it only produces the simply connected ones. To produce the remaining
+surfaces, one needs to perform yet another identification. One must
+identify all closed loops such that analytic continuation along these
+loops leads to the same function and identify paths which differ by such a
+loop. A beautiful example of this identification is provided by an example
+considered earlier, the Riemann surface of <math id="S5.p2.m1" class="ltx_Math" alttext="f(z)=\sqrt{z^{4}-1}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msqrt><mrow><msup><mi>z</mi><mn>4</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow></math>. If
+one does not make identifications, one obtains a plane on which <math id="S5.p2.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> lifts
+to a doubly periodic elliptic function. Identifying by the two periods
+forms a torus which, as we saw earlier, is the Riemann surface of <math id="S5.p2.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Sheaves</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">Just as the two foregoing approaches may be seen as
+being based upon the analytic continuation by power series and along
+paths, respectively, so the approach to be described now may be seen as
+based upon analytic continuation along chains of open sets. Define a
+<em class="ltx_emph ltx_font_italic">function element</em> to be a pair <math id="S6.p1.m1" class="ltx_Math" alttext="(D,f)" display="inline"><mrow><mo stretchy="false">(</mo><mi>D</mi><mo>,</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></math> where <math id="S6.p1.m2" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is an open subset
+of the complex plane and <math id="S6.p1.m3" class="ltx_Math" alttext="f\colon D\to\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> is analytic. The
+set of all function elements form a sheaf over the complex plane, which
+we shall denote as <math id="S6.p1.m4" class="ltx_Math" alttext="{\cal S}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒮</mi></math>.</p>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Comparison of Approaches</h2>
+
+</section>
+<section id="S8" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8 </span>Branch Points</h2>
+
+<div id="S8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Bibliography</span></p>
+</div>
+<div id="S8.p2" class="ltx_para">
+<p class="ltx_p">H. Cohn, <em class="ltx_emph ltx_font_italic">Conformal Mapping on Riemann Surfaces</em>, Dover Publishing, 1967
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Riemann surface</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RiemannSurface</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:41:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:41:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 30F99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:22:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof to Cauchy-Riemann equations (polar coordinates)</title>
+<!--Generated on Fri Feb  9 20:22:16 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof to Cauchy-Riemann equations (polar coordinates)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">If <math id="p1.m1" class="ltx_Math" alttext="f(z)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> is differentialble at <math id="p1.m2" class="ltx_Math" alttext="z_{0}" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math> then the following limit</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle f^{\prime}(z_{0})" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle\lim_{\xi\to 0}\frac{f(z_{0}+\xi)-f(z_{0})}{\xi}" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ξ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>+</mo><mi>ξ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>ξ</mi></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">will remain the same approaching from any direction. First we fix <math id="p1.m3" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> as <math id="p1.m4" class="ltx_Math" alttext="\theta_{0}" display="inline"><msub><mi>θ</mi><mn>0</mn></msub></math> then we take the limit along the ray where the argument is equal to <math id="p1.m5" class="ltx_Math" alttext="\theta_{0}" display="inline"><msub><mi>θ</mi><mn>0</mn></msub></math>. Then</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle f^{\prime}(z_{0})" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle\lim_{h\to 0}\frac{f(r_{0}e^{i\theta_{0}}+he^{i\theta_{0}})-f(r_{%
+0}e^{i\theta_{0}})}{he^{i\theta_{0}}}" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle\lim_{h\to 0}\frac{f((r_{0}+h)e^{i\theta_{0}})-f(r_{0}e^{i\theta_%
+{0}})}{he^{i\theta_{0}}}" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\lim_{h\to 0}\frac{u(r_{0}+h,\theta_{0})+iv(r_{0}+h,\theta_{0})-u%
+(r_{0},\theta_{0})-iv(r_{0},\theta_{0})}{he^{i\theta_{0}}}" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{e^{i\theta_{0}}}\Bigg{[}\lim_{h\to 0}\frac{u(r_{0}+h,%
+\theta_{0})-u(r_{0},\theta_{0})}{h}+i\lim_{h\to 0}\frac{v(r_{0}+h,\theta_{0})-%
+v(r_{0},\theta_{0})}{h}\Bigg{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mstyle></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{e^{i\theta_{0}}}\Bigg{[}\frac{\partial u}{\partial r}(r_%
+{0},\theta_{0})+i\frac{\partial v}{\partial r}(r_{0},\theta_{0})\Bigg{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Similarly, if we take the limit along the circle with fixed <math id="p2.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> equals <math id="p2.m2" class="ltx_Math" alttext="r_{0}" display="inline"><msub><mi>r</mi><mn>0</mn></msub></math>. Then</p>
+</div>
+<div id="p3" class="ltx_para">
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle f^{\prime}(z_{0})" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle\lim_{h\to 0}\frac{f(r_{0}e^{i\theta_{0}}+r_{0}e^{i(\theta_{0}+h)%
+})-f(r_{0}e^{i\theta_{0}})}{r_{0}e^{i\theta_{0}}(e^{ih}-1)}" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>θ</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle\lim_{h\to 0}\frac{f(r_{0}e^{i(\theta_{0}+h)})-f(r_{0}e^{i\theta_%
+{0}})}{he^{i\theta_{0}}}" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>θ</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle\lim_{h\to 0}\frac{u(r_{0},\theta_{0}+h)+iv(r_{0},\theta_{0}+h)-u%
+(r_{0},\theta_{0})-iv(r_{0},\theta_{0})}{he^{i\theta_{0}}}" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><mrow><msub><mi>θ</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><mrow><msub><mi>θ</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{r_{0}e^{i\theta_{0}}}\Bigg{[}\lim_{h\to 0}\frac{u(r_{0}+%
+h,\theta_{0})-u(r_{0},\theta_{0})}{h}\cdot\frac{h}{e^{ih}-1}+i\lim_{h\to 0}%
+\frac{v(r_{0}+h,\theta_{0})-v(r_{0},\theta_{0})}{h}\cdot\frac{h}{e^{ih}-1}%
+\Bigg{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mstyle><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mi>h</mi><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mstyle><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mi>h</mi><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{r_{0}e^{i\theta_{0}}}\Bigg{[}\lim_{h\to 0}\frac{u(r_{0}+%
+h,\theta_{0})-u(r_{0},\theta_{0})}{h}\cdot\lim_{h\to 0}\frac{h}{e^{ih}-1}+i%
+\lim_{h\to 0}\frac{v(r_{0}+h,\theta_{0})-v(r_{0},\theta_{0})}{h}\cdot\lim_{h%
+\to 0}\frac{h}{e^{ih}-1}\Bigg{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mstyle><mo>⋅</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mi>h</mi><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>+</mo><mi>h</mi></mrow><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mstyle><mo>⋅</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mi>h</mi><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mstyle></mrow></mrow></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{r_{0}e^{i\theta_{0}}}\Bigg{[}\frac{\partial u}{\partial%
+\theta}(r_{0},\theta_{0})\frac{1}{i}+\frac{\partial v}{\partial\theta}(r_{0},%
+\theta_{0})\Bigg{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>i</mi></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{r_{0}e^{i\theta_{0}}}\Bigg{[}\frac{\partial v}{\partial%
+\theta}(r_{0},\theta_{0})-i\frac{\partial u}{\partial\theta}(r_{0},\theta_{0})%
+\Bigg{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Note: We use l’Hôpital’s rule to obtain the following result used above <math id="p4.m1" class="ltx_Math" alttext="\lim_{h\to 0}\frac{h}{e^{ih}-1}=\frac{1}{i}" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>h</mi><mo>→</mo><mn>0</mn></mrow></msub><mo>⁡</mo><mfrac><mi>h</mi><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mrow><mo>=</mo><mfrac><mn>1</mn><mi>i</mi></mfrac></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Now, since the limit is the same along the circle and the ray then they are equal:</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{e^{i\theta_{0}}}\Bigg{[}\frac{\partial u}{\partial r}(r_%
+{0},\theta_{0})+i\frac{\partial v}{\partial r}(r_{0},\theta_{0})\Bigg{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{r_{0}e^{i\theta_{0}}}\Bigg{[}\frac{\partial v}{\partial%
+\theta}(r_{0},\theta_{0})-i\frac{\partial u}{\partial\theta}(r_{0},\theta_{0})%
+\Bigg{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>θ</mi><mn>0</mn></msub></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle\Bigg{[}\frac{\partial u}{\partial r}(r_{0},\theta_{0})+i\frac{%
+\partial v}{\partial r}(r_{0},\theta_{0})\Bigg{]}" display="inline"><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{r_{0}}\Bigg{[}\frac{\partial v}{\partial\theta}(r_{0},%
+\theta_{0})-i\frac{\partial u}{\partial\theta}(r_{0},\theta_{0})\Bigg{]}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>r</mi><mn>0</mn></msub></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>0</mn></msub><mo>,</mo><msub><mi>θ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which implies that
+</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial u}{\partial r}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex17.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex17.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{r}\frac{\partial v}{\partial\theta}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>r</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial v}{\partial r}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex18.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex18.m3" class="ltx_Math" alttext="\displaystyle-\frac{1}{r}\frac{\partial u}{\partial\theta}" display="inline"><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>r</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">QED
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof to Cauchy-Riemann equations (polar coordinates)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofToCauchyRiemannEquationspolarCoordinates</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:06:13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:06:13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Daume (40)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Daume (40)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Daume (40)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 30E99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:22:16 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

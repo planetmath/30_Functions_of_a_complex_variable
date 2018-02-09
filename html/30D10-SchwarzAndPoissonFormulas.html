@@ -1,0 +1,267 @@
+<!DOCTYPE html><html>
+<head>
+<title>Schwarz and Poisson formulas</title>
+<!--Generated on Fri Feb  9 20:17:44 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Schwarz and Poisson formulas</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Introduction</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">Fundamental boundary-value problems of potential theory, i.e. (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Ie</span>), the so-called Dirichlet and Neumann problems occur in many  of applied mathematics such as hydrodynamics, elasticity  and electrodynamics. While solving the two-dimensional problem for special  of boundaries is likely to present serious computational difficulties, it is possible to write down formulas for a circular (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Circle</span>) boundary. We shall give Schwarz and Poisson formulas that solve the Dirichlet problem for a circular domain.</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Schwarz formula</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">Without loss of generality, we shall consider the compact disc <math id="Sx2.p1.m1" class="ltx_Math" alttext="\overline{D}:|z|\leq 1" display="inline"><mrow><mover accent="true"><mi>D</mi><mo>¯</mo></mover><mo>:</mo><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></mrow></math> in the <math id="Sx2.p1.m2" class="ltx_Math" alttext="z-" display="inline"><mrow><mi>z</mi><mo>-</mo></mrow></math>plane, its boundary will be denoted by <math id="Sx2.p1.m3" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> and any point on this one by <math id="Sx2.p1.m4" class="ltx_Math" alttext="\zeta=e^{i\theta}" display="inline"><mrow><mi>ζ</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>θ</mi></mrow></msup></mrow></math>. Let it be required to determine a harmonic function <math id="Sx2.p1.m5" class="ltx_Math" alttext="u(x,y)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>, which on the boundary <math id="Sx2.p1.m6" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> assumes the values</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Sx2.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.E1.m1" class="ltx_Math" alttext="\displaystyle u\big{|}_{\gamma}=f(\theta)," display="inline"><mrow><mrow><msub><mrow><mi>u</mi><mo fence="true" maxsize="120%" minsize="120%">|</mo></mrow><mi>γ</mi></msub><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="Sx2.p1.m7" class="ltx_Math" alttext="f(\theta)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a continuous single-valued function of <math id="Sx2.p1.m8" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>. Let <math id="Sx2.p1.m9" class="ltx_Math" alttext="v(x,y)" display="inline"><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the conjugate harmonic function which is determined to within an arbitrary constant from the knowledge of the function <math id="Sx2.p1.m10" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>. <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>Since <math id="Sx2.p1.m11" class="ltx_Math" alttext="u+iv" display="inline"><mrow><mi>u</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></math> is an analytic function of <math id="Sx2.p1.m12" class="ltx_Math" alttext="z=x+iy" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math>,it is clear from the Cauchy-Riemann equations that the function <math id="Sx2.p1.m13" class="ltx_Math" alttext="v(x,y)" display="inline"><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is determined by
+
+<span id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<span id="Sx2.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex1.m1" class="ltx_Math" alttext="\displaystyle v(x,y)=\int_{z_{0}}^{z}\frac{\partial v}{\partial x}dx+\frac{%
+\partial v}{\partial y}dy=\int_{z_{0}}^{z}-\frac{\partial u}{\partial y}dx+%
+\frac{\partial u}{\partial x}dy\&gt;," display="inline"><mrow><mrow><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>z</mi><mn>0</mn></msub><mi>z</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>z</mi><mn>0</mn></msub><mi>z</mi></msubsup></mstyle><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+2.2pt"><mi>y</mi></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+where the integral is evaluated over an arbitrary path joining some point <math id="Sx2.p1.m14" class="ltx_Math" alttext="z_{0}" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math> with an arbitrary point <math id="Sx2.p1.m15" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> belonging to the unitary open disc <math id="Sx2.p1.m16" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>. We are concerned to a simply connected domain, so that the function <math id="Sx2.p1.m17" class="ltx_Math" alttext="v(x,y)" display="inline"><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> will be single-valued.</span></span></span>Then the function</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx2.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex2.m1" class="ltx_Math" alttext="\displaystyle w(z)=u(x,y)+iv(x,y)" display="inline"><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is an analytic function for all values of <math id="Sx2.p1.m18" class="ltx_Math" alttext="z\in D" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>D</mi></mrow></math>. We shall suppose that <math id="Sx2.p1.m19" class="ltx_Math" alttext="w(z)\in C(\overline{D})" display="inline"><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>D</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></math> the class of continuous functions. Therefore, we may write the boundary condition (1) as</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Sx2.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.E2.m1" class="ltx_Math" alttext="\displaystyle w(\zeta)+\overline{w}(\overline{\zeta})=2f(\theta)\quad on\,\,\gamma." display="inline"><mrow><mrow><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mover accent="true"><mi>w</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>ζ</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mi>o</mi><mo>⁢</mo><mpadded width="+3.3pt"><mi>n</mi></mpadded><mo>⁢</mo><mi>γ</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We define here <math id="Sx2.p1.m20" class="ltx_Math" alttext="\overline{w}(\zeta)=\overline{w(\overline{\zeta})}" display="inline"><mrow><mrow><mover accent="true"><mi>w</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mover accent="true"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>ζ</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow></math> and <math id="Sx2.p1.m21" class="ltx_Math" alttext="\overline{w}(\overline{\zeta})=\overline{w(\zeta)}" display="inline"><mrow><mrow><mover accent="true"><mi>w</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>ζ</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mover accent="true"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow></math>. Next, we multiply (2) by <math id="Sx2.p1.m22" class="ltx_Math" alttext="\frac{1}{2\pi i}\frac{d\zeta}{\zeta-z}" display="inline"><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ζ</mi></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mrow></math> and, by integrating over <math id="Sx2.p1.m23" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math>, we obtain</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Sx2.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.E3.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2\pi i}\int_{\gamma}\frac{w(\zeta)}{\zeta-z}d\zeta+\frac%
+{1}{2\pi i}\int_{\gamma}\frac{\overline{w}(\overline{\zeta})}{\zeta-z}d\zeta=%
+\frac{1}{\pi i}\int_{\gamma}\frac{f(\theta)}{\zeta-z}d\zeta\&gt;," display="inline"><mrow><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>w</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>ζ</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.2pt"><mi>ζ</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which, by Harnack’s theorem, is  to (2). Notice that the first integral on the left is equal to <math id="Sx2.p1.m24" class="ltx_Math" alttext="w(z)" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> by Cauchy’s integral formula, and for the same reason <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>From Taylor’s formula
+
+<span id="A0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<span id="Sx2.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex3.m1" class="ltx_Math" alttext="\displaystyle w(z)=w(0)+w^{\prime}(0)z+\frac{1}{2!}w^{\prime\prime}(0)z^{2}+O(%
+z^{3})." display="inline"><mrow><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>w</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>w</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+But on <math id="Sx2.p1.m25" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math>,  <math id="Sx2.p1.m26" class="ltx_Math" alttext="\overline{z}=1/\zeta" display="inline"><mrow><mover accent="true"><mi>z</mi><mo>¯</mo></mover><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mi>ζ</mi></mrow></mrow></math>, so
+
+<span id="A0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<span id="Sx2.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex4.m1" class="ltx_Math" alttext="\displaystyle\overline{w}(\overline{\zeta})=\overline{w}(0)+\overline{w}^{%
+\prime}(0)\frac{1}{\zeta}+\frac{1}{2!}\overline{w}^{\prime\prime}(0)\frac{1}{%
+\zeta^{2}}+O\bigg{(}\frac{1}{\zeta^{3}}\bigg{)}" display="inline"><mrow><mrow><mover accent="true"><mi>w</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>ζ</mi><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>w</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mover accent="true"><mi>w</mi><mo>¯</mo></mover><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>ζ</mi></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><msup><mover accent="true"><mi>w</mi><mo>¯</mo></mover><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>ζ</mi><mn>2</mn></msup></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo maxsize="210%" minsize="210%">(</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>ζ</mi><mn>3</mn></msup></mfrac></mstyle><mo maxsize="210%" minsize="210%">)</mo></mrow></mrow></mrow></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+and term-by-term integration gives the desired result recalling that
+
+<span id="A0.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<span id="Sx2.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex5.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2\pi i}\int_{\gamma}\frac{d\zeta}{\zeta^{n}(\zeta-z)}=%
+\left\{\begin{array}[]{ll}1,&amp;if\;\;n=0,\\
+0,&amp;otherwise.\end{array}\right." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ζ</mi></mrow><mrow><msup><mi>ζ</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mn>1</mn><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mi>i</mi><mo>⁢</mo><mpadded width="+5.6pt"><mi>f</mi></mpadded><mo>⁢</mo><mi>n</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mn>0</mn><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mrow><mi>o</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>e</mi></mrow><mo>.</mo></mrow></mtd></mtr></mtable><mi></mi></mrow></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span></span></span></span> the second one is equal to <math id="Sx2.p1.m27" class="ltx_Math" alttext="\overline{w}(0)" display="inline"><mrow><mover accent="true"><mi>w</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>. Let <math id="Sx2.p1.m28" class="ltx_Math" alttext="\overline{w}(0)=a-ib" display="inline"><mrow><mrow><mover accent="true"><mi>w</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>a</mi><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow></math>, thus (3) becomes</p>
+<table id="A0.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Sx2.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.E4.m1" class="ltx_Math" alttext="\displaystyle w(z)=\frac{1}{\pi i}\int_{\gamma}\frac{f(\theta)}{\zeta-z}d\zeta%
+-a+ib." display="inline"><mrow><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>-</mo><mi>a</mi></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">By setting <math id="Sx2.p1.m29" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math> in (4), we get</p>
+<table id="A0.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="Sx2.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.Ex6.m1" class="ltx_Math" alttext="\displaystyle a+ib=\frac{1}{\pi i}\int_{\gamma}\frac{f(\theta)}{\zeta}d\zeta-a%
++ib," display="inline"><mrow><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mi>ζ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>-</mo><mi>a</mi></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence</p>
+<table id="A0.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Sx2.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.E5.m1" class="ltx_Math" alttext="\displaystyle 2a=\frac{1}{\pi i}\int_{\gamma}\frac{f(\theta)}{\zeta}d\zeta=%
+\frac{1}{\pi i}\int_{0}^{2\pi}f(\theta)d\theta." display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>a</mi></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mi>ζ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>θ</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">As one would expect, <math id="Sx2.p1.m30" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is left undetermined because the conjugate harmonic function <math id="Sx2.p1.m31" class="ltx_Math" alttext="v(x,y)" display="inline"><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is determined to within an arbitrary real constant. Finally we substitute <math id="Sx2.p1.m32" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> from (5) in (4),</p>
+<table id="A0.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Sx2.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx2.E6.m1" class="ltx_Math" alttext="\displaystyle w(z)=\frac{1}{\pi i}\int_{\gamma}\frac{f(\theta)}{\zeta-z}d\zeta%
+-\frac{1}{2\pi i}\int_{\gamma}\frac{f(\theta)}{\zeta}d\zeta+ib=\frac{1}{2\pi i%
+}\int_{\gamma}f(\theta)\frac{\zeta+z}{\zeta-z}\frac{d\zeta}{\zeta}+ib," display="inline"><mrow><mrow><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mi>ζ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>γ</mi></msub></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>ζ</mi><mo>+</mo><mi>z</mi></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ζ</mi></mrow><mi>ζ</mi></mfrac></mstyle></mrow></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">the aimed Schwarz formula.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>It is possible to prove that, if <math id="Sx2.p1.m33" class="ltx_Math" alttext="f(\theta)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></math> satisfies Hölder condition, then the function <math id="Sx2.p1.m34" class="ltx_Math" alttext="w(z)" display="inline"><mrow><mi>w</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> given by (6) will be continuous in <math id="Sx2.p1.m35" class="ltx_Math" alttext="\overline{D}" display="inline"><mover accent="true"><mi>D</mi><mo>¯</mo></mover></math>. Such a condition is less restrictive than the requirement of the existence of a bounded derivative.</span></span></span></p>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Poisson formula</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">If we substitute <math id="Sx3.p1.m1" class="ltx_Math" alttext="z=\rho\&gt;e^{i\phi}" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mpadded width="+2.2pt"><mi>ρ</mi></mpadded><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup></mrow></mrow></math> and <math id="Sx3.p1.m2" class="ltx_Math" alttext="\zeta=e^{i\theta}" display="inline"><mrow><mi>ζ</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>θ</mi></mrow></msup></mrow></math> in (6) and separate the real and imaginary parts, we find</p>
+<table id="A0.EGx13" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Sx3.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx3.E7.m1" class="ltx_Math" alttext="\displaystyle\Re{w(z)}\equiv u(\rho,\phi)=\frac{1}{2\pi}\int_{0}^{2\pi}\!\!%
+\frac{(1-\rho^{2})f(\theta)}{1-2\rho\cos{(\theta-\phi)}+\rho^{2}}\;d\theta\&gt;." display="inline"><mrow><mrow><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mi>w</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ρ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mpadded width="-3.3pt"><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup></mstyle></mpadded><mrow><mpadded width="+2.8pt"><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>ρ</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>θ</mi><mo>-</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>+</mo><msup><mi>ρ</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.2pt"><mi>θ</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This is the Poisson formula (so-called also Poisson integral), which gives the solution of Dirichlet problem. It is possible to prove that (7) also  the solution under the assumption that <math id="Sx3.p1.m3" class="ltx_Math" alttext="f(\theta)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a piecewise continuous function.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">4</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">4</sup>See <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>.</span></span></span> It is also possible to generalize the formulas obtained above so as to make them apply to any simply connected region. This is done by introducing a mapping function and the idea of conformal mapping of simply connected domains.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">5</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">5</sup>For a discussion of Neumann problem, see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>.</span></span></span></p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+O. D. Kellog, <span class="ltx_text ltx_font_italic">Foundations of Potential Theory</span>, Dover, 1954.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+G. C. Evans, <span class="ltx_text ltx_font_italic">The Logarithmic Potential</span>, Chap. IV, New York, 1927.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Schwarz and Poisson formulas</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SchwarzAndPoissonFormulas</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:05:58</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:05:58</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30D10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Schwarz formula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Poisson formula</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:17:44 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

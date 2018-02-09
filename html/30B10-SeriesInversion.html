@@ -1,0 +1,285 @@
+<!DOCTYPE html><html>
+<head>
+<title>series inversion</title>
+<!--Generated on Fri Feb  9 20:15:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">series inversion</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The method of <em class="ltx_emph ltx_font_italic">series inversion</em> allows us to derive the power series
+of an inverse function <math id="p1.m1" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> given the power series of <math id="p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Clearly, since we are representing function <math id="p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> and <math id="p2.m2" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> by power series,
+the function <math id="p2.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> must necessarily be holomorphic; that is, it is differentiable
+as a complex-valued function on an open subset of the complex plane.
+(It follows that <math id="p2.m4" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> must also be holomorphic.)
+Holomorphic functions include the elementary functions studied in calculus
+such as <math id="p2.m5" class="ltx_Math" alttext="\sin" display="inline"><mi>sin</mi></math>, <math id="p2.m6" class="ltx_Math" alttext="\cos" display="inline"><mi>cos</mi></math>, <math id="p2.m7" class="ltx_Math" alttext="\tan" display="inline"><mi>tan</mi></math> and <math id="p2.m8" class="ltx_Math" alttext="\exp" display="inline"><mi>exp</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">For the method to work smoothly, it is best to assume that we want
+to invert <math id="p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at around the origin, and its value there is zero.
+There is no loss of generality, since
+if <math id="p3.m2" class="ltx_Math" alttext="f(b)=a" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>a</mi></mrow></math>, we can apply series inversion to the function <math id="p3.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> defined
+by <math id="p3.m4" class="ltx_Math" alttext="f(z)=a+g(z-b)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
+Then <math id="p3.m5" class="ltx_Math" alttext="f^{-1}(w)=g^{-1}(w-a)+b" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>w</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>b</mi></mrow></mrow></math>;
+we obtain the power series for <math id="p3.m6" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> centred at <math id="p3.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Also, it must be true that <math id="p4.m1" class="ltx_Math" alttext="f^{\prime}(0)\neq 0" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>, otherwise <math id="p4.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> will not even
+be invertible around the origin.</p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">An example</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">We explain the method by an example, for <math id="Sx1.p1.m1" class="ltx_Math" alttext="f(z)=\arctan z" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>arctan</mi><mo>⁡</mo><mi>z</mi></mrow></mrow></math>.
+In the following, we will consistently use the notation <math id="Sx1.p1.m2" class="ltx_Math" alttext="O(z^{n})" display="inline"><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math>
+to denote a holomorphic function <math id="Sx1.p1.m3" class="ltx_Math" alttext="h(z)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> whose power series expansion begins
+with <math id="Sx1.p1.m4" class="ltx_Math" alttext="z^{n}" display="inline"><msup><mi>z</mi><mi>n</mi></msup></math>. And similarly when <math id="Sx1.p1.m5" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> is replaced with the variable <math id="Sx1.p1.m6" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">First, we start with the well-known power series expansion for <math id="Sx1.p2.m1" class="ltx_Math" alttext="w=\arctan z" display="inline"><mrow><mi>w</mi><mo>=</mo><mrow><mi>arctan</mi><mo>⁡</mo><mi>z</mi></mrow></mrow></math>:</p>
+<table id="Sx1.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.E1.m1" class="ltx_Math" alttext="w=z-\frac{z^{3}}{3}+\frac{z^{5}}{5}+O(z^{7})\,." display="block"><mrow><mrow><mi>w</mi><mo>=</mo><mrow><mrow><mi>z</mi><mo>-</mo><mfrac><msup><mi>z</mi><mn>3</mn></msup><mn>3</mn></mfrac></mrow><mo>+</mo><mfrac><msup><mi>z</mi><mn>5</mn></msup><mn>5</mn></mfrac><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>7</mn></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The number of explicit terms in the power series expansion determines
+the number of terms that we will be able to obtain
+in the power series expansion of <math id="Sx1.p2.m2" class="ltx_Math" alttext="f^{-1}" display="inline"><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math>.
+So in this case, we are going to seek an expansion
+of <math id="Sx1.p2.m3" class="ltx_Math" alttext="f^{-1}(w)=\tan w" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>tan</mi><mo>⁡</mo><mi>w</mi></mrow></mrow></math> up to (but excluding) the <math id="Sx1.p2.m4" class="ltx_Math" alttext="w^{7}" display="inline"><msup><mi>w</mi><mn>7</mn></msup></math> term.</p>
+</div>
+<div id="Sx1.p3" class="ltx_para">
+<p class="ltx_p">A simple rearrangement of (<a href="#Sx1.E1" title="(1) ‣ An example ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) gives</p>
+<table id="Sx1.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.E2.m1" class="ltx_Math" alttext="z=w+\frac{z^{3}}{3}-\frac{z^{5}}{5}+O(z^{7})" display="block"><mrow><mi>z</mi><mo>=</mo><mrow><mrow><mrow><mi>w</mi><mo>+</mo><mfrac><msup><mi>z</mi><mn>3</mn></msup><mn>3</mn></mfrac></mrow><mo>-</mo><mfrac><msup><mi>z</mi><mn>5</mn></msup><mn>5</mn></mfrac></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>7</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+</div>
+<div id="Sx1.p4" class="ltx_para">
+<p class="ltx_p">Now we <em class="ltx_emph ltx_font_italic">substitute equation (<a href="#Sx1.E2" title="(2) ‣ An example ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) into itself</em>.
+Of course, usually when we substitute an equation into itself
+we do not get anything, but here it works because we can
+<em class="ltx_emph ltx_font_italic">perform simplications using the <math id="Sx1.p4.m1" class="ltx_Math" alttext="O" display="inline"><mi>O</mi></math> notation</em>.
+So for instance, in the following,
+in second term <math id="Sx1.p4.m2" class="ltx_Math" alttext="z^{3}/3" display="inline"><mrow><msup><mi>z</mi><mn>3</mn></msup><mo>/</mo><mn>3</mn></mrow></math> on the right of equation (<a href="#Sx1.E2" title="(2) ‣ An example ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>), we put in
+equation (<a href="#Sx1.E2" title="(2) ‣ An example ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) simplified to <math id="Sx1.p4.m3" class="ltx_Math" alttext="z=w+O(z^{3})" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>w</mi><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
+Why we should choose this simplication will be clear in a moment:
+</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Sx1.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx1.E3.m1" class="ltx_Math" alttext="\displaystyle z" display="inline"><mi>z</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.E3.m2" class="ltx_Math" alttext="\displaystyle=w+\frac{1}{3}\Bigl{(}w+O(z^{3})\Bigr{)}^{3}-\frac{z^{5}}{5}+O(z^%
+{7})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mi>w</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mi>w</mi><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow><mn>3</mn></msup></mrow></mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><msup><mi>z</mi><mn>5</mn></msup><mn>5</mn></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>7</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+<tbody id="Sx1.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.E4.m2" class="ltx_Math" alttext="\displaystyle=w+\frac{1}{3}\Bigl{(}w^{3}+O(z^{3})(w^{2}+\cdots)\Bigr{)}-\frac{%
+z^{5}}{5}+O(z^{7})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mi>w</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><msup><mi>w</mi><mn>3</mn></msup><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>w</mi><mn>2</mn></msup><mo>+</mo><mi mathvariant="normal">⋯</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><msup><mi>z</mi><mn>5</mn></msup><mn>5</mn></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>7</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+<tbody id="Sx1.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.E5.m2" class="ltx_Math" alttext="\displaystyle=w+\frac{1}{3}\Bigl{(}w^{3}+O(w^{3})\cdot O(w^{2})\Bigr{)}+O(w^{5%
+})\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>w</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><msup><mi>w</mi><mn>3</mn></msup><mo>+</mo><mrow><mrow><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mi>O</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>5</mn></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In equation (<a href="#Sx1.E5" title="(5) ‣ An example ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) we used the fact that the expansion
+for <math id="Sx1.p4.m4" class="ltx_Math" alttext="z=f^{-1}(w)" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> <em class="ltx_emph ltx_font_italic">must begin</em> with a <math id="Sx1.p4.m5" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> term, i.e.
+<math id="Sx1.p4.m6" class="ltx_Math" alttext="f^{-1}(0)=0" display="inline"><mrow><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. Also note that we are guaranteed that the <math id="Sx1.p4.m7" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> and <math id="Sx1.p4.m8" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> terms
+have non-zero coefficients, because <math id="Sx1.p4.m9" class="ltx_Math" alttext="f^{\prime}(0)\neq 0" display="inline"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>. (Otherwise
+we would not be able to isolate <math id="Sx1.p4.m10" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> in equation (<a href="#Sx1.E2" title="(2) ‣ An example ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>).)</p>
+</div>
+<div id="Sx1.p5" class="ltx_para">
+<p class="ltx_p">Now equation (<a href="#Sx1.E5" title="(5) ‣ An example ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) simplifies to</p>
+<table id="Sx1.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx1.E6.m1" class="ltx_Math" alttext="z=w+\frac{w^{3}}{3}+O(w^{5})\,," display="block"><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mi>w</mi><mo>+</mo><mfrac><msup><mi>w</mi><mn>3</mn></msup><mn>3</mn></mfrac><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>5</mn></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">which is already an achievement, because we have identified
+exactly what the <math id="Sx1.p5.m1" class="ltx_Math" alttext="w^{3}" display="inline"><msup><mi>w</mi><mn>3</mn></msup></math> term must be.</p>
+</div>
+<div id="Sx1.p6" class="ltx_para">
+<p class="ltx_p">We substitute (<a href="#Sx1.E6" title="(6) ‣ An example ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>) into the <math id="Sx1.p6.m1" class="ltx_Math" alttext="z^{3}" display="inline"><msup><mi>z</mi><mn>3</mn></msup></math> and <math id="Sx1.p6.m2" class="ltx_Math" alttext="z^{5}" display="inline"><msup><mi>z</mi><mn>5</mn></msup></math> terms of (<a href="#Sx1.E2" title="(2) ‣ An example ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>),
+and obtain:</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Sx1.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Sx1.E7.m1" class="ltx_Math" alttext="\displaystyle z" display="inline"><mi>z</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.E7.m2" class="ltx_Math" alttext="\displaystyle=w+\frac{1}{3}\left(w+\frac{w^{3}}{3}+O(w^{5})\right)^{3}-\frac{1%
+}{5}\left(w+\frac{w^{3}}{3}+O(w^{5})\right)^{5}+O(z^{7})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mi>w</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mi>w</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mi>w</mi><mn>3</mn></msup><mn>3</mn></mfrac></mstyle><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>5</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow><mn>3</mn></msup></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>5</mn></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mi>w</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mi>w</mi><mn>3</mn></msup><mn>3</mn></mfrac></mstyle><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>5</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow><mn>5</mn></msup></mrow></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>7</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+<tbody id="Sx1.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.E8.m2" class="ltx_Math" alttext="\displaystyle=w+\frac{1}{3}\left(w^{3}+\binom{3}{1}\frac{w^{3}}{3}w^{2}+O(w^{7%
+})\right)-\frac{1}{5}\left(w^{5}+O(w^{7})\right)+O(w^{7})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mi>w</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>w</mi><mn>3</mn></msup><mo>+</mo><mrow><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mn>3</mn><mn>1</mn></mfrac></mstyle><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>w</mi><mn>3</mn></msup><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>w</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>7</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>5</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>w</mi><mn>5</mn></msup><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>7</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>7</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+<tbody id="Sx1.E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Sx1.E9.m2" class="ltx_Math" alttext="\displaystyle=w+\frac{1}{3}w^{3}+\frac{2}{15}w^{5}+O(w^{7})\,." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>w</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>w</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>15</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>w</mi><mn>5</mn></msup></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>7</mn></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">And this gives our desired expansion of <math id="Sx1.p6.m3" class="ltx_Math" alttext="z=\tan w" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>tan</mi><mo>⁡</mo><mi>w</mi></mrow></mrow></math>
+of degree <math id="Sx1.p6.m4" class="ltx_Math" alttext="&lt;7" display="inline"><mrow><mi></mi><mo>&lt;</mo><mn>7</mn></mrow></math>.</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Summary</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">To summarize the procedure in general,
+we start with the expansion</p>
+<table id="Sx2.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.E10.m1" class="ltx_Math" alttext="w=f(z)=a_{1}z+a_{2}z^{2}+a_{3}z^{3}+\cdots\,,\quad a_{1}\neq 0\,," display="block"><mrow><mrow><mrow><mi>w</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><msup><mi>z</mi><mn>3</mn></msup></mrow><mo>+</mo><mpadded width="+1.7pt"><mi mathvariant="normal">⋯</mi></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>≠</mo><mpadded width="+1.7pt"><mn>0</mn></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr>
+</table>
+<p class="ltx_p">and rearrange it to,</p>
+<table id="Sx2.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Sx2.E11.m1" class="ltx_Math" alttext="z=b_{1}\Bigl{(}w-a_{2}z^{2}-a_{3}z^{3}-\cdots-a_{n}z^{n}\Bigr{)}+O(w^{n+1})\,,%
+\quad b_{1}=\frac{1}{a_{1}}\,." display="block"><mrow><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mi>w</mi><mo>-</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo>-</mo><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><msup><mi>z</mi><mn>3</mn></msup></mrow><mo>-</mo><mi mathvariant="normal">⋯</mi><mo>-</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>z</mi><mi>n</mi></msup></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><mpadded width="+1.7pt"><mfrac><mn>1</mn><msub><mi>a</mi><mn>1</mn></msub></mfrac></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr>
+</table>
+<p class="ltx_p">So we know that <math id="Sx2.p1.m1" class="ltx_Math" alttext="z=b_{1}w+O(w^{2})" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mi>w</mi></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>,
+and we can substitute
+this into the term <math id="Sx2.p1.m2" class="ltx_Math" alttext="z^{2}" display="inline"><msup><mi>z</mi><mn>2</mn></msup></math> of equation (<a href="#Sx2.E11" title="(11) ‣ Summary ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>).
+At the end we will get an equation of the form
+<math id="Sx2.p1.m3" class="ltx_Math" alttext="z=b_{1}w+b_{2}w^{2}+O(w^{3})" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mi>w</mi></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>w</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>w</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, and we can substitute this
+into the terms <math id="Sx2.p1.m4" class="ltx_Math" alttext="z^{2}" display="inline"><msup><mi>z</mi><mn>2</mn></msup></math> and <math id="Sx2.p1.m5" class="ltx_Math" alttext="z^{3}" display="inline"><msup><mi>z</mi><mn>3</mn></msup></math> of (<a href="#Sx2.E11" title="(11) ‣ Summary ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>).
+And what ever results we will substitute back into the
+terms <math id="Sx2.p1.m6" class="ltx_Math" alttext="z^{2}" display="inline"><msup><mi>z</mi><mn>2</mn></msup></math>, <math id="Sx2.p1.m7" class="ltx_Math" alttext="z^{3}" display="inline"><msup><mi>z</mi><mn>3</mn></msup></math>, <math id="Sx2.p1.m8" class="ltx_Math" alttext="z^{4}" display="inline"><msup><mi>z</mi><mn>4</mn></msup></math> of equation (<a href="#Sx2.E11" title="(11) ‣ Summary ‣ series inversion" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>).
+We can repeat this process until
+we have all the terms of <math id="Sx2.p1.m9" class="ltx_Math" alttext="z=f^{-1}(w)" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><msup><mi>f</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> that we need.</p>
+</div>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">We probably should normalize
+the functions so that <math id="Sx2.p2.m1" class="ltx_Math" alttext="a_{1}=b_{1}=1" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><msub><mi>b</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></mrow></math>
+to make the computations easier.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Lars V. Ahlfors. <span class="ltx_text ltx_font_italic">Complex Analysis</span>. McGraw-Hill, 1979.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">series inversion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SeriesInversion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:39:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:39:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 30B10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:15:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

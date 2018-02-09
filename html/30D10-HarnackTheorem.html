@@ -1,0 +1,349 @@
+<!DOCTYPE html><html>
+<head>
+<title>Harnack theorem</title>
+<!--Generated on Fri Feb  9 20:17:37 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Harnack theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Introduction.</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">It is frequent to make use of Cauchy integral formula to represent analytically some functions that are useful in mathematical physics applications. However, it must be noted that such representation is not unique, so that the same function can be represented by different integrals of Cauchy’s type. An important case has to do with the equality of the two Cauchy integrals</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2\pi i}\oint_{C}\frac{\psi_{1}(\zeta)}{\zeta-z}d\zeta=%
+\frac{1}{2\pi i}\oint_{C}\frac{\psi_{2}(\zeta)}{\zeta-z}d\zeta" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>C</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>ψ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>C</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>ψ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all values of <math id="S0.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> in the interior of <math id="S0.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>. In general no conclusion can be drawn concerning the equality of the density functions <math id="S0.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="\psi_{1}(\zeta)" display="inline"><mrow><msub><mi>ψ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S0.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="\psi_{2}(\zeta)" display="inline"><mrow><msub><mi>ψ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow></math>. We shall see, however, that if some additional restriction are imposed on the density functions and on the contour <math id="S0.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, then the equality will occur. That is the matter of <span class="ltx_text ltx_font_italic">Harnack theorem</span>. In considering the applications of the theory of functions of a complex variable to problems in continuum mechanics, for instance, we shall most frequently deal with the region bounded by the unit circle, i.e. the compact disc <math id="S0.SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="|z|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math> that we shall draw in the <math id="S0.SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-plane, its boundary will be denoted by <math id="S0.SS0.SSS0.Px1.p1.m8" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> and the points of <math id="S0.SS0.SSS0.Px1.p1.m9" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> by <math id="S0.SS0.SSS0.Px1.p1.m10" class="ltx_Math" alttext="\zeta=e^{i\theta}" display="inline"><mrow><mi>ζ</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>θ</mi></mrow></msup></mrow></math>. All density functions of the argument <math id="S0.SS0.SSS0.Px1.p1.m11" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> will be assumed to be <math id="S0.SS0.SSS0.Px1.p1.m12" class="ltx_Math" alttext="2\pi" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></math>-periodic.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>A less restrictive form of Harnack theorem is discussed in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>.</span></span></span>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="f(\theta)" display="inline"><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>θ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> and <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="g(\theta)" display="inline"><mrow><mi>g</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>θ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> be continuous real functions of the argument <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> defined on the boundary <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math>; if</span></p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2\pi i}\oint_{\gamma}\frac{f(\theta)d\zeta}{\zeta-z}=%
+\frac{1}{2\pi i}\oint_{\gamma}\frac{g(\theta)d\zeta}{\zeta-z}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ζ</mi></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mstyle displaystyle="true"><mfrac><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ζ</mi></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">then</span></p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle f(\theta)\equiv g(\theta)\qquad if\qquad|z|&lt;1" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mi>i</mi><mo>⁢</mo><mi>f</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle f(\theta)=g(\theta)+const.\qquad if\qquad|z|&gt;1." display="inline"><mrow><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>g</mi><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>t</mi><mo>.</mo><mo mathvariant="italic" separator="true">  </mo><mi>i</mi><mi>f</mi><mo mathvariant="italic" separator="true">  </mo><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo><mo>&gt;</mo><mn>1</mn><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="|z|&lt;1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>. From equality (1) we obtain</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2\pi i}\oint_{\gamma}\frac{f(\theta)-g(\theta)}{\zeta-z}%
+d\zeta\equiv\frac{1}{2\pi i}\oint_{\gamma}\frac{h(\theta)}{\zeta-z}d\zeta%
+\equiv 0," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>≡</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>≡</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I1.i1.p1.m2" class="ltx_Math" alttext="h(\theta)\equiv f(\theta)-g(\theta)" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. We shall prove that <math id="I1.i1.p1.m3" class="ltx_Math" alttext="h(\theta)\equiv 0" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mn>0</mn></mrow></math>. Since <math id="I1.i1.p1.m4" class="ltx_Math" alttext="|z|&lt;1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math> we can write,</p>
+<table id="A0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{\zeta-z}=\sum_{n=0}^{\infty}\frac{z^{n}}{\zeta^{n+1}}\&gt;," display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><msup><mi>z</mi><mi>n</mi></msup><msup><mi>ζ</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mfrac></mstyle></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then</p>
+<table id="A0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2\pi i}\oint_{\gamma}\frac{h(\theta)}{\zeta-z}d\zeta=%
+\frac{1}{2\pi i}\oint_{\gamma}\sum_{n=0}^{\infty}\frac{h(\theta)}{\zeta^{n+1}}%
+z^{n}d\zeta=\frac{1}{2\pi i}\sum_{n=0}^{\infty}(a_{n}-ib_{n})z^{n}," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><msup><mi>ζ</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><msup><mi>z</mi><mi>n</mi></msup><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>z</mi><mi>n</mi></msup></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">the complex form of Fourier series <span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>The restrictions imposed upon the expanded function are known as the Dirichlet conditions, but it is sufficient to demand that it be a function of bounded variation.</span></span></span>where the coefficients are given by (we are using the Euler’s formula)</p>
+<table id="A0.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle a_{n}-ib_{n}=\frac{1}{2\pi i}\oint_{\gamma}\frac{h(\theta)}{%
+\zeta^{n+1}}d\zeta=\frac{1}{2\pi}\int_{0}^{2\pi}\!\!h(\theta)e^{-in\theta}d\theta." display="inline"><mrow><mrow><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><msup><mi>ζ</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mpadded width="-3.3pt"><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup></mstyle></mpadded><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>θ</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But (2) vanishes for all values of <math id="I1.i1.p1.m5" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, therefore <math id="I1.i1.p1.m6" class="ltx_Math" alttext="a_{n}=b_{n}=0,\,n\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>b</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow><mo rspace="4.2pt">,</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> and a reference to Fourier complex expansion</p>
+<table id="A0.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle h(\theta)=\sum_{n=-\infty}^{\infty}c_{n}e^{in\theta},\qquad c_{n%
+}=\frac{1}{2\pi}\int_{0}^{2\pi}h(t)e^{-int}dt,\quad n\in\mathbb{Z}," display="inline"><mrow><mrow><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>θ</mi></mrow></msup></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup></mstyle><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">shows that all Fourier coefficients of the function <math id="I1.i1.p1.m7" class="ltx_Math" alttext="h(\theta)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></math> vanish, and hence <math id="I1.i1.p1.m8" class="ltx_Math" alttext="h(\theta)\equiv 0" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="|z|&gt;1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mn>1</mn></mrow></math>. By analytic continuation, we have</p>
+<table id="A0.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{\zeta-z}=\sum_{n=0}^{\infty}-\frac{\zeta^{n}}{z^{n+1}}\&gt;," display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mo>-</mo><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><msup><mi>ζ</mi><mi>n</mi></msup><msup><mi>z</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mfrac></mstyle></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so that</p>
+<table id="A0.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2\pi i}\oint_{\gamma}\frac{h(\theta)}{\zeta-z}d\zeta=-%
+\frac{1}{2\pi i}\oint_{\gamma}\sum_{n=1}^{\infty}\frac{\zeta^{n-1}h(\theta)}{z%
+^{n}}d\zeta=-\sum_{n=1}^{\infty}\frac{a_{n}+ib_{n}}{z^{n}}\&gt;," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi>ζ</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><msup><mi>z</mi><mi>n</mi></msup></mfrac></mstyle><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ζ</mi></mrow></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mrow><msup><mi>z</mi><mi>n</mi></msup></mfrac></mstyle></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where</p>
+<table id="A0.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle a_{n}+ib_{n}=\frac{1}{2\pi i}\oint_{\gamma}\zeta^{n-1}h(\theta)d%
+\zeta=\frac{1}{2\pi}\int_{0}^{2\pi}\!\!h(\theta)e^{in\theta}d\theta,\quad n\in%
+\mathbb{N}\backslash\{0\}." display="inline"><mrow><mrow><mrow><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><msup><mi>ζ</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mpadded width="-3.3pt"><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup></mstyle></mpadded><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>θ</mi></mrow></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>θ</mi></mrow></mrow></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>n</mi><mo>∈</mo><mrow><mi>ℕ</mi><mo>\</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since (3) vanishes for all values of <math id="I1.i2.p1.m2" class="ltx_Math" alttext="|z|&gt;1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mn>1</mn></mrow></math>,
+<math id="I1.i2.p1.m3" class="ltx_Math" alttext="a_{n}=b_{n}=0,\,n\in\mathbb{N}\backslash\{0\}" display="inline"><mrow><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msub><mi>b</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow><mo rspace="4.2pt">,</mo><mrow><mi>n</mi><mo>∈</mo><mrow><mi>ℕ</mi><mo>\</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow></math>. Thus, all Fourier coefficients of <math id="I1.i2.p1.m4" class="ltx_Math" alttext="h(\theta)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></math>, with the possible exception of <math id="I1.i2.p1.m5" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math>, vanish and hence</p>
+<table id="A0.EGx13" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle g(\theta)=f(\theta)+const." display="inline"><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="S0.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">Moreover, from this theorem if <math id="S0.SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="|z|&gt;1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mn>1</mn></mrow></math> and in addition to (1) we have the equality</p>
+<table id="A0.EGx14" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2\pi i}\oint_{\gamma}\frac{f(\theta)}{\zeta}d\zeta=\frac%
+{1}{2\pi i}\oint_{\gamma}\frac{g(\theta)}{\zeta}d\zeta," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mi>ζ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mi>ζ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then <math id="S0.SS0.SSS0.Px1.p3.m2" class="ltx_Math" alttext="f(\theta)=g(\theta)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Thmcorollary1" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Corollary 1</span>.</h6>
+<div id="Thmcorollary1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Given the continuous real functions <math id="Thmcorollary1.p1.m1" class="ltx_Math" alttext="f_{1},f_{2},g_{1},g_{2}" display="inline"><mrow><msub><mi>f</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><msub><mi>f</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><msub><mi>g</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><msub><mi>g</mi><mn mathvariant="normal">2</mn></msub></mrow></math> and the following simultaneous equalities for all values of <math id="Thmcorollary1.p1.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>.</span></p>
+<table id="A0.EGx15" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2\pi i}\oint_{\gamma}\frac{f_{1}+if_{2}}{\zeta-z}d\zeta=%
+\frac{1}{2\pi i}\oint_{\gamma}\frac{g_{1}+ig_{2}}{\zeta-z}d\zeta," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>f</mi><mn>2</mn></msub></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>g</mi><mn>2</mn></msub></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="A0.EGx16" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2\pi i}\oint_{\gamma}\frac{f_{1}-if_{2}}{\zeta-z}d\zeta=%
+\frac{1}{2\pi i}\oint_{\gamma}\frac{g_{1}-ig_{2}}{\zeta-z}d\zeta," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>f</mi><mn>2</mn></msub></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi>γ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>g</mi><mn>2</mn></msub></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">then</span></p>
+<table id="A0.EGx17" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle g_{1}=f_{1},\qquad g_{2}=f_{2},\qquad if\quad|z|&lt;1," display="inline"><mrow><mrow><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>=</mo><msub><mi>f</mi><mn>1</mn></msub></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>=</mo><mrow><msub><mi>f</mi><mn>2</mn></msub><mo rspace="22.5pt">,</mo><mrow><mi>i</mi><mo>⁢</mo><mi>f</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">and</span></p>
+<table id="A0.EGx18" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle g_{1}=f_{1}+const.,\qquad g_{2}=f_{2}+const.,\qquad if\quad|z|&gt;1." display="inline"><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>=</mo><msub><mi>f</mi><mn>1</mn></msub><mo>+</mo><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>t</mi><mo>.</mo><mo rspace="22.5pt">,</mo><msub><mi>g</mi><mn>2</mn></msub><mo>=</mo><msub><mi>f</mi><mn>2</mn></msub><mo>+</mo><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>t</mi><mo>.</mo><mo rspace="22.5pt">,</mo><mi>i</mi><mi>f</mi><mo mathvariant="italic" separator="true"> </mo><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo><mo>&gt;</mo><mn>1</mn><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">By adding and substracting those equalities, this corollary follows from Harnack theorem.</span></p>
+</div>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+N. I. Muskhelishvili’s, <span class="ltx_text ltx_font_italic">Singular Integral Equations,</span> p.64, 1953.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+E.C. Titchmarsh, <span class="ltx_text ltx_font_italic">The Theory of Functions,</span> Oxford University Press, New York, 2d ed., pp. 64-101, 399-428.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+W.F. Osgood, <span class="ltx_text ltx_font_italic">Lehrbuch der Funktionentheorie</span>, Teubner Verlagsgesellschaft, Leipzig, vol. 1.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+Ãâ°. Goursat, <span class="ltx_text ltx_font_italic">Course d’analyse,</span> Gauthiers-Villars &amp; Cie, Paris, vol. 2.
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+E. Picard, <span class="ltx_text ltx_font_italic">Leçons sur quelques types simples d’ÃÂ©quations aux dÃÂ©rivÃÂ©es partielles,</span> Gauthiers-Villars &amp; Cie, Paris.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Harnack theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">HarnackTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:02:55</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:02:55</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 30D10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:17:37 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

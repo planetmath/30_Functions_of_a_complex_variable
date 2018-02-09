@@ -1,0 +1,217 @@
+<!DOCTYPE html><html>
+<head>
+<title>existence of power series</title>
+<!--Generated on Fri Feb  9 20:15:19 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">existence of power series</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">In this entry we shall demonstrate the logical equivalence of the holomorphic
+and analytic concepts. As is the case with so many basic results in
+complex analysis, the proof of these facts hinges on the Cauchy
+integral theorem, and the Cauchy integral formula.</p>
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Holomorphic implies analytic.</h2>
+
+<div id="Thmproposition1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Theorem 1</span></h6>
+<div id="Thmproposition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmproposition1.p1.m1" class="ltx_Math" alttext="U\subset\mathbb{C}" display="inline"><mrow><mi>U</mi><mo mathvariant="normal">⊂</mo><mi mathvariant="normal">C</mi></mrow></math> be an open domain that contains the origin, and
+let <math id="Thmproposition1.p1.m2" class="ltx_Math" alttext="f:U\rightarrow\mathbb{C}," display="inline"><mrow><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>U</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">C</mi></mrow></mrow><mo mathvariant="normal">,</mo></mrow></math>
+be a function such that
+the complex derivative</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="f^{\prime}(z)=\lim_{\zeta\rightarrow 0}\frac{f(z+\zeta)-f(z)}{\zeta}" display="block"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ζ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>+</mo><mi>ζ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>ζ</mi></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">exists for all <math id="Thmproposition1.p1.m3" class="ltx_Math" alttext="z\in U" display="inline"><mrow><mi>z</mi><mo mathvariant="normal">∈</mo><mi>U</mi></mrow></math>. Then, there exists a power series representation</span></p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="f(z)=\sum_{k=0}^{\infty}a_{k}z^{k},\quad\|z\|&lt;R,\quad a_{k}\in\mathbb{C}" display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>z</mi><mi>k</mi></msup></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mrow><mo>∥</mo><mi>z</mi><mo>∥</mo></mrow><mo>&lt;</mo><mi>R</mi></mrow><mo rspace="12.5pt">,</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>∈</mo><mi>ℂ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for a
+sufficiently small radius of convergence <math id="Thmproposition1.p1.m4" class="ltx_Math" alttext="R&gt;0" display="inline"><mrow><mi>R</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>.</span></p>
+</div>
+</div>
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Note: it is just as
+easy to show the existence of a power series representation around
+every basepoint in <math id="S0.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="z_{0}\in U" display="inline"><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>∈</mo><mi>U</mi></mrow></math>; one need only consider the holomorphic
+function <math id="S0.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="f(z-z_{0})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><msub><mi>z</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em> Choose an <math id="S0.SS0.SSS0.Px1.p2.m1" class="ltx_Math" alttext="R&gt;0" display="inline"><mrow><mi>R</mi><mo>&gt;</mo><mn>0</mn></mrow></math> sufficiently small so that the
+disk <math id="S0.SS0.SSS0.Px1.p2.m2" class="ltx_Math" alttext="\|z\|\leq R" display="inline"><mrow><mrow><mo>∥</mo><mi>z</mi><mo>∥</mo></mrow><mo>≤</mo><mi>R</mi></mrow></math> is contained in <math id="S0.SS0.SSS0.Px1.p2.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>.
+By the Cauchy integral formula we have
+that</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="f(z)=\frac{1}{2\pi i}\oint_{\|\zeta\|=R}\frac{f(\zeta)}{\zeta-z}\,d\zeta,\quad%
+\|z\|&lt;R," display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mrow><mrow><mo>∥</mo><mi>ζ</mi><mo>∥</mo></mrow><mo>=</mo><mi>R</mi></mrow></msub><mrow><mpadded width="+1.7pt"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ζ</mi></mrow></mrow></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mo>∥</mo><mi>z</mi><mo>∥</mo></mrow><mo>&lt;</mo><mi>R</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where, as usual, the integration contour is oriented
+counterclockwise. For every <math id="S0.SS0.SSS0.Px1.p2.m4" class="ltx_Math" alttext="\zeta" display="inline"><mi>ζ</mi></math> of modulus <math id="S0.SS0.SSS0.Px1.p2.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, we can expand
+the integrand as a geometric power series in <math id="S0.SS0.SSS0.Px1.p2.m6" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, namely</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\frac{f(\zeta)}{\zeta-z}=\frac{f(\zeta)/\zeta}{1-z/\zeta}=\sum_{k=0}^{\infty}%
+\,\frac{f(\zeta)}{\zeta^{k+1}}\,z^{k},\quad\|z\|&lt;R." display="block"><mrow><mrow><mrow><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>ζ</mi><mo>-</mo><mi>z</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi>ζ</mi></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>z</mi><mo>/</mo><mi>ζ</mi></mrow></mrow></mfrac><mo>=</mo><mrow><mpadded width="+1.7pt"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mpadded><mrow><mpadded width="+1.7pt"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><msup><mi>ζ</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup></mfrac></mpadded><mo>⁢</mo><msup><mi>z</mi><mi>k</mi></msup></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mo>∥</mo><mi>z</mi><mo>∥</mo></mrow><mo>&lt;</mo><mi>R</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The circle of radius <math id="S0.SS0.SSS0.Px1.p2.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is a compact set; hence
+<math id="S0.SS0.SSS0.Px1.p2.m8" class="ltx_Math" alttext="f(\zeta)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is bounded on it; and hence, the power series above
+converges uniformly with respect to <math id="S0.SS0.SSS0.Px1.p2.m9" class="ltx_Math" alttext="\zeta" display="inline"><mi>ζ</mi></math>. Consequently, the order
+of the infinite summation and the integration operations can be
+interchanged. Hence,
+</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="f(z)=\sum_{k=0}^{\infty}a_{k}z^{k},\quad\|z\|&lt;R," display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>z</mi><mi>k</mi></msup></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mo>∥</mo><mi>z</mi><mo>∥</mo></mrow><mo>&lt;</mo><mi>R</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="a_{k}=\frac{1}{2\pi i}\oint_{\|\zeta\|=R}\frac{f(\zeta)}{\zeta^{k+1}}," display="block"><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∮</mo><mrow><mrow><mo>∥</mo><mi>ζ</mi><mo>∥</mo></mrow><mo>=</mo><mi>R</mi></mrow></msub><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><msup><mi>ζ</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup></mfrac></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as desired. QED</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Analytic implies holomorphic.</h2>
+
+<div id="Thmproposition2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem">Theorem 2</span></h6>
+<div id="Thmproposition2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let</span></p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="f(z)=\sum_{n=0}^{\infty}a_{n}z^{n},\quad a_{n}\in\mathbb{C},\quad\|z\|&lt;\epsilon" display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>z</mi><mi>n</mi></msup></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>∈</mo><mi>ℂ</mi></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mo>∥</mo><mi>z</mi><mo>∥</mo></mrow><mo>&lt;</mo><mi>ϵ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">be a power series, converging in <math id="Thmproposition2.p1.m1" class="ltx_Math" alttext="D=D_{\epsilon}(0)" display="inline"><mrow><mi>D</mi><mo mathvariant="normal">=</mo><mrow><msub><mi>D</mi><mi>ϵ</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>, the open disk of radius
+<math id="Thmproposition2.p1.m2" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math> about the origin. Then the complex derivative</span></p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="f^{\prime}(z)=\lim_{\zeta\rightarrow 0}\frac{f(z+\zeta)-f(z)}{\zeta}" display="block"><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ζ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>+</mo><mi>ζ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>ζ</mi></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">exists for all <math id="Thmproposition2.p1.m3" class="ltx_Math" alttext="z\in D" display="inline"><mrow><mi>z</mi><mo mathvariant="normal">∈</mo><mi>D</mi></mrow></math>, i.e. the function <math id="Thmproposition2.p1.m4" class="ltx_Math" alttext="f:D\rightarrow\mathbb{C}" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>D</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">C</mi></mrow></mrow></math> is holomorphic.</span></p>
+</div>
+</div>
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Note: this theorem generalizes immediately to shifted power series in
+<math id="S0.SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="z-z_{0},\;z_{0}\in\mathbb{C}" display="inline"><mrow><mrow><mrow><mi>z</mi><mo>-</mo><msub><mi>z</mi><mn>0</mn></msub></mrow><mo rspace="5.3pt">,</mo><msub><mi>z</mi><mn>0</mn></msub></mrow><mo>∈</mo><mi>ℂ</mi></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Proof.</em> For every <math id="S0.SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="z_{0}\in D" display="inline"><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>∈</mo><mi>D</mi></mrow></math>, the function <math id="S0.SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="f(z)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be recast
+as a power series centered at <math id="S0.SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="z_{0}" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math>. Hence, without loss of
+generality it suffices to prove the theorem for <math id="S0.SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math>. The power
+series</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\sum_{n=0}^{\infty}a_{n+1}\zeta^{n},\quad\zeta\in D" display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mi>ζ</mi><mi>n</mi></msup></mrow></mrow><mo rspace="12.5pt">,</mo><mi>ζ</mi></mrow><mo>∈</mo><mi>D</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">converges, and equals
+<math id="S0.SS0.SSS0.Px2.p2.m5" class="ltx_Math" alttext="(f(\zeta)-f(0))/\zeta" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ζ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mi>ζ</mi></mrow></math> for <math id="S0.SS0.SSS0.Px2.p2.m6" class="ltx_Math" alttext="\zeta\neq 0" display="inline"><mrow><mi>ζ</mi><mo>≠</mo><mn>0</mn></mrow></math>. Consequently, the complex
+derivative <math id="S0.SS0.SSS0.Px2.p2.m7" class="ltx_Math" alttext="f^{\prime}(0)" display="inline"><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> exists; indeed it is equal to <math id="S0.SS0.SSS0.Px2.p2.m8" class="ltx_Math" alttext="a_{1}" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math>. QED
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">existence of power series</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExistenceOfPowerSeries</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:56:27</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:56:27</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rmilson (146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 30B10</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:15:19 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

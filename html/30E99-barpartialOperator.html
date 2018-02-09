@@ -1,0 +1,265 @@
+<!DOCTYPE html><html>
+<head>
+<title> operator</title>
+<!--Generated on Fri Feb  9 20:22:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document"> operator</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="G\subset{\mathbb{C}}^{n}" display="inline"><mrow><mi>G</mi><mo>⊂</mo><msup><mi>ℂ</mi><mi>n</mi></msup></mrow></math> be a domain and let
+<math id="p1.m2" class="ltx_Math" alttext="f\colon G\to{\mathbb{C}}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> be a <math id="p1.m3" class="ltx_Math" alttext="C^{1}" display="inline"><msup><mi>C</mi><mn>1</mn></msup></math>
+function (continuously differentiable)
+<math id="p1.m4" class="ltx_Math" alttext="(z^{1},\ldots,z^{n})\mapsto f(z^{1},\ldots,z^{n})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>z</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>z</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>z</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> where <math id="p1.m5" class="ltx_Math" alttext="z^{j}=x^{j}+iy^{j}" display="inline"><mrow><msup><mi>z</mi><mi>j</mi></msup><mo>=</mo><mrow><msup><mi>x</mi><mi>j</mi></msup><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></mrow></mrow></math>.
+We can think of <math id="p1.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> as a subset of <math id="p1.m7" class="ltx_Math" alttext="{\mathbb{R}}^{2n}" display="inline"><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></math>.
+We therefore
+have the following partial derivatives for all <math id="p1.m8" class="ltx_Math" alttext="1\leq j\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></math>,</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial f}{\partial z^{j}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>z</mi><mi>j</mi></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle:=\frac{1}{2}\left(\frac{\partial f}{\partial x^{j}}-i\frac{%
+\partial f}{\partial y^{j}}\right)," display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial f}{\partial\bar{z}^{j}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mover accent="true"><mi>z</mi><mo stretchy="false">¯</mo></mover><mi>j</mi></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle:=\frac{1}{2}\left(\frac{\partial f}{\partial x^{j}}+i\frac{%
+\partial f}{\partial y^{j}}\right)." display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now let <math id="p1.m9" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> be the standard exterior derivative on
+<math id="p1.m10" class="ltx_Math" alttext="{\mathbb{R}}^{2n}" display="inline"><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></math> and the <math id="p1.m11" class="ltx_Math" alttext="dx^{j}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>j</mi></msup></mrow></math> and <math id="p1.m12" class="ltx_Math" alttext="dy^{j}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></math> the standard basis of cotangent
+vectors. Then if we define</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle dz^{j}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mi>j</mi></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle:=dx^{j}+idy^{j}," display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>j</mi></msup></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle d\bar{z}^{j}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msup><mover accent="true"><mi>z</mi><mo stretchy="false">¯</mo></mover><mi>j</mi></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle:=dx^{j}-idy^{j}," display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>j</mi></msup></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>y</mi><mi>j</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then we can define two new operators acting on <math id="p1.m13" class="ltx_Math" alttext="C^{1}" display="inline"><msup><mi>C</mi><mn>1</mn></msup></math> functions on <math id="p1.m14" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
+giving 1-forms by</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle\partial f" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle:=\sum_{j=1}^{n}\frac{\partial f}{\partial z^{j}}dz^{j}," display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>z</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mi>j</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\bar{\partial}f" display="inline"><mrow><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mo>⁢</mo><mi>f</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle:=\sum_{j=1}^{n}\frac{\partial f}{\partial\bar{z}^{j}}d\bar{z}^{j}." display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mover accent="true"><mi>z</mi><mo stretchy="false">¯</mo></mover><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mover accent="true"><mi>z</mi><mo stretchy="false">¯</mo></mover><mi>j</mi></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By direct calculation we immediately see that</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="df=\partial f+\bar{\partial}f." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>+</mo><mrow><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mo>⁢</mo><mi>f</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Similarly we now define <math id="p2.m1" class="ltx_Math" alttext="\partial" display="inline"><mo>∂</mo></math> and <math id="p2.m2" class="ltx_Math" alttext="\bar{\partial}" display="inline"><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover></math>
+on arbitrary differential form
+<math id="p2.m3" class="ltx_Math" alttext="\omega=\sum_{\alpha,\beta}f_{\alpha,\beta}dz^{\alpha}\wedge d\bar{z}^{\beta}" display="inline"><mrow><mi>ω</mi><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub><mrow><msub><mi>f</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mi>α</mi></msup></mrow></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mover accent="true"><mi>z</mi><mo stretchy="false">¯</mo></mover><mi>β</mi></msup></mrow></mrow></mrow></math>, where <math id="p2.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> and <math id="p2.m5" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> range over all multi-indices with
+elements less then <math id="p2.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, where if <math id="p2.m7" class="ltx_Math" alttext="\alpha=(\alpha_{1},\ldots,\alpha_{k})" display="inline"><mrow><mi>α</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>α</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>
+then <math id="p2.m8" class="ltx_Math" alttext="dz^{\alpha}=dz^{\alpha_{1}}\wedge\ldots\wedge dz^{\alpha_{k}}" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mi>α</mi></msup></mrow><mo>=</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><msub><mi>α</mi><mn>1</mn></msub></msup></mrow><mo>∧</mo><mi mathvariant="normal">…</mi><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><msub><mi>α</mi><mi>k</mi></msub></msup></mrow></mrow></mrow></math>,
+and <math id="p2.m9" class="ltx_Math" alttext="f_{\alpha,\beta}" display="inline"><msub><mi>f</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub></math> is a <math id="p2.m10" class="ltx_Math" alttext="C^{1}" display="inline"><msup><mi>C</mi><mn>1</mn></msup></math>, complex valued function
+on <math id="p2.m11" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.
+</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle\partial\omega" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi>ω</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle:=\sum_{\alpha,\beta}\frac{\partial f_{\alpha,\beta}}{\partial z^%
+{j}}dz^{j}\wedge dz^{\alpha}\wedge d\bar{z}^{\beta}," display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>f</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>z</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mi>j</mi></msup></mrow></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mi>α</mi></msup></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mover accent="true"><mi>z</mi><mo stretchy="false">¯</mo></mover><mi>β</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle\bar{\partial}\omega" display="inline"><mrow><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mo>⁢</mo><mi>ω</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle:=\sum_{\alpha,\beta}\frac{\partial f_{\alpha,\beta}}{\partial%
+\bar{z}^{j}}d\bar{z}^{j}\wedge dz^{\alpha}\wedge d\bar{z}^{\beta}." display="inline"><mrow><mrow><mi></mi><mo>:=</mo><mrow><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>f</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mover accent="true"><mi>z</mi><mo stretchy="false">¯</mo></mover><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msup><mover accent="true"><mi>z</mi><mo stretchy="false">¯</mo></mover><mi>j</mi></msup></mrow></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mi>α</mi></msup></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><msup><mover accent="true"><mi>z</mi><mo stretchy="false">¯</mo></mover><mi>β</mi></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Again a direct calculation shows that <math id="p2.m12" class="ltx_Math" alttext="d=\partial+\bar{\partial}" display="inline"><mrow><mi>d</mi><mo>=</mo><mrow><mo>∂</mo><mo>+</mo><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover></mrow></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The Cauchy-Riemann equations are then given by</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\bar{\partial}f=0" display="block"><mrow><mrow><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">That is, <math id="p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is holomorphic if and only if it satisfies the above equations.
+Note that this only applies to functions. If <math id="p3.m2" class="ltx_Math" alttext="\bar{\partial}\omega=0" display="inline"><mrow><mrow><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mo>⁢</mo><mi>ω</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>
+for a differential form, then the coefficients in the standard basis
+need not be holomorphic.</p>
+</div>
+<div id="Thmpropx1" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition</span>.</h6>
+<div id="Thmpropx1.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmpropx1.p1.m1" class="ltx_Math" alttext="\bar{\partial}" display="inline"><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover></math><span class="ltx_text ltx_font_italic"> and <math id="Thmpropx1.p1.m2" class="ltx_Math" alttext="\partial" display="inline"><mo mathvariant="normal">∂</mo></math> satisfy the following properties</span></p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">•</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\bar{\partial}" display="inline"><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover></math><span class="ltx_text ltx_font_italic"> and </span><math id="I1.i1.p1.m2" class="ltx_Math" alttext="\partial" display="inline"><mo>∂</mo></math><span class="ltx_text ltx_font_italic"> are linear,</span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">•</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\bar{\partial}^{2}=\bar{\partial}\bar{\partial}=0" display="inline"><mrow><msup><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mn>2</mn></msup><mo>=</mo><mrow><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mo>⁢</mo><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover></mrow><mo>=</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I1.i2.p1.m2" class="ltx_Math" alttext="\partial^{2}=\partial\partial=0" display="inline"><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>=</mo><mrow><mo>∂</mo><mo>⁡</mo><mo>∂</mo></mrow><mo>=</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic">,</span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_italic">•</span></span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\bar{\partial}\partial-\partial\bar{\partial}=0" display="inline"><mrow><mrow><mrow><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mo>⁢</mo><mo>∂</mo></mrow><mo>-</mo><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">While <math id="p4.m1" class="ltx_Math" alttext="\bar{\partial}u=0" display="inline"><mrow><mrow><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> is our condition for <math id="p4.m2" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> to be a
+holomorphic function it turns out that it is more important to solve the inhomogeneous
+<math id="p4.m3" class="ltx_Math" alttext="\bar{\partial}u=f" display="inline"><mrow><mrow><mover accent="true"><mo>∂</mo><mo stretchy="false">¯</mo></mover><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mi>f</mi></mrow></math> equation, as that allows us to construct holomorphic
+objects from nonholomorphic ones.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Lars Hörmander.
+,
+North-Holland Publishing Company, New York, New York, 1973.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Steven G. Krantz.
+,
+AMS Chelsea Publishing, Providence, Rhode Island, 1992.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">operator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">barpartialOperator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:10:39</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:10:39</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">jirka (4157)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">jirka (4157)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">jirka (4157)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30E99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 32A99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">d bar operator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">d-bar operator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">
+<math id="p5.m2" class="ltx_Math" alttext="\partial" display="inline"><mo>∂</mo></math> operator</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:22:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

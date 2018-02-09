@@ -1,0 +1,201 @@
+<!DOCTYPE html><html>
+<head>
+<title>Fresnel integrals</title>
+<!--Generated on Fri Feb  9 20:15:22 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Fresnel integrals</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>The functions <math id="S0.SS1.m1" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> and <math id="S0.SS1.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>
+</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">For any real value of the argument <math id="S0.SS1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, the <span class="ltx_text ltx_font_italic">Fresnel integrals</span> <math id="S0.SS1.p1.m2" class="ltx_Math" alttext="C(x)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S0.SS1.p1.m3" class="ltx_Math" alttext="S(x)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> are defined as the integrals</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle C(x)\;:=\;\int_{0}^{x}\cos{t^{2}}\,dt,\quad\quad S(x)\;:=\;\int_%
+{0}^{x}\sin{t^{2}}\,dt." display="inline"><mrow><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>x</mi></msubsup></mstyle><mrow><mi>cos</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><msup><mi>t</mi><mn>2</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>x</mi></msubsup></mstyle><mrow><mi>sin</mi><mo>⁡</mo><mrow><mpadded width="+1.7pt"><msup><mi>t</mi><mn>2</mn></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p">In optics, both of them express the .</p>
+</div>
+<div id="S0.SS1.p3" class="ltx_para">
+<p class="ltx_p">Using the Taylor series expansions of cosine and sine (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ComplexSineAndCosine</span>), we get easily the expansions of the functions (1):</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="C(z)\,=\,\frac{z}{1}\!-\!\frac{z^{5}}{5\!\cdot\!2!}\!+\!\frac{z^{9}}{9\!\cdot%
+\!4!}\!-\!\frac{z^{13}}{13\!\cdot\!6!}\!+\!-\ldots" display="block"><mrow><mi>C</mi><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo rspace="4.2pt">=</mo><mpadded width="-1.7pt"><mfrac><mi>z</mi><mn>1</mn></mfrac></mpadded><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><mfrac><msup><mi>z</mi><mn>5</mn></msup><mrow><mpadded width="-1.7pt"><mn>5</mn></mpadded><mo rspace="0.8pt">⋅</mo><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><mfrac><msup><mi>z</mi><mn>9</mn></msup><mrow><mpadded width="-1.7pt"><mn>9</mn></mpadded><mo rspace="0.8pt">⋅</mo><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mpadded><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><mfrac><msup><mi>z</mi><mn>13</mn></msup><mrow><mpadded width="-1.7pt"><mn>13</mn></mpadded><mo rspace="0.8pt">⋅</mo><mrow><mn>6</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mpadded><mo rspace="0.8pt">+</mo><mo>-</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="S(z)\,=\,\frac{z^{3}}{3\cdot 1!}\!-\!\frac{z^{7}}{7\!\cdot\!3!}\!+\!\frac{z^{1%
+1}}{11\!\cdot\!5!}\!-\!\frac{z^{15}}{15\!\cdot\!7!}\!+\!-\ldots" display="block"><mrow><mi>S</mi><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo rspace="4.2pt">=</mo><mpadded width="-1.7pt"><mfrac><msup><mi>z</mi><mn>3</mn></msup><mrow><mn>3</mn><mo>⋅</mo><mrow><mn>1</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mpadded><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><mfrac><msup><mi>z</mi><mn>7</mn></msup><mrow><mpadded width="-1.7pt"><mn>7</mn></mpadded><mo rspace="0.8pt">⋅</mo><mrow><mn>3</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><mfrac><msup><mi>z</mi><mn>11</mn></msup><mrow><mpadded width="-1.7pt"><mn>11</mn></mpadded><mo rspace="0.8pt">⋅</mo><mrow><mn>5</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mpadded><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><mfrac><msup><mi>z</mi><mn>15</mn></msup><mrow><mpadded width="-1.7pt"><mn>15</mn></mpadded><mo rspace="0.8pt">⋅</mo><mrow><mn>7</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mpadded><mo rspace="0.8pt">+</mo><mo>-</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These converge for all complex values <math id="S0.SS1.p3.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> and thus define entire transcendental functions.
+<br class="ltx_break"></p>
+</div>
+<div id="S0.SS1.p4" class="ltx_para">
+<p class="ltx_p">The Fresnel integrals at infinity have the finite value</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\lim_{x\to\infty}C(x)\;=\;\lim_{x\to\infty}S(x)\;=\;\frac{\sqrt{2\pi}}{4}." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mfrac><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt><mn>4</mn></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Clothoid</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">The parametric presentation</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle x\;=\;C(t),\quad\quad y\;=\;S(t)" display="inline"><mrow><mrow><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mpadded width="+2.8pt"><mi>y</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">a curve called <span class="ltx_text ltx_font_italic">clothoid</span>.  Since the equations (2) both define odd functions, the clothoid has symmetry about the origin.  The curve has the shape of a “<math id="S0.SS2.p1.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math>”
+(see this <span class="ltx_text ltx_font_typewriter">http://www.wakkanet.fi/ pahio/A/A/clothoid.png</span>diagram).</p>
+</div>
+<div id="S0.SS2.p2" class="ltx_para ltx_centering">
+<img src="Clothoid" id="S0.SS2.p2.g1" class="ltx_graphics" alt="">
+</div>
+<div id="S0.SS2.p3" class="ltx_para">
+<p class="ltx_p">The arc length of the clothoid from the origin to the point  <math id="S0.SS2.p3.m1" class="ltx_Math" alttext="(C(t),\,S(t))" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt">,</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>  is simply</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\int_{0}^{t}\sqrt{C^{\prime}(u)^{2}+S^{\prime}(u)^{2}}\,du=\int_{0}^{t}\sqrt{%
+\cos^{2}(u^{2})+\sin^{2}(u^{2})}\,du=\int_{0}^{t}du=t." display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msqrt><mrow><mrow><msup><mi>C</mi><mo>′</mo></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><msup><mi>S</mi><mo>′</mo></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msqrt><mrow><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>u</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msup><mi>u</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow><mo>=</mo><mi>t</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus the  of the whole curve (to the point 
+<math id="S0.SS2.p3.m2" class="ltx_Math" alttext="(\frac{\sqrt{2\pi}}{4},\,\frac{\sqrt{2\pi}}{4})" display="inline"><mrow><mo stretchy="false">(</mo><mfrac><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt><mn>4</mn></mfrac><mo rspace="4.2pt">,</mo><mfrac><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt><mn>4</mn></mfrac><mo stretchy="false">)</mo></mrow></math>) is infinite.</p>
+</div>
+<div id="S0.SS2.p4" class="ltx_para">
+<p class="ltx_p">The curvature (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CurvaturePlaneCurve</span>) of the clothoid also is extremely ,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\varkappa\,=\,2t," display="block"><mrow><mrow><mpadded width="+1.7pt"><mi>ϰ</mi></mpadded><mo>=</mo><mrow><mn> 2</mn><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e. proportional (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Variation</span>) to the arc lenth; thus in the origin only the curvature is zero.</p>
+</div>
+<div id="S0.SS2.p5" class="ltx_para">
+<p class="ltx_p">Conversely, if the curvature of a plane curve varies proportionally to the arc length, the curve is a clothoid.</p>
+</div>
+<div id="S0.SS2.p6" class="ltx_para">
+<p class="ltx_p">This property of the curvature of clothoid is utilised in way and railway construction, since the form of the clothoid is very efficient when a  portion of way must be bent to a turn:  the zero curvature of the line can be continuously raised to the wished curvature.</p>
+</div>
+<div id="S0.SS2.p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Fresnel integrals</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">FresnelIntegrals</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-07-11 21:15:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-07-11 21:15:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30B10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 33B20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SineIntegral</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">clothoid</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:15:22 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

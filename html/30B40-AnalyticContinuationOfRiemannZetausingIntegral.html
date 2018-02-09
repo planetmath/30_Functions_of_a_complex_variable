@@ -1,0 +1,260 @@
+<!DOCTYPE html><html>
+<head>
+<title>analytic continuation of Riemann zeta (using integral)</title>
+<!--Generated on Fri Feb  9 20:16:10 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">analytic continuation of Riemann zeta (using integral)</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The Riemann zeta function can be analytically
+continued to the whole complex plane minus the point 1
+by means of an integral representation. Remember that the zeta functon
+is defined by the series</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\zeta(s)=\sum_{n=1}^{\infty}{1\over n^{s}}." display="block"><mrow><mrow><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mn>1</mn><msup><mi>n</mi><mi>s</mi></msup></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">When <math id="p1.m1" class="ltx_Math" alttext="\Re s&gt;1" display="inline"><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mi>s</mi></mrow><mo>&gt;</mo><mn>1</mn></mrow></math>, this series converges; furthermore, this convergence is
+uniform on compact subsets of this half-plane, hence the series converges to
+an analytic function on this half plane. However, the series diverges when
+we have <math id="p1.m2" class="ltx_Math" alttext="\Re s&lt;1" display="inline"><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mi>s</mi></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, so this series cannot be used to define the zeta function
+in the whole complex plane, which is why we must make an analytic continuation.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">To make this continuation, we start by changing the variable in an integration:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="n^{s}\int_{0}^{\infty}e^{-nx}x^{s-1}\,dx=\int_{0}^{\infty}e^{-y}y^{s-1}\,dy=%
+\Gamma(s)" display="block"><mrow><mrow><msup><mi>n</mi><mi>s</mi></msup><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>y</mi></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>y</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>y</mi></mrow></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This provides us with an integral representation of our summand.
+Substituting this into the series, we find that</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\zeta(s)=\sum_{n=1}^{\infty}{1\over\Gamma(s)}\int_{0}^{\infty}e^{-nx}x^{s-1}\,%
+dx={1\over\Gamma(s)}\sum_{n=1}^{\infty}\int_{0}^{\infty}e^{-nx}x^{s-1}\,dx." display="block"><mrow><mrow><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We note that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\int_{0}^{\infty}\left|e^{-nx}x^{s-1}\right|\,dx=\sum_{n=1}%
+^{\infty}\int_{0}^{\infty}e^{-nx}x^{|s-1|}\,dx=\sum_{n=1}^{\infty}{\Gamma(|s-1%
+|+1)\over n^{s}};" display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><mrow><mo>|</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo rspace="4.2pt">|</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>x</mi><mrow><mo stretchy="false">|</mo><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">|</mo></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">|</mo></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><msup><mi>n</mi><mi>s</mi></msup></mfrac></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">because the series converges, hence it is possible
+to interchange integration and summation and
+subsequently sum a geometric series.</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\zeta(s)={1\over\Gamma(s)}\sum_{n=1}^{\infty}\int_{0}^{\infty}e^{-nx}x^{s-1}\,%
+dx={1\over\Gamma(s)}\int_{0}^{\infty}\sum_{n=1}^{\infty}e^{-nx}x^{s-1}\,dx={1%
+\over\Gamma(s)}\int_{0}^{\infty}{x^{s-1}\over e^{x}-1}\,dx" display="block"><mrow><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">As it stands, the integral representation we have is not of
+much use for analytically continuing the zeta function
+because the integral diverges when <math id="p3.m1" class="ltx_Math" alttext="\Re s&lt;1" display="inline"><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mi>s</mi></mrow><mo>&lt;</mo><mn>1</mn></mrow></math> on account of
+the fact that the integrand behaves like <math id="p3.m2" class="ltx_Math" alttext="x^{-s}" display="inline"><msup><mi>x</mi><mrow><mo>-</mo><mi>s</mi></mrow></msup></math> when <math id="p3.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>
+is close to zero. However, it is possible to make use of the
+theorem of Cauchy to move the path of integration away from
+zero.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Given a real number <math id="p4.m1" class="ltx_Math" alttext="r&gt;0" display="inline"><mrow><mi>r</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, define the contour <math id="p4.m2" class="ltx_Math" alttext="C_{r}" display="inline"><msub><mi>C</mi><mi>r</mi></msub></math> on the
+Riemann surface of <math id="p4.m3" class="ltx_Math" alttext="z^{s-1}" display="inline"><msup><mi>z</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup></math> as follows: <math id="p4.m4" class="ltx_Math" alttext="C_{r}" display="inline"><msub><mi>C</mi><mi>r</mi></msub></math> passes from
+<math id="p4.m5" class="ltx_Math" alttext="+\infty" display="inline"><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></math> to <math id="p4.m6" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> along a lift of the real axis, then continues
+along the circle of radius <math id="p4.m7" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> clockwise, and finally goes
+from <math id="p4.m8" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> to <math id="p4.m9" class="ltx_Math" alttext="+\infty" display="inline"><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We now examine the integral over such a contour by breaking it
+into three pieces.</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\int_{C_{r}}{x^{s-1}\over e^{x}-1}\,dx=\int_{r}^{\infty}{x^{s-1}\over e^{x}-1}%
+\,dx+\int_{|x|=r}{x^{s-1}\over e^{x}-1}\,dx-\int_{r}^{\infty}{(e^{-2\pi i}x)^{%
+s-1}\over e^{x}-1}\,dx." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>C</mi><mi>r</mi></msub></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>r</mi><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>r</mi></mrow></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>-</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>r</mi><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></mrow></msup><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We may estimate the third integral in absolute value like so:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\left|\int_{|x|=r}{x^{s-1}\over e^{x}-1}\,dx\right|\leq 2\pi r\sup_{|x|=r}%
+\left|{x^{s-1}\over e^{x}-1}\right|" display="block"><mrow><mrow><mo>|</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>r</mi></mrow></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>r</mi></mrow></munder><mo>⁡</mo><mrow><mo>|</mo><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac><mo>|</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The expression <math id="p6.m1" class="ltx_Math" alttext="x/(e^{x}-1)" display="inline"><mrow><mi>x</mi><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> represents an analytic function of
+<math id="p6.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, and hence a bounded function of <math id="p6.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in a neighborhood of <math id="p6.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.
+When <math id="p6.m5" class="ltx_Math" alttext="\Re s&gt;1" display="inline"><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mi>s</mi></mrow><mo>&gt;</mo><mn>1</mn></mrow></math>, it happens that <math id="p6.m6" class="ltx_Math" alttext="\lim_{x\to 0}|x|x^{s-2}=0" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></msub><mo>⁡</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, so</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\lim_{r\to 0}\left|\int_{|x|=r}{x^{s-1}\over e^{x}-1}\,dx\right|=0." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>r</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mo>|</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>r</mi></mrow></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>|</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">The third integral differs from the first integral by a phase, so
+they may be combined by pulling out this common factor. When
+<math id="p7.m1" class="ltx_Math" alttext="\Re s&gt;0" display="inline"><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mi>s</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>, we may take the limit as <math id="p7.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> approaches <math id="p7.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> after doing
+so to obtain the following:</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\lim_{r\to 0}\int_{C_{r}}{x^{s-1}\over e^{x}-1}\,dx=\left(1+e^{2\pi i(1-s)}%
+\right)\int_{0}^{\infty}{x^{s-1}\over e^{x}-1}\,dx" display="block"><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>r</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>C</mi><mi>r</mi></msub></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Since, aside from the branch point at
+<math id="p8.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, the only singularities of our integrand occur at multiples
+of <math id="p8.m2" class="ltx_Math" alttext="2\pi i" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow></math>, it follows from Cauchy’s theorem that</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\int_{C_{a}}{x^{s-1}\over e^{x}-1}\,dx=\int_{C_{b}}{x^{s-1}\over e^{x}-1}\,dx" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>C</mi><mi>a</mi></msub></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>C</mi><mi>b</mi></msub></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whenever <math id="p8.m3" class="ltx_Math" alttext="0&lt;a&lt;2\pi" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>a</mi><mo>&lt;</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mrow></math> and <math id="p8.m4" class="ltx_Math" alttext="0&lt;b&lt;2\pi" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>b</mi><mo>&lt;</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mrow></math>, which trivially implies that</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\lim_{r\to 0}\int_{C_{r}}{x^{s-1}\over e^{x}-1}\,dx=\int_{C_{r}}{x^{s-1}\over e%
+^{x}-1}\,dx" display="block"><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>r</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>C</mi><mi>r</mi></msub></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>C</mi><mi>r</mi></msub></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for any <math id="p8.m5" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> between <math id="p8.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> and <math id="p8.m7" class="ltx_Math" alttext="2\pi" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></math>. Therefore,</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\zeta(s)={1\over\left(1+e^{2\pi i(1-s)}\right)\Gamma(s)}\int_{C_{\pi}}{x^{s-1}%
+\over e^{x}-1}\,dx" display="block"><mrow><mrow><mi>ζ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo>)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>C</mi><mi>π</mi></msub></msub><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>x</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><mn>1</mn></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">when <math id="p8.m8" class="ltx_Math" alttext="\Re z&gt;1" display="inline"><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mi>z</mi></mrow><mo>&gt;</mo><mn>1</mn></mrow></math>. This integral converges for all complex <math id="p8.m9" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> because
+the exponential grows more rapidly than the power. Furthermore, this
+integral defines an analytic function of <math id="p8.m10" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math>, so we have an analytic
+continuation of the zeta function to the whole complex plane minus the point 1.</p>
+</div>
+<div id="p9" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">analytic continuation of Riemann zeta (using integral)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AnalyticContinuationOfRiemannZetausingIntegral</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:53:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:53:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30B40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30A99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">EstimatingTheoremOfContourIntegral</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PeriodicityOfExponentialFunction</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">AnalyticContinuationOfRiemannZeta</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:16:10 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
